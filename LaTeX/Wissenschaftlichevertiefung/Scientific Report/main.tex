@@ -1,32 +1,24 @@
-\documentclass[a4paper,12pt]{article}
+\usepackage{biblatex}\input{preamble} % ← hier wird alles eingebunden
 
-% ----------------- Packages -----------------
-\usepackage[margin=2.5cm,headheight=14.5pt]{geometry}
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}
-\usepackage{microtype}
-\usepackage{blindtext}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{csquotes}
-\usepackage{url}
-\usepackage{booktabs}
-\usepackage{amsfonts}
-\usepackage{array}
-\usepackage{tikz}
-\usepackage{relsize}
-\usepackage{float}
-
-% ----------------- Layout -----------------
-\pagestyle{fancy}
-\fancyhead[L]{Wissenschaftliche Vertiefung}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-
-% ----------------- Dokument -----------------
 \begin{document}
 
+\pagestyle{empty}
+\input{titlepage}
+
+\newpage
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+\listoffigures
+\newpage
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% Inhaltskapitel
 \input{titlepage}
 \tableofcontents
 \newpage
@@ -36,5 +28,8 @@
 
 
 \input{conclusion}
+
+\newpage
+\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
 
 \end{document}

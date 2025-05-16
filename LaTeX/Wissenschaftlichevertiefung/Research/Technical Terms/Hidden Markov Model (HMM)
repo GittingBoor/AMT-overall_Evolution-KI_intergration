@@ -1,0 +1,20 @@
+Was ist ein HMM (Hidden Markov Model)?
+
+Ein HMM ist ein statistisches Modell, das eine Abfolge von „versteckten Zuständen“ beschreibt,
+die nicht direkt beobachtbar sind, aber indirekt über beobachtbare Daten (z.B. Audio) erschlossen werden können.
+In der Musiktranskription ist:
+
+Versteckter Zustand = welche Note (z.B. C4, D#4, …) gerade gespielt wird
+Beobachtung = Merkmale aus dem Audiosignal (z.B. Spektraldaten, MFCCs)
+
+
+HMM in der Klavier-Transkription
+Ein HMM-Modell wird so aufgebaut:
+
+Zustände: Jede mögliche Note (z.B. 88 Zustände für die 88 Klaviertasten) oder Kombinationen mehrerer Noten (Akkorde).
+Übergangswahrscheinlichkeiten: Wahrscheinlichkeit, mit der von einer Note zur nächsten gewechselt wird (z.B. dass nach C4 oft D4 kommt).
+Emissionswahrscheinlichkeiten: Wie wahrscheinlich ein bestimmtes Audiosignal ist, wenn eine bestimmte Note gespielt wird.
+
+Dann wird z.B. mit dem Viterbi-Algorithmus die wahrscheinlichste Abfolge von Noten (Zuständen) berechnet,
+die zu einem gegebenen Audiosignal passt.
+

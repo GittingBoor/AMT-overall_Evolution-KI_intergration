@@ -1,0 +1,11 @@
+On the Transcription of Musical Sound by Computer
+Link: https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf#:~:text=An%20examination%20of%20the%20problem,commonly%20taught%20to%20freshman%20and
+James A. Moorer versucht, mit einem der ersten Ansätze, Musik mit einem Computer zu Transkripten. [1977]
+
+Automatic Transcription of Simple Polyphonic Music: Robust Front End Processing
+Link: https://www.media.mit.edu/publications/automatic-transcription-of-simple-polyphonic-music-robust-front-end-processing-2/#:~:text=It%20is%20only%20very%20recently,lag%20correlogram%20of%20%5BEl
+(Link führt zu einer Seite bei der man die TR-399.pdf downloaden kann, welche das folgende Thema bespricht)
+Keith D. Martin (MIT) erstellt als einer der ersten ein System,
+welches polyphone Musik (mehrere Noten gleichzeitig),
+mit mehr als zwei Stimmen erkennen kann und diese mit Sinuskurvenanalysen musikalischer Eigenschaften voneinander trennen kann.
+Dieses physiologische inspirierte Verfahren soll dem menschlichen Hören mehr ähneln. [1996]

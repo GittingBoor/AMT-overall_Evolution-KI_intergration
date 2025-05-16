@@ -1,0 +1,15 @@
+ADSR-Kurven sind ein Konzept aus der Audiotechnik und Sound-Synthese,
+das den zeitlichen Verlauf der Lautstärke eines Tons beschreibt.
+Das Kürzel steht für:
+
+Attack (Anschwellen)
+Decay (Abklingen)
+Sustain (Halten)
+Release (Loslassen)
+
+ADSR im Detail:
+Attack – Die Zeit, die ein Ton braucht, um von Stille auf seine maximale Lautstärke anzusteigen, nachdem eine Taste gedrückt wurde.
+Decay – Die Zeit, in der der Ton nach dem Erreichen der Maximallautstärke auf das Sustain-Niveau absinkt.
+Sustain – Das Lautstärkeniveau, das der Ton während des Haltens der Taste beibehält. Anders als Attack/Decay/Release ist Sustain keine Zeitangabe, sondern ein Lautstärkewert.
+Release – Die Zeit, die der Ton braucht, um nach dem Loslassen der Taste vollständig zu verklingen.
+
