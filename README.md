@@ -1,2 +1,2 @@
 # Automatic-Music-Transcription
-A AI which gets an Audiofile as input and gives back music notes as an output
+Automatic Music Transcription (AMT) is the process of converting an audio recording of music into a symbolic representation such as sheet music or MIDI, identifying pitch, timing, and instrumentation. It aims to automatically extract musical elements like notes, rhythms, and dynamics from complex audio signals, often using machine learning or signal processing techniques.
