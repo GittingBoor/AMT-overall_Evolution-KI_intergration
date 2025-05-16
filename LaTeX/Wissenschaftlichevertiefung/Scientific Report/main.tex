@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+
+% ----------------- Packages -----------------
+\usepackage[margin=2.5cm,headheight=14.5pt]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{blindtext}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{relsize}
+\usepackage{float}
+
+% ----------------- Layout -----------------
+\pagestyle{fancy}
+\fancyhead[L]{Wissenschaftliche Vertiefung}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+% ----------------- Dokument -----------------
+\begin{document}
+
+\input{titlepage}
+\tableofcontents
+\newpage
+
+\input{introduction}
+\input{history}
+
+
+\input{conclusion}
+
+\end{document}
