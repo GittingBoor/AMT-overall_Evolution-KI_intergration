@@ -1,11 +1,99 @@
-\usepackage{biblatex}\input{preamble} % ← hier wird alles eingebunden
+\documentclass[11pt, a4paper, twoside]{article}
+
+% --- Packages ---
+
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,inner=2.75cm,outer=2.75cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{acronym}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{parskip}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% --- Fonts ---
+
+\renewcommand{\rmdefault}{ptm}  % Times New Roman
+\renewcommand{\sfdefault}{phv}  % Helvetica
+
+% --- Code Listing Style ---
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    language=Python
+}
+
+\lstset{
+    style=mystyle,
+    literate=
+        {Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1
+        {ü}{{\"u}}1 {ä}{{\"a}}1 {ö}{{\"o}}1 {~}{{\textasciitilde}}1
+}
+
+\addbibresource{literatur.bib}
+
+% --- Header and Footer ---
+
+\pagestyle{fancy}
+\fancyhf{ }
+\lhead{Hochschule Düsseldorf}
+\cfoot{\thepage}
+\rhead{878007}
+\fancyhead[LE]{Hochschule Düsseldorf}
+\fancyhead[RO]{878007}
+\fancyhead[LO]{Hochschule Düsseldorf}
+\fancyhead[RE]{878007}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\raggedbottom
+
+% --- Document Start ---
 
 \begin{document}
+
+% --- Title Page ---
 
 \pagestyle{empty}
 \input{titlepage}
 
 \newpage
+
+% --- Table of Contents and Lists ---
 
 \setcounter{tocdepth}{3}
 \tableofcontents
@@ -14,22 +102,22 @@
 \listoffigures
 \newpage
 
+% --- Main Content ---
+
 \pagestyle{fancy}
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-% Inhaltskapitel
-\input{titlepage}
-\tableofcontents
-\newpage
-
 \input{introduction}
 \input{history}
 
-
 \input{conclusion}
+
+% --- Bibliography ---
 
 \newpage
 \printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+
+% --- Document End ---
 
 \end{document}
