@@ -1,0 +1,14 @@
+Onset Detection == Einschwingpunkt einer Note
+
+Der bestimmte Zeitpunkt,
+wenn ein bestimmter Ton gespielt wird.
+
+Das ist wichtig für:
+    zeitlich korrekte Erkennung
+    Beat Tracking (Rhythmus / Tempo)
+    Audio-Effekte (Slicing Samplen)
+
+Wie funktioniert es:
+    Energieverlauf (plötzlicher Lautstärke-Sprung)
+    Spektrum (neue Frequenzkomponente)
+    Phase (Verschiebung in der Wellenstruktur
