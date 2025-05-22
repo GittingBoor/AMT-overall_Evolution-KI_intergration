@@ -1,0 +1,5 @@
+Short-Time Fourier Transform:
+
+Technik um zu analysieren, welche Frequenzen in einem Audiosignal zu welchem Zeitpunkt vorkommen.
+Dadurch bekommt man ein Spektrogramm, welches Zeit, Frequenz und Amplitude (Lautstärke/Intensität) zurückgibt.
+

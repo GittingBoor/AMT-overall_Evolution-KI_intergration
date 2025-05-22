@@ -1,0 +1,6 @@
+Support Vector Machines:
+
+Mit Support Vector Machines wird auf Hyperebenen (mehr Dimensional) eine Trennebene gesponnen,
+zwischen zwei Punkten mit maximalen Abstand.
+
+Dadurch kann man in dem Beispiel der Musik verschiedene Instrumente voneinander besser trennen.

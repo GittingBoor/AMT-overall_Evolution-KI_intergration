@@ -1,0 +1,7 @@
+Posteriogramm:
+
+Visualisiert die Wahrscheinlichkeiten, das eine bestimmte Note (MIDI-Pitches)
+zu einem bestimmten Zeitpunkt abegspielt wird.
+
+Kann als Output von neuronalen Netzen genutz werden,
+um danach eine edngültige Notenentscheidung festzulegen.

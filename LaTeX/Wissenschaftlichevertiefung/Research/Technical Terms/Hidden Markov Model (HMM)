@@ -18,3 +18,20 @@ Emissionswahrscheinlichkeiten: Wie wahrscheinlich ein bestimmtes Audiosignal ist
 Dann wird z.B. mit dem Viterbi-Algorithmus die wahrscheinlichste Abfolge von Noten (Zuständen) berechnet,
 die zu einem gegebenen Audiosignal passt.
 
+
+Hierachische HMMs:
+Diese können Zustände erhalten, welche wierdem selbst ganze HMMs enthalten.
+
+| Merkmal           | Klassisches HMM                | Hierarchisches HMM (HHMM)         |
+| ----------------- | ------------------------------ | --------------------------------- |
+| Struktur          | Flach                          | Verschachtelt / mehrschichtig     |
+| Zustandsübergänge | Direkt zwischen Basiszuständen | Auch zwischen „Sub-HMMs“          |
+| Beobachtungen     | Jeder Zustand erzeugt eine     | Nur unterste Zustände erzeugen    |
+| Ausdruckskraft    | Begrenzt                       | Hoch (mehrstufige Abhängigkeiten) |
+| Rechenaufwand     | Gering                         | Höher                             |
+
+| Anwendungsebene   | HMM                   | HHMM                                        |
+| ----------------- | --------------------- | ------------------------------------------- |
+| Melodielinie      | Folge einzelner Noten | Eine Phrase (Super-State) → Folge von Noten |
+| Rhythmuserkennung | Einzelne Schläge      | Taktstruktur mit Notenpositionen            |
+| Polyphone Musik   | Eine Stimme pro HMM   | Mehrere Stimmen innerhalb eines HHMM        |
