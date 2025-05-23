@@ -1,0 +1,23 @@
+Spektrogramm:
+
+visuelle Darstellung des zeitlichen Verlaufs des
+Frequenzspektrums eines Signals.
+
+In der Musik:
+
+Desto Heller die bestimmte Frequenz zu einer Zeit t
+ist, desto wahrscheinlicher ist es das dieser bestimmte
+Ton zu der Zeit gespielt wurde.
+
+
+Log-Mel-Spektrogramm:
+
+Das menschliche Gehör kann 200-400Hz feiner als
+5000-5200Hz wahrnehmen. Zudem sind Lautstärke unterschiede
+meist logarithmisch entscheidender als linear.
+
+Mel-System -> orientiert sich an die Tonwahrnehmung von Menschen.
+Log -> Ohr nimmt Lautstärke logarithmisch wahr.
+
+Log-Mel-Spek. sind besser geeignet, da diese den Maschinen
+eher beibringen wie wir Menschen zu hören.

@@ -1,0 +1,19 @@
+MIDI:
+
+Musical Instrument Digital Interface
+ist ein Standard zur digitalen Kommunikation zwischen
+elektronischen Musikinstrumenten, Computern und anderen Geräten.
+
+Es ist ein Dateprotokoll welches beschreibt:
+- Welche Note gespielt wird (z.B. C4),
+- Wann sie beginnt (Onset-Zeit),
+- Wie laut sie gespielt wird (Velocity),
+- Wann sie aufhört (Note-Off),
+- und evtl. Instrumente, Effekte, Kontrollinformationen usw.
+
+JSON Beispiel:
+[
+  {"note": "C4", "start": 0.0, "end": 0.5, "velocity": 90},
+  {"note": "E4", "start": 0.5, "end": 1.0, "velocity": 85},
+  {"note": "G4", "start": 1.0, "end": 1.5, "velocity": 80}
+]
