@@ -1,0 +1,5 @@
+Constant-Q Transform:
+
+Eine Darstellung der Noten in einem Spektrogramm,
+wie bei einem STFT, nur das hier die Werte
+logarithmisch angepasst an das Gehör der Menschen sind.

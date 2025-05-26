@@ -1,0 +1,13 @@
+Sinusmodelle:
+
+Ansatz zur Klangsynthese und -analyse,
+um ein Audiosignal als Summe vieler
+Sinusschwingungen zu modellieren.
+
+In AMT kann man damit einzelne Teiltöne
+eines Instruments spektral exakt verfolgen.
+
+Beispiel C4-Ton (261.63Hz) + 2 Obertöne:
+x(t) = 0.8 * sin(2π * 261.63 * t)   (Grundton C4)
+     + 0.3 * sin(2π * 523.25 * t)   (1. Oberton = C5)
+     + 0.2 * sin(2π * 784.88 * t)   (2. Oberton = G5)

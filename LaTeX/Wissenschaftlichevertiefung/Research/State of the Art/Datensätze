@@ -1,0 +1,7 @@
+| Quelle                                 | Beschreibung                                                                                                                     |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **MAESTRO**                            | 200+ Stunden Klaviermusik (Yamaha Disklavier), Audio + synchrones MIDI [(Link)](https://magenta.tensorflow.org/datasets/maestro) |
+| **MAPS**                               | Klavierdatenbank: Synthesizer- und echte Klavieraufnahmen mit MIDI [(Link)](https://zenodo.org/record/1299396)                   |
+| **MusicNet**                           | Klassische Musik mit Audio + MIDI-Alignments [(Link)](https://homes.cs.washington.edu/~thickstn/musicnet.html)                   |
+| **Slakh2100**                          | Mehrspurige Musikstücke mit Audio & Synth-MIDI, genreübergreifend [(Link)](https://zenodo.org/record/3371780)                    |
+| **Yamaha e-Piano Competition Dataset** | Echtes Spiel mit MIDI-Ausgabe, jedoch nicht öffentlich frei verfügbar                                                            |

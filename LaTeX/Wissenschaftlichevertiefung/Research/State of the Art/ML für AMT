@@ -1,0 +1,19 @@
+Warum maschinelles Lernen für AMT besonders
+vielversprechend ist:
+
+Komplexe Mustererkennung:
+Musik ist hochdimensional, mehrdeutig und kontextabhängig
+ML-Modelle (z.B. neuronale Netze) sind gut darin, nichtlineare Muster in großen Datenräumen zu erkennen
+
+Lernen aus Daten statt Regeln:
+Statt Regeln hart zu codieren („Wenn Ton A, dann...“) kann ML aus echten Musikbeispielen lernen,
+was z.B. wie ein Akkord oder eine Melodie aussieht
+
+Flexibilität:
+ML kann unterschiedliche Musikstile, Instrumente,
+Spielweisen automatisch adaptieren – klassische Algorithmen müssten für jeden Fall manuell angepasst werden
+
+Skalierbarkeit:
+Mehr Daten = oft bessere Performance (z.B. bei Deep Learning)
+Dadurch können Systeme verbessert werden,
+ohne dass man sie von Grund auf neu schreiben muss
