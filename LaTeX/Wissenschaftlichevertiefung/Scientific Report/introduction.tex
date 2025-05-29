@@ -6,7 +6,7 @@ Während etwa 2000 bis 0 v.Chr. musikalische Werke meist mündlich überliefert 
 entwickelte sich in diesem Zeitraum auch eine Notenschrift.
 Diese Notenschrift ermöglichte es, Musikstücke einfacher zu erlernen und einem breiteren Publikum zugänglich zu machen.
 Durch die Digitalisierung erhielten Digital Audio Workstations zunehmend Einzug in die Musikproduktion,
-wodurch Notenblätter oft nicht mehr notwendig waren und es weniger bedarf gab diese Lieder zu übersetzen in Notenschrift.
+wodurch Notenblätter oft nicht mehr notwendig waren und es weniger Bedarf gab diese Lieder zu übersetzen in Notenschrift.
 
 An dieser Stelle setzt Automatic Music Transcription (AMT) an.
 AMT ist ein Prozess, bei dem eine Audiospur als Input gegeben wird und diese durch Computerprogramme
@@ -20,28 +20,90 @@ in Notenschrift überträgt würde diese Aufgabe eine Software für einen erledi
 Dieses Ziel ist jedoch schwer zu erreichen,
 da Musik mehrdimensional ist durch zum Beispiel Zeit, Tonhöhe und Polyphonie.
 Vor allem bei polyphonen Musikstücken haben herkömmliche Algorithmen viele Schwierigkeiten.
-In diesen fällen müssen sie nämlich viele verschiedene Stimmen gleichzeitig analysieren und
+In diesen Fällen müssen sie nämlich viele verschiedene Stimmen gleichzeitig analysieren und
 im späteren auch die jeweiligen Töne voneinander differenzieren und eindeutig einem Instrument zuordnen.
 Ein weiteres Problem ist die Individualität jedes Musikstückes.
 In realen Aufnahmen können leichtes Rauschen,
 kleine Spielfehler oder stilistische Mittel wie Vibrato auftreten,
-die je nach Interpret unterschiedlich klingen.
+die je nach Interpreten unterschiedlich klingen.
 Zudem sind die meisten AMT-Modelle auf westliche Tonleiter trainiert.
-Dies kann zu Problemen führen wenn man zum Beispiel 
+Dies kann zu Problemen führen, wenn man zum Beispiel
 arabische oder indische Musikstücke transkribieren möchte.
 
-\subsection{AMT und Künstliche Intelligenz}
-Um diese vielfalt zu bewältigen ist ein neuer, oft genutzter Ansatz,
-die nutzung von Künstlicher Intelligenz und Machine Learning.
-Im gegensatz zu Algorithmen ist KI flexibler und kann sich besser einstellen auf
-kleine Abweichungen in realitätsnahen Audioaufnahmen von Musikstücken.
-...
+\subsection{AMT und Künstliche Intelligenz,}
+Um diese Vielfalt zu bewältigen, ist ein neuer, oft genutzter Ansatz,
+die Nutzung von künstlicher Intelligenz und Machine Learning.
+
+Im Gegensatz zu Algorithmen ist KI flexibler und kann sich besser
+einstellen auf kleine Abweichungen in Musikstücken.
+In vorherigen Modellen wurden meist direkt elektronische
+Audioaufnahmen oder MIDI-Dateien verwendet, da realitätsnahe Audioaufnahmen
+meist zu viele Störfaktoren haben.         % Hier Quelle Angeben wo keine KI genutzt wurde und keine realen Audiodateien
+Durch KI kann man nun mehr auf reale Audioaufnahmen zurückgreifen
+und das Modell somit besser anpassen für einen realistischen Gebrauch.
+
+Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
+Das neuronale Netz einer KI ist mehrdimensional aufgebaut, wodurch dieses verschiedene Patterns,
+Stimmen oder andere Eigenschaften besser zuordnen und erlernen kann.     % Hier Quelle einfügen die Mehrdimensionalität von KI im Kontext AMT eingeht
+Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
+explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
+Sie folgen nur dem, was zuvor vom Menschen fest einprogrammiert wurde.
+
+Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.
+Hier werden meistens Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN) benutzt. % Hier Quellen die CNN oder RNN benutzen
+Da Musik keine definierbaren richtigen oder falschen Musikstücke, Notenabfolgen oder anderes hat,
+kann man keine Reinforcement Learning KI-Modelle nutzen.
+Dementsprechend braucht man auch ein zuverlässiges Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien.
+
+RNNs sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
+In der Musik werden viele Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
+Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
+um die darauffolgenden Noten besser einordnen zu können.
+So können Töne einfacher bestimmten Akkorden zugeordnet werden oder der Rhythmus des Musikstückes erkannt werden.  % Quelle die das besagt
+
+CNNs hingegen können gut räumliche Strukturen erkennen.
+Das hiflt uns bei der Analyse von Spektrogrammen.
+Meist werden die verschiedenen Frequenzen der Noten, die gespielt wurden,
+nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben. % Hier ein Beispiel Spektrogramm Bild einfügen
+Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt werden,
+die dann einem bestimmten Instrument zugeordnet werden können.
+Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrumente voneinander zu differenzieren. % Quelle die das besagt
+
+RNNs und CNNs werden auch häufig kombiniert in AMT-Modellen.
+Meist in folgender Reihenfolge:
+\begin{enumerate}
+    \item \textbf{CNN:} Extrahiert folgende Merkmale aus dem Spektrogramm:
+    \begin{itemize}
+        \item Frequenzverteilungen und spektrale Muster
+        \item Tonhöhenlage und damit verbundene Obertöne
+        \item Klangfarbe einzelner Instrumente
+        \item Energieverteilung, unter anderem zur Erkennung von Toneinsätzen
+        \item Harmonische Strukturen wie Akkordfolgen
+    \end{itemize}
+
+    \item \textbf{RNN:} Verarbeitet auf Basis dieser Merkmale die zeitliche Abfolge und erkennt dabei folgende Eigenschaften:
+    \begin{itemize}
+        \item Reihenfolge und Übergänge musikalischer Ereignisse
+        \item Beginn und Ende einzelner Töne zur Bestimmung der Notendauer
+        \item Rhythmische Muster und zeitliche Gruppierungen
+        \item Musikalische Phrasen mit zusammenhängender Struktur
+        \item Wiederholungen, Themen oder längere Abhängigkeiten im Verlauf
+    \end{itemize}
+
+    \item \textbf{Output:} Gibt das transkribierte Musikstück in strukturierter Form aus:
+    \begin{itemize}
+        \item Als MIDI-Datei mit exakten Noteninformationen
+        \item Oder als Transkription in standardisierter Notenschrift
+    \end{itemize}
+\end{enumerate}
+
+
 
 \subsection{praktische Anwendungsfelder und Vorteile von AMT}
 AMT kann auch bei vielen anderen Problemen helfen
 oder in vielen Bereichen Quality-of-Life-Changes bringen.
 Zum einen kann der Musikunterricht spannender und interaktiver gestaltet werden.
-Es gibt eine breitere Auswahl von Musikstücken die man den Schülern anbieten kann,
+Es gibt eine breitere Auswahl von Musikstücken, die man den Schülern anbieten kann,
 wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim lernen haben könnten.
 Zudem kann man die gespielten Musikstücke der Schüler direkt beim Spielen transkribieren und gezielt erkennen,
 wo der jeweilige Schüler noch Verbesserungsmöglichkeiten hat.

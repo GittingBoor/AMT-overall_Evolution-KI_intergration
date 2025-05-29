@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  28 MAY 2025 18:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  29 MAY 2025 15:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1116,7 +1116,8 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 86
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-No file main.aux.
+(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\out\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
@@ -1137,6 +1138,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
 LaTeX Font Info:    ... okay on input line 86.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
 LaTeX Font Info:    ... okay on input line 86.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1249,63 +1251,71 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 86.
 Package biblatex Info: Reference segment=0 on input line 86.
 Package hyperref Info: Link coloring OFF on input line 86.
+
+(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\out\main.out)
+(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\out\main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c@lstlisting=\count487
-(titlepage.tex
-
-titlepage.tex:1: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage
-               {graphicx}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+ (titlepage.tex
+<Graphics/HSDLogo.png, id=38, 274.77657pt x 146.79843pt>
+File: Graphics/HSDLogo.png Graphic file (type png)
+<use Graphics/HSDLogo.png>
+Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 8.
+(pdftex.def)             Requested size: 138.91902pt x 74.21886pt.
+<Graphics/FacultyOfMedia.png, id=40, 264.99pt x 195.73125pt>
+File: Graphics/FacultyOfMedia.png Graphic file (type png)
+<use Graphics/FacultyOfMedia.png>
+Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
+(pdftex.def)             Requested size: 138.91902pt x 102.6111pt.
 
 
 [1
 
 {C:/Users/bened/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bene
-d/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<Graphics/HSDLogo.png, id=12, 274.77657pt x 146.79843pt>
-File: Graphics/HSDLogo.png Graphic file (type png)
-<use Graphics/HSDLogo.png>
-Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 9.
-(pdftex.def)             Requested size: 138.91902pt x 74.21886pt.
-File: Graphics/HSDLogo.png Graphic file (type png)
-<use Graphics/HSDLogo.png>
-Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 14.
-(pdftex.def)             Requested size: 138.91902pt x 74.21886pt.
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.58 \end{titlepage}
-                     [1 <./Graphics/HSDLogo.png>])
-No file main.toc.
+d/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Graphics/HSDLog
+o.png> <./Graphics/FacultyOfMedia.png>])
+(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\out\main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
 [2]
-No file main.lof.
+(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\out\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
 [3] (introduction.tex
-Overfull \hbox (1.15347pt too wide) in paragraph at lines 62--64
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 
+      [1]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
+7.
+
+(C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Overfull \hbox (1.15347pt too wide) in paragraph at lines 124--126
 \T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
 lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
  []
@@ -1320,12 +1330,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \section
-            {Geschichte} [1]) (conclusion.tex)
+            {Geschichte} [2]) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1335,12 +1345,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.117 \newpage
-               [2]
+               [3]
 
 LaTeX Warning: Empty bibliography on input line 118.
 
@@ -1351,33 +1361,18 @@ sic-Transcription\out\main.aux)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  87B78ECADC0480D583BCB4D33AE7E225;1490.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 99D4DA7F76BBB73A3D5AE3606ACFC46E;1495.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35637 strings out of 473523
- 684792 string characters out of 5714630
- 1511798 words of memory out of 5000000
- 58333 multiletter control sequences out of 15000+600000
- 591715 words of font info for 66 fonts, out of 8000000 for 9000
+ 35704 strings out of 473523
+ 686952 string characters out of 5714630
+ 1512835 words of memory out of 5000000
+ 58382 multiletter control sequences out of 15000+600000
+ 594832 words of font info for 69 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,11n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
@@ -1385,9 +1380,9 @@ b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pf
 b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
 Output written on "C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
-itHub\Automatic-Music-Transcription\out\main.pdf" (6 pages, 71820 bytes).
+itHub\Automatic-Music-Transcription\out\main.pdf" (6 pages, 117453 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
+ 87 words of extra memory for PDF output out of 10000 (max. 10000000)
 
