@@ -43,23 +43,26 @@ Durch KI kann man nun mehr auf reale Audioaufnahmen zurückgreifen
 und das Modell somit besser anpassen für einen realistischen Gebrauch.
 
 Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
-Das neuronale Netz einer KI ist mehrdimensional aufgebaut, wodurch dieses verschiedene Patterns,
-Stimmen oder andere Eigenschaften besser zuordnen und erlernen kann.     % Hier Quelle einfügen die Mehrdimensionalität von KI im Kontext AMT eingeht
+Neuronale Netze besitzen eine mehrdimensionale Struktur, die es ihnen ermöglicht,
+verschiedene Muster, Stimmen und Eigenschaften zu erlernen.    % Hier Quelle einfügen die Mehrdimensionalität von KI im Kontext AMT eingeht
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
 Sie folgen nur dem, was zuvor vom Menschen fest einprogrammiert wurde.
 
 Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.
-Hier werden meistens Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN) benutzt. % Hier Quellen die CNN oder RNN benutzen
-Da Musik keine definierbaren richtigen oder falschen Musikstücke, Notenabfolgen oder anderes hat,
-kann man keine Reinforcement Learning KI-Modelle nutzen.
+Hier werden meistens Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN),
+als einzelne Module, benutzt.
+\cite{Boeck2012}
+Diese Module bilden keine eigenständigen KIs, sondern lassen sich flexibel innerhalb eines Systems kombinieren.
+Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz von Reinforcement Learning nicht sinnvoll.
 Dementsprechend braucht man auch ein zuverlässiges Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien.
 
 RNNs sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
 In der Musik werden viele Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
 Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
 um die darauffolgenden Noten besser einordnen zu können.
-So können Töne einfacher bestimmten Akkorden zugeordnet werden oder der Rhythmus des Musikstückes erkannt werden.  % Quelle die das besagt
+So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des Stücks analysieren.
+\cite{Boeck2012}
 
 CNNs hingegen können gut räumliche Strukturen erkennen.
 Das hiflt uns bei der Analyse von Spektrogrammen.
@@ -93,11 +96,15 @@ Meist in folgender Reihenfolge:
     \item \textbf{Output:} Gibt das transkribierte Musikstück in strukturierter Form aus:
     \begin{itemize}
         \item Als MIDI-Datei mit exakten Noteninformationen
-        \item Oder als Transkription in standardisierter Notenschrift
     \end{itemize}
 \end{enumerate}
+Nachdem man die KI diesesen Prozess durchlaufen hat kann man mit einem eigenen oder externen Programm
+diese MIDI-Dateien zu standardisierter Notenschrift transkribieren.
 
+Es gibt aber auch Projekte, wo nur ein bestimmter Teil dieser Kette mit KI-Modulen realisiert wird,
+oder andere KI-Module verwendet werden.
 
+% Hier Auflistung von alternativen für RNNs und CNNs auflisten!!!
 
 \subsection{praktische Anwendungsfelder und Vorteile von AMT}
 AMT kann auch bei vielen anderen Problemen helfen
