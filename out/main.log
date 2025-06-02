@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  29 MAY 2025 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  2 JUN 2025 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1295,6 +1295,13 @@ sic-Transcription\out\main.lof)
 
 [3] (introduction.tex
 
+LaTeX Warning: Citation 'Boeck2012' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation 'Boeck2012' on page 1 undefined on input line 65.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1307,20 +1314,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 
+l.66 
       [1]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
-7.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+0.
 
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (1.15347pt too wide) in paragraph at lines 124--126
-\T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
-lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
- []
-
-) (history.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1334,8 +1335,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \section
-            {Geschichte} [2]) (conclusion.tex)
+l.129 
+       [2]
+Overfull \hbox (1.15347pt too wide) in paragraph at lines 131--133
+\T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
+lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
+ []
+
+) (history.tex) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1361,17 +1368,26 @@ sic-Transcription\out\main.aux)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 99D4DA7F76BBB73A3D5AE3606ACFC46E;1495.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35704 strings out of 473523
- 686952 string characters out of 5714630
+ 35891 strings out of 473523
+ 690700 string characters out of 5714630
  1512835 words of memory out of 5000000
- 58382 multiletter control sequences out of 15000+600000
+ 58569 multiletter control sequences out of 15000+600000
  594832 words of font info for 69 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,11n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1380,7 +1396,7 @@ b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pf
 b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
 fb>
 Output written on "C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
-itHub\Automatic-Music-Transcription\out\main.pdf" (6 pages, 117453 bytes).
+itHub\Automatic-Music-Transcription\out\main.pdf" (6 pages, 118350 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
