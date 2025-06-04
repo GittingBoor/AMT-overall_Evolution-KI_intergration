@@ -1,2 +1,53 @@
 \section{Geschichte}
-Geschichte von ding hier musik und so
+Einer der ersten Papers über Automatic Music Transcription wurde von James A. Moorer im Jahr 1977 geschrieben.
+\cite{Moorer1977}
+In diesem beschreibt Moorer seinen Ansatz, polyphone Musik Audiospuren
+direkt über Computerprogramme in Notenschrift zu übertragen.
+Während dieses Prozesses fallen ihm schon sehr viele schwierigkeiten auf, die auch in späteren Papern und Arbeiten
+eine ausschlaggebende Rolle spielen werden.
+Eines dieser Probleme wird von ihm als das \("\)Cocktail-Party-Problem\("\) bezeichnet.
+Dieses stellt die Schwierigkeit dar, auf einer Party bestimmten Stimmen zu folgen, während viele verschiedene Stimmen
+gleichzeitig erklingen.
+Das gleiche Problem liegt in der Noten transkription.
+Die meisten Musikstücke haben mehrere Instrumente, welche gleichzeitig spielen.
+Öfter gibt es auch Musikstücke wo es für ein Instrument, wie zum Beispiel Violine, mehrere verschiedene Stimmen gibt.
+Dies erschwert die Zuordnung bestimmter Noten zu einer gewählten Stimme.
+Schon viele Menschen scheitern deshalb daran große Musikstücke richtig zu transckribieren.
+Noch schwieriger wird es hier für Computerprogramme.
+Anfangs identifizieren diese bestimmte Töne anhand der Frequenz des Tons.
+Leider reicht das, wie Moorer feststellt, nicht aus um genaustens zu bestimmen,
+welche Töne genau momentan gespielt werden.
+Jeder Ton hat Obertöne.
+Diese Obertöne sind jeweils das Vielfache von dem Grundton, den man spielt.
+Heißt, wenn ich auf einem Klavier den Ton C3 mit 130,81 Hz spiele dann hat dieser
+die Obertöne C4 (261,62 Hz), G4 (392,42 Hz) usw.
+Wenn man nur C3 spielt erklingen für das Computerprogramm auch die jeweiligen Obertöne,
+was man Frequenzüberlagerung nennt.
+Diese Frequenzüberlagerung sorgt dafür, das zum Beispiel ein Klavier anders klingt als eine Violine.
+Daraus resultiert dann die Klangfarbe (Timbre) eines bestimmten Instrumentes.
+% Hier Quelle einfügen die sich mit Frequenzüberlagerung und Klangfarbe auseinandersetzt
+Leider konnte Moorer zu dieser Zeit noch nicht die Klangfarbe eines Instruments erkennen.
+Er konnte auch noch nicht das Problem der Obertöne lösen,
+da die damaligen Algorithmen und Verfahren noch nicht in der Lage waren die Grundfrequenz von den Obertönen zu trennen,
+weshalb er sich ausschließlich auf zweistimmige polyphone Musikstücke fokussierte.
+Ein weiteres Problem war Rauschen in realistischen Audiospuren und
+Stilistische mittel in der Musik, wie zum Beispiel Vibrato.
+In real aufgenommenen Audiospuren gibt es immer ein gewisses Hintergrundrauschen.
+% Quelle die sich mit Rauschen in Audiospuren befasst
+Dieses kann von einem Computerprogramm auch als Note erkannt werden oder verhindern, das bestimmte Noten
+richtig vom Computerprogramm erkannt werden.
+Moorer hat ein Musikstück analog aufgenommen und dieses dann mit einem 14-bit converter digitalisiert.
+Dadurch war das Rauschen nicht weg, aber da er das Musikstück selber aufgenommen hat und dieses convertiert hat
+sorgte es für insgesamt geringeres Rauschen.
+Zudem konnte er so die Musiker davon abhalten bestimmte Stilistische mittel zu verwenden,
+um bessere Daten zur Transkripition zu erhalten.
+Stilistische mittel, wie Vibrato, konnten nicht genutzt werden,
+da diese eine kleine aber kontinuierliche Veränderung der Frequenz verursachen.
+Dadurch kann das Computerprogramm nicht korrekt erkennen, das eigentlich eine einzelne Note gespielt wurde.
+Somit war der Onset und Offset der Note komplett falsch.
+Das letzte Problem, was Moorer angesprochen hat, ist das Nutzen von nicht
+harmonischen Instrumenten wie Trommeln oder einem Schlagzeug.
+Diese Instrumente haben keinen eindeutigen Pitch für deren Töne,
+sie sind eher abhängig von Rhythms und Lautstärke.
+
+% Moorer weiterschreiben = unharmonische Instrumente
