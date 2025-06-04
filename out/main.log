@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  2 JUN 2025 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  4 JUN 2025 20:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1261,12 +1261,12 @@ sic-Transcription\out\main.out)
 
 \c@lstlisting=\count487
  (titlepage.tex
-<Graphics/HSDLogo.png, id=38, 274.77657pt x 146.79843pt>
+<Graphics/HSDLogo.png, id=54, 274.77657pt x 146.79843pt>
 File: Graphics/HSDLogo.png Graphic file (type png)
 <use Graphics/HSDLogo.png>
 Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 8.
 (pdftex.def)             Requested size: 138.91902pt x 74.21886pt.
-<Graphics/FacultyOfMedia.png, id=40, 264.99pt x 195.73125pt>
+<Graphics/FacultyOfMedia.png, id=56, 264.99pt x 195.73125pt>
 File: Graphics/FacultyOfMedia.png Graphic file (type png)
 <use Graphics/FacultyOfMedia.png>
 Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
@@ -1342,7 +1342,11 @@ Overfull \hbox (1.15347pt too wide) in paragraph at lines 131--133
 lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
  []
 
-) (history.tex) (conclusion.tex)
+) (history.tex
+
+LaTeX Warning: Citation 'Moorer1977' on page 3 undefined on input line 6.
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1356,8 +1360,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.117 \newpage
-               [3]
+l.62 
+      [3]) (conclusion.tex)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
 
 LaTeX Warning: Empty bibliography on input line 118.
 
@@ -1373,7 +1386,7 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 99D4DA7F76BBB73A3D5AE3606ACFC46E;1495.
+(rerunfilecheck)             Checksum: FE79A33FB0FA7A476D3C92E6A3722204;2518.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1384,21 +1397,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35891 strings out of 473523
- 690700 string characters out of 5714630
- 1512835 words of memory out of 5000000
- 58569 multiletter control sequences out of 15000+600000
- 594832 words of font info for 69 fonts, out of 8000000 for 9000
+ 35905 strings out of 473523
+ 690933 string characters out of 5714630
+ 1512881 words of memory out of 5000000
+ 58579 multiletter control sequences out of 15000+600000
+ 592110 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,11n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
-b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pf
-b><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.p
-fb>
+<C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmri8a.pfb>
 Output written on "C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
-itHub\Automatic-Music-Transcription\out\main.pdf" (6 pages, 118350 bytes).
+itHub\Automatic-Music-Transcription\out\main.pdf" (7 pages, 137134 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,4 +6,8 @@
 \contentsline {subsection}{\numberline {1.4}praktische Anwendungsfelder und Vorteile von AMT}{2}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Motivation und Zielsetzung dieser Arbeit}{3}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Geschichte}{3}{section.2}%
-\contentsline {section}{\numberline {3}Fazit}{3}{section.3}%
+\contentsline {subsection}{\numberline {2.1}Moorer und eines der ersten Musiktranskriptionssysteme}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Grundlegende Probleme bei AMTs}{3}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau von Moorers AMT-Systems}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Umwandlung in Notenschrift}{4}{subsubsection.2.1.3}%
+\contentsline {section}{\numberline {3}Fazit}{4}{section.3}%
