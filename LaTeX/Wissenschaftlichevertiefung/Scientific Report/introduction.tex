@@ -36,15 +36,17 @@ die Nutzung von künstlicher Intelligenz und Machine Learning.
 
 Im Gegensatz zu Algorithmen ist KI flexibler und kann sich besser
 einstellen auf kleine Abweichungen in Musikstücken.
-In vorherigen Modellen wurden meist direkt elektronische
-Audioaufnahmen oder MIDI-Dateien verwendet, da realitätsnahe Audioaufnahmen
-meist zu viele Störfaktoren haben.         % Hier Quelle Angeben wo keine KI genutzt wurde und keine realen Audiodateien
-Durch KI kann man nun mehr auf reale Audioaufnahmen zurückgreifen
-und das Modell somit besser anpassen für einen realistischen Gebrauch.
+Reale Audiospuren besitzen immer eine gewisse Menge Rauschen.
+Das kann bei der AMT für schwierigkeiten sorgen,
+da Algorithmen diese als zusätliche Noten ansehen oder richtige Noten dadurch nicht erkennen könnten.
+KIs können sich besser an diese begenheiten anpassen,
+da Neuronale Netzwerke mit genau diesen unperfekten Audiosignalen trainiert werden können.
+Somit können AMT-Systeme besser angepasst werden für einen realistischen Gebrauch.
 
 Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
 Neuronale Netze besitzen eine mehrdimensionale Struktur, die es ihnen ermöglicht,
-verschiedene Muster, Stimmen und Eigenschaften zu erlernen.    % Hier Quelle einfügen die Mehrdimensionalität von KI im Kontext AMT eingeht
+verschiedene Muster, Stimmen und Eigenschaften zu erlernen.
+\cite{graves2007multi}
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
 Sie folgen nur dem, was zuvor vom Menschen fest einprogrammiert wurde.
@@ -67,10 +69,12 @@ So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des 
 CNNs hingegen können gut räumliche Strukturen erkennen.
 Das hiflt uns bei der Analyse von Spektrogrammen.
 Meist werden die verschiedenen Frequenzen der Noten, die gespielt wurden,
-nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben. % Hier ein Beispiel Spektrogramm Bild einfügen
+nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben.
+% Hier ein Beispiel Spektrogramm Bild einfügen
 Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt werden,
 die dann einem bestimmten Instrument zugeordnet werden können.
-Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrumente voneinander zu differenzieren. % Quelle die das besagt
+Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrumente voneinander zu differenzieren.
+\cite{han2016deep}
 
 RNNs und CNNs werden auch häufig kombiniert in AMT-Modellen.
 Meist in folgender Reihenfolge:

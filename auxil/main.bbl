@@ -1,0 +1,129 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Boeck2012}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=beb91874b5d6ce57d740309f9052d834}{%
+           family={Böck},
+           familyi={B\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=28b51640509c48a3b9b4bbbb0b26c578}{%
+           family={Schedl},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b25816a98a82e1edc7533057fe315283}
+      \strng{fullhash}{b25816a98a82e1edc7533057fe315283}
+      \strng{fullhashraw}{b25816a98a82e1edc7533057fe315283}
+      \strng{bibnamehash}{b25816a98a82e1edc7533057fe315283}
+      \strng{authorbibnamehash}{b25816a98a82e1edc7533057fe315283}
+      \strng{authornamehash}{b25816a98a82e1edc7533057fe315283}
+      \strng{authorfullhash}{b25816a98a82e1edc7533057fe315283}
+      \strng{authorfullhashraw}{b25816a98a82e1edc7533057fe315283}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}
+      \field{note}{Zugriff am 19.05.2025}
+      \field{title}{Polyphonic Piano Note Transcription with Recurrent Neural Networks}
+      \field{year}{2012}
+      \field{pages}{121\bibrangedash 124}
+      \range{pages}{4}
+      \verb{urlraw}
+      \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
+      \endverb
+    \endentry
+    \entry{Smith1983}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc423c1a176caf95bd2fba94ac0a0efa}{%
+           family={dave},
+           familyi={d\bibinitperiod},
+           prefix={smith},
+           prefixi={s\bibinitperiod}}}%
+        {{hash=2935ebdc5b3d2db24518a401de59a815}{%
+           family={chet},
+           familyi={c\bibinitperiod},
+           prefix={wood},
+           prefixi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{fullhash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{fullhashraw}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{bibnamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{authorbibnamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{authornamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{authorfullhash}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \strng{authorfullhashraw}{6ca597e9cda8f3e250f1eab66ee3a29d}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{journal of the audio engineering society}
+      \field{month}{10}
+      \field{number}{1845}
+      \field{title}{the 'usi', or universal synthesizer interface}
+      \field{year}{1981}
+    \endentry
+    \entry{Moorer1977}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bfdf41531a7327672959180a231be555}{%
+           family={Moorer},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bfdf41531a7327672959180a231be555}
+      \strng{fullhash}{bfdf41531a7327672959180a231be555}
+      \strng{fullhashraw}{bfdf41531a7327672959180a231be555}
+      \strng{bibnamehash}{bfdf41531a7327672959180a231be555}
+      \strng{authorbibnamehash}{bfdf41531a7327672959180a231be555}
+      \strng{authornamehash}{bfdf41531a7327672959180a231be555}
+      \strng{authorfullhash}{bfdf41531a7327672959180a231be555}
+      \strng{authorfullhashraw}{bfdf41531a7327672959180a231be555}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Music Journal}
+      \field{note}{Zugriff am 19.05.2025}
+      \field{number}{4}
+      \field{title}{On the Transcription of Musical Sound by Computer}
+      \field{volume}{1}
+      \field{year}{1977}
+      \field{pages}{32\bibrangedash 38}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

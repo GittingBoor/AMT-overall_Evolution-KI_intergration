@@ -30,7 +30,7 @@ Wenn man nur C3 spielt erklingen für das Computerprogramm auch die jeweiligen O
 was man Frequenzüberlagerung nennt.
 Diese Frequenzüberlagerung sorgt dafür, das zum Beispiel ein Klavier anders klingt als eine Violine.
 Daraus resultiert dann die Klangfarbe (Timbre) eines bestimmten Instrumentes.
-% Hier Quelle einfügen die sich mit Frequenzüberlagerung und Klangfarbe auseinandersetzt
+\cite{goswami2013timbre}
 Leider konnte Moorer zu dieser Zeit noch nicht die Klangfarbe eines Instruments erkennen.
 Er konnte auch noch nicht das Problem der Obertöne lösen,
 da die damaligen Algorithmen und Verfahren noch nicht in der Lage waren die Grundfrequenz von den Obertönen zu trennen,
@@ -39,10 +39,10 @@ weshalb er sich ausschließlich auf zweistimmige polyphone Musikstücke fokussie
 Ein weiteres Problem war Rauschen in realistischen Audiospuren und
 Stilistische mittel in der Musik, wie zum Beispiel Vibrato.
 In real aufgenommenen Audiospuren gibt es immer ein gewisses Hintergrundrauschen.
-% Quelle die sich mit Rauschen in Audiospuren befasst
+\cite{iZotope2025noisefloor}
 Dieses kann von einem Computerprogramm auch als Note erkannt werden oder verhindern, das bestimmte Noten
 richtig vom Computerprogramm erkannt werden.
-Moorer hat ein Musikstück analog aufgenommen und dieses dann mit einem 14-bit converter digitalisiert.
+Moorer hat ein Musikstück analog aufgenommen und dieses dann mit einem 14-Bit converter digitalisiert.
 Dadurch war das Rauschen nicht weg, aber da er das Musikstück selber aufgenommen hat und dieses konvertiert hat
 sorgte es für insgesamt geringeres Rauschen.
 Zudem konnte er so die Musiker davon abhalten bestimmte Stilistische mittel zu verwenden,
@@ -58,8 +58,106 @@ Diese Instrumente haben keinen eindeutigen Pitch für deren Töne,
 sie sind eher abhängig von Rhythms und Lautstärke.
 Da Moorers AMT sich jedoch auf das Frequenzmuster der Noten fokussiert,
 können diese Musikinstrumente nicht berücksichtigt werden.
-% Quelle die eingeht auf Unharmonische Instrumente
 
 \subsubsection{Der Aufbau von Moorers AMT-Systems}
+Moorers automatische Musiktranskriptionssystem war eins der ersten seiner Art.
+Viele weiteren AMT-System leiten sich von diesen ab.
 
-\subsubsection{Umwandlung in Notenschrift}
+Zunächst wird ein analoges Musiksignal mit einem 14-Bit converter digitalisiert.
+Dieses digitale Musiksignal wurden dann genutzt um mithilfe von Bandpassfiltern,
+ein Filter welcher nur bestimmte Frequenzen durchlässt,
+bestimmte Frequenzbereiche zu isolieren.
+Dadurch konnte Moorer die gespielte Note und deren Dauer,
+also zugleich auch deren Onset und Offset, feststellen.
+
+Nun mussten die bestimmten Noten einer gewählten Stimme zugeordnet werden.
+Dies wurde durch melodische Gruppierung verwirklicht.
+Zunächst wurden Inseln gebildet.
+Inseln sind Noten die sich Zeitlich vollständig überlappen.
+Wir gehen davon aus das jede Stimme nur eine Note gleichzeitig spielt,
+wodurch diese Noten nicht der gleichen Stimme zugeordnet werden können.
+Als Nächstes müssen die anderen Noten auf verschiedene Kombinationen getestet werden.
+Desto kleiner die Frequenz sprünge je Note sind, desto wahrscheinlicher gehören sie einer Stimme zu.
+Zudem werden Gruppierungen von Noten erstellt, welche am wahrscheinlichsten harmonisch nacheinander gespielt worden.
+
+Zum Schluss ließ Moorer die gewonnenen Daten durch ein Programm laufen, 
+um diese dann mithilfe eines Plotters in eine Notenschrift umzuwandeln.
+
+\subsection{MIDI-Dateien}
+Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
+Zunächst müsste man die gespielten Noten immer wieder zu Notenschrift konvertieren
+und danach diese auch noch in anderen Programmen analysieren, was sehr aufwändig werden würde.
+Eine bessere lösung dafür wäre eine Datenschreibweise,
+bei der alle wichtigen Informationen bestimmter Noten übersichtlich aufgeschrieben sind.
+MIDI-Dateien sind dafür perfekt geeignet.
+
+MIDI ist ein Standartprotokoll zur kommunikation zwischen
+elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizer.
+Dieses Protokoll wurde 1983 erstmals eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie.
+\cite{smith1983midi}
+In MIDI-Dateien werden Daten von Tönen gelagert,
+welche zum Beispiel zuvor von einem elektronischen Instrument gespielt wurden oder durch AMTs erfasst wurden.
+
+In MIDI-Dateien werden folgenden Daten gespeichert:
+\begin{enumerate}
+    \item \textbf{MIDI Header-Chunk (MThd):} Enthält grundlegende Informationen zur Struktur der Datei:
+    \begin{itemize}
+        \item Formattyp (0 = eine Spur, 1 = mehrere synchrone Spuren, 2 = unabhängige Spuren)
+        \item Anzahl der folgenden MTrk-Blöcke (Tracks)
+        \item Zeitauflösung (Ticks pro Viertelnote)
+    \end{itemize}
+
+    \item \textbf{MIDI Track-Chunks (MTrk):} Jede Spur enthält eine zeitlich sortierte Liste von MIDI-Events:
+    \begin{itemize}
+        \item \textbf{MIDI-Events:}
+        \begin{itemize}
+            \item Note Onset / Offset
+            \item Control Change (Lautstärke)
+            \item Program Change (gibt das spielende Instrument an)
+            \item Pitch Bend (verändert die Tonhöhe)
+            \item Aftertouch / Polyphonic Key Pressure (Druckstärke pro Taste)
+        \end{itemize}
+        \item \textbf{Meta-Events:}
+        \begin{itemize}
+            \item Set Tempo (Tempo in Mikrosekunden pro Viertelnote)
+            \item Time Signature (Taktart zum Beispiel 4/4 oder 3/4)
+            \item Key Signature (Tonart zum Beispiel C-Dur oder A-Moll)
+            \item Track Name
+            \item Lyrics
+            \item Markers
+            \item End of Track (Ende einer Spur)
+        \end{itemize}
+        \item \textbf{System Exclusive Events (SysEx):}
+        \begin{itemize}
+            \item Herstellerspezifische Daten wie Synthesizer-Presets oder Spezialbefehle
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Delta-Time:} Gibt die Zeit (in Ticks) an, die seit dem letzten Event vergangen ist:
+    \begin{itemize}
+        \item Ermöglicht die genaue zeitliche Positionierung jedes MIDI-Events
+        \item Grundlage für das Timing und die rhythmische Struktur der Datei
+    \end{itemize}
+\end{enumerate}
+Am wichtigsten sind dabei die MTrk-Blöcke, in denen die Daten der einzelnen Noten gespeichert werden.
+Dabei stellt ein Track die Eventliste einer ganzen Stimme dar,
+wie zum Beispiel die Melodiestimme, eine Violine, die Pedalsteuerung eines Klaviers oder Metadaten.
+Es fällt auf das diese vier Beispiele alle sehr unterschiedliche Aufgaben und bedeutungen haben.
+Das liegt daran, dass in MIDI-Dateien eher zusammenhängende Funktionen gespeichert werden und nicht nur Musiknoten.
+
+MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
+da man nun ein standardisiertes output Format für diese Programme besaß.
+Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme.
+\cite{telila2025cnn}
+
+\subsection{Polyphone AMT-Systeme und neue Ansätze}
+Moorer stellte, mit seinem AMT-System, viele grundlegende Bausteine für dieses Forschungsgebiet.
+Jedoch gab es noch viele offene Probleme, die man überwältigen muss.
+Eines der ausschlaggebendsten Probleme stellte sich Keith D. Martin.
+\cite{Martin1996}
+Zuvor wurden höchstens zwei verschiedene Stimmen gleichzeitig zur Musik transkription verwendet.
+Ein großer Teil von Musikstücken verwendet jedoch mehr Stimmen.
+Um diese polyphonen Musikstücke zu transkribieren,
+baute Martin einen neuen Ansatz eines AMT-Systems mit innovativen Modulen und Ansätzen.
+
+
