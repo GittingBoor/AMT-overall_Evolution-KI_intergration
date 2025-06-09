@@ -21,3 +21,9 @@ Log -> Ohr nimmt Lautstärke logarithmisch wahr.
 
 Log-Mel-Spek. sind besser geeignet, da diese den Maschinen
 eher beibringen wie wir Menschen zu hören.
+
+
+Correlogram
+
+Ein Correlogram ist eine matrixartige Darstellung,
+in der die Autokorrelation eines Audiosignals über mehrere Frequenzbänder hinweg gezeigt wird.

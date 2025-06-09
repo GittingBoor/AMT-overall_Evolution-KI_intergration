@@ -160,4 +160,33 @@ Ein großer Teil von Musikstücken verwendet jedoch mehr Stimmen.
 Um diese polyphonen Musikstücke zu transkribieren,
 baute Martin einen neuen Ansatz eines AMT-Systems mit innovativen Modulen und Ansätzen.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Graphics/Martin1996Structure}
+    \caption{Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), basierend auf \cite{Martin1996}.}
+    \label{fig:martin-structure}
+\end{figure}
 
+Nachdem das Input Audiosignal in ein Correlogram verarbeitet wurde,
+spaltet sich Martins AMT-System auf, in einem Analysepfad und einen Rhythmuspfad.
+Dabei konzentriert sich der Analysepfad auf die Zusammenhänge der verschiedenen Noten,
+während der Rhythmuspfad sich mehr mit der Lautstärke und den Notenanschlägen beschäftigt.
+Am Ende werden diese Kenntnisse zusammengeführt.
+Der Output besteht aus dem Onset, der Dauer und der Frequenz jeder gespielten Note.
+Martin gibt nicht explizit zurück, welcher Stimme jede Note zugeordnet ist.
+Durch simultaner und sequentieller AAnalyse der Intervalle kann man
+jedoch den gegebenen Noten den passenden Stimmen rekursiv zuordnen.
+
+Der Analysepfad beginnt bei dem Correlogram.
+Hier wird der Input, ein reales Audiosignal,
+zunächst verarbeitet und dann in einem Correlogram dargestellt.
+Dieses Visualisiert die Korrelation der gegebenen Noten in Abhängigkeit der Zeit, Frequenz und Lag.
+Lag soll in diesem Fall darstellen, wann sich ein bestimmtes Singal wiederholt.
+Heißt wenn ich einen Ton mit der Frequenz x spiele
+und dieser sich nach zum Beispiel 10ms wiederholt wird das Visuel im Lag dargestellt.
+Aufbauend auf das Correlogram werden einige Analysen angewendet.
+% Summary Autocorrelation
+% Peaks
+% Periodicities
+
+% Rhythmuspfad (Und alle anderen ChatGPT LaTeX chatverlaufen schauen)
