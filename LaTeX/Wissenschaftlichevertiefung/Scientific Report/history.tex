@@ -151,8 +151,9 @@ Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Sys
 \cite{telila2025cnn}
 
 \subsection{Polyphone AMT-Systeme und neue Ansätze}
+\subsubsection{Martins Blackboard-System}
 Moorer stellte, mit seinem AMT-System, viele grundlegende Bausteine für dieses Forschungsgebiet.
-Jedoch gab es noch viele offene Probleme, die man überwältigen muss.
+Jedoch gab es noch viele offene Probleme, die noch überwunden werden mussten.
 Eines der ausschlaggebendsten Probleme stellte sich Keith D. Martin.
 \cite{Martin1996}
 Zuvor wurden höchstens zwei verschiedene Stimmen gleichzeitig zur Musik transkription verwendet.
@@ -160,33 +161,71 @@ Ein großer Teil von Musikstücken verwendet jedoch mehr Stimmen.
 Um diese polyphonen Musikstücke zu transkribieren,
 baute Martin einen neuen Ansatz eines AMT-Systems mit innovativen Modulen und Ansätzen.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Graphics/Martin1996Structure}
-    \caption{Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), basierend auf \cite{Martin1996}.}
-    \label{fig:martin-structure}
-\end{figure}
-
 Nachdem das Input Audiosignal in ein Correlogram verarbeitet wurde,
-spaltet sich Martins AMT-System auf, in einem Analysepfad und einen Rhythmuspfad.
+spaltet sich Martins AMT-System auf, in einen Analysepfad und einen Rhythmuspfad.
 Dabei konzentriert sich der Analysepfad auf die Zusammenhänge der verschiedenen Noten,
 während der Rhythmuspfad sich mehr mit der Lautstärke und den Notenanschlägen beschäftigt.
 Am Ende werden diese Kenntnisse zusammengeführt.
 Der Output besteht aus dem Onset, der Dauer und der Frequenz jeder gespielten Note.
 Martin gibt nicht explizit zurück, welcher Stimme jede Note zugeordnet ist.
-Durch simultaner und sequentieller AAnalyse der Intervalle kann man
-jedoch den gegebenen Noten den passenden Stimmen rekursiv zuordnen.
+Durch das Blackboard-System, und vor allem nach sequentieller Analyse der Intervalle, kann man
+jedoch die erhaltenen Noten später bestimmten Stimmen nachträglich korrekt zuordnen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Graphics/Martin1996Structure}
+    \caption{Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), basierend auf \cite{Martin1996}.}
+    \label{fig:martin-structure}
+\end{figure}
+
+Martin nutzte ein Blackboard-System zur Notenerkennung und Hypothesenbildung.
+Unter anderem kann man dadurch Noten bestimmten Stimmen zuordnen.
+Ein Blackboard-System ist ein kollaboratives Problemlösungsmodell, welches aus verschiedenen Modulen besteht,
+die alle auf einem gemeinsamen Datenraum Hypothesen aufstellen können.
+Um diese Vermutungen aufstellen zu können müssen jedoch erst die dafür nötigen Daten erarbeitet werden.
+Dies erreicht Martin mithilfe von Sinuskurvenanalyse.
+Zur Sinuskurvenanalyse, in Martins Aufbau, gehören die Bestandteile
+Correlogram, Envelope, Summary Autocorrelation und Peaks.
+Durch diese können Eigenschaften der Noten ermittelt werden, auf denen aufbauend später Hypothesen entstehen.
+Die Module des Blackboard-Systems sind dementsprechend
+Onsets, Periodicities und Simultaneous, Sequential Intervals.
+Diese Module geben sich gegenseitig mehr Informationen über die gespielten Noten,
+sodass später gegebene Stimmen unterschieden werden können.
 
 Der Analysepfad beginnt bei dem Correlogram.
 Hier wird der Input, ein reales Audiosignal,
 zunächst verarbeitet und dann in einem Correlogram dargestellt.
 Dieses Visualisiert die Korrelation der gegebenen Noten in Abhängigkeit der Zeit, Frequenz und Lag.
-Lag soll in diesem Fall darstellen, wann sich ein bestimmtes Singal wiederholt.
-Heißt wenn ich einen Ton mit der Frequenz x spiele
-und dieser sich nach zum Beispiel 10ms wiederholt wird das Visuel im Lag dargestellt.
-Aufbauend auf das Correlogram werden einige Analysen angewendet.
-% Summary Autocorrelation
-% Peaks
-% Periodicities
+Lag soll in diesem Fall darstellen, wann sich ein bestimmtes Signal wiederholt.
+Dabei ist die Wiederholung ein Signal, welches dem Ursprungssignal maximal selbst ähnelt.
+Heißt, wenn ich einen Ton mit der Frequenz x spiele
+und dieser sich nach zum Beispiel 10ms wiederholt wird das rechnerisch durch den Lag dargestellt.
+Als Nächstes wird mithilfe der Summary Autocorrelation das Correlogram komprimiert
+und die Datenstruktur normalisiert.
+Dadurch entsteht eine stabile Grundfrequenz,
+sodass die weiteren schritte effizient das Correlogram untersuchen können.
+Nun werden basierend auf der normierten Struktur die Peaks gesucht.
+Diese Peaks deuten darauf hin, wann periodische Komponenten auftreten.
+Dabei geben sie nicht den Onset der Noten zurück, sondern nur die generelle Frequenz zu einer bestimmten Zeit.
+Darauf werden mehrere Peaks, die regelmäßig wiederkehren, gruppiert.
+So kann man Muster in der gespielten Musik erkennen und kurzzeitige Störfaktoren ausschließen.
 
-% Rhythmuspfad (Und alle anderen ChatGPT LaTeX chatverlaufen schauen)
+Im Rhythmuspfad wird wiederum die zeitliche Analyse der Noten durchgeführt.
+Zunächst wird mit dem Envelope die Lautstärke des Signals zu jedem Zeitpunkt festgelegt.
+Dies dient als Grundlage, um anschließend die Onsets der Noten zu bestimmen.
+Jeder Onset wird sehr präzise im Envelope dargestellt durch einen plötzlichen Anstieg der Lautstärke.
+
+Nachdem die beiden Pfade durchgelaufen sind, hat man schon Noten,
+welche man grundsätzlich in Notenschrift transkribieren kann.
+Jedoch sind diese Noten musikalisch noch nicht verstanden worden.
+In der oben gegebenen Abbildung gibt es noch die Bestandteile Simultaneous und Sequential Intervals.
+In dem Modul Simultaneous Intervals wird ermittelt, welche Töne gleichzeitig erklingen.
+Diese können, wenn sie harmonisch zueinander sind, zu einem Chord gebunden werden.
+Sequential Intervals analysieren dahingegen, welche Töne nacheinander gespielt werden und
+möglicherweise eine Melodie bilden könnten.
+Dies erfolgt durch Tonhöhenverläufe, Pausen und Frequenzunterschiede.
+Dadurch können Melodien, Basslinien oder Begleitungen voneinander getrennt werden.
+Zum Schluss werden dadurch die verschiedenen Stimmen, in Martins Modell, aufgetrennt.
+
+\subsubsection{Kalpuros xxx-System}
+AAAA

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  5 JUN 2025 18:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  10 JUN 2025 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1310,10 +1310,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 
+l.68 
       [1]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
-0.
+4.
 
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1331,10 +1331,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 \subsection
-                 {Motivation und Zielsetzung dieser Arbeit} (Noch nicht ange...
-[2]
-Overfull \hbox (1.15347pt too wide) in paragraph at lines 131--133
+l.133 
+       [2]
+Overfull \hbox (1.15347pt too wide) in paragraph at lines 135--137
 \T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
 lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
  []
@@ -1353,15 +1352,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 
+l.61 
       [3]
-Overfull \hbox (0.67047pt too wide) in paragraph at lines 64--66
+Overfull \hbox (0.67047pt too wide) in paragraph at lines 63--65
 \T1/ptm/m/n/10.95 Moorers au-to-ma-ti-sche Mu-sik-tran-skrip-ti-ons-sys-tem war
  eins der ers-ten sei-ner Art. Vie-le wei-te-ren AMT-
  []
 
 
-Overfull \hbox (3.5908pt too wide) in paragraph at lines 95--101
+Overfull \hbox (3.5908pt too wide) in paragraph at lines 94--100
 []\T1/ptm/m/n/10.95 MIDI ist ein Stan-dart-pro-to-koll zur kom-mu-ni-ka-ti-on z
 wi-schen elek-tro-ni-schen Mu-sik-in-stru-men-ten, Com-
  []
@@ -1375,7 +1374,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]) (conclusion.tex)
+[4]
+<Graphics/Martin1996Structure.png, id=127, 357.335pt x 416.55624pt>
+File: Graphics/Martin1996Structure.png Graphic file (type png)
+<use Graphics/Martin1996Structure.png>
+Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 1
+76.
+(pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1393,7 +1399,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6]
+[6 <./Graphics/Martin1996Structure.png>]) (conclusion.tex)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
 (C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\out\main.aux)
  ***********
@@ -1414,13 +1438,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35954 strings out of 469941
- 691951 string characters out of 5469431
+ 36002 strings out of 469941
+ 693449 string characters out of 5469431
  1502448 words of memory out of 5000000
- 62192 multiletter control sequences out of 15000+600000
+ 62229 multiletter control sequences out of 15000+600000
  664338 words of font info for 75 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,11n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{subsubsection.2.1.3} has been referenced but does n
 ot exist, replaced by a fixed one
@@ -1432,9 +1456,9 @@ es/utmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
 Output written on C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitH
-ub\Automatic-Music-Transcription\out\main.pdf (9 pages, 162746 bytes).
+ub\Automatic-Music-Transcription\out\main.pdf (11 pages, 200832 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -57,7 +57,7 @@
       \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
       \endverb
     \endentry
-    \entry{Smith1983}{article}{}{}
+    \entry{smith1983midi}{article}{}{}
       \name{author}{2}{}{%
         {{hash=dc423c1a176caf95bd2fba94ac0a0efa}{%
            family={dave},
@@ -87,6 +87,180 @@
       \field{number}{1845}
       \field{title}{the 'usi', or universal synthesizer interface}
       \field{year}{1981}
+    \endentry
+    \entry{goswami2013timbre}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bab64b9bfb4d3e8697d67ccae3b17869}{%
+           family={Goswami},
+           familyi={G\bibinitperiod},
+           given={AP},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3749617715566e42c202dc88758189fe}{%
+           family={Velankar},
+           familyi={V\bibinitperiod},
+           given={Makarand},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{fullhash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{fullhashraw}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{bibnamehash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{authorbibnamehash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{authornamehash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{authorfullhash}{ddcf648e498dcec370714a3adbbd667c}
+      \strng{authorfullhashraw}{ddcf648e498dcec370714a3adbbd667c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Engineering Research \& Technology (IJERT)}
+      \field{number}{10}
+      \field{title}{Study paper for Timbre identification in sound}
+      \field{volume}{2}
+      \field{year}{2013}
+    \endentry
+    \entry{graves2007multi}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9320fcd79fc9668957f2f8911a5d1890}{%
+           family={Fernández},
+           familyi={F\bibinitperiod},
+           given={Santiago},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{fullhash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{fullhashraw}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{bibnamehash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{authorbibnamehash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{authornamehash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{authorfullhash}{4f9f5b9a730faacf67206a074a2edf4b}
+      \strng{authorfullhashraw}{4f9f5b9a730faacf67206a074a2edf4b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International conference on artificial neural networks}
+      \field{title}{Multi-dimensional recurrent neural networks}
+      \field{year}{2007}
+      \field{pages}{549\bibrangedash 558}
+      \range{pages}{10}
+    \endentry
+    \entry{han2016deep}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4a1e25a86fbcddf1e82056630f705db9}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Yoonchang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=06813b11fe46242fc6ccc1dbe18085ba}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jaehun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0f47d6f8a9660c5c5bcdb2f43935a120}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kyogu},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{641f61d85150f82711325600491c1eae}
+      \strng{fullhash}{641f61d85150f82711325600491c1eae}
+      \strng{fullhashraw}{641f61d85150f82711325600491c1eae}
+      \strng{bibnamehash}{641f61d85150f82711325600491c1eae}
+      \strng{authorbibnamehash}{641f61d85150f82711325600491c1eae}
+      \strng{authornamehash}{641f61d85150f82711325600491c1eae}
+      \strng{authorfullhash}{641f61d85150f82711325600491c1eae}
+      \strng{authorfullhashraw}{641f61d85150f82711325600491c1eae}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/ACM Transactions on Audio, Speech, and Language Processing}
+      \field{number}{1}
+      \field{title}{Deep convolutional neural networks for predominant instrument recognition in polyphonic music}
+      \field{volume}{25}
+      \field{year}{2016}
+      \field{pages}{208\bibrangedash 221}
+      \range{pages}{14}
+    \endentry
+    \entry{iZotope2025noisefloor}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c7378e077457ee4772b9feac0223c2ad}{%
+           family={{iZotope}},
+           familyi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{fullhash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{fullhashraw}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{bibnamehash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{authorbibnamehash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{authornamehash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{authorfullhash}{c7378e077457ee4772b9feac0223c2ad}
+      \strng{authorfullhashraw}{c7378e077457ee4772b9feac0223c2ad}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 19.05.2025}
+      \field{title}{What is the Noise Floor?}
+      \field{year}{n.d.}
+      \verb{urlraw}
+      \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
+      \endverb
+      \verb{url}
+      \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
+      \endverb
+    \endentry
+    \entry{Martin1996}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=738ee76c7986f525e0628faea8dab11e}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Keith\bibnamedelima D.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {MIT Media Lab}%
+      }
+      \strng{namehash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{fullhash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{fullhashraw}{738ee76c7986f525e0628faea8dab11e}
+      \strng{bibnamehash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{authorbibnamehash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{authornamehash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{authorfullhash}{738ee76c7986f525e0628faea8dab11e}
+      \strng{authorfullhashraw}{738ee76c7986f525e0628faea8dab11e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 19.05.2025}
+      \field{number}{Technical Report 399}
+      \field{title}{Automatic Transcription of Simple Polyphonic Music: Robust Front End Processing}
+      \field{type}{techreport}
+      \field{year}{1996}
+      \verb{urlraw}
+      \verb https://www.media.mit.edu/publications/automatic-transcription-of-simple-polyphonic-music-robust-front-end-processing-2/
+      \endverb
+      \verb{url}
+      \verb https://www.media.mit.edu/publications/automatic-transcription-of-simple-polyphonic-music-robust-front-end-processing-2/
+      \endverb
     \endentry
     \entry{Moorer1977}{article}{}{}
       \name{author}{1}{}{%
@@ -122,6 +296,40 @@
       \verb{url}
       \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
       \endverb
+    \endentry
+    \entry{telila2025cnn}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4a0307f869b07e786a23f421327cd69f}{%
+           family={Telila},
+           familyi={T\bibinitperiod},
+           given={Yohannis},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=33898a85a2e6e32bc973259e7b03436f}{%
+           family={Cucinotta},
+           familyi={C\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d3908573ecb0e99b6931248865657610}{%
+           family={Bacciu},
+           familyi={B\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{fullhash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{fullhashraw}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{bibnamehash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{authorbibnamehash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{authornamehash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{authorfullhash}{a64f55ff6d5c121ba6001b60c268b882}
+      \strng{authorfullhashraw}{a64f55ff6d5c121ba6001b60c268b882}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2505.04451}
+      \field{title}{Automatic music transcription using convolutional neural networks and constant-q transform}
+      \field{year}{2025}
     \endentry
   \enddatalist
 \endrefsection
