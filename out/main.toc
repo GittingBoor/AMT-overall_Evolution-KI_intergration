@@ -9,5 +9,8 @@
 \contentsline {subsection}{\numberline {2.1}Moorer und eines der ersten Musiktranskriptionssysteme}{3}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Grundlegende Probleme bei AMTs}{3}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau von Moorers AMT-Systems}{4}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Umwandlung in Notenschrift}{4}{subsubsection.2.1.3}%
-\contentsline {section}{\numberline {3}Fazit}{4}{section.3}%
+\contentsline {subsection}{\numberline {2.2}MIDI-Dateien}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Polyphone AMT-Systeme und neue Ansätze}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Martins Blackboard-System}{5}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Kalpuris xxx-System}{7}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Fazit}{7}{section.3}%

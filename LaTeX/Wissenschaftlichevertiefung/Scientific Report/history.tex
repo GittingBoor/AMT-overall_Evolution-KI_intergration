@@ -227,16 +227,61 @@ Dies erfolgt durch Tonhöhenverläufe, Pausen und Frequenzunterschiede.
 Dadurch können Melodien, Basslinien oder Begleitungen voneinander getrennt werden.
 Zum Schluss werden dadurch die verschiedenen Stimmen, in Martins Modell, aufgetrennt.
 
-\subsubsection{Kalpuros xxx-System}
-Ende 1997 publizierte Kalpuros seine Masterarbeit \("\)Automatic transcription of Music\("\).
+\subsubsection{Kalpuris xxx-System}
+Ende 1997 publizierte Kalpuris seine Masterarbeit \("\)Automatic transcription of Music\("\).
 \cite{klapuri1998automatic}
 In seiner Arbeit benutzt er ein neues RASTA-basiertes Verfahren, zur Unterdrückung nicht harmonischer Signalkomponenten.
 Somit konnten auch Musikstücke mit nicht harmonischen Instrumenten, wie Trommeln, transkribiert werden.
 Zudem führte er ein Modul ein, zur Schätzung der Anzahl an gleichzeitigen Stimmen, die in dem Musikstück vorkommen.
-Kalpuros AMT-System konzentriert sich, gegenüber Martins AMT-System, viel mehr auf die robustheit gegenüber
+Kalpuris AMT-System konzentriert sich, gegenüber Martins AMT-System, viel mehr auf die robustheit gegenüber
 echten polyphonen Audioaufnahmen mit rauschen, Störgeräuschen und nicht harmonischen Instrumenten.
 Die Struktur des Systems ist linear aufgebaut und sehr präzise in dem Aufgabenfeld, für die es entwickelt wurde.
 
-% System Aufbau erklären, was passiert reihe für reihe
+\begin{tikzpicture}[>=stealth, thick]
+% Erste Zeile
+\node at (0,0) (input) {Audio Input};
+\node at (3,0) (prep) {Vorverarbeitung};
+\node at (6.2,0) (onset) {Onset-Detektion};
+\node at (9.5,0) (rasta) {RASTA-Filtering};
+\node at (12.9,0) (multi) {Multipitch-Schätzung};
+% Neue Zeile (links unten)
+\node at (0,-2) (voice) {Stimmenanzahl-Schätzung};
+\node at (3.5,-2) (notes) {Note Formation};
+\node at (6.5,-2) (output) {Transkription};
+% Pfeile obere Zeile
+\draw[->] (input) -- (prep);
+\draw[->] (prep) -- (onset);
+\draw[->] (onset) -- (rasta);
+\draw[->] (rasta) -- (multi);
+% Pfeile untere Zeile
+\draw[->] (multi.south) -- ++(0,-0.3) -- ++(-12.9,0) |- (voice);
+\draw[->] (voice) -- (notes);
+\draw[->] (notes) -- (output);
+\end{tikzpicture}
+
+Kalpuris System ist sequentiell aufgebaut und besteht aus sechs Modulen.
+Als Input wird eine reale Audioaufnahme genutzt, welche in ein Monosignal umgewandelt wird.
+Dieses Monosignal wird mithilfe von STFT transformiert, sodass durch das entstandene Spektrogramm Zeit,
+Frequenz und Amplitude der gegebenen Noten ausgelesen werden kann.
+Anhand dieser Daten werden als Nächstes die Onsets der Noten bestimmt.
+Kalpuri nutzt, zur Onset erkennung, ein Schema von Eric D. Scheirer.
+\cite{scheirer1998tempo}
+Bei diesem wird das Audiosignal in Frequenzbänder aufgeteilt und
+auf jedem Band die zeitliche Änderung der Energie analysiert.
+Daraufhin werden die resultierenden Energie-Deviate der verschiedenen Bänder summiert.
+Die nun entstehenden Peaks werden als Onsets der Noten interpretiert.
+Als Nächstes werden unharmonische Instrumente und transiente Geräusche, wie zum Beispiel Rauschen, entfernt.
+Dies erfolgt mithilfe der RASTA-Filterung, welches auf das spektrale Signal, vom gegeben Spektrogramm, wirkt.
+Mehr zu der RASTA-Filterung werde ich in einem folgenden Absatz, im Detail, erläutern.
+Um mehrere Töne, die gleichzeitig im Signal erklingen, zu erkennen wird harmonic matching genutzt.
+Die Multipitch-Schätzung funktioniert so, dass zu einer bestimmten Zeit immer die dominanteste Tonhöhe,
+basierend auf der Energieverteilung im Signal, gesucht wird.
+Sobald man diese ermittelt hat, wird sie vom Signal subtrahiert und dieses Verfahren wird erneut eingesetzt,
+bis man jeden signifikanten Pitch untersucht hat.
+Jetzt werden die Stimmenanzahlen geschätzt.
+Dieses Modul werde ich ebenfalls ausführlich in einem folgenden Absatz detailliert wiedergeben.
+In dem Modul Note-Formation werden nun die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
+Diese MIDI-Datei wäre jetzt bereit in Notenschrift transkribiert zu werden.
+
 % RASTA-basiertes Verfahren für unharmonische Instrumente erklären
 % Modul zur Stimmanzahl erkennung erklären
