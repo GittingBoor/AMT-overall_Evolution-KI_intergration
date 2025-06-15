@@ -227,6 +227,37 @@
       \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
       \endverb
     \endentry
+    \entry{klapuri1998automatic}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=5d79b2c1c58f54540fd7dce441be6a83}{%
+           family={Klapuri},
+           familyi={K\bibinitperiod},
+           given={Anssi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1436e1460d47553be172c0ccbf7703e}{%
+           family={Eronen},
+           familyi={E\bibinitperiod},
+           given={Antti},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{fullhash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{fullhashraw}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{bibnamehash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{authorbibnamehash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{authornamehash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{authorfullhash}{b30689c4a0f40f279919b4c7569ab3f1}
+      \strng{authorfullhashraw}{b30689c4a0f40f279919b4c7569ab3f1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Stockholm Music Acoustics Conference}
+      \field{title}{Automatic transcription of music}
+      \field{year}{1998}
+      \field{pages}{6\bibrangedash 9}
+      \range{pages}{4}
+    \endentry
     \entry{Martin1996}{report}{}{}
       \name{author}{1}{}{%
         {{hash=738ee76c7986f525e0628faea8dab11e}{%
@@ -296,6 +327,37 @@
       \verb{url}
       \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
       \endverb
+    \endentry
+    \entry{scheirer1998tempo}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1c5103f2793a261d0122a19a0906d897}{%
+           family={Scheirer},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima D},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Acoustical Society of America}%
+      }
+      \strng{namehash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{fullhash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{fullhashraw}{1c5103f2793a261d0122a19a0906d897}
+      \strng{bibnamehash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{authorbibnamehash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{authornamehash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{authorfullhash}{1c5103f2793a261d0122a19a0906d897}
+      \strng{authorfullhashraw}{1c5103f2793a261d0122a19a0906d897}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of the Acoustical Society of America}
+      \field{number}{1}
+      \field{title}{Tempo and beat analysis of acoustic musical signals}
+      \field{volume}{103}
+      \field{year}{1998}
+      \field{pages}{588\bibrangedash 601}
+      \range{pages}{14}
     \endentry
     \entry{telila2025cnn}{article}{}{}
       \name{author}{3}{}{%

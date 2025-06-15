@@ -151,7 +151,7 @@ Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Sys
 \cite{telila2025cnn}
 
 \subsection{Polyphone AMT-Systeme und neue Ansätze}
-\subsubsection{Martins Blackboard-System}
+\subsubsection{Blackboard-System}
 Moorer stellte, mit seinem AMT-System, viele grundlegende Bausteine für dieses Forschungsgebiet.
 Jedoch gab es noch viele offene Probleme, die noch überwunden werden mussten.
 Eines der ausschlaggebendsten Probleme stellte sich Keith D. Martin.
@@ -227,7 +227,7 @@ Dies erfolgt durch Tonhöhenverläufe, Pausen und Frequenzunterschiede.
 Dadurch können Melodien, Basslinien oder Begleitungen voneinander getrennt werden.
 Zum Schluss werden dadurch die verschiedenen Stimmen, in Martins Modell, aufgetrennt.
 
-\subsubsection{Kalpuris xxx-System}
+\subsubsection{RASTA-basiertes System}
 Ende 1997 publizierte Kalpuris seine Masterarbeit \("\)Automatic transcription of Music\("\).
 \cite{klapuri1998automatic}
 In seiner Arbeit benutzt er ein neues RASTA-basiertes Verfahren, zur Unterdrückung nicht harmonischer Signalkomponenten.
@@ -237,27 +237,38 @@ Kalpuris AMT-System konzentriert sich, gegenüber Martins AMT-System, viel mehr 
 echten polyphonen Audioaufnahmen mit rauschen, Störgeräuschen und nicht harmonischen Instrumenten.
 Die Struktur des Systems ist linear aufgebaut und sehr präzise in dem Aufgabenfeld, für die es entwickelt wurde.
 
-\begin{tikzpicture}[>=stealth, thick]
-% Erste Zeile
-\node at (0,0) (input) {Audio Input};
-\node at (3,0) (prep) {Vorverarbeitung};
-\node at (6.2,0) (onset) {Onset-Detektion};
-\node at (9.5,0) (rasta) {RASTA-Filtering};
-\node at (12.9,0) (multi) {Multipitch-Schätzung};
-% Neue Zeile (links unten)
-\node at (0,-2) (voice) {Stimmenanzahl-Schätzung};
-\node at (3.5,-2) (notes) {Note Formation};
-\node at (6.5,-2) (output) {Transkription};
-% Pfeile obere Zeile
-\draw[->] (input) -- (prep);
-\draw[->] (prep) -- (onset);
-\draw[->] (onset) -- (rasta);
-\draw[->] (rasta) -- (multi);
-% Pfeile untere Zeile
-\draw[->] (multi.south) -- ++(0,-0.3) -- ++(-12.9,0) |- (voice);
-\draw[->] (voice) -- (notes);
-\draw[->] (notes) -- (output);
-\end{tikzpicture}
+\begin{center}
+    \vspace{1em}
+    \begin{tikzpicture}[>=stealth, thick]
+
+        % Obere Zeile
+        \node at (0,0) (input) {Audio Input};
+        \node at (5,0) (prep) {Vorverarbeitung};
+        \node at (9,0) (onset) {Onset-Detektion};
+        \node at (12.75,0) (rasta) {RASTA-Filtering};
+
+        % Untere Zeile
+        \node at (0.75,-1) (multi) {Multipitch-Schätzung};
+        \node at (5,-1) (voice) {Stimmenanzahl};
+        \node at (9,-1) (notes) {Note Formation};
+        \node at (13,-1) (output) {Transkription};
+
+        % Pfeile obere Zeile
+        \draw[->] (input) -- (prep);
+        \draw[->] (prep) -- (onset);
+        \draw[->] (onset) -- (rasta);
+
+        % Übergangspfeil
+        \draw[->] (rasta.south) -- ++(0,-0.1) -| (multi);
+
+        % Pfeile untere Zeile
+        \draw[->] (multi) -- (voice);
+        \draw[->] (voice) -- (notes);
+        \draw[->] (notes) -- (output);
+
+    \end{tikzpicture}
+    \vspace{1em}
+\end{center}
 
 Kalpuris System ist sequentiell aufgebaut und besteht aus sechs Modulen.
 Als Input wird eine reale Audioaufnahme genutzt, welche in ein Monosignal umgewandelt wird.
@@ -283,5 +294,41 @@ Dieses Modul werde ich ebenfalls ausführlich in einem folgenden Absatz detailli
 In dem Modul Note-Formation werden nun die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
 Diese MIDI-Datei wäre jetzt bereit in Notenschrift transkribiert zu werden.
 
-% RASTA-basiertes Verfahren für unharmonische Instrumente erklären
-% Modul zur Stimmanzahl erkennung erklären
+Die RASTA-Filterung ist eine der neuen Module von Klapuri.
+Sie bewirkt, das nicht-harmonische Störsignale, wie
+Rauschen, unharmonische Instrumente und vom Musikstück unabhängige Geräusche ausgefiltert werden.
+Dadurch werden die harmonischen Komponenten des Stückes mehr herausgehoben,
+wodurch folgende Module einfacher weitere Eigenschaften den gegebenen Noten zuordnen können.
+Zudem stärkt dies die Robustheit der Multipitch-Schätzung,
+in der mehrere Töne zur gleichen Zeit im Audiosignal erkannt werden müssen.
+Dieses Verhalten wird erzielt, indem ein Filter gesetzt wird,
+der schaut, wie Laut jede Frequenz zu jedem Moment ist.
+Nach der Berechnung gibt der Filter eine Lautstärke-Kurve zurück.
+Alle Frequenzanteile, die entweder zu kurzzeitig sind, wie etwa Claps oder Hi-Hats, oder zu langanhaltend,
+wie dauerhaftes Rauschen, werden durch einen Bandpassfilter aus dem Audiosignal herausgefiltert.
+Dadurch bleiben vor allem die zeitlich stabilen, musikalisch relevanten Komponenten erhalten.
+
+Auch die Stimmanzahl erkennung ist, von Klapuri, ein neu eingefügtes Modul.
+Vor allem bei der Multipitch-Schätzung ist dieses sehr wichtig, da das System dadurch ein Bild davon bekommt,
+wie viele Töne gleichzeitig erklingen können, zu einer bestimmten Zeit.
+Die Multipitch-Schätzung zieht den spektralen Abdruck eines Tons von dem Audiosignal ab, wenn dieser erkannt wurde.
+Jedoch kann diese nicht einschätzen, wann genau sie aufhören soll die Töne zu erkennen.
+Da hilft die Stimmanzahlschätzung.
+Diese analysiert das neue Audiosignal nach jeder Multipitch-Schätzung und gibt aus,
+ob in der spektralen Energie noch Noten zu erkennen sind.
+Dies ordnet die Stimmanzahlschätzung durch drei Eigenschaften ein.
+Gibt es in der spektralen Energie noch typische Muster von harmonischen Klängen?
+Wie viele Stimmen wurden schon erkannt?
+Tragen die weiteren extrahierten Stimmen noch groß etwas zur Erklärung des gesamten Musikstückes bei?
+Dadurch extrahiert die Multipitch-Schätzung nur die nötigen Noten und unnötig Störfaktoren werden ausgelassen.
+Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem jeweiligen Musikstück erklingen.
+
+\subsubsection{Hidden Markov Models}
+% HMMMMMMMMMMMMMMM
+
+\subsection{Entwickelung von Datensätzen}
+% Wie kommt man gut an Datensätze, welche Ansätze dafür gibt es
+
+
+\subsection{Einbindung von Künstlicher Intelligenz}
+% Kurz übergang von AMT-System die jetzt KI benutzen aber nicht detail (richtige modelle im detail folgen)
