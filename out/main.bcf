@@ -2379,13 +2379,18 @@
     <bcf:citekey order="6" intorder="1">Moorer1977</bcf:citekey>
     <bcf:citekey order="7" intorder="1">goswami2013timbre</bcf:citekey>
     <bcf:citekey order="8" intorder="1">iZotope2025noisefloor</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">smith1983midi</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">telila2025cnn</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">klapuri1998automatic</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">scheirer1998tempo</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">baum1970maximization</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">takeda2002hidden</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">smith1983midi</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">telila2025cnn</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Moorer1977</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">joysingh2019development</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">klapuri1998automatic</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">scheirer1998tempo</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

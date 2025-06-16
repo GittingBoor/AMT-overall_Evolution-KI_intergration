@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  12 JUN 2025 15:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  16 JUN 2025 15:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1111,7 +1111,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count479
 \@quotereset=\count480
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 86
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 88
 .
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1120,24 +1120,24 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 sic-Transcription\out\main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1248,9 +1248,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 86.
-Package biblatex Info: Reference segment=0 on input line 86.
-Package hyperref Info: Link coloring OFF on input line 86.
+Package biblatex Info: Reference section=0 on input line 88.
+Package biblatex Info: Reference segment=0 on input line 88.
+Package hyperref Info: Link coloring OFF on input line 88.
 
 (C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
 sic-Transcription\out\main.out)
@@ -1261,12 +1261,12 @@ sic-Transcription\out\main.out)
 
 \c@lstlisting=\count487
  (titlepage.tex
-<Graphics/HSDLogo.png, id=66, 274.77657pt x 146.79843pt>
+<Graphics/HSDLogo.png, id=78, 274.77657pt x 146.79843pt>
 File: Graphics/HSDLogo.png Graphic file (type png)
 <use Graphics/HSDLogo.png>
 Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 8.
 (pdftex.def)             Requested size: 138.91902pt x 74.21886pt.
-<Graphics/FacultyOfMedia.png, id=68, 264.99pt x 195.73125pt>
+<Graphics/FacultyOfMedia.png, id=80, 264.99pt x 195.73125pt>
 File: Graphics/FacultyOfMedia.png Graphic file (type png)
 <use Graphics/FacultyOfMedia.png>
 Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
@@ -1388,10 +1388,28 @@ Overfull \hbox (0.67047pt too wide) in paragraph at lines 63--65
  []
 
 
-LaTeX Warning: Citation 'smith1983midi' on page 4 undefined on input line 97.
+LaTeX Warning: Citation 'baum1970maximization' on page 4 undefined on input lin
+e 89.
 
 
-Overfull \hbox (3.5908pt too wide) in paragraph at lines 94--100
+LaTeX Warning: Citation 'takeda2002hidden' on page 4 undefined on input line 11
+6.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+
+LaTeX Warning: Citation 'smith1983midi' on page 5 undefined on input line 140.
+
+
+Overfull \hbox (3.5908pt too wide) in paragraph at lines 137--143
 []\T1/ptm/m/n/10.95 MIDI ist ein Stan-dart-pro-to-koll zur kom-mu-ni-ka-ti-on z
 wi-schen elek-tro-ni-schen Mu-sik-in-stru-men-ten, Com-
  []
@@ -1405,27 +1423,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]
+[5]
 
-LaTeX Warning: Citation 'telila2025cnn' on page 5 undefined on input line 151.
+LaTeX Warning: Citation 'telila2025cnn' on page 6 undefined on input line 194.
 
 
-LaTeX Warning: Citation 'Martin1996' on page 5 undefined on input line 158.
+LaTeX Warning: Citation 'Moorer1977' on page 6 undefined on input line 204.
 
-<Graphics/Martin1996Structure.png, id=126, 357.335pt x 416.55624pt>
+
+LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 204.
+
+
+LaTeX Warning: Citation 'joysingh2019development' on page 6 undefined on input 
+line 220.
+
+
+LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 227.
+
+<Graphics/Martin1996Structure.png, id=145, 357.335pt x 416.55624pt>
 File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
-Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 1
-76.
+Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
+45.
 (pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
 
-LaTeX Warning: Citation 'Martin1996' on page 5 undefined on input line 177.
+LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 246.
 
 
-LaTeX Warning: Citation 'Martin1996' on page 5 undefined on input line 177.
+LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 246.
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 177--177
+Underfull \hbox (badness 1043) in paragraph at lines 246--246
 []\T1/ptm/m/n/10.95 Abbildung 1: |Sys-tem-struk-tur des AMT-Ansatzes von Keith 
 D. Mar-tin (1996), ba-sie-rend auf
  []
@@ -1439,7 +1467,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5]
+[6]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1448,33 +1476,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6 <./Graphics/Martin1996Structure.png>]
+[7 <./Graphics/Martin1996Structure.png>]
 
-LaTeX Warning: Citation 'klapuri1998automatic' on page 7 undefined on input lin
-e 232.
+LaTeX Warning: Citation 'klapuri1998automatic' on page 8 undefined on input lin
+e 301.
 
 
-Overfull \hbox (49.05858pt too wide) in paragraph at lines 231--239
+Overfull \hbox (49.05858pt too wide) in paragraph at lines 300--308
 \T1/ptm/m/n/10.95 Ende 1997 pu-bli-zier-te Kal-pu-ris sei-ne Mas-ter-ar-beit $\
 OT1/cmr/m/n/10.95 "$\T1/ptm/m/n/10.95 Automatic tran-s-crip-ti-on of Music$\OT1
 /cmr/m/n/10.95 "$\T1/ptm/m/n/10.95 . [[]]
  []
 
 
-Package pgf Warning: Returning node center instead of a point on node border. D
-id you specify a point identical to the center of node ``voice''? on input line
- 257.
+LaTeX Warning: Citation 'scheirer1998tempo' on page 8 undefined on input line 3
+48.
 
 
-Overfull \hbox (39.77072pt too wide) in paragraph at lines 260--261
-[][] 
- []
-
-
-LaTeX Warning: Citation 'scheirer1998tempo' on page 7 undefined on input line 2
-68.
-
-) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1483,9 +1501,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7]
+[8]) (conclusion.tex)
 
-LaTeX Warning: Empty bibliography on input line 118.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+
+LaTeX Warning: Empty bibliography on input line 120.
 
 
 (C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
@@ -1499,7 +1526,7 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8860261F3F1D9799511EC10B363F3F43;3057.
+(rerunfilecheck)             Checksum: 90A638E972592955FC59AE7F590B906A;3849.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1510,22 +1537,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36058 strings out of 473523
- 694122 string characters out of 5714630
- 1515292 words of memory out of 5000000
- 58722 multiletter control sequences out of 15000+600000
+ 36071 strings out of 473523
+ 694360 string characters out of 5714630
+ 1517416 words of memory out of 5000000
+ 58730 multiletter control sequences out of 15000+600000
  592110 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,11n,107p,695b,3032s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,695b,3032s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmr10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmb8a.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on "C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
-itHub\Automatic-Music-Transcription\out\main.pdf" (10 pages, 176206 bytes).
+itHub\Automatic-Music-Transcription\out\main.pdf" (12 pages, 185218 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

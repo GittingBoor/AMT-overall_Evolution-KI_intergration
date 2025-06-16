@@ -113,8 +113,18 @@ Diese gibt an, wie Wahrscheinlich ein bestimmter Zustand in der momentanen Beoba
 Die Beobachtung wird dabei zusammengesetzt aus Eigenschaften, wie Frequenzverteilung, Spektrogramm
 oder anderen Merkmalen die man aus anderen Modulen herleiten kann.
 Aus den gesammelten Daten kann nun mithilfe von zum Beispiel dem Viterbi-Algorithmus
-% Quelle
+\cite{takeda2002hidden}
 die wahrscheinlichste Abfolge von Zuständen berechnet werden.
+
+In gewisser Weise lassen sich HMMs auf KI-Modelle übertragen.
+Beide arbeiten mit versteckten Zuständen und
+berechnen anhand von Testdaten die Wahrscheinlichste kombination von Zuständen.
+Natürlich sind moderne KI-Modelle weitaus komplexer,
+doch HMMs spielten im Kontext automatischer Musiktranskriptionssysteme eine zentrale Rolle dabei,
+wie KI-Methoden in diesem Bereich später eingesetzt wurden.
+Sie beeinflussten insbesondere den Umgang mit zeitlichen Abfolgen
+und Unsicherheiten in der Tonerkennung,
+was bis heute relevante Konzepte in KI-basierten AMT-Systemen sind.
 
 \subsection{MIDI-Dateien}
 Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
@@ -182,6 +192,32 @@ MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
 da man nun ein standardisiertes output Format für diese Programme besaß.
 Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme.
 \cite{telila2025cnn}
+
+\subsection{Entwickelung von Datensätzen}
+Während der Forschung an neuen AMT-Systemen wurden immer wieder neue Datensätze genutzt,
+um das AMT-System zu bespielen oder heutzutage auch zu trainieren.
+In der Transkribtion von Musikstücken sind diese sehr relevant,
+da man nicht so leicht an nutzvolle Datensätze generieren kann und
+mit dem weiteren Einsatz von KI-Modellen genau diese sehr wichtig, in größeren Mengen, sind.
+Die ersten Datensätze, welche genutzt worden waren selbst kreierte Datensätze,
+welche lediglich einige Eigenschaften der Noten beinhalten.
+In den AMT-Systemen von Moorer\cite{Moorer1977} oder auch Martin\cite{Martin1996} wurde solch ein Ansatz verfolgt.
+Durch die einführung von MIDI-Dateien wurde ein standard entwickelt,
+welcher jetzt in dem großteil, der AMT-Systeme eingebaut werden sollte.
+Auf der Grundlage von MIDI-Dateien wurden auch spezialisierte Datensätze erstellte.
+Zwei der größten und wichtigsten sind MAPS (MIDI Aligned Piano Sounds) und
+MAESTRO (MIDI and Audio Edited for Synchronous TRacks and Organization).
+Dabei ist MAPS ein Datensatz aus künstlich generierten Audiospuren,
+während MAESTRO ein ungefähr 200 Stunden langer Datensatz von realen Audioaufnahmen ist.
+Vor allem bei dem training neuer KI-Modellen sind solche großen Datensätze sehr hilfreich.
+Ein weiterer wichtiger Datensatz ist ADTOF (Annotated Drum Transcription Onset Features).
+Dieser besteht ausschließlich aus unharmonischen Instrumenten.
+In Moorers und anderen AMT-Systemen ist die Erkennung von unharmonischen Instrumenten ein großes Problem.
+KI-Modelle können mithilfe von dem ADTOF Datensatz sich speziell auf diese Instrumente vorbereiten.
+Es gibt auch Methoden schnell seine eigenen Datensätze zu generieren.
+Eine der neusten Methoden nutzt HMM- und Viterbi-basierte Alignment-Verfahren,
+um synthetische Audiosignale zu kreieren, damit man mehr Daten hat um sein KI-Modell zu trainieren.
+\cite{joysingh2019development}
 
 \subsection{Polyphone AMT-Systeme und neue Ansätze}
 \subsubsection{Blackboard-System}
@@ -357,8 +393,6 @@ Dadurch extrahiert die Multipitch-Schätzung nur die nötigen Noten und unnötig
 Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem jeweiligen Musikstück erklingen.
 
 
-\subsection{Entwickelung von Datensätzen}
-% Wie kommt man gut an Datensätze, welche Ansätze dafür gibt es
 
 
 \subsection{Einbindung von Künstlicher Intelligenz}
