@@ -1,2 +1,3 @@
 # Ignoriere JetBrains IDE-Projektdateien (.idea)
 .idea/
+/.idea

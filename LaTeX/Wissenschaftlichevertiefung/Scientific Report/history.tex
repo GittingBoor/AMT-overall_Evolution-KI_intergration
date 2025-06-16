@@ -1,4 +1,4 @@
-\section{Geschichte}
+\section{Geschichtliche Entwickelung von AMT-Systemen}
 
 \subsection{Moorer und eines der ersten Musiktranskriptionssysteme}
 \subsubsection{Grundlegende Probleme bei AMTs}
@@ -82,6 +82,39 @@ Zudem werden Gruppierungen von Noten erstellt, welche am wahrscheinlichsten harm
 
 Zum Schluss ließ Moorer die gewonnenen Daten durch ein Programm laufen, 
 um diese dann mithilfe eines Plotters in eine Notenschrift umzuwandeln.
+
+\subsubsection{Hidden Markov Models}
+Hidden Markov Modelle (HMM) sind statische Modelle, welche sich sehr gut zur Analyse von Musikstücken eignen.
+Sie wurden erstmal in den 1960er Jahren erfunden
+\cite{baum1970maximization}
+und sind ein zentraler bestandteil früherer AMT-Systeme.
+HMMs beschreiben eine Abfolge von \("\)versteckten Zuständen\("\),
+welche im Kontext von AMT-Systemen Noten im Audiosignal darstellen.
+Durch indirekt beobachtbare Daten, wie zum Beispiel die Spektraldaten des Audiosignals,
+können diese Noten erschlossen werden.
+
+HMMs bestehen aus:
+\begin{itemize}
+    \item Zustände (States)
+    \item Übergangswahrscheinlichkeiten (Transition Probabilities)
+    \item Emissionswahrscheinlichkeiten (Emission Probabilities)
+    \item Beobachtungen (Observations)
+\end{itemize}
+Nehmen wir das Beispiel eines Klaviers.
+Ein Klavier hat 88 Tasten, und somit mindestens 88 Zustände.
+Durch Akkorde können zudem mehr Zustände generiert werden.
+Die Übergangswahrscheinlichkeit stellt dar,
+wie wahrscheinliche es ist von einem Zustand zu einem bestimmten anderen Zustand zu wechseln.
+Zum Beispiel könnte es wahrscheinlicher sein, dass auf die Note C4 der Ton G3 folgt statt D1,
+da diese Tonfolge harmonischer und musikalisch plausibler klingt.
+Dies ist jedoch nur eine Annahme anhand von gesammelten Testdaten, weshalb es nicht als Begründung ausreicht.
+Deshalb kommt als zweite Instanz die Emissionswahrscheinlichkeit hinzu.
+Diese gibt an, wie Wahrscheinlich ein bestimmter Zustand in der momentanen Beobachtung ist.
+Die Beobachtung wird dabei zusammengesetzt aus Eigenschaften, wie Frequenzverteilung, Spektrogramm
+oder anderen Merkmalen die man aus anderen Modulen herleiten kann.
+Aus den gesammelten Daten kann nun mithilfe von zum Beispiel dem Viterbi-Algorithmus
+% Quelle
+die wahrscheinlichste Abfolge von Zuständen berechnet werden.
 
 \subsection{MIDI-Dateien}
 Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
@@ -323,8 +356,6 @@ Tragen die weiteren extrahierten Stimmen noch groß etwas zur Erklärung des ges
 Dadurch extrahiert die Multipitch-Schätzung nur die nötigen Noten und unnötig Störfaktoren werden ausgelassen.
 Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem jeweiligen Musikstück erklingen.
 
-\subsubsection{Hidden Markov Models}
-% HMMMMMMMMMMMMMMM
 
 \subsection{Entwickelung von Datensätzen}
 % Wie kommt man gut an Datensätze, welche Ansätze dafür gibt es
