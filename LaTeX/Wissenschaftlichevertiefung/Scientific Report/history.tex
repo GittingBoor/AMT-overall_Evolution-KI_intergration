@@ -392,8 +392,37 @@ Tragen die weiteren extrahierten Stimmen noch groß etwas zur Erklärung des ges
 Dadurch extrahiert die Multipitch-Schätzung nur die nötigen Noten und unnötig Störfaktoren werden ausgelassen.
 Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem jeweiligen Musikstück erklingen.
 
-
-
-
 \subsection{Einbindung von Künstlicher Intelligenz}
-% Kurz übergang von AMT-System die jetzt KI benutzen aber nicht detail (richtige modelle im detail folgen)
+Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen, wie zum Beispiel HMMs.
+Doch auch diese Systeme waren nicht verschont durch den stetigen Anstieg von KI basierten Lösungswegen.
+2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten.
+\cite{eyben2010universal}
+Oft wurden KI-Modelle nur für bestimmte Teilprobleme genutzt
+wie Onset Detection, pitch estimation oder instrument classification.
+Dieser Trend zog sich durch, wodurch heutzutage so gut wie jedes AMT-System eine Art von KI-Modell nutzt.
+
+Einige AMT-Systeme nutzen auch mehrere KI-Modelle gleichzeitig.
+Solch ein AMT-System wird auch in der, 2016 veröffentlichen, Arbeit
+von Sigtia Siddharth, Emmanouil Benetos und Simon Dixon beschrieben.
+\cite{sigtia2016end}
+Es ist eins der ersten KI basierenden Ent-to-End AMT-Systeme, welches polyphone Musikstücke transkribieren kann.
+Der KI-Ablauf des AMT-Systems ist folgendermaßen aufgebaut.
+Ein CNN bekommt als Input ein Log-Mel-Spektrogramm des Audiosignals bereitgestellt
+und entzieht diesem bestimmte Merkmale der Noten.
+Diese Merkmale werden einem RNN weitergegeben, welches dadurch die zeitlichen Abhängigkeiten herausfiltert.
+Als Nächstes wird durch Frame-wise Multi-Label Classification vorhergesagt, welche Noten zu welcher Zeit aktiv sind.
+Somit bekommt man als Output eine Binärmatrix, wo der Pitch mit Abhängigkeit der Zeit angezeigt wird.
+Das System wird mit dem MAPS Datensatz durch Supervised Learning trainiert.
+Diese Arbeit stellt den drastischen übergang von heuristischen, regelbasierten AMT-Systemen
+zu selbstlernenden AMT-Systemen dar.
+Heutzutage sind CNNs und RNNs, oder ähnliche KI alternativen, kaum wegzudenken aus der Struktur von AMT-Systemen.
+
+Viele intelligente und erfindungsreiche Personen haben sich über die Jahre mit AMT-Systemen beschäftigt.
+Dadurch konnten nachfolgende Arbeiten neue Module und Ansätze für sich nutzen, um deren Entwicklung weiter voranzutreiben.
+Auch heutzutage ist dies immer noch der Fall, wodurch es stets neue AMT-Systeme mit neuen Ansätzen gibt.
+Diese neuen, auf KI basierenden Systeme, haben alle jeweils ihre eigenen Stärken und schwächen.
+Auch wenn die Forschung von AMT-Systemen in den letzten Jahren viele Fortschritte erfuhr,
+gibt es trotz dessen noch große Baustellen und ungelöste Aufgaben.
+Im folgenden Abschnitt werde ich weiter auf den momentanen Stand
+von AMT-Systemen eingehen und anhand einiger Beispiele verschiedene Strukturen darstellen.
+Zudem gehe ich auf momentan relevante Hindernisse in der automatischen Musiktranskription ein.
