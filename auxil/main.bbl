@@ -19,6 +19,52 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{baum1970maximization}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2afdffde7bc0ec8fe20955d90c4f3922}{%
+           family={Baum},
+           familyi={B\bibinitperiod},
+           given={Leonard\bibnamedelima E},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8ea4b0d08cb69e7a6c9b2b460ece7f63}{%
+           family={Petrie},
+           familyi={P\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0046a927a2069287ad40e434300dd33a}{%
+           family={Soules},
+           familyi={S\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c24f874021783a3c48c8c5844d51b6e1}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Norman},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{244c6bf68eab694487731f3594dbb017}
+      \strng{fullhash}{e6e948b7eaf8648ca1bb689f5d8ff426}
+      \strng{fullhashraw}{e6e948b7eaf8648ca1bb689f5d8ff426}
+      \strng{bibnamehash}{244c6bf68eab694487731f3594dbb017}
+      \strng{authorbibnamehash}{244c6bf68eab694487731f3594dbb017}
+      \strng{authornamehash}{244c6bf68eab694487731f3594dbb017}
+      \strng{authorfullhash}{e6e948b7eaf8648ca1bb689f5d8ff426}
+      \strng{authorfullhashraw}{e6e948b7eaf8648ca1bb689f5d8ff426}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The annals of mathematical statistics}
+      \field{number}{1}
+      \field{title}{A maximization technique occurring in the statistical analysis of probabilistic functions of Markov chains}
+      \field{volume}{41}
+      \field{year}{1970}
+      \field{pages}{164\bibrangedash 171}
+      \range{pages}{8}
+    \endentry
     \entry{Boeck2012}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=beb91874b5d6ce57d740309f9052d834}{%
@@ -87,6 +133,44 @@
       \field{number}{1845}
       \field{title}{the 'usi', or universal synthesizer interface}
       \field{year}{1981}
+    \endentry
+    \entry{eyben2010universal}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8d87463eeccc4eb4c15cc59e80fd89be}{%
+           family={Eyben},
+           familyi={E\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=beb91874b5d6ce57d740309f9052d834}{%
+           family={Böck},
+           familyi={B\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=952e7ee348d058f9287a08ad1c034dbc}{%
+           family={Schuller},
+           familyi={S\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b536a83bffb8f29b983f0c15ff9a03f}
+      \strng{fullhash}{512e8d63d3a095406ef011326b9fc04e}
+      \strng{fullhashraw}{512e8d63d3a095406ef011326b9fc04e}
+      \strng{bibnamehash}{1b536a83bffb8f29b983f0c15ff9a03f}
+      \strng{authorbibnamehash}{1b536a83bffb8f29b983f0c15ff9a03f}
+      \strng{authornamehash}{1b536a83bffb8f29b983f0c15ff9a03f}
+      \strng{authorfullhash}{512e8d63d3a095406ef011326b9fc04e}
+      \strng{authorfullhashraw}{512e8d63d3a095406ef011326b9fc04e}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Universal onset detection with bidirectional long-short term memory neural networks}
+      \field{year}{2010}
     \endentry
     \entry{goswami2013timbre}{article}{}{}
       \name{author}{2}{}{%
@@ -227,6 +311,45 @@
       \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
       \endverb
     \endentry
+    \entry{joysingh2019development}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d48e708f4fe2b3fab01a889d1842059}{%
+           family={Joysingh},
+           familyi={J\bibinitperiod},
+           given={S\bibnamedelima Johanan},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=10e2b19691d1d23de0f560675b60c75d}{%
+           family={Vijayalakshmi},
+           familyi={V\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7f6ec9c02d32e400b981999155220f72}{%
+           family={Nagarajan},
+           familyi={N\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{fullhash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{fullhashraw}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{bibnamehash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{authorbibnamehash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{authornamehash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{authorfullhash}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \strng{authorfullhashraw}{d184e05eaed61d5a9ceed1a85bfe4d36}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{TENCON 2019-2019 IEEE Region 10 Conference (TENCON)}
+      \field{title}{Development of large annotated music datasets using HMM based forced Viterbi alignment}
+      \field{year}{2019}
+      \field{pages}{1298\bibrangedash 1302}
+      \range{pages}{5}
+    \endentry
     \entry{klapuri1998automatic}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=5d79b2c1c58f54540fd7dce441be6a83}{%
@@ -358,6 +481,101 @@
       \field{year}{1998}
       \field{pages}{588\bibrangedash 601}
       \range{pages}{14}
+    \endentry
+    \entry{sigtia2016end}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=41dfe7a23523475cf0db49d0c2744acd}{%
+           family={Sigtia},
+           familyi={S\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b068724f00d17295882e712edcc6315c}{%
+           family={Benetos},
+           familyi={B\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a9aae0a8ca29e8a3ecc7d2bbf3f6c76e}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{fullhash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{fullhashraw}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{bibnamehash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{authorbibnamehash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{authornamehash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{authorfullhash}{1cc22cf17b4c104137a7401d7873deb9}
+      \strng{authorfullhashraw}{1cc22cf17b4c104137a7401d7873deb9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/ACM Transactions on Audio, Speech, and Language Processing}
+      \field{number}{5}
+      \field{title}{An end-to-end neural network for polyphonic piano music transcription}
+      \field{volume}{24}
+      \field{year}{2016}
+      \field{pages}{927\bibrangedash 939}
+      \range{pages}{13}
+    \endentry
+    \entry{takeda2002hidden}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=0d7b33f4d84462737f3b60857fc9d97d}{%
+           family={Takeda},
+           familyi={T\bibinitperiod},
+           given={Haruto},
+           giveni={H\bibinitperiod}}}%
+        {{hash=45c4785e53a3f613a8c87f51db7301c9}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c9518b7a360612a666a62bf46441d639}{%
+           family={Otsuki},
+           familyi={O\bibinitperiod},
+           given={Tomoshi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=454dd990b8ce5e93347705a4b337320f}{%
+           family={Nakai},
+           familyi={N\bibinitperiod},
+           given={Mitsuru},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a0c59a94855ae4c54791b58f170ec0ec}{%
+           family={Shimodaira},
+           familyi={S\bibinitperiod},
+           given={Hiroshi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=32e95823cd525a9cdd3388525d88d388}{%
+           family={Sagayama},
+           familyi={S\bibinitperiod},
+           given={Shigeki},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{96051e8f018ad028f06f24130fbbe458}
+      \strng{fullhash}{6262ae18c6dbd4ffe0bde39437e74055}
+      \strng{fullhashraw}{6262ae18c6dbd4ffe0bde39437e74055}
+      \strng{bibnamehash}{96051e8f018ad028f06f24130fbbe458}
+      \strng{authorbibnamehash}{96051e8f018ad028f06f24130fbbe458}
+      \strng{authornamehash}{96051e8f018ad028f06f24130fbbe458}
+      \strng{authorfullhash}{6262ae18c6dbd4ffe0bde39437e74055}
+      \strng{authorfullhashraw}{6262ae18c6dbd4ffe0bde39437e74055}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2002 IEEE Workshop on Multimedia Signal Processing.}
+      \field{title}{Hidden Markov model for automatic transcription of MIDI signals}
+      \field{year}{2002}
+      \field{pages}{428\bibrangedash 431}
+      \range{pages}{4}
     \endentry
     \entry{telila2025cnn}{article}{}{}
       \name{author}{3}{}{%

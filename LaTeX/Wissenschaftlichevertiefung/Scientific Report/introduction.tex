@@ -59,14 +59,7 @@ Diese Module bilden keine eigenständigen KIs, sondern lassen sich flexibel inne
 Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz von Reinforcement Learning nicht sinnvoll.
 Dementsprechend braucht man auch ein zuverlässiges Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien.
 
-RNNs sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
-In der Musik werden viele Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
-Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
-um die darauffolgenden Noten besser einordnen zu können.
-So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des Stücks analysieren.
-\cite{Boeck2012}
-
-CNNs hingegen können gut räumliche Strukturen erkennen.
+CNNs können gut räumliche Strukturen erkennen.
 Das hiflt uns bei der Analyse von Spektrogrammen.
 Meist werden die verschiedenen Frequenzen der Noten, die gespielt wurden,
 nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben.
@@ -75,6 +68,13 @@ Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt we
 die dann einem bestimmten Instrument zugeordnet werden können.
 Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrumente voneinander zu differenzieren.
 \cite{han2016deep}
+
+RNNs hingegen sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
+In der Musik werden viele Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
+Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
+um die darauffolgenden Noten besser einordnen zu können.
+So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des Stücks analysieren.
+\cite{Boeck2012}
 
 RNNs und CNNs werden auch häufig kombiniert in AMT-Modellen.
 Meist in folgender Reihenfolge:
