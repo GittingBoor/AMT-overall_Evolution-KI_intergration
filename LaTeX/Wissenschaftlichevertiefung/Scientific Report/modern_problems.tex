@@ -1,0 +1,85 @@
+\section{Hindernisse Moderner AMT-Systeme}
+Trotz der Einführung von KI-Modulen gibt es noch viele offene Probleme, die noch nicht gelöst werden konnten
+oder noch nicht perfekt gelöst sind.
+Auch wenn durch die nutzung von KIs viele Fehler geringer oder sogar komplett behoben werden konnten,
+agieren diese völlig anders als normale Algorithmen.
+Dies führte, zum Teil, auch zu neuen Problemen, welche davor nicht mal bekannt waren.
+
+\subsection{Onset Detection}
+Die On-/Offset erkennung von Noten wurde schon ausgiebig in vielen Arbeiten behandelt.
+Trotzdem ist diese noch nicht komplett akkurat.
+Das liegt daran, dass man On-/Offsets an Lautstärke sprüngen und spektralen Änderungen erkennt.
+Bei polyphonen Musikstücken mit vielen verschiedenen Noten kann man jedoch schwieriger diese Unterschiede erkennen.
+Lautstärke sprünge werden ungenauer, da viele andere Noten während des Onsets einer bestimmten Note spielen.
+Mit spektralen Änderungen sind hier Veränderungen der Energieverteilung gemeint.
+Einer der ausschlaggebendsten Anteile ist die Spektrale Fluktuation.
+Diese stellt den plötzlichen Anstieg von Energie in bestimmten Frequenzbändern dar.
+Wenn nun ein Ton auf einem Klavier gespielt wird kann somit der Onset sehr gut ermittelt werden.
+Bei Instrument wie einer Geige kann dies jedoch zu problemen führen.
+Hier können Noten gebunden gespielt werden, was zu einem unterschied in der Frequenz,
+jedoch nicht in dem Energie level führt.
+Zudem kann eine Note, durch Crescendo, zunächst leise gespielt werden und mit der Zeit an Lautstärke zunehmen.
+Dieser Onset hat keinen Energie-Peak und somit erkennt das System hier auch nur schwierig eine scharfe Kante.
+So welche Töne, welche keinen starken Einschlag haben, werden als nicht-perkussiv bezeichnet.
+Ein weiteres Problem der Onset erkennung sind nach wirkende Geräusche oder stör Geräusche.
+Bleiben wir bei dem Beispiel einer Geige, so können einige Töne, sobald man aufhört andere Töne zu spielen, nachklingen.
+Dadurch könnten Töne von anderen Instrumenten verdeckt werden, wodurch das System den Onset nicht erkennt.
+Ähnlich kann dies auch der Fall sein, wenn im Audiosignal ein starkes Rauschen besteht.
+
+\subsection{Polyphonie und Notenzuordnung}
+Durch die nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung,
+viele Probleme schwerer und deutlicher geworden.
+Ein weiteres Problem, das gezielt von diesen Anwendungsfällen abhängt, ist die Verwechselung von Noten im Audiosignal.
+Einige Noten haben sehr ähnliche Frequenzen.
+Wenn diese Noten gleichzeitig gespielt werden, ist es schwieriger für das System, die korrekten Noten herauszuhören.
+Neuronale Netzwerke helfen hierbei deutlich, da diese nicht nur das Spektrum zur analyse einbeziehen,
+sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext besser zuordnen können
+und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
+Trotz dessen scheitert auch KI an der einordnung der richtigen Noten, wenn die gespielten Noten
+eine sehr ähnliche Frequenz besitzen oder die Akkorde zu unterschiedlich zu den Trainingsdaten sind.
+In der Arbeit von Lukas Samuel Martak werden diese Probleme nochmals deutlicher aufgegriffen.
+\cite{martak2022balancing}
+
+\subsection{Instrument spezifische Probleme}
+Oft ist die Qualität der Transkription auch abhängig von den vertretenen Instrumenten in dem Audiosignal.
+Ethnische Instrumente zum Beispiel sind Instrumente die einer bestimmten Kultur angehören
+und in unserer westlichen Kultur weniger vertreten sind.
+Dadurch gibt es auch weniger Datensätze, welche diese Instrumente beinhalten.
+KIs brauchen Trainingsdaten und ohne diese können sie bestimmte Instrumente nicht richtig zuordnen.
+Die meisten Datensätze zur Musiktranskription bestehen hauptsächlich aus Klavier und Geigen Noten.
+Instrumente wie Flöten oder Orgeln können von diesen Noten gut abgeleitet werden,
+da sich deren Struktur deutlich ähnelt.
+Eine weitere Gruppe von Instrumenten die Probleme bei der Transkription bereitet sind elektronische Instrumente.
+Wenn man zum Beispiel eine E-Gitarre spielt, kann diese Effekte nutzen,
+welche nicht üblich in klassischen Datensätzen von Klavieren vorkommen.
+Somit erkennt die KI diese Töne nicht korrekt an.
+Das letzte Instrument welches schwierigkeiten bringt, ist der Gesang.
+Jede Stimme ist einzigartig und vor allem nicht statische.
+Wenn man einen Ton auf dem Klavier spielt, besitzt dieser,
+wenn das Klavier richtig gestimmt ist, immer die gleiche Frequenz.
+Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt spielen, wodurch eine große varianz an Tönen entsteht.
+Zudem verläuft der Klang einer Stimme von einer Note zur nächsten.
+Es gibt nicht immer starke Peaks zur Onset Erkennung.
+Gesang ist auch, wie die vorher genannten Instrumentgruppen, nicht sonderlich vertreten in größeren Datensätzen.
+Xiangming Gu hat sich in folgende Paper speziell auf das Thema des Gesangs in der Musiktranskription fokussiert
+\cite{gu2023deep,gu2024automatic}
+und kam in seiner Arbeit sogar auf eine Onset Erkennungsgenauigkeit von ungefähr 80\%, wenn Gesang genutzt word.
+
+\subsection{Notendauer}
+Neben dem Onset einer Note muss man auch erkennen, wie lange eine bestimmte Note gespielt wird.
+Das kann schwierig sein, da man den Nachhall einer Note von der wirklich gespielten Zeit der Note trennen muss.
+Es gibt jedoch bei einigen Instrumenten, wie zum Beispiel dem Klavier, ein spezielles Problem.
+Wenn man während des Spielens einer Note das Pedal drückt, gibt es keinen klaren Punkt,
+an dem man den Übergang zwischen der Note und dem Nachhallen eindeutig erkennen kann.
+Die Lautstärke sinkt dabei nicht abrupt, sondern nur langsam ab.
+Natürlich ist dieses Problem in polyphonen Musikstücken nochmal deutlich stärker,
+da sich dort die verschiedenen Nachhallphasen überlappen.
+Fatemeh Jamshidi betont dies in seiner Arbeit als eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
+\cite{jamshidi2024machine}
+
+\subsection{s}
+
+
+
+
+% Welche Probleme haben auch noch heute KI-basierende AMT-Systeme die noch nicht ganz geregelt sind

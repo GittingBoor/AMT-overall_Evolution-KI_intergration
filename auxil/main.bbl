@@ -242,6 +242,108 @@
       \field{pages}{549\bibrangedash 558}
       \range{pages}{10}
     \endentry
+    \entry{gu2024automatic}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=e6e7254968e77d760a500fb3959476d6}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Xiangming},
+           giveni={X\bibinitperiod}}}%
+        {{hash=724099a04b0a2fab58cd2cbe840c3b6c}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Longshen},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c14a2b98f3681abab1366793dca49c73}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a9347b2232469d8d075c4d3340476443}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jianan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a78e2af39586aee020c1e0385d620a96}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=33f1f8102ae8d032fb301ab80a09459d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY}%
+      }
+      \strng{namehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{fullhash}{db130dbab1dc426c7b8dc0a2d1cb83e7}
+      \strng{fullhashraw}{db130dbab1dc426c7b8dc0a2d1cb83e7}
+      \strng{bibnamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authorbibnamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authornamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authorfullhash}{db130dbab1dc426c7b8dc0a2d1cb83e7}
+      \strng{authorfullhashraw}{db130dbab1dc426c7b8dc0a2d1cb83e7}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Multimedia Computing, Communications and Applications}
+      \field{number}{7}
+      \field{title}{Automatic lyric transcription and automatic music transcription from multimodal singing}
+      \field{volume}{20}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 29}
+      \range{pages}{29}
+    \endentry
+    \entry{gu2023deep}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e6e7254968e77d760a500fb3959476d6}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Xiangming},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c14a2b98f3681abab1366793dca49c73}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a9347b2232469d8d075c4d3340476443}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jianan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=724099a04b0a2fab58cd2cbe840c3b6c}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Longshen},
+           giveni={L\bibinitperiod}}}%
+        {{hash=33f1f8102ae8d032fb301ab80a09459d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{fullhash}{3cd996b1fbb91da9ac8c681ca85c4671}
+      \strng{fullhashraw}{3cd996b1fbb91da9ac8c681ca85c4671}
+      \strng{bibnamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authorbibnamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authornamehash}{49cb56ca439a60e09b1f9e3abe5187c5}
+      \strng{authorfullhash}{3cd996b1fbb91da9ac8c681ca85c4671}
+      \strng{authorfullhashraw}{3cd996b1fbb91da9ac8c681ca85c4671}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2304.12082}
+      \field{title}{Deep audio-visual singing voice transcription based on self-supervised learning models}
+      \field{year}{2023}
+    \endentry
     \entry{han2016deep}{article}{}{}
       \name{author}{3}{}{%
         {{hash=4a1e25a86fbcddf1e82056630f705db9}{%
@@ -310,6 +412,45 @@
       \verb{url}
       \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
       \endverb
+    \endentry
+    \entry{jamshidi2024machine}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=dd4bcf80177cb7bbbed17e36d598a9bf}{%
+           family={Jamshidi},
+           familyi={J\bibinitperiod},
+           given={Fatemeh},
+           giveni={F\bibinitperiod}}}%
+        {{hash=20de91b2a1a93ccf75d63b42b82d6f68}{%
+           family={Pike},
+           familyi={P\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=bf2072ef6bebbc9caf1bd20314d70376}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0c5e236ea512fa823d7cb2221e7043b9}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6e8a658c705a79b96301e1e6a363ba6}
+      \strng{fullhash}{e1887a4da8d065d7eb67a3944ef6244d}
+      \strng{fullhashraw}{e1887a4da8d065d7eb67a3944ef6244d}
+      \strng{bibnamehash}{a6e8a658c705a79b96301e1e6a363ba6}
+      \strng{authorbibnamehash}{a6e8a658c705a79b96301e1e6a363ba6}
+      \strng{authornamehash}{a6e8a658c705a79b96301e1e6a363ba6}
+      \strng{authorfullhash}{e1887a4da8d065d7eb67a3944ef6244d}
+      \strng{authorfullhashraw}{e1887a4da8d065d7eb67a3944ef6244d}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2406.15249}
+      \field{title}{Machine learning techniques in automatic music transcription: A systematic survey}
+      \field{year}{2024}
     \endentry
     \entry{joysingh2019development}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -380,6 +521,46 @@
       \field{year}{1998}
       \field{pages}{6\bibrangedash 9}
       \range{pages}{4}
+    \endentry
+    \entry{martak2022balancing}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e0611a611f2df93040fc0ea4aff4f409}{%
+           family={Marták},
+           familyi={M\bibinitperiod},
+           given={Lukáš\bibnamedelima Samuel},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=07a942196507cd4f935998a268c8a84c}{%
+           family={Kelz},
+           familyi={K\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8296a6d278bcf9dc9f972c25929ae2d0}{%
+           family={Widmer},
+           familyi={W\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{fullhash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{fullhashraw}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{bibnamehash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{authorbibnamehash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{authornamehash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{authorfullhash}{90b36b0020b8cad28b32ff76240d025a}
+      \strng{authorfullhashraw}{90b36b0020b8cad28b32ff76240d025a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Signal Processing}
+      \field{title}{Balancing bias and performance in polyphonic piano transcription systems}
+      \field{volume}{2}
+      \field{year}{2022}
+      \field{pages}{975932}
+      \range{pages}{1}
     \endentry
     \entry{Martin1996}{report}{}{}
       \name{author}{1}{}{%

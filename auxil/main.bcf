@@ -2393,6 +2393,10 @@
     <bcf:citekey order="20" intorder="1">scheirer1998tempo</bcf:citekey>
     <bcf:citekey order="21" intorder="1">eyben2010universal</bcf:citekey>
     <bcf:citekey order="22" intorder="1">sigtia2016end</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">martak2022balancing</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">gu2023deep</bcf:citekey>
+    <bcf:citekey order="24" intorder="2">gu2024automatic</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">jamshidi2024machine</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
