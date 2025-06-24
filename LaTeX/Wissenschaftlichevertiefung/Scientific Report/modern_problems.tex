@@ -103,8 +103,25 @@ was das nächste musikalische Ereignis im Audiosignal ist und reagieren dementsp
 Dadurch entspricht der Output viel mehr dem Input, in relation zu der zeitlichen Abfolge.
 Im Ergebnis sind Event-basierte AMT-Systeme somit Frame-basierten AMT-Systemen überlegen.
 Jedoch ist in der Realität trotzdem fast jedes AMT-System Frame-basiert.
-Das liegt % Unterschiede warum frame basierte öfter genutzt werden auflegen (siehe ChatGPT)
+Das liegt daran, dass Event-basierte AMT-Systeme eine sehr neue Entwickelung sind
+und zudem auch schwerer zu implementieren ist.
+Frame-basierte Methoden wurden ungefähr im Jahre 2000 entwickelt
+und haben sich seitdem in zahlreichen Arbeiten durchgesetzt.
+\cite{Martin1996, klapuri1998automatic}
+Dahingegen sind Event-basierte Methoden erst ungefähr 15 Jahre später entwickelt worden.
+\cite{performance_rnn2017event}
+Deshalb wurden Frame-basierte Methoden lange als der Standard angesehen.
+Zudem ist die Umsetzung von Event-basierten AMT-Systemen schwerer als Frame-basierte.
+Das System muss korrekt jedes Event einschätzen un zuordnen, ist es ein Onset ein Offset oder doch nur Rauschen?
+Wenn es nun einen Fehler macht wird sich das, 
+im gegensatz zu Frame-basierten, auf das ganze weitere Audiosignal auswirken.
+Auch das Training kann nicht parallel verlaufen, sondern muss tokenweise abgearbeitet werden.
+Diese Gründe, und noch einige andere, machen Event-basierte AMT-Systeme zu einer viel größeren Herauforderung.
+Jedoch ist der übergang von Frame zu Event mit der Zeit irgendwann nötig, da man somit den Inhalt der Musikstücke
+viel präziser wiedergeben kann.
+Die Forschung in dem Event-basierten Methoden steigt auch in den letzten Jahren immer mehr an.
 
+\subsection{Blackbox von KI-Modellen}
 
 
 % Welche Probleme haben auch noch heute KI-basierende AMT-Systeme die noch nicht ganz geregelt sind
