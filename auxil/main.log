@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  23 JUN 2025 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  24 JUN 2025 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1445,6 +1445,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
 Overfull \hbox (4.53941pt too wide) in paragraph at lines 123--123
 []\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fernán-dez und Jür-gen Schmid-hu-b
 er. ``Multi-dimensional re-cur-rent neural
@@ -1459,7 +1468,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12]
+[13]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1468,7 +1477,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13]
+[14]
 (C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\out\main.aux)
  ***********
@@ -1489,10 +1498,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36198 strings out of 469941
- 698423 string characters out of 5469431
- 1508983 words of memory out of 5000000
- 62392 multiletter control sequences out of 15000+600000
+ 36203 strings out of 469941
+ 698571 string characters out of 5469431
+ 1507983 words of memory out of 5000000
+ 62394 multiletter control sequences out of 15000+600000
  664338 words of font info for 75 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,11n,107p,695b,3070s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1503,9 +1512,9 @@ imes/utmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
 imes/utmri8a.pfb>
 Output written on C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitH
-ub\Automatic-Music-Transcription\out\main.pdf (16 pages, 232069 bytes).
+ub\Automatic-Music-Transcription\out\main.pdf (17 pages, 235407 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

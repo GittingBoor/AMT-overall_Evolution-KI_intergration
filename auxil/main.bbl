@@ -522,6 +522,40 @@
       \field{pages}{6\bibrangedash 9}
       \range{pages}{4}
     \endentry
+    \entry{kusaka2024mobile}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=44418b72bb375bc4204de7a18e753efd}{%
+           family={Kusaka},
+           familyi={K\bibinitperiod},
+           given={Yuta},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=72c90dfc673d1abcb8048488fb58abf5}{%
+           family={Maezawa},
+           familyi={M\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{fullhash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{fullhashraw}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{bibnamehash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{authorbibnamehash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{authornamehash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{authorfullhash}{a36be344513afe5370cb8e1f4c9f01de}
+      \strng{authorfullhashraw}{a36be344513afe5370cb8e1f4c9f01de}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 32nd European Signal Processing Conference (EUSIPCO)}
+      \field{title}{Mobile-AMT: Real-Time Polyphonic Piano Transcription for In-the-Wild Recordings}
+      \field{year}{2024}
+      \field{pages}{36\bibrangedash 40}
+      \range{pages}{5}
+    \endentry
     \entry{martak2022balancing}{article}{}{}
       \name{author}{3}{}{%
         {{hash=e0611a611f2df93040fc0ea4aff4f409}{%

@@ -77,8 +77,33 @@ da sich dort die verschiedenen Nachhallphasen überlappen.
 Fatemeh Jamshidi betont dies in seiner Arbeit als eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
 \cite{jamshidi2024machine}
 
-\subsection{s}
+\subsection{Reale Audioaufnahmen}
+Ein perfektes AMT-System sollte sogar auf realen Audioaufnahmen 100\% Genauigkeit besitzen.
+In der Realität klappt das aber nicht so gut, da Live-Audioaufnahmen mehr Hintergrundrauschen besitzt.
+Dies war schon vor der Einführung von KI ein Problem und wurde durch die Einbindung
+von KI-Modulen nicht sonderlich viel verbessert.
+Das liegt daran, dass KIs mit isolierten Studioaufnahmen, wie es im MAESTRO Datensatz der Fall ist, trainiert werden.
+Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte man dafür viel mehr Trainingsdaten und
+vor allem auch viele unterschiedliche Hintergrundgeräusche, damit die KI auf alles trainiert wird.
+Um dem entgegenzuwirken, kann man Studio-Datensätze wie MAESTRO durch Data-Augmentation variieren,
+wodurch realistischere Audioaufnahmen entstehen.
+So setzte Yuta Kusaka dies auch in seiner Arbeit, für seine Trainingsdaten, ein.
+\cite{kusaka2024mobile}
+Er variierte Timber, Reverb, Noise und veränderte die Qualität des Aufnahmegerätes zu der eines Smartphones.
+So bekommt er viele neue Datensätze, die passend auf seinen Anwendungsfall ausgelegt sind.
 
+\subsection{Frame-basierte vs Event-basierte AMT-Systeme}
+Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
+Frame-basiert bedeutet, das die Analyse des Audiosignals in Zeitfenster, ungefähr 20ms, aufgeteilt wird.
+Jedes Zeitfenster wird somit der momentane Stand das Audiosignal von den verschiedenen Modulen analysiert.
+Falls nun zum Beispiel ein Onset einer Note genau zwischen zwei Zeitfenstern liegt,
+wird dieser verschoben oder verzerrt, sodass dieser mit den gegebenen Zeitfenstern übereinstimmt.
+Event-basierte AMT-Systeme hingegen fragen immer ab,
+was das nächste musikalische Ereignis im Audiosignal ist und reagieren dementsprechend.
+Dadurch entspricht der Output viel mehr dem Input, in relation zu der zeitlichen Abfolge.
+Im Ergebnis sind Event-basierte AMT-Systeme somit Frame-basierten AMT-Systemen überlegen.
+Jedoch ist in der Realität trotzdem fast jedes AMT-System Frame-basiert.
+Das liegt % Unterschiede warum frame basierte öfter genutzt werden auflegen (siehe ChatGPT)
 
 
 

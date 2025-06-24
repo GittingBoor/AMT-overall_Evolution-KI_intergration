@@ -1,18 +1,18 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'main.blg'
-[106] biber-MSWIN64:340> INFO - === 
-[139] Biber.pm:420> INFO - Reading 'main.bcf'
-[224] Biber.pm:994> INFO - Found 20 citekeys in bib section 0
-[234] Biber.pm:4463> INFO - Processing section 0
-[244] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[293] bibtex.pm:1713> INFO - LaTeX decoding ...
-[314] bibtex.pm:1519> INFO - Found BibTeX data source 'C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\literatur.bib'
-[410] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[410] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[410] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[410] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[427] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[437] bbl.pm:779> INFO - Output to main.bbl
-[437] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
-[437] Biber.pm:131> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
-[437] Biber.pm:133> INFO - WARNINGS: 2
+[91] biber-MSWIN64:340> INFO - === 
+[125] Biber.pm:420> INFO - Reading 'main.bcf'
+[204] Biber.pm:994> INFO - Found 21 citekeys in bib section 0
+[214] Biber.pm:4463> INFO - Processing section 0
+[223] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[270] bibtex.pm:1713> INFO - LaTeX decoding ...
+[292] bibtex.pm:1519> INFO - Found BibTeX data source 'C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\literatur.bib'
+[381] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[381] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[381] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[381] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[399] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[408] bbl.pm:779> INFO - Output to main.bbl
+[409] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
+[409] Biber.pm:131> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
+[409] Biber.pm:133> INFO - WARNINGS: 2

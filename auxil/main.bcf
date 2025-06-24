@@ -2397,6 +2397,7 @@
     <bcf:citekey order="24" intorder="1">gu2023deep</bcf:citekey>
     <bcf:citekey order="24" intorder="2">gu2024automatic</bcf:citekey>
     <bcf:citekey order="25" intorder="1">jamshidi2024machine</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">kusaka2024mobile</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
