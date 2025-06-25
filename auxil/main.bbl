@@ -103,6 +103,50 @@
       \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
       \endverb
     \endentry
+    \entry{cheuk2021revisiting}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=3b44500ec3bf865184968d612dbc09a7}{%
+           family={Cheuk},
+           familyi={C\bibinitperiod},
+           given={Kin\bibnamedelima Wai},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8bedc194dcec83bc6760a1731d18c69f}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yin-Jyun},
+           giveni={Y\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=b068724f00d17295882e712edcc6315c}{%
+           family={Benetos},
+           familyi={B\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fdae87cad6eeb39b72cfdb074d296c7b}{%
+           family={Herremans},
+           familyi={H\bibinitperiod},
+           given={Dorien},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{fullhash}{d92bb1e07b0e6698eb4522ab88cf6396}
+      \strng{fullhashraw}{d92bb1e07b0e6698eb4522ab88cf6396}
+      \strng{bibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authorbibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authornamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authorfullhash}{d92bb1e07b0e6698eb4522ab88cf6396}
+      \strng{authorfullhashraw}{d92bb1e07b0e6698eb4522ab88cf6396}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 International Joint Conference on Neural Networks (IJCNN)}
+      \field{title}{Revisiting the onsets and frames model with additive attention}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
     \entry{smith1983midi}{article}{}{}
       \name{author}{2}{}{%
         {{hash=dc423c1a176caf95bd2fba94ac0a0efa}{%
@@ -555,6 +599,29 @@
       \field{year}{2024}
       \field{pages}{36\bibrangedash 40}
       \range{pages}{5}
+    \endentry
+    \entry{performance_rnn2017event}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ad630040e50482691cc564f6925724ae}{%
+           family={{Magenta Team}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad630040e50482691cc564f6925724ae}
+      \strng{fullhash}{ad630040e50482691cc564f6925724ae}
+      \strng{fullhashraw}{ad630040e50482691cc564f6925724ae}
+      \strng{bibnamehash}{ad630040e50482691cc564f6925724ae}
+      \strng{authorbibnamehash}{ad630040e50482691cc564f6925724ae}
+      \strng{authornamehash}{ad630040e50482691cc564f6925724ae}
+      \strng{authorfullhash}{ad630040e50482691cc564f6925724ae}
+      \strng{authorfullhashraw}{ad630040e50482691cc564f6925724ae}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://magenta.tensorflow.org/performance-rnn}}
+      \field{note}{Accessed: 2025-06-22}
+      \field{title}{Performance RNN: Generating Expressive Piano Performances with Neural Networks}
+      \field{year}{2017}
     \endentry
     \entry{martak2022balancing}{article}{}{}
       \name{author}{3}{}{%

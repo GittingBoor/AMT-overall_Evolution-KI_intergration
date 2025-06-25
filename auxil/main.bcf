@@ -2398,6 +2398,10 @@
     <bcf:citekey order="24" intorder="2">gu2024automatic</bcf:citekey>
     <bcf:citekey order="25" intorder="1">jamshidi2024machine</bcf:citekey>
     <bcf:citekey order="26" intorder="1">kusaka2024mobile</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="27" intorder="2">klapuri1998automatic</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">performance_rnn2017event</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">cheuk2021revisiting</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
