@@ -2402,6 +2402,7 @@
     <bcf:citekey order="27" intorder="2">klapuri1998automatic</bcf:citekey>
     <bcf:citekey order="28" intorder="1">performance_rnn2017event</bcf:citekey>
     <bcf:citekey order="29" intorder="1">cheuk2021revisiting</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">hawthorne2017onsets</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

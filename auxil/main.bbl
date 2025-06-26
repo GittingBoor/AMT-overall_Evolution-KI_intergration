@@ -429,6 +429,70 @@
       \field{pages}{208\bibrangedash 221}
       \range{pages}{14}
     \endentry
+    \entry{hawthorne2017onsets}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=4102bf268c4922002c51584dbb63c959}{%
+           family={Hawthorne},
+           familyi={H\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6aa92a937d4d30dd0b5ec0eecbad1bf1}{%
+           family={Elsen},
+           familyi={E\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5aa4a8948ca91d3a18201fabb1cecdc8}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Jialin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=243c03e5ae8031582d6af9fcbc70f629}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0b461ec7764bb41a6287a8d0716006a0}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=81a5a94e2388c149a73a86381db45e07}{%
+           family={Raffel},
+           familyi={R\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=84488af703576ab131f87436b63aeef0}{%
+           family={Engel},
+           familyi={E\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod}}}%
+        {{hash=619ca3d01db1d2673993591ddf761dbb}{%
+           family={Oore},
+           familyi={O\bibinitperiod},
+           given={Sageev},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b2c4631ad93e93115d9b3ceea6587550}{%
+           family={Eck},
+           familyi={E\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc875fb44266eb3f98e6aa2c898eaf27}
+      \strng{fullhash}{9ccbd093574f665e8ab46f678ff3b74f}
+      \strng{fullhashraw}{9ccbd093574f665e8ab46f678ff3b74f}
+      \strng{bibnamehash}{dc875fb44266eb3f98e6aa2c898eaf27}
+      \strng{authorbibnamehash}{dc875fb44266eb3f98e6aa2c898eaf27}
+      \strng{authornamehash}{dc875fb44266eb3f98e6aa2c898eaf27}
+      \strng{authorfullhash}{9ccbd093574f665e8ab46f678ff3b74f}
+      \strng{authorfullhashraw}{9ccbd093574f665e8ab46f678ff3b74f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1710.11153}
+      \field{title}{Onsets and frames: Dual-objective piano transcription}
+      \field{year}{2017}
+    \endentry
     \entry{iZotope2025noisefloor}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c7378e077457ee4772b9feac0223c2ad}{%

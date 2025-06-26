@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  26 JUN 2025 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  26 JUN 2025 20:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1319,6 +1319,11 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
+LaTeX Warning: Reference `subsec:ki_integration' on page 2 undefined on input l
+ine 110.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1331,9 +1336,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.133 
+l.132 
        [2]
-Overfull \hbox (1.15347pt too wide) in paragraph at lines 135--137
+Overfull \hbox (1.15347pt too wide) in paragraph at lines 134--136
 \T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
 lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
  []
@@ -1444,7 +1449,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11]) (state_of_the_art.tex) (conclusion.tex)
+[11]) (state_of_the_art.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1453,13 +1458,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12]
-Overfull \hbox (4.53941pt too wide) in paragraph at lines 123--123
-[]\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fernán-dez und Jür-gen Schmid-hu-b
-er. ``Multi-dimensional re-cur-rent neural
- []
-
-
+[12]) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1478,6 +1477,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
+Overfull \hbox (4.53941pt too wide) in paragraph at lines 123--123
+[]\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fernán-dez und Jür-gen Schmid-hu-b
+er. ``Multi-dimensional re-cur-rent neural
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16]
 (C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\out\main.aux)
  ***********
@@ -1498,10 +1521,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36211 strings out of 469941
- 698887 string characters out of 5469431
- 1508982 words of memory out of 5000000
- 62399 multiletter control sequences out of 15000+600000
+ 36222 strings out of 469941
+ 699155 string characters out of 5469431
+ 1508983 words of memory out of 5000000
+ 62402 multiletter control sequences out of 15000+600000
  664338 words of font info for 75 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,11n,107p,695b,3070s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1512,9 +1535,9 @@ imes/utmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
 imes/utmri8a.pfb>
 Output written on C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitH
-ub\Automatic-Music-Transcription\out\main.pdf (17 pages, 240354 bytes).
+ub\Automatic-Music-Transcription\out\main.pdf (19 pages, 247877 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

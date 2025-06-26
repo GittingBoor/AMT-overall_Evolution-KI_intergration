@@ -19,17 +19,68 @@ Auch KIs wie ChatGPT nutzen eine verbesserte Form von CNNs, um Bilder zu analysi
 Im Fall der Musiktranskription haben wir als Input Bild das Spektrogramm.
 Spektrogramme können ähnliche wie zweidimensionale Bilder gehandhabt werden,
 da auf diesen auch alle wichtigen Daten des Inputs Audiosignals zu finden sind.
-CNNs bestehen aus drei verschiedenen Schichten, % Hier schichten was sagen
+CNNs bestehen aus mehreren verschiedenen Layern.
+Einfache CNN Modelle bestehen nur aus 2 bis 5 Layern,
+wobei komplexere CNNs aus über tausende Layern bestehen können.
+In AMT-Systemen haben die meisten CNNs etwa drei bis zehn Layer.
+Diese Layer sind Convolutional Layer (Faltungsschicht), Activation Layer (ReLU), Pooling Layer,
+Batch Normalization, Dropout Layer und Upsampling.
+Mit jedem Layer kann ein CNN immer abstraktere Merkmale erkennen.
+Außer dem Convolutional Layer und Activation Layer sind die anderen Layer jedoch nicht unbedingt notwendig.
+Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt ist die von Curtis Hawthorne.
+\cite{hawthorne2017onsets}
+Er benutzt direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
+Mit diesem System illustriert er die Entwickelung des Forschungsgebietes,
+insbesondere für polyphone Klaviertranskription, ausgezeichnet.
+Im Folgenden werde ich die verschiedenen Layer eines CNNs, in einem AMT-System, erläutern.
 
-Ein CNN funktioniert folgendermaßen.
-% Convolution Layer (Faltungsschicht)
-CNNs verwenden Filter, welche jeweils einen 3x3 Pixel Eingabebereich des Input Bildes abdecken.
-Diese Filter werden über das gesamte Bild gezogen und analysieren dadurch erstmal jeden Teil einzeln.
+In dem Convolution Layer werden Filter verwendet.
+Filter sind 2D-Matrizen, die aus trainierbaren Gewichten bestehen.
+Ein Filter deckt jeweils einen 3x3 Pixel Eingabebereich des Inputbildes ab.
+Jeden Filter, den man auf das Bild anwendet,
+wird über das gesamte Bild gezogen und analysieren dadurch erstmal jeden Eingabebereich einzeln.
 Ein Skalarprodukt aus Filter und Eingabebereich beschreibt dann einen Aktivierungswert.
-Wenn man den Aktivierungswert mit anderen Aktivierungswerten vergleicht,
-können so mit Patterns und Eigenschaften erkannt werden.
+Aus allen Aktivierungswerten eines Filters entsteht eine Feature Map.
+Wenn man Aktivierungswerte miteinander vergleicht,
+können somit Patterns und Eigenschaften erkannt werden.
 In der Musiktranskription filtert man somit Onsets, Sustains oder harmonische Verläufe heraus.
 Zum Beispiel Onsets werden erkannt, wenn es eine plötzliche Energieänderung gibt.
+Am Ende bekommt man einen 3D-Tensor raus, welcher alle Feature Maps beinhaltet.
+
+Die Batch Normalization sorgt dafür, das die Aktivierungswerte normalisiert werden.
+Jede Feature Map wird dabei einzeln normalisiert.
+Dadurch wird Rechenleistung eingespart.
+Zudem kann man im Training durch Mini-Batches mehrere Spektrogramme gleichzeitig durch die CNN Struktur leiten.
+Dadurch wird das Training schneller und man kommt früher an Ergebnisse.
+
+Es kann passieren das die Summe eines Convolution Layers negativ ist.
+Dies kann passieren, wenn stärker gewichtete Filter einen negativen Aktivierungswert herausgeben.
+Negative Werte können zu Informationsverlust, von Eigenschaften des Musikstückes, führen.
+Um das zu vermeiden werden im Activation Layer, meistens mit der ReLU Funktion,
+alle negativen Aktivierungswerte auf 0 gesetzt.
+So kann das Netz nichtlineare Beziehungen modellieren.
+
+Als Nächstes wird mit dem Pooling Layer der Rechenaufwand verringert.
+Dieser nimmt jede Feature Map einzeln und reduziert deren Matrix zu einer kleineren, meistens 2x2, Matrix.
+Das erfolgt, indem sich der Pooling Layer zunächst eine
+gesamte Feature Map nimmt und diese dann in kleinere Blöcke aufteilt.
+Es gibt entweder Max-Pooling oder Average-Pooling.
+Je nachdem welche Methode man wählt, wird immer der höchste Wert oder der durchschnittliche Wert extrahiert.
+Der extrahierte Wert von jedem Block wird nun in die reduzierte Feature Map zurückgeführt.
+Dadurch reduziert man nicht nur Rechenaufwand, sondern vermeidet auch überanpassung.
+Wenn das System jeden kleinsten Wert berücksichtigt passt es sich zu sehr an den trainingsdaten an
+und kann womöglich andere Daten nicht mehr richtig analysieren.
+
+Der Dropout Layer ist, im gegensatz zu den anderen Layern, nur im Training relevant.
+Er schaltet zufällig bestimmte Neuronen aus,
+sodass sich Neuronen nicht ausschließlich auf bestimmte andere Neuronen verlassen können.
+Somit wird das gesamte neuronale Netzwerk robuster und vielseitiger.
+
+Upsampling ist das Gegenteil von dem Pooling Layer.
+Anstatt die Feature Maps zu reduzieren, werden diese wieder hochskaliert.
+Dadurch kann man bestimmte Features wieder zeitlich präziser bestimmen,
+da die Zeitfenster wieder genauer zum originellen Audiosignal sind.
+Meist wird dieser Layer jedoch weggelassen, da er meistens nicht sehr relevant für AMT-Systeme ist.
 
 
 \subsubsection{Recurrent Neural Networks}
