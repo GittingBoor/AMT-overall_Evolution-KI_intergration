@@ -1,9 +1,36 @@
 \section{AMT-Systeme heutzutage}
 
 \subsection{beliebte KI-Module}
-% Welche verschiedenen integrationen von KI gibt es in heutigen AMT-Systemen und welche werden am liebsten verwendet
+\label{subsec:ki_integration}
+KI-Systeme haben, in den letzten Jahren stark an beliebtheit gewonnen.
+AMT-Systeme bilden da keine Ausnahmen.
+Vor allem durch die integration von CNNs und RNNs konnten AMT-Systeme viele Prozesse deutlich verbessern
+und neue Errungenschaften in dem Forschungsgebiet erzielen.
+Es gibt jedoch auch weitere wichtige KI-Module die in AMT-Systemen häufig genutzt werden
+oder zur integration in Planung stehen.
+In diesem Kapitel werde ich auf genau diese KI-Module stärker eingehen
+und deren Aufgaben in der automatischen Musik transkription weiter erläutern.
 
 \subsubsection{Convolutional Neural Networks}
+CNNs sind neuronale Netze, welcher besonders gut räumlich strukturierte Daten analysieren können.
+Deshalb werden diese vor allem in der analyse von Bildern genutzt.
+Sie können zum Beispiel erkennen, was auf einem Bild genau passiert oder welche Objekte in einem Bild zu erkennen sind.
+Auch KIs wie ChatGPT nutzen eine verbesserte Form von CNNs, um Bilder zu analysieren.
+Im Fall der Musiktranskription haben wir als Input Bild das Spektrogramm.
+Spektrogramme können ähnliche wie zweidimensionale Bilder gehandhabt werden,
+da auf diesen auch alle wichtigen Daten des Inputs Audiosignals zu finden sind.
+CNNs bestehen aus drei verschiedenen Schichten, % Hier schichten was sagen
+
+Ein CNN funktioniert folgendermaßen.
+% Convolution Layer (Faltungsschicht)
+CNNs verwenden Filter, welche jeweils einen 3x3 Pixel Eingabebereich des Input Bildes abdecken.
+Diese Filter werden über das gesamte Bild gezogen und analysieren dadurch erstmal jeden Teil einzeln.
+Ein Skalarprodukt aus Filter und Eingabebereich beschreibt dann einen Aktivierungswert.
+Wenn man den Aktivierungswert mit anderen Aktivierungswerten vergleicht,
+können so mit Patterns und Eigenschaften erkannt werden.
+In der Musiktranskription filtert man somit Onsets, Sustains oder harmonische Verläufe heraus.
+Zum Beispiel Onsets werden erkannt, wenn es eine plötzliche Energieänderung gibt.
+
 
 \subsubsection{Recurrent Neural Networks}
 
