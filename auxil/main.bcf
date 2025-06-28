@@ -2406,6 +2406,7 @@
     <bcf:citekey order="31" intorder="1">fukushima1980neocognitron</bcf:citekey>
     <bcf:citekey order="32" intorder="1">lecun1989backpropagation</bcf:citekey>
     <bcf:citekey order="33" intorder="1">sigtia2016end</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">hawthorne2017onsets</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

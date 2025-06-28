@@ -136,10 +136,37 @@ Für einen 1D-Vektor laufen diese Aufgaben parallel zueinander ab.
 Bei der Frame-Glättung bekommt das RNN als Input die Aktivierungswerte des Zeitfensters.
 Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche vorhersagen auszuschließen.
 Das CNN hat dem RNN schon Vorhersagen für bestimmte Noten gegeben.
-Diese könnten jedoch fehlerhaft sein und fälschlicherweise für einen Frame nicht aktiv sein.
+Diese könnten jedoch fehlerhaft.
+Zum Beispiel kann die Note C4 für den Frame 6 und 8 aktiv sein,
+aber bei dem Frame 7 hat das CNN diese Note nicht als aktiv angesehen.
+Es ist sehr unwahrscheinlich, das eine Note für nur einen Frame ausfällt.
 Solche Arten von Fehlern verarbeitet das RNN und glättet dementsprechend die vorher vom CNN gelieferten Daten.
+Dadurch ist der Ton C4 auch im Frame 7 aktiv.
 
-% Fram Elättung noch ncht zuende, Dann die anderen 3 Aufgaben beschreiben,
+Die Kontext-Modellierung ist etwas komplizierter als die Frame-Glättung.
+Als Input bekommt diese auch die 1D-Vektoren des CNNs.
+In der Kontext-Modellierung werden größere zeitliche Zusammenhänge betrachtet.
+So kann die Kontext-Modellierung, mithilfe des Hidden States,
+den Notenverlauf oder auch die länge einer Note vorhersehen.
+Je nach den Trainingsdaten ist es zum Beispiel üblicher das auf C4 ein D3 folgt,
+was durch die Kontext-Modellierung angepasst wird.
+Dies ist aber immer stark von der Musikrichtung und Musikern abhängig, welche in den Trainingsdaten vorhanden sind.
+Jazz und Pop oder Bach und Taylor Swift unterscheidet sich der style der Tonabfolge extremst.
+Zudem wird Onset, Sustain und Offset stabilisiert.
+Durch vorherige Beispiele weis die Kontext-Modellierung,
+wie lange eine bestimmte Note andauern wird und kann so das Offset der Note einschätzen.
+Als Output bekommt man Kontextabhängig Vektoren.
+Sie haben die gleiche Struktur wie die 1D-Vektoren vom CNN, sind aber entsprechend dem Kontext angepasst.
+Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
+Dieses besteht aus zwei RNNs.
+Eines liest den Kontext von vorne und das andere von hinten.
+Danach werden die gewonnenen Kontexte miteinander kombiniert, um das Ergebnis noch robuster zu machen.
+Auch in AMT-Systemen sind diese sehr hilfreich.
+Ein Bidirektionales RNN kann man auch in der Arbeit von Curtis Hawthorne finden.
+\cite{hawthorne2017onsets}
+
+
+% Feature-Zusammenführung (Sequential integration of acoustic features) und Ausgabevorbereitung (time-distributed output classification).
 % Dann die Zeitliche Entwickelung von RNNs, Dann überleitung zu besseren Systemen wie LSTM
 
 
