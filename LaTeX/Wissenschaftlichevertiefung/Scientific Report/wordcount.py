@@ -14,7 +14,7 @@ def count_words_in_file(filename):
 
 
 def main():
-    main_file = "praxissemesterbericht.tex"
+    main_file = "main.tex"
     total_words = 0
     total_characters = 0
     section_counts = {}

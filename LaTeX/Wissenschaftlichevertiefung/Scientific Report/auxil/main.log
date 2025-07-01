@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  30 JUN 2025 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  1 JUL 2025 15:32
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
@@ -1124,8 +1123,9 @@ LaTeX Font Info:    Trying to load font information for T1+ptm on input line 89
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.aux)
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
@@ -1253,23 +1253,27 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
+Package biblatex Info: ... file 'main.bbl' found.
 
-No file main.bbl.
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\out\main.
+bbl)
 Package biblatex Info: Reference section=0 on input line 89.
 Package biblatex Info: Reference segment=0 on input line 89.
 Package hyperref Info: Link coloring OFF on input line 89.
 
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.out)
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.out)
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.out)
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c@lstlisting=\count487
  (titlepage.tex
-<Graphics/HSDLogo.png, id=142, 274.77657pt x 146.79843pt>
+<Graphics/HSDLogo.png, id=146, 274.77657pt x 146.79843pt>
 File: Graphics/HSDLogo.png Graphic file (type png)
 <use Graphics/HSDLogo.png>
 Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 8.
@@ -1284,7 +1288,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Graphics/FacultyOfMedia.png, id=144, 264.99pt x 195.73125pt>
+<Graphics/FacultyOfMedia.png, id=148, 264.99pt x 195.73125pt>
 File: Graphics/FacultyOfMedia.png Graphic file (type png)
 <use Graphics/FacultyOfMedia.png>
 Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
@@ -1296,39 +1300,24 @@ Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
 {C:/Users/bened/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bene
 d/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Graphics/HSDLog
 o.png> <./Graphics/FacultyOfMedia.png>])
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.toc)
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
 [2]
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.lof
-Overfull \hbox (19.7439pt too wide) in paragraph at lines 2--2
- [][] [][]\T1/ptm/m/n/10.95 Systemstruktur des AMT-Ansatzes von Keith D. Mar-ti
-n (1996), ba-sie-rend auf [[]].[] [][]  
- []
-
-)
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
 [3] (introduction.tex
-
-LaTeX Warning: Citation 'graves2007multi' on page 1 undefined on input line 49.
-
-
-
-LaTeX Warning: Citation 'Boeck2012' on page 1 undefined on input line 57.
-
-
-LaTeX Warning: Citation 'han2016deep' on page 1 undefined on input line 70.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1344,11 +1333,9 @@ been already used, duplicate ignored
                    \relax 
 l.71 
       [1]
-
-LaTeX Warning: Citation 'Boeck2012' on page 2 undefined on input line 77.
-
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
 4.
+
 (C:\Users\bened\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -1374,18 +1361,6 @@ lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
 
 ) (history.tex
 
-LaTeX Warning: Citation 'Moorer1977' on page 3 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'goswami2013timbre' on page 3 undefined on input line 3
-3.
-
-
-LaTeX Warning: Citation 'iZotope2025noisefloor' on page 3 undefined on input li
-ne 42.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1398,21 +1373,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 D
-      as letzte Problem, was Moorer angesprochen hat, ist das Nutzen von nicht
-[3]
+l.61 
+      [3]
 Overfull \hbox (0.67047pt too wide) in paragraph at lines 63--65
 \T1/ptm/m/n/10.95 Moorers au-to-ma-ti-sche Mu-sik-tran-skrip-ti-ons-sys-tem war
  eins der ers-ten sei-ner Art. Vie-le wei-te-ren AMT-
  []
-
-
-LaTeX Warning: Citation 'baum1970maximization' on page 4 undefined on input lin
-e 89.
-
-
-LaTeX Warning: Citation 'takeda2002hidden' on page 4 undefined on input line 11
-6.
 
 
 
@@ -1424,10 +1390,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-
-LaTeX Warning: Citation 'smith1983midi' on page 5 undefined on input line 140.
-
-
 Overfull \hbox (3.5908pt too wide) in paragraph at lines 137--143
 []\T1/ptm/m/n/10.95 MIDI ist ein Stan-dart-pro-to-koll zur kom-mu-ni-ka-ti-on z
 wi-schen elek-tro-ni-schen Mu-sik-in-stru-men-ten, Com-
@@ -1443,22 +1405,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-
-LaTeX Warning: Citation 'telila2025cnn' on page 6 undefined on input line 194.
-
-
-LaTeX Warning: Citation 'Moorer1977' on page 6 undefined on input line 204.
-
-
-LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 204.
-
-
-LaTeX Warning: Citation 'joysingh2019development' on page 6 undefined on input 
-line 220.
-
-
-LaTeX Warning: Citation 'Martin1996' on page 6 undefined on input line 227.
-
+<Graphics/Martin1996Structure.png, id=257, 357.335pt x 416.55624pt>
+File: Graphics/Martin1996Structure.png Graphic file (type png)
+<use Graphics/Martin1996Structure.png>
+Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
+45.
+(pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
 
 
 
@@ -1469,26 +1421,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
-<Graphics/Martin1996Structure.png, id=231, 357.335pt x 416.55624pt>
-File: Graphics/Martin1996Structure.png Graphic file (type png)
-<use Graphics/Martin1996Structure.png>
-Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
-45.
-(pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
-
-
-LaTeX Warning: Citation 'Martin1996' on page 7 undefined on input line 246.
-
-
-LaTeX Warning: Citation 'Martin1996' on page 7 undefined on input line 246.
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 246--246
-[]\T1/ptm/m/n/10.95 Abbildung 1: |Sys-tem-struk-tur des AMT-Ansatzes von Keith 
-D. Mar-tin (1996), ba-sie-rend auf
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1499,22 +1431,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7 <./Graphics/Martin1996Structure.png>]
 
-LaTeX Warning: Citation 'klapuri1998automatic' on page 8 undefined on input lin
-e 301.
-
-
-Overfull \hbox (49.05858pt too wide) in paragraph at lines 300--308
-\T1/ptm/m/n/10.95 Ende 1997 pu-bli-zier-te Kal-pu-ris sei-ne Mas-ter-ar-beit $\
-OT1/cmr/m/n/10.95 "$\T1/ptm/m/n/10.95 Automatic tran-s-crip-ti-on of Music$\OT1
-/cmr/m/n/10.95 "$\T1/ptm/m/n/10.95 . [[]]
- []
-
-
-LaTeX Warning: Citation 'scheirer1998tempo' on page 8 undefined on input line 3
-48.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1522,15 +1438,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8]
-
-LaTeX Warning: Citation 'eyben2010universal' on page 9 undefined on input line 
-399.
-
-
-LaTeX Warning: Citation 'sigtia2016end' on page 9 undefined on input line 407.
-
-) (modern_problems.tex
+[8]) (modern_problems.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1541,18 +1449,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: Citation 'martak2022balancing' on page 10 undefined on input lin
-e 41.
-
-
-LaTeX Warning: Citation 'gu2023deep' on page 10 undefined on input line 65.
-
-
-LaTeX Warning: Citation 'gu2024automatic' on page 10 undefined on input line 65
-.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1562,32 +1458,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 
-LaTeX Warning: Citation 'jamshidi2024machine' on page 11 undefined on input lin
-e 78.
-
-
-LaTeX Warning: Citation 'kusaka2024mobile' on page 11 undefined on input line 9
-1.
-
-
-LaTeX Warning: Citation 'Martin1996' on page 11 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'klapuri1998automatic' on page 11 undefined on input li
-ne 110.
-
-
-LaTeX Warning: Citation 'performance_rnn2017event' on page 11 undefined on inpu
-t line 112.
-
-
-Overfull \hbox (92.38838pt too wide) in paragraph at lines 96--123
-\T1/ptm/m/n/10.95 Da-hin-ge-gen sind Event-basierte Me-tho-den erst un-ge-f�hr 
-15 Jah-re sp�-ter ent-wi-ckelt wor-den. [[]]
- []
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1595,17 +1465,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11]
-
-LaTeX Warning: Citation 'cheuk2021revisiting' on page 12 undefined on input lin
-e 155.
-
-) (state_of_the_art.tex
-
-LaTeX Warning: Citation 'hawthorne2017onsets' on page 12 undefined on input lin
-e 31.
-
-
+[11]) (state_of_the_art.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1625,22 +1485,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 
-LaTeX Warning: Citation 'fukushima1980neocognitron' on page 14 undefined on inp
-ut line 87.
-
-
-LaTeX Warning: Citation 'lecun1989backpropagation' on page 14 undefined on inpu
-t line 90.
-
-
-LaTeX Warning: Citation 'sigtia2016end' on page 14 undefined on input line 99.
-
-
-LaTeX Warning: Citation 'hawthorne2017onsets' on page 14 undefined on input lin
-e 166.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1658,52 +1502,70 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
+Overfull \hbox (4.53941pt too wide) in paragraph at lines 124--124
+[]\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fern�n-dez und J�r-gen Schmid-hu-b
+er. ``Multi-dimensional re-cur-rent neural
+ []
 
-LaTeX Warning: Empty bibliography on input line 124.
 
 
-(C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
-sic-Transcription\out\main.aux)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17]
+(C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\GitHub\Automatic-Mu
+sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
+n.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3D5876D23C5284960C47E8A61C3B6C2D;6965.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: EDED9C1E7ED5CD9747443DD3AC678A8F;7110.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36238 strings out of 473523
- 697516 string characters out of 5714630
- 1517434 words of memory out of 5000000
- 58855 multiletter control sequences out of 15000+600000
- 596633 words of font info for 75 fonts, out of 8000000 for 9000
+ 36396 strings out of 473523
+ 704356 string characters out of 5714630
+ 1520341 words of memory out of 5000000
+ 58975 multiletter control sequences out of 15000+600000
+ 601802 words of font info for 82 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,12n,107p,695b,3032s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/bened/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/bened/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/bened/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/bened/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "C:/Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
-itHub\Automatic-Music-Transcription\out\main.pdf" (18 pages, 251780 bytes).
+ 102i,12n,107p,695b,3068s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\bened\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1095.pk><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/bened/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/bened/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/bened/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ben
+ed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
+><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on "C:\Users\bened\OneDrive - Hochschule Düsseldorf\Dokumente\G
+itHub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientifi
+c Report\out\main.pdf" (20 pages, 325185 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 300 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

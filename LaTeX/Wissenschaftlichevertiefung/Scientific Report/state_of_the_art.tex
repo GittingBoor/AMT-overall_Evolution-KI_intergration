@@ -118,9 +118,9 @@ RNNs sind neuronale Netze, welche entworfen wurden um Daten mit zeitlicher Struk
 Dabei ist die besonderheit von RNNs das diese ein Gedächtnis haben.
 Wenn nun in unserem Fall von AMT-Systemen eine bestimmte Tonabfolge gespielt wurde,
 kann sich das RNN diese merken und dementsprechend die fortlaufenden Ausgaben anpassen.
-Dies passiert dank dem Hidden State.
-Dieser stellt das Gedächtnis des RNNs dar.
-Er wird in jeder berechnung eines Zeitpunktes berücksichtigt und mit jeder neuen Ausgabe aktualisiert.
+Dies passiert dank den Hidden States.
+Dieser stellt das Gedächtnis des RNNs dar und ist einer der wichtigsten Faktoren in einem RNN\@.
+Mehr zu den Hidden States erläutere ich im übernächsten Paragraf.
 Dieses Prinzip ist in der Musiktranskription sehr hilfreich,
 da jede Note stark von den vorherigen gespielten Noten abhängt.
 Takt, Rhythmus, Harmonie und die Melodie eines Musikstückes sind alles gute Beispiele,
@@ -131,7 +131,21 @@ Je nachdem wie man das RNN trainiert bewältigt dieses alle Aufgaben oder nur ei
 Diese Aufgaben bestehen aus Frame-Glättung (Temporal smoothing), Kontext-Modellierung (Temporal context modeling),
 Feature-Zusammenführung (Sequential integration of acoustic features)
 und Ausgabevorbereitung (time-distributed output classification).
-Für einen 1D-Vektor laufen diese Aufgaben parallel zueinander ab.
+Diese Aufgaben werden auf jedes Zeitfenster, auf jeden 1D-Vektor des CNNs, angewendet.
+Doch bevor man sich auf diese einzelnen Aufgaben konzentrieren kann, muss man noch wissen, was Hidden States sind.
+
+Hidden States sind das grundlegende Prinzip, warum RNNs funktioniere.
+Sie stellen praktisch das Gedächtnis des RNNs dar und helfen somit
+anderen Modulen Vorhersagen über bestimmte musikalische Eigenschaften zu treffen.
+Für jeden 1D-Vektor, den wir vom CNN geliefert bekommen, wird ein Hidden State erstellt.
+Diese werden sequenziell nacheinander, mit abhängigkeit des vorherigen Hidden States, definiert.
+\[
+\mathbf{h}_t = f(\mathbf{x}_t, \mathbf{h}_{t-1})
+\]
+In Hidden States ist das Wissen der vorherigen Zeitfenster über zeitliche Muster, wie Sustain und Akkordstruktur.
+Sie alleine können jedoch noch keine eigene Entscheidung über bestimmte Noten fallen.
+Dafür müssen andere Module die Informationen der Hidden States später richtig verwerten.
+Jeder Hidden State hat eine Anzahl von Dimensionen, welche gleich der Anzahle der Neuronen in einem RNN ist.
 
 Bei der Frame-Glättung bekommt das RNN als Input die Aktivierungswerte des Zeitfensters.
 Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche vorhersagen auszuschließen.
@@ -155,22 +169,65 @@ Jazz und Pop oder Bach und Taylor Swift unterscheidet sich der style der Tonabfo
 Zudem wird Onset, Sustain und Offset stabilisiert.
 Durch vorherige Beispiele weis die Kontext-Modellierung,
 wie lange eine bestimmte Note andauern wird und kann so das Offset der Note einschätzen.
-Als Output bekommt man Kontextabhängig Vektoren.
+Als Output bekommt man Kontextabhängige Vektoren.
 Sie haben die gleiche Struktur wie die 1D-Vektoren vom CNN, sind aber entsprechend dem Kontext angepasst.
+
+Die Feature-Zusammenführung ist der letzte wichtige interne Schritt eines RNNs.
+Bei diesem werden aus, lokalen alleinstehenden, Informationen eines Zeitfensters, konkrete musikalische Ereignisse.
+Dadurch schreibt das RNN Ereignisse, wie Akkorde, Noten, Onsets und vieles mehr, heraus.
+Dafür muss die Feature-Zusammenführung sich die einzelnen 1D-Vektoren als eine folge von Events anschauen.
+Dies passiert wiedermal über den Hidden State.
+Das wird vor allem wichtig, wenn man später eine MIDI-Datei ausgeben möchte,
+da in dieser auch die einzelnen musikalischen Ereignisse aufgeschrieben sind.
+Als Output bekommt man kontextreiche Vektoren.
+Diese Vektoren sind, durch die vorherigen Module angepasste und verbesserte, Hidden States.
+
+Die Ausgabevorbereitung ist der letzte Schritt des RNNs,
+wodurch nun die gesammelten Daten zu echten musikalischen Ereignissen zusammengefügt werden.
+Als Input werden die, durch die Feature-Zusammenführung verbesserten, Hidden States genutzt.
+Zunächst werden diese durch ein Fully Connected Layer geschickt.
+\[
+\mathbf{z}_t = W \cdot \mathbf{h}_t + \mathbf{b}
+\]
+Ein Fully Connected Layer ist ein Klassifikator, welcher den Hidden States auf eine gewünschte Dimension bringt.
+Wenn man zum Beispiel Klaviertasten vorhersagen möchte werden alle Hidden States auf mit 88 Dimensionen ausgestattet.
+Bei MIDI-Dateien wären es 128 Dimensionen.
+Die Werte, welche wir aus dem Fully Connected Layer herausbekommen sind, jedoch noch nicht richtig interpretierbar.
+Um diese als konkrete und normalisierte Wahrscheinlichkeiten darstellen zu können,
+nutzen wir noch eine Aktivierungsfunktion.
+Zum Beispiel können wir mit der Sigmoid-Funktion als Aktivierungsfunktion,
+alle Werte normiert in einem Bereich zwischen 0 und 1 bringen.
+Sagen wir, wir wollen jetzt die gespielten Klaviertasten vorhersagen.
+Dann hat jeder Hidden State jetzt für alle Klaviertasten einen eigenen Wert mit einer Wahrscheinlichkeit,
+das diese Taste zu dem gewählten Moment gespielt wurde.
+Zu guter Letzt müssen wir noch einen Threshold bestimmten.
+In polyphonen Musikstücken können immer mehrere Noten gleichzeitig erklingen,
+weshalb man nicht einfach die Note mit der höchsten Wahrscheinlichkeit auswählen kann.
+Deshalb nutzt man einen Threshold, zum Beispiel bei 50\%,
+welcher bestimmt wie viel Prozent eine Note braucht um als aktiv zu gelten.
+Durch Postprocessing können einige Eigenschaften wie Rauschen noch herausgefiltert werden.
+Postprocessing ist jedoch nicht relevant für den KI-Ablauf.
+Wenn man zufrieden mit dem Ergebnis ist, kann man dieses jetzt in das gewünschte Output-Format,
+meistens MIDI-Dateien, einfügen.
+
 Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
 Dieses besteht aus zwei RNNs.
-Eines liest den Kontext von vorne und das andere von hinten.
-Danach werden die gewonnenen Kontexte miteinander kombiniert, um das Ergebnis noch robuster zu machen.
+Eines liest die Zeitfenster von vorne und das andere von hinten ab.
+Dadurch bekommt man die doppelte Menge Hidden States und die gesamte Vorhersage wird sehr viel robuster.
+\[
+\mathbf{h}_t = \left[ \overrightarrow{\mathbf{h}}_t \ ;\ \overleftarrow{\mathbf{h}}_t \right]
+\]
 Auch in AMT-Systemen sind diese sehr hilfreich.
 Ein Bidirektionales RNN kann man auch in der Arbeit von Curtis Hawthorne finden.
 \cite{hawthorne2017onsets}
 
+In der Geschichte...
 
-% Feature-Zusammenführung (Sequential integration of acoustic features) und Ausgabevorbereitung (time-distributed output classification).
-% Dann die Zeitliche Entwickelung von RNNs, Dann überleitung zu besseren Systemen wie LSTM
-
-
-
+Heutzutage sind RNNs sind nur die grundlegende Struktur.
+Basierend auf dieser gibt es einige besser Systeme,
+welcher Aktiv in AMT-Systemen und anderen KI-Systemen genutzt werden.
+Eines dieser Systeme sind Long Short-Term Memory (LSTM).
+Auf dieses werde ich im folgenden Kapitel weiter eingehen.
 
 \subsubsection{Long Short-Term Memory}
 
