@@ -1,7 +1,5 @@
-\section{AMT-Systeme heutzutage}
-
-\subsection{beliebte KI-Module}
-\label{subsec:ki_integration}
+\section{KI-Module in AMT-Systemen}
+\label{sec:ki_integration}
 KI-Systeme haben, in den letzten Jahren stark an beliebtheit gewonnen.
 AMT-Systeme bilden da keine Ausnahmen.
 Vor allem durch die integration von CNNs und RNNs konnten AMT-Systeme viele Prozesse deutlich verbessern
@@ -11,7 +9,7 @@ oder zur integration in Planung stehen.
 In diesem Kapitel werde ich auf genau diese KI-Module stärker eingehen
 und deren Aufgaben in der automatischen Musik transkription weiter erläutern.
 
-\subsubsection{Convolutional Neural Networks}
+\subsection{Convolutional Neural Networks}
 CNNs sind neuronale Netze, welcher besonders gut räumlich strukturierte Daten analysieren können.
 Deshalb werden diese vor allem in der analyse von Bildern genutzt.
 Sie können zum Beispiel erkennen, was auf einem Bild genau passiert oder welche Objekte in einem Bild zu erkennen sind.
@@ -34,6 +32,7 @@ Mit diesem System illustriert er die Entwickelung des Forschungsgebietes,
 insbesondere für polyphone Klaviertranskription, ausgezeichnet.
 Im Folgenden werde ich die verschiedenen Layer eines CNNs, in einem AMT-System, erläutern.
 
+\subsubsection{Layer eines CNNs}
 In dem Convolution Layer werden Filter verwendet.
 Filter sind 2D-Matrizen, die aus trainierbaren Gewichten bestehen.
 Ein Filter deckt jeweils einen 3x3 Pixel Eingabebereich des Inputbildes ab.
@@ -82,6 +81,7 @@ Dadurch kann man bestimmte Features wieder zeitlich präziser bestimmen,
 da die Zeitfenster wieder genauer zum originellen Audiosignal sind.
 Meist wird dieser Layer jedoch weggelassen, da er meistens nicht sehr relevant für AMT-Systeme ist.
 
+\subsubsection{Geschichte von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
 Kunihiko Fukushima erfand damals die Architektur für CNNs unter dem Namen Neocognitron.
 \cite{fukushima1980neocognitron}
@@ -113,7 +113,7 @@ Jedes Zeitfenster aus dem 3D-Tensor wird einzeln zu einem 1D-Vektor umgewandelt.
 Dabei wird der Vektor eine Dimension von F × C erhalten.
 Diese Vektoren werden dann an das folgende RNN weitergeleitet.
 
-\subsubsection{Recurrent Neural Networks}
+\subsection{Recurrent Neural Networks}
 RNNs sind neuronale Netze, welche entworfen wurden um Daten mit zeitlicher Struktur zu verarbeiten.
 Dabei ist die besonderheit von RNNs das diese ein Gedächtnis haben.
 Wenn nun in unserem Fall von AMT-Systemen eine bestimmte Tonabfolge gespielt wurde,
@@ -126,6 +126,7 @@ da jede Note stark von den vorherigen gespielten Noten abhängt.
 Takt, Rhythmus, Harmonie und die Melodie eines Musikstückes sind alles gute Beispiele,
 warum diese sequenzielle Abfolge so passend in AMT-Systemen ist.
 
+\subsubsection{Grundstruktur eines RNNs}
 RNNs haben in der automatischen Musiktranskription mehrere Aufgabenfelder.
 Je nachdem wie man das RNN trainiert bewältigt dieses alle Aufgaben oder nur einen Teil.
 Diese Aufgaben bestehen aus Frame-Glättung (Temporal smoothing), Kontext-Modellierung (Temporal context modeling),
@@ -147,6 +148,7 @@ Sie alleine können jedoch noch keine eigene Entscheidung über bestimmte Noten 
 Dafür müssen andere Module die Informationen der Hidden States später richtig verwerten.
 Jeder Hidden State hat eine Anzahl von Dimensionen, welche gleich der Anzahle der Neuronen in einem RNN ist.
 
+\subsubsection{Aufgaben eines RNNs}
 Bei der Frame-Glättung bekommt das RNN als Input die Aktivierungswerte des Zeitfensters.
 Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche vorhersagen auszuschließen.
 Das CNN hat dem RNN schon Vorhersagen für bestimmte Noten gegeben.
@@ -210,6 +212,43 @@ Postprocessing ist jedoch nicht relevant für den KI-Ablauf.
 Wenn man zufrieden mit dem Ergebnis ist, kann man dieses jetzt in das gewünschte Output-Format,
 meistens MIDI-Dateien, einfügen.
 
+Heutzutage sind RNNs sind nur die grundlegende Struktur.
+Basierend auf dieser Struktur gibt es einige bessere Systeme,
+welche Aktiv in AMT-Systemen und anderen KI-Systemen genutzt werden.
+Zwei dieser Systeme sind Long Short-Term Memory's (LSTM) und Bidirektionale RNNs (BiRNN).
+Auf diese werde ich in den folgenden Kapiteln weiter eingehen.
+
+\subsubsection{Long Short-Term Memory}
+LSTMs sind verbesserte RNNs.
+Diese kontrollieren durch Gates besser, welche Daten sie wirklich in den Hidden State speicher möchten.
+Dadurch kann man das neuronale Netz noch weiter an seine gewünschten Ansprüche anpassen.
+Ein normals RNN berechnet einen Hidden State mit folgender Formel:
+\begin{equation}
+h_t = \tanh(W x_t + U h_{t-1} + b)
+\end{equation}
+Dabei werden alle Daten, egal ob sinnvoll oder nicht, miteinander kombiniert.
+Somit kann sich das RNN langfristig schwieriger Information merken.
+Wenn zum Beispiel im 2\. Hidden State ein Onset erkannt wurde, kann der 20\. Hidden State
+sich das schlechter merken, da ganz viele andere Informationen mitgeschrieben wurden.
+LSTMs lösen dieses Problem mit Forget, Input und Output Gates und dem Cell State.
+Der Cell State stellt das Langzeitgedächtnis des LSTMs dar.
+Er berechnet sich aus den 3 Gates.
+Das Forget Gate bestimmt, welche Informationen aus dem vorherigen Cell State gelöscht werden sollen.
+Das Input Gate bestimmt, welche neuen Inhalte aus dem neuen Zeitfenster aufgenommen werden.
+Dabei ist der Cell-candidate die Datenmenge, welche zum Speichern, durch das Input Gate, vorgeschlagen wird.
+Das Output Gate bestimmt, welcher Teil des Cell States zu dem neuen Hidden State hinzugefügt wird.
+\begin{align}
+f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f) \quad &&\text{(Forget Gate)} \\
+i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i) \quad &&\text{(Input Gate)} \\
+o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o) \quad &&\text{(Output Gate)} \\
+\tilde{c}_t &= \tanh(W_c x_t + U_c h_{t-1} + b_c) \quad &&\text{(Cell-candidate)} \\
+c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \quad &&\text{(Cellstate)} \\
+h_t &= o_t \odot \tanh(c_t) \quad &&\text{(Aktueller Hidden State)}
+\end{align}
+Dadurch kann sich ein LSTM die verschiedenen musikalischen Ereignisse,
+über das gesamte Audiosignal, besser im Zusammenhang merken.
+
+\subsubsection{Bidirektionale RNNs}
 Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
 Dieses besteht aus zwei RNNs.
 Eines liest die Zeitfenster von vorne und das andere von hinten ab.
@@ -217,24 +256,38 @@ Dadurch bekommt man die doppelte Menge Hidden States und die gesamte Vorhersage 
 \[
 \mathbf{h}_t = \left[ \overrightarrow{\mathbf{h}}_t \ ;\ \overleftarrow{\mathbf{h}}_t \right]
 \]
-Auch in AMT-Systemen sind diese sehr hilfreich.
+Auch in AMT-Systemen sind Bidirektionale RNNs sehr hilfreich,
+da musikalische Ereignisse auch eine klar verständliche Abhängigkeit, von der Zukunft in die Vergangenheit aus, haben.
+Das gleiche Prinzip kann man auch auf LSTMs einsetzen.
+Bidirektionale LSTMs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
 Ein Bidirektionales RNN kann man auch in der Arbeit von Curtis Hawthorne finden.
 \cite{hawthorne2017onsets}
 
-In der Geschichte...
+\subsubsection{Die Geschichte von RNNs}
+Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück.
+Damals wurde das allererste RNN von Jeffrey L. Elman gebaut.
+\cite{elman1990finding}
+Er baute erstmals die Idee der Rückkopplung ein,
+wodurch der Output eines Neurons als zusätzliche Eingabe im nächsten Zeitfenster genutzt wird.
+Das resultierte später in den Hidden States.
+Diese Arbeit baute den Grundstein für alle weiterführenden RNNs.
+Eine weitere wichtige Arbeit über RNNs stammt von Michael I. Jordan.
+\cite{jordan1997serial}
+Er publizierte seine Arbeit über RNNs offiziell im Jahre 1997,
+obwohl er schon 1986 einen technischen Bericht über seine Arbeit veröffentlichte.
+Zudem wurde, im Jahre 1997, das erste Bidirektionale RNN, von Mike Schuster,
+\cite{schuster1997bidirectional}
+und das erste LSTM von Hochreiter und Schmidhuber erfunden.
+\cite{hochreiter1997long}
+RNNs fanden ihren Weg in die automatische Musiktranskription, fast zeitgleich zu CNNs, im Jahre 2015.
+\cite{sigtia2015hybrid}
+Für LSTMs dauerte die Einbindung in AMT-Systeme etwas länger.
+Erst im Jahre 2016 hat Siddharth Sigtia ein LSTM in einem AMT-System eingefügt.
+\cite{sigtia2016end}
+Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System, von Hawthorne, integriert.
+\cite{hawthorne2017onsets}
 
-Heutzutage sind RNNs sind nur die grundlegende Struktur.
-Basierend auf dieser gibt es einige besser Systeme,
-welcher Aktiv in AMT-Systemen und anderen KI-Systemen genutzt werden.
-Eines dieser Systeme sind Long Short-Term Memory (LSTM).
-Auf dieses werde ich im folgenden Kapitel weiter eingehen.
+\subsection{Transformers}
 
-\subsubsection{Long Short-Term Memory}
+\subsection{Weitere Deep-Learning-Module und Entwicklungen}
 
-\subsubsection{Transformers}
-
-\subsubsection{Weitere Deep-Learning-Module und Entwicklungen}
-
-
-\subsection{KI-basierende AMT-Systeme im Vergleich}
-% Einige AMT-Systeme raussuchen, die von KI gestütz werden und vor kurzem (3Jahre) gebaut wurden + deren Aufbau erklären
