@@ -288,6 +288,25 @@ Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System, 
 \cite{hawthorne2017onsets}
 
 \subsection{Transformers}
+Transformer sind eine, von Google entwickelte Deep-Learning Architektur,
+die mit dem Prinzip der Self-Attention, zur natürliche Sprachverarbeitung (NLP) genutzt wird.
+Auch Transformer verarbeiten die Daten, wie ein LSTM, sequentiell.
+Jedoch wurde zu dieser Verarbeitung noch der Attentionmechanismus hinzugefügt,
+welcher der grundlegende Baustein eines Transformer-Modells ist.
+Die Architektur eines Transformers besteht grundlegend aus 3 Bausteinen.
+Diese 3 sind Input Embedding + Position Encoding, der Self-Attention Layer und der Feedforward Layer.
+Input Embedding und Position Encoding nur einmalig am anfang des Transformers durchgeführt.
+Dahingegen werden Self-Attention und Feedforward mehrmals hintereinander aufgerufen.
+Dies passiert meistens 6-, 12- oder 24-mal, wodurch das Transformer-Modell an Layer gewinnt.
+Dieser Schritt wird so oft wiederholt, damit der Transformer immer komplexere Muster erkennen kann.
+% Hier weiter machen, noch nicht ferti!
+
+Das vorliegende Spektrogramm wird wieder in einzelne Zeitfenster aufgeteilt.
+Durch Self-Attention kann sich nun jedes Zeitfenster merken, welche anderen Zeitfenster für sich selber relevant sind.
+In der Musiktranskription würde sich zum Beispiel das Zeitfenster, wo ein Offset ist,
+jedes vorherige Zeitfenster mit dem Sustain und Onset, dieses spezifischen Tons, merken.
+So kann der richtige Fokus für jedes Zeitfenster gewählt werden.
+Wo genau der Fokus liegen soll entscheidet das Transformer-Modell selbst beim training.
 
 \subsection{Weitere Deep-Learning-Module und Entwicklungen}
 

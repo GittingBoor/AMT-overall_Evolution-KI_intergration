@@ -178,6 +178,37 @@
       \field{title}{the 'usi', or universal synthesizer interface}
       \field{year}{1981}
     \endentry
+    \entry{elman1990finding}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d5a20a1ebd7891ecfcfd79254de20395}{%
+           family={Elman},
+           familyi={E\bibinitperiod},
+           given={Jeffrey\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{fullhash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{fullhashraw}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{bibnamehash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{authorbibnamehash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{authornamehash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{authorfullhash}{d5a20a1ebd7891ecfcfd79254de20395}
+      \strng{authorfullhashraw}{d5a20a1ebd7891ecfcfd79254de20395}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cognitive science}
+      \field{number}{2}
+      \field{title}{Finding structure in time}
+      \field{volume}{14}
+      \field{year}{1990}
+      \field{pages}{179\bibrangedash 211}
+      \range{pages}{33}
+    \endentry
     \entry{eyben2010universal}{article}{}{}
       \name{author}{4}{}{%
         {{hash=8d87463eeccc4eb4c15cc59e80fd89be}{%
@@ -524,6 +555,42 @@
       \field{title}{Onsets and frames: Dual-objective piano transcription}
       \field{year}{2017}
     \endentry
+    \entry{hochreiter1997long}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{bibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorbibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authornamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural computation}
+      \field{number}{8}
+      \field{title}{Long short-term memory}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{pages}{1735\bibrangedash 1780}
+      \range{pages}{46}
+    \endentry
     \entry{iZotope2025noisefloor}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c7378e077457ee4772b9feac0223c2ad}{%
@@ -590,6 +657,36 @@
       \field{journaltitle}{arXiv preprint arXiv:2406.15249}
       \field{title}{Machine learning techniques in automatic music transcription: A systematic survey}
       \field{year}{2024}
+    \endentry
+    \entry{jordan1997serial}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=8a36116840c7ee55901618c95fd08a58}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Michael\bibnamedelima I},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{fullhash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{fullhashraw}{8a36116840c7ee55901618c95fd08a58}
+      \strng{bibnamehash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{authorbibnamehash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{authornamehash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{authorfullhash}{8a36116840c7ee55901618c95fd08a58}
+      \strng{authorfullhashraw}{8a36116840c7ee55901618c95fd08a58}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in psychology}
+      \field{title}{Serial order: A parallel distributed processing approach}
+      \field{volume}{121}
+      \field{year}{1997}
+      \field{pages}{471\bibrangedash 495}
+      \range{pages}{25}
     \endentry
     \entry{joysingh2019development}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -920,6 +1017,42 @@
       \field{pages}{588\bibrangedash 601}
       \range{pages}{14}
     \endentry
+    \entry{schuster1997bidirectional}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=29ea22df63f174ac629e9ef100b40484}{%
+           family={Schuster},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b1d3b7d330a0b9cd14b9467a0dfa8189}{%
+           family={Paliwal},
+           familyi={P\bibinitperiod},
+           given={Kuldip\bibnamedelima K},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ieee}%
+      }
+      \strng{namehash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{fullhash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{fullhashraw}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{bibnamehash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{authorbibnamehash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{authornamehash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{authorfullhash}{2f2edc15114454b7b2f9bea34478b390}
+      \strng{authorfullhashraw}{2f2edc15114454b7b2f9bea34478b390}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on Signal Processing}
+      \field{number}{11}
+      \field{title}{Bidirectional recurrent neural networks}
+      \field{volume}{45}
+      \field{year}{1997}
+      \field{pages}{2673\bibrangedash 2681}
+      \range{pages}{9}
+    \endentry
     \entry{sigtia2016end}{article}{}{}
       \name{author}{3}{}{%
         {{hash=41dfe7a23523475cf0db49d0c2744acd}{%
@@ -960,6 +1093,60 @@
       \field{year}{2016}
       \field{pages}{927\bibrangedash 939}
       \range{pages}{13}
+    \endentry
+    \entry{sigtia2015hybrid}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=41dfe7a23523475cf0db49d0c2744acd}{%
+           family={Sigtia},
+           familyi={S\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b068724f00d17295882e712edcc6315c}{%
+           family={Benetos},
+           familyi={B\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a7723f3260ddbd5e0b5c47c5fe2c913a}{%
+           family={Boulanger-Lewandowski},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=910a6a2a708f88f9fc3780e006617ca9}{%
+           family={Weyde},
+           familyi={W\bibinitperiod},
+           given={Tillman},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b46d088fcebd8eb99a5066ba10111447}{%
+           family={Garcez},
+           familyi={G\bibinitperiod},
+           given={Artur\bibnamedelimb S\bibnamedelima d'Avila},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=a9aae0a8ca29e8a3ecc7d2bbf3f6c76e}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{716e7e0f781b507315cc2645dcfa3864}
+      \strng{fullhash}{0c0196e3c8f5399ac9bef6f5b40a7807}
+      \strng{fullhashraw}{0c0196e3c8f5399ac9bef6f5b40a7807}
+      \strng{bibnamehash}{716e7e0f781b507315cc2645dcfa3864}
+      \strng{authorbibnamehash}{716e7e0f781b507315cc2645dcfa3864}
+      \strng{authornamehash}{716e7e0f781b507315cc2645dcfa3864}
+      \strng{authorfullhash}{0c0196e3c8f5399ac9bef6f5b40a7807}
+      \strng{authorfullhashraw}{0c0196e3c8f5399ac9bef6f5b40a7807}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE international conference on acoustics, speech and signal processing (ICASSP)}
+      \field{title}{A hybrid recurrent neural network for music transcription}
+      \field{year}{2015}
+      \field{pages}{2061\bibrangedash 2065}
+      \range{pages}{5}
     \endentry
     \entry{takeda2002hidden}{inproceedings}{}{}
       \name{author}{6}{}{%

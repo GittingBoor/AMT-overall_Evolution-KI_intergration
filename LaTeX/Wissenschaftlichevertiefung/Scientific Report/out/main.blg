@@ -1,18 +1,18 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [1] Config.pm:311> INFO - Logfile is 'out\main.blg'
-[625] biber-MSWIN64:340> INFO - === 
-[858] Biber.pm:420> INFO - Reading 'auxil\main.bcf'
-[1234] Biber.pm:994> INFO - Found 26 citekeys in bib section 0
-[1274] Biber.pm:4463> INFO - Processing section 0
-[1337] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[1491] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1612] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[2422] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2422] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2422] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[2423] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[2604] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[2669] bbl.pm:779> INFO - Output to out\main.bbl
-[2670] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
-[2671] Biber.pm:131> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
-[2671] Biber.pm:133> INFO - WARNINGS: 2
+[433] biber-MSWIN64:340> INFO - === 
+[600] Biber.pm:420> INFO - Reading 'auxil\main.bcf'
+[798] Biber.pm:994> INFO - Found 31 citekeys in bib section 0
+[825] Biber.pm:4463> INFO - Processing section 0
+[873] Biber.pm:4654> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[985] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1075] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[1569] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1569] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1569] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[1570] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1701] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[1729] bbl.pm:779> INFO - Output to out\main.bbl
+[1730] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
+[1730] Biber.pm:131> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
+[1730] Biber.pm:133> INFO - WARNINGS: 2
