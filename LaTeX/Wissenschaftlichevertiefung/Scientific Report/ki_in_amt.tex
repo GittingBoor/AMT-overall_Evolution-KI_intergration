@@ -389,6 +389,29 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
 
 
 \subsubsection{MT3}
+MT3 ist ein Transformer-Modell, welches spezifisch für Musiktranskription entwickelt wurde.
+Dabei liegt ein großer Unterschied, zu normalen Transformern, bei dem Input und Output.
+Zunächst wird als Input ein Log-Mel-Spektrogramm genutzt, welches dann in einzelne Frames (Zeitfenster) zerlegt wird.
+Diese Frames werden durch Learned linear Projection direkt in den Vektorraum überführt.
+Als Nächstes führt, der Encoder, das normale Prinzip eines Transformers mit Self-Attention Layer und Feedforward Layer.
+Daraus resultieren Vektoren, welche kontextreiche Informationen des Musikstückes besitzen.
+Damit man diese Informationen extrahieren kann und als richtige Daten herunterschreiben kann,
+braucht man als Nächstes den Decoder.
+Dieser bekommt als Input die Encoder Vektoren und autoregressive Tokens.
+Autoregressive Tokens sind bereits generierte Tokens,
+die im Training meist aus den echten Daten stammen (Teacher Forcing)
+und beim Einsatz vom Modell selbst generiert werden.
+Dadurch bekommt der Decoder mehr Kontext für die zu generierenden Tokens.
+Der Ablauf des Decoders sieht folgendermaßen aus:
+\begin{enumerate}
+  \item \textbf{Self-Attention:} verarbeitet den Kontext der autoregressiven Tokens
+  \item \textbf{Cross-Attention:} extrahiert relevante Informationen aus dem Encoder-Output
+  \item \textbf{Feedforward Layer:} verfeinert die Repräsentationen der Tokens lokal
+  \item \textbf{Lineare Layer:} wandelt den Vektor in ein konkretes Token um
+\end{enumerate}
+Jeder Token stellt ein musikalisches Event dar.
+Diese heißen zum Beispiel \("\)Note-On C4\("\) oder \("\)Shift +10 ms\("\).
+Als letzten Schritt werden diese Tokens jetzt in ein Output-Format, meistens eine MIDI-Datei, gebracht.
 
 \subsubsection{Geschichte}
 Das erste Transformer-Modell wurde im Jahre 2017 von Ashish Vaswani erfunden.
