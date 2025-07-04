@@ -2407,6 +2407,13 @@
     <bcf:citekey order="32" intorder="1">lecun1989backpropagation</bcf:citekey>
     <bcf:citekey order="33" intorder="1">sigtia2016end</bcf:citekey>
     <bcf:citekey order="34" intorder="1">hawthorne2017onsets</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">elman1990finding</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">jordan1997serial</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">schuster1997bidirectional</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">hochreiter1997long</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">sigtia2015hybrid</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">sigtia2016end</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">hawthorne2017onsets</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

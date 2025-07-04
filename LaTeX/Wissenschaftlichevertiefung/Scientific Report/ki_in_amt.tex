@@ -298,15 +298,121 @@ Diese 3 sind Input Embedding + Position Encoding, der Self-Attention Layer und d
 Input Embedding und Position Encoding nur einmalig am anfang des Transformers durchgeführt.
 Dahingegen werden Self-Attention und Feedforward mehrmals hintereinander aufgerufen.
 Dies passiert meistens 6-, 12- oder 24-mal, wodurch das Transformer-Modell an Layer gewinnt.
-Dieser Schritt wird so oft wiederholt, damit der Transformer immer komplexere Muster erkennen kann.
-% Hier weiter machen, noch nicht ferti!
+Dieser Schritt wird so oft wiederholt, damit der Transformer immer komplexere musikalische Strukturen erkennen kann.
+Als Nächstes erläutere ich die einzelnen Schritte eines Transformers näher.
 
-Das vorliegende Spektrogramm wird wieder in einzelne Zeitfenster aufgeteilt.
-Durch Self-Attention kann sich nun jedes Zeitfenster merken, welche anderen Zeitfenster für sich selber relevant sind.
-In der Musiktranskription würde sich zum Beispiel das Zeitfenster, wo ein Offset ist,
-jedes vorherige Zeitfenster mit dem Sustain und Onset, dieses spezifischen Tons, merken.
-So kann der richtige Fokus für jedes Zeitfenster gewählt werden.
-Wo genau der Fokus liegen soll entscheidet das Transformer-Modell selbst beim training.
+\subsubsection{Input Embedding und Position Encoding}
+Zunächst müssen die Daten, welche der Transformer verabeiten soll in das richtige Format für diesen umgewandelt werden.
+Dafür ist das Input Embedding zuständig.
+Tokens sind einzelne Datenpunkte wie zum Beispiel kleine Wörter wie \("\)hallo\("\).
+Wenn man zum Beispiel bei ChatGPT die Anfrage stellt \("\)Wie alt sind die Planeten unseres Sonnensystems\("\),
+dann wird zwar das Wort \("\)alt\("\) als ein Token gespeichert, aber längere Wörter wie \("\)Sonnensystem\("\)
+werden aufgeteilt in \("\)Sonn\("\) und \("\)ensystem\("\).
+Je nach Tokenizer-Version, die der jeweilige Transformer nutzt, kann dies jedoch abweichen.
+Unser Beispielsatz nutzt, alleine für die Wörter, 9 Tokens.
+Tokens können auch einzelne Satzzeichen oder Symbole sein.
+Für verschiedene Transformer Modelle gibt es immer eine maximale Tokenanzahl,
+bei GPT-3.5 sind es um Beispiel ungefähr 4000 Tokens.
+Diese Tokens sind für den Input und Output.
+Heißt, wenn der Input zu viele Tokens nutzt, gibt es weniger Tokens für den Output.
+Dies ist jedoch meistens, wie man an der Menge der Tokens für unseren Beispielsatz sehen kann, kein größeres Problem.
+In AMT-Systemen stellen Tokens Zeitfenster (Frames) oder Musik-Events (Onsets etc.) dar.
+Jedoch können diese von einem Transformer nicht verarbeitet werden,
+weshalb sie durch Input Embedding erstmals in Vektoren  umgewandelt werden.
+Dies passiert über eine Embedding-Matrix, welche die einzelnen Tokens in den Vektorraum einbettet.
+\[
+Embedding-Matrix \in \mathbb{R}^{Maximale Tokenanzahl \times Embedding-Dimension}
+\]
+Tokens, welche ähnliche musikalische Eigenschaften speichern, werden im Vektorraum näher beieinander gespeichert.
+Das Modell kann die Tokens richtig einordnen durch die gesammelten Daten im Training.
+
+Nun sieht der Transformer die Tokens trotzdem nur als viele Vektoren, ohne Rheinfolge, an.
+Um den Tokens einen Sinn zu geben, müssen diese eine explizite Position erhalten.
+Das wird durch Postion Encoding gemacht.
+Durch zwei Funktionen, eine Sinus und eine Cosinus, wird für jeden Token ein Positionsvektor berechnet.
+Dadurch kann der Transformer die relative Position, verschiedener Tokens,
+gut miteinander vergleichen und zugleich wiederkehrende Muster erkennen.
+Danach wird der Positionsvektor dem Tokenvektor aufaddiert.
+Moderne Transformer besitzen manchmal auch gelernte Position Embeddings,
+wodurch die Positionen schon durch das Training bekannt sind.
+Diese Vektoren werden, als Input, weiter an den Transformer geleitet.
+
+\subsubsection{Self-Attention Layer}
+Jeder Input-Vektor wird einzeln behandelt.
+Durch Self-Attention kann sich jetzt jeder Vektor merken, welche anderen Vektoren für sich selber relevant sind.
+Zunächst wird jeder Input-Vektor in 3 verschiedene Vektoren umgewandelt.
+Diese Vektoren heißen Query, Key und Value.
+\begin{itemize}
+  \item \textbf{Query ($Q$)}: Bestimmt, auf welche Informationen aus anderen Tokens das Modell aktuell achten möchte.
+  \item \textbf{Key ($K$)}: Zeigt anderen Tokens, was dieser Input-Vektor anderen Tokens, für Informationen, anbieten kann.
+  \item \textbf{Value ($V$)}: Enthält die tatsächlichen Informationen des Input-Vektors.
+\end{itemize}
+Als Nächstes wird der Attention Score berechnet.
+Durch diesen wird die Kompatibilität zu anderen Tokens berechnet.
+Als Ergebnis bekommt man, für jeden Token, eine Matrix.
+Jeder Wert in dieser Matrix steht für die Ähnlichkeit zwischen zwei verschiedenen Tokens.
+Diese Werte sind die Attention Weights.
+Durch Softmax werden diese Werte normalisiert.
+Als Letztes werden diese Attention Weights mit den Value-Vektoren verbunden.
+\[
+\text{Output} = \text{Attention Weights} \times \text{Value Vektoren}
+\]
+Nun können die einzelnen Tokens sich besser auf die Tokens fokussieren, welche wirklich wichtig für deren Ergebnis sind.
+
+\subsubsection{Feedforward Layer}
+Der Feedforward Layer stammt von der Idee eines Feedforward neuronalen Netzwerks (FNN).
+Dieses neuronale Netz verläuft immer nur in eine Richtung und hat keine Rückkopplung.
+Das heißt jeder Token wird für sich alleine, nacheinander, umgeschrieben.
+Das funktioniert so, da die jeweilige Gewichtung schon im Self-Attention Layer stattgefunden hat.
+Im Feedforward Layer passiert dann folgendes.
+Zunächst werden die Vektoren, welche wir aus dem Self-Attention Layer gewonnen haben,
+mit einer Gewichtsmatrix auf eine höhere Dimension transformiert.
+Durch die erhöhung der Dimension bekommt das Netzwerk mehr Freiraum Informationen voneinander zu trennen
+und komplexere Zusammenhänge zu modellieren.
+Durch eine Aktivierungsfunktion, zum Beispiel ReLU, erlernt das Modell jetzt nichtlineare Abhängigkeiten.
+Diese Aktivierungsfunktion gehört zu dem Hidden Layer des FNN.
+Ein FNN kann mehrere Hidden Layer besitzen, welche alle die Input-Werte in irgendeiner Form verändern.
+Als Nächstes wird der Vektor wieder auf seine ursprüngliche Dimension zurückprojiziert,
+wodurch wir nur die wichtigsten Informationen behalten.
+Mathematisch sieht der Feedforward Layer folgendermaßen aus:
+\[
+y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W_2 + b_2
+\]
+\begin{itemize}
+  \item $x_t$: Eingabevektor des Tokens.
+  \item $W_1, W_2$: Gewichtsmatrizen, zuständig für Dimensionserweiterung und -reduktion.
+  \item $b_1, b_2$: Bias-Vektoren der jeweiligen linearen Projektionen.
+  \item $\left( x_t W_1 + b_1 \right)$: Ergebnis der ersten linearen Projektion.
+  \item $\text{ReLU}$: Aktivierungsfunktion zur Einführung von Nichtlinearität.
+  \item $y_t$: Ausgabewert des Feedforward Layers für das Token.
+\end{itemize}
+
+
+\subsubsection{MT3}
+
+\subsubsection{Geschichte}
+Das erste Transformer-Modell wurde im Jahre 2017 von Ashish Vaswani erfunden.
+\cite{vaswani2017attention}
+Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
+Leider dauerte es noch lange bis der erste Transformer auch in AMT-Systemen genutzt wurde.
+Das liegt an mehreren Gründen.
+Einerseits gibt es im gegensatz zu Natural Language Processing (NLP) viel weniger Datensätze zum Lernen.
+Transformer trainieren auf einem globalen Level und brauchen daher sehr viele Datensätze.
+Die Rechenkosten von Transformer sind auch weitaus höher als andere Systeme wie CNN und RNN.
+Zudem lag der Fokus bei AMT-Systemen für eine sehr lange Zeit überwiegend bei CNN und RNN basierenden Systemen,
+da diese Anwendungsfälle bekannter waren in AMT-Systemen.
+Das größte Problem war jedoch wahrscheinlich die Anpassung.
+Transformer Modelle waren einfach nicht dafür ausgelegt Musikspezifische Daten zu verarbeiten.
+In der Musiktranskription wird immer mit langen Sequenzen, ein gesamtes Musikstück, gearbeitet.
+Spezielle Transformer Modelle für diesen Anwednugnsfall mussten noch programmiert werden.
+Die ersten Ansätze für Transformer in AMT-Systemen wurden zwischen den Jahren 2021 und 2023 erstellt.
+Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer (MT3),
+welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
+\cite{gardner2021mt3}
+Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskription ist das
+YourMT3+ Modell von Sungkyun Chang, indem die MT3-Architektur noch weiter verbessert wurde.
+\cite{chang2024yourmt3}
+
 
 \subsection{Weitere Deep-Learning-Module und Entwicklungen}
 
