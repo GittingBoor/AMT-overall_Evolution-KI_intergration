@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  4 JUL 2025 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  6 JUL 2025 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,7 +1258,15 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
-c-Transcription\auxil\main.bbl)
+c-Transcription\auxil\main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                chang2024yourmt3
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 89.
 Package biblatex Info: Reference segment=0 on input line 89.
 Package hyperref Info: Link coloring OFF on input line 89.
@@ -1522,7 +1530,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17]) (current_amt_systems.tex) (conclusion.tex)
+[17]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1533,6 +1541,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 
+LaTeX Warning: Citation 'chang2024yourmt3' on page 19 undefined on input line 4
+37.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1541,6 +1554,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]) (current_amt_systems.tex) (conclusion.tex)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
 Overfull \hbox (4.53941pt too wide) in paragraph at lines 123--123
 []\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fernán-dez und Jür-gen Schmid-hu-b
 er. ``Multi-dimensional re-cur-rent neural
@@ -1555,7 +1586,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]
+[22]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1564,7 +1595,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
+[23]
 (C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\out\main.aux)
  ***********
@@ -1585,11 +1616,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36421 strings out of 469941
- 703204 string characters out of 5469431
+ 36460 strings out of 469941
+ 704424 string characters out of 5469431
  1510001 words of memory out of 5000000
- 62548 multiletter control sequences out of 15000+600000
- 670868 words of font info for 87 fonts, out of 8000000 for 9000
+ 62567 multiletter control sequences out of 15000+600000
+ 671201 words of font info for 88 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,3070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1620,9 +1651,9 @@ b8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 r8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utm
 ri8a.pfb>
 Output written on C:/Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitH
-ub\Automatic-Music-Transcription\out\main.pdf (24 pages, 362986 bytes).
+ub\Automatic-Music-Transcription\out\main.pdf (26 pages, 375779 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -436,6 +436,76 @@ Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskrip
 YourMT3+ Modell von Sungkyun Chang, indem die MT3-Architektur noch weiter verbessert wurde.
 \cite{chang2024yourmt3}
 
-
 \subsection{Weitere Deep-Learning-Module und Entwicklungen}
+CNNs und RNNs oder Transformer Modelle wie MT3 werden überwiegend in AMT-Systemen eingebunden,
+wenn es sich um KI integration handelt.
+Jedoch gibt es noch andere KI-Modelle, die auch ab und zu in AMT-Systemen integriert werden.
+Diese gehen, bei der Musiktranskription, ganz anders vor als die vorgestellten Module.
+Je nach KI übernehmen sie auch eine ganz andere Aufgabe.
+Im folgenden Teil werde ich ein paar von diesen anderen KIs vorstellen.
+Dabei werde ich bei der am meisten erprobten KI anfangen,
+sodass die letzte KI welche ich vorstelle nur theoretisch, für die Musiktranskitpiton, besprochen word.
+
+\subsubsection{Variational Autoencoder}
+Variational Autoencoder (VAE) ist ein KI-Modell, welches komplexe Daten in eine verdichtete Form überführt
+und durch Wahrscheinlichkeiten bestimmte Muster vorhersagen kann.
+\cite{kingma2019introduction}
+Dabei ist wichtig das VAE kein alleinstehendes KI-Modell ist,
+sondern eher als zusatz gilt um bestimmte Bereiche zu verbessern.
+In der Musiktranskription könnte ein VAE zum Beispiel bei der Mehrdeutigkeit von Musik helfen.
+Wenn mehrere Instrumente spielen ist es schwer die genauen Noten herauszuschreiben.
+Da VAEs, anders als CNNs oder RNNs, als ausgabe keine eindeutigen Noten herausgeben,
+sondern eine Wahrscheinlichkeit, könnte dies helfen die entscheidung, welche Note gerade spielt, robuster zu gestalten.
+Dadurch das sich VAEs nur eine wahrscheinliche Version der Musik, aus den Daten,
+extrahieren könnte man auch kreative Variationen des Musikstückes damit bilden.
+Die Methode, welche in VAEs genutzt wird, fand Ihren Ursprung in folgendem Paper.
+\cite{kingma2013auto}
+
+\subsubsection{Graph Neural Network}
+Graph Neural Network (GNN) ist ein KI-Modell, welches dazu dient Daten, mit abhängigkeit voneinander, zu verarbeiten.
+Diese Daten werden in einem Graphen aus Knoten und Kanten gespeichert.
+Dabei hat jeder Knoten seine eigenen Daten, die er in jedem Rechenschritt mit seinen benachbarten Knoten austauscht.
+Knoten sind benachbart, wenn sie durch Kanten verbunden sind.
+Dadurch wird jeder Knoten im Netzwerk schlauer.
+Natürlich machen RNNs und Transformer etwas Ähnliches wie ein GNN, mit zum Beispiel Backpropagation.
+Der Unterschied ist hier, das GNNs keine bestimmte Reihenfolge, wie Wissen weitergeleitet wird, haben.
+Es ist ein anderer Ansatz harmonische Abhängigkeiten miteinander zu kombinieren.
+\cite{wu2020comprehensive}
+
+\subsubsection{Diffusion Model}
+Diffusion Models arbeiten mit Rauschen.
+Aus komplettem rauschen bauen sie Schritt für Schritt ein sauberes Musikstück zusammen.
+Dabei entscheiden sie pro Rechenschritt nur einen kleinen Teil des Musikstückes,
+wodurch mehrdeutige Passagen in Musikstücken auch noch später im Transkriptionsprozess behandelt werden können.
+In dem Projekt DiffRoll, aus dem Jahre 2022, wurde ein Diffusion Model auf ein AMT-System angewendet.
+\cite{cheuk2022diffroll}
+
+\subsubsection{Reinforcement Learning}
+Reinforcement Learning (RL) benutzen ein Belohnungssystem, damit der Agent sich beim training richtig anpasst.
+Sobald der Agent ein bestimmtes Ziel erreicht oder eine Handlung ausführt, wird dieser dafür belohnt.
+Die Agenten, welche am meisten Belohnungen erzielen werden kopiert und in der nächsten iteration eingesetzt,
+bis man einen Agenten besitzt, welche die gewünschte Aufgabe erfüllt.
+Dieses Prinzip wird vor allem in Videospielen, wo es meistens eindeutige Ziele gibt, eingesetzt.
+In der Musiktranskription könnte man dieses Prinzip folgendermaßen umsetzen.
+Man gibt dem Agenten als Input eine Audiodatei.
+Danach lässt man ihm Noten nacheinander erzeugen.
+Durch eine andere KI oder vorgefertigte MIDI-Dateien besitzt man einen Vergleichsdatensatz.
+Falls die gewählten Noten vom Agenten gleich dem Vergleichsdatensatz sind, bekommt der Agent Belohnungen.
+So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von anderen KIs nochmal korrekturlesen.
+\cite{li2018music}
+
+\subsubsection{Energy-Based Model}
+Der letzte Ansatz ist ein Energy-Based Model (EBM).
+Ein EBM arbeitet mit Energie anstatt von Wahrscheinlichkeiten.
+\cite{lecun2006tutorial}
+Die verschiedenen Arten, wie das EBM das Musikstück transkribieren kann haben alle jeweils ihre eigene Energie.
+Dabei haben die besten möglichkeiten immer die niedrigste Energie, wie bei dem Gradientenabstiegsverfahren.
+Dies ist für AMT-Systeme interessant, da das EBM somit viele verschiedene Transkriptionsraten wählen könnte.
+In mehr improvisierten Musikrichtungen, wie Jazz, bildet das eine größere viel fallt.
+Man kann auch Musiktheorie in das Modell mit einbauen, wodurch aus einem Musikstück viele Remixe kreiert werden können.
+Der Ansatz von EBMs in AMT-Systemen ist,
+von den zusätzlich vorgestellten KI-Modellen, wahrscheinlich einer der interessantesten.
+Leider sind EBMs sowohl schwer zu trainieren, als auch sehr rechenintensiv.
+AMT-Systeme ohnehin schon recht anspruchsvoll,
+weshalb noch kein EBM-Modell in der automatischen Musiktranskription zum einsatz kam.
 

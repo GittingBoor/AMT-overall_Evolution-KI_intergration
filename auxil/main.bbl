@@ -103,6 +103,68 @@
       \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
       \endverb
     \endentry
+    \entry{cheuk2022diffroll}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=3b44500ec3bf865184968d612dbc09a7}{%
+           family={Cheuk},
+           familyi={C\bibinitperiod},
+           given={Kin\bibnamedelima Wai},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=bc439000c0851260ca124ce6201ca029}{%
+           family={Sawata},
+           familyi={S\bibinitperiod},
+           given={Ryosuke},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1730bf21e4e1bba2387e6e66327bfa4e}{%
+           family={Uesaka},
+           familyi={U\bibinitperiod},
+           given={Toshimitsu},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2e528e9961993bf0126f9a084dbc70e3}{%
+           family={Murata},
+           familyi={M\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f1df5da3947ada511dd2a711e73449ba}{%
+           family={Takahashi},
+           familyi={T\bibinitperiod},
+           given={Naoya},
+           giveni={N\bibinitperiod}}}%
+        {{hash=5e8b7511a1010ea028943afb5f0169ab}{%
+           family={Takahashi},
+           familyi={T\bibinitperiod},
+           given={Shusuke},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fdae87cad6eeb39b72cfdb074d296c7b}{%
+           family={Herremans},
+           familyi={H\bibinitperiod},
+           given={Dorien},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4887153a80d429a1020202b811ab9739}{%
+           family={Mitsufuji},
+           familyi={M\bibinitperiod},
+           given={Yuki},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{fullhash}{720983b6e89aa753416c346368d14180}
+      \strng{fullhashraw}{720983b6e89aa753416c346368d14180}
+      \strng{bibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authorbibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authornamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authorfullhash}{720983b6e89aa753416c346368d14180}
+      \strng{authorfullhashraw}{720983b6e89aa753416c346368d14180}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ICASSP}
+      \field{month}{4}
+      \field{note}{arXiv preprint arXiv:2210.05148, Oct 2022}
+      \field{title}{DiffRoll: Diffusion-based Generative Music Transcription with Unsupervised Pretraining Capability}
+      \field{year}{2023}
+    \endentry
     \entry{cheuk2021revisiting}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{hash=3b44500ec3bf865184968d612dbc09a7}{%
@@ -137,6 +199,7 @@
       \strng{authornamehash}{c1b5cfb9508a1d031e3d38938a00686f}
       \strng{authorfullhash}{d92bb1e07b0e6698eb4522ab88cf6396}
       \strng{authorfullhashraw}{d92bb1e07b0e6698eb4522ab88cf6396}
+      \field{extraname}{2}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -277,6 +340,50 @@
       \field{year}{1980}
       \field{pages}{193\bibrangedash 202}
       \range{pages}{10}
+    \endentry
+    \entry{gardner2021mt3}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=3963c126f0cb4418865b090dc8f391f2}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0b461ec7764bb41a6287a8d0716006a0}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=920370ef63e65050447be131a12b3a21}{%
+           family={Manilow},
+           familyi={M\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4102bf268c4922002c51584dbb63c959}{%
+           family={Hawthorne},
+           familyi={H\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=84488af703576ab131f87436b63aeef0}{%
+           family={Engel},
+           familyi={E\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{fullhash}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{fullhashraw}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{bibnamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authorbibnamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authornamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authorfullhash}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{authorfullhashraw}{fe2afddf971b2e06babe298e77cbb0f3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2111.03017}
+      \field{title}{MT3: Multi-task multitrack music transcription}
+      \field{year}{2021}
     \endentry
     \entry{goswami2013timbre}{article}{}{}
       \name{author}{2}{}{%
@@ -727,6 +834,79 @@
       \field{pages}{1298\bibrangedash 1302}
       \range{pages}{5}
     \endentry
+    \entry{kingma2019introduction}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=53d2880ad8047b61cdae2c6b2803e763}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Now Publishers, Inc.}%
+      }
+      \strng{namehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{fullhash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{fullhashraw}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{bibnamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorbibnamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authornamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorfullhash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorfullhashraw}{3932bb760fe490d8d2ed0457111a9521}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Foundations and Trends{®} in Machine Learning}
+      \field{number}{4}
+      \field{title}{An introduction to variational autoencoders}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{307\bibrangedash 392}
+      \range{pages}{86}
+    \endentry
+    \entry{kingma2013auto}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=53d2880ad8047b61cdae2c6b2803e763}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Banff, Canada}%
+      }
+      \strng{namehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{fullhash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{fullhashraw}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{bibnamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorbibnamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authornamehash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorfullhash}{3932bb760fe490d8d2ed0457111a9521}
+      \strng{authorfullhashraw}{3932bb760fe490d8d2ed0457111a9521}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Auto-encoding variational bayes}
+      \field{year}{2013}
+    \endentry
     \entry{klapuri1998automatic}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=5d79b2c1c58f54540fd7dce441be6a83}{%
@@ -792,6 +972,55 @@
       \field{pages}{36\bibrangedash 40}
       \range{pages}{5}
     \endentry
+    \entry{lecun2006tutorial}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=83e9081b3be58a20d597b22b70648e30}{%
+           family={Chopra},
+           familyi={C\bibinitperiod},
+           given={Sumit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dc7c14ebfc2b431292d1ff4ded63d5e7}{%
+           family={Hadsell},
+           familyi={H\bibinitperiod},
+           given={Raia},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6cb5af0e649387de5bbfdb150cc7a786}{%
+           family={Ranzato},
+           familyi={R\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=df36fe1cd51b24c49e24e1143df64375}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Fujie},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{6d258ee0e1f31017b02beafbbfed5fb1}
+      \strng{fullhashraw}{6d258ee0e1f31017b02beafbbfed5fb1}
+      \strng{bibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorbibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{6d258ee0e1f31017b02beafbbfed5fb1}
+      \strng{authorfullhashraw}{6d258ee0e1f31017b02beafbbfed5fb1}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Predicting structured data}
+      \field{number}{0}
+      \field{title}{A tutorial on energy-based learning}
+      \field{volume}{1}
+      \field{year}{2006}
+    \endentry
     \entry{lecun1989backpropagation}{article}{}{}
       \name{author}{7}{}{%
         {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
@@ -841,6 +1070,7 @@
       \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
       \strng{authorfullhash}{db03602b955b0c9b23b4bd012343619d}
       \strng{authorfullhashraw}{db03602b955b0c9b23b4bd012343619d}
+      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -852,6 +1082,56 @@
       \field{year}{1989}
       \field{pages}{541\bibrangedash 551}
       \range{pages}{11}
+    \endentry
+    \entry{li2018music}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=9f45335a03652086f812fd79fee778c6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Juncheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9992979de426c14311c67b3d5f89a321}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Shuhui},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8a1bb54f4d13ffc9b1399b661587db69}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xinya},
+           giveni={X\bibinitperiod}}}%
+        {{hash=8e448470980462cb6c82de10f864754c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=db9828c378d8037495e5ad34364e3dd6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xinjian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=64e42b033385cc6471532215b5b12d27}{%
+           family={Metze},
+           familyi={M\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f74228f3bd25da0c93db4a6295bc5f8}
+      \strng{fullhash}{ef938d1107e5c1f0f56a6a7a0d2efed7}
+      \strng{fullhashraw}{ef938d1107e5c1f0f56a6a7a0d2efed7}
+      \strng{bibnamehash}{2f74228f3bd25da0c93db4a6295bc5f8}
+      \strng{authorbibnamehash}{2f74228f3bd25da0c93db4a6295bc5f8}
+      \strng{authornamehash}{2f74228f3bd25da0c93db4a6295bc5f8}
+      \strng{authorfullhash}{ef938d1107e5c1f0f56a6a7a0d2efed7}
+      \strng{authorfullhashraw}{ef938d1107e5c1f0f56a6a7a0d2efed7}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Music theory inspired policy gradient method for piano music transcription}
+      \field{volume}{31}
+      \field{year}{2018}
     \endentry
     \entry{performance_rnn2017event}{misc}{}{}
       \name{author}{1}{}{%
@@ -1236,7 +1516,124 @@
       \field{title}{Automatic music transcription using convolutional neural networks and constant-q transform}
       \field{year}{2025}
     \endentry
+    \entry{vaswani2017attention}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{fullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Attention is all you need}
+      \field{volume}{30}
+      \field{year}{2017}
+    \endentry
+    \entry{wu2020comprehensive}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c97b91ddf59fcb75f2d1b52080711566}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Zonghan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=019bcbde9904047f7c02c1ae64e1d46e}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Shirui},
+           giveni={S\bibinitperiod}}}%
+        {{hash=60aaf7ecf6263904f7e30d9a299a044d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Fengwen},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e7b6aa3c68f9430695b34429c0871856}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Guodong},
+           giveni={G\bibinitperiod}}}%
+        {{hash=59f3e845390faff6c808a1556b2ac0ef}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chengqi},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ed7b2de2f08bfa6638d5d174d55d839b}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Philip\bibnamedelima S},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0d8fc377d7726031a0daf3b3b9ab64b3}
+      \strng{fullhash}{0f1e0d108c1e93aa577ae493dc7dd45b}
+      \strng{fullhashraw}{0f1e0d108c1e93aa577ae493dc7dd45b}
+      \strng{bibnamehash}{0d8fc377d7726031a0daf3b3b9ab64b3}
+      \strng{authorbibnamehash}{0d8fc377d7726031a0daf3b3b9ab64b3}
+      \strng{authornamehash}{0d8fc377d7726031a0daf3b3b9ab64b3}
+      \strng{authorfullhash}{0f1e0d108c1e93aa577ae493dc7dd45b}
+      \strng{authorfullhashraw}{0f1e0d108c1e93aa577ae493dc7dd45b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on neural networks and learning systems}
+      \field{number}{1}
+      \field{title}{A comprehensive survey on graph neural networks}
+      \field{volume}{32}
+      \field{year}{2020}
+      \field{pages}{4\bibrangedash 24}
+      \range{pages}{21}
+    \endentry
   \enddatalist
+  \missing{chang2024yourmt3}
 \endrefsection
 \endinput
 
