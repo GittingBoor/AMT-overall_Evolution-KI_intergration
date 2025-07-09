@@ -1,2 +1,36 @@
 \section{KI-basierende AMT-Systeme im Vergleich}
+Im Laufe der Forschung zu AMT-Systemen wurden schon einige verschiedenen Architekturen eingesetzt und verbessert.
+Jedes neue System hat, unabhängig des KI-Moduls, eine komplett eigene Struktur und vorgehensweise.
+Im Verlauf dieser wissenschaftlichen Arbeit habe ich die Geschichte
+und viele Konzepte der automatischen Musiktranskription dargestellt.
+Deshalb wird sich jetzt dieses Letzte große Kapitel um die state of the art AMT-Systeme handeln.
+Dafür stelle ich zwei verschiedene AMT-Systeme vor.
+Diese nutzen unterschiedliche KI-Modelle.
+Ich werde deren Architektur, sowie deren stärken und schwächen, ausgiebig erläutern.
+
+Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt.
+\cite{wu2021omnizart}
+Je nach Anwendungsfall werden stärker ausgeprägte KI-Modelle genutzt.
+Bei der Analyse von Drums werden zum Beispiel nur CNNs verwendet,
+während bei Chords und der Melody tiefere CNNs und mehrere RNNs kombiniert werden.
+Omnizart ist ein Open-Source-Toolkit für AMT.
+Dadurch kann man, je nach Bedarf, ein KI-Modell auswählen was perfekt auf eine bestimmte aufgabe ausgelegt wurde.
+Omnizart findet ihren Ursprung im Jahre 2020 am Music and Culture Technology Lab, National Taiwan University.
+Omnizart hat seit seiner Gründung keine ausschlaggebenden weiteren Technologien, in der richtung KI, hinzugefügt.
+Dafür gibt es viele verschiedene CNNs und RNNs und einen open source code,
+welchen man gut zur eigenen Forschung an AMT-Systemen nutzen kann.
+
+Das Transformer-Modell, welches ich näher erläutere, heißt MT3.
+Auf dieses bin ich schon ein wenig im vorherigem Kapitel (siehe Transformers → MT3) eingegangen.
+Dies liegt daran, dass das MT3-Modell, im gegensatz zu Omnizart, ein alleinstehendes Modell ist,
+welches darüber hinaus ein wichtiger Meilenstein in der Transformer-basierten automatischen Musiktranskription bildet.
+MT3 ist das erste weit verbreitete Multi-Task-Transkriptionsmodell,
+das heißt verschiedene Transkription aufgaben werden von einem einzigen Modell gelöst.
+Frühere Modelle brauchten zum Beispiel für Drums und die Melody, wie bei Omnizart ist, verschiedene KI-Modelle.
+Durch die Communityversion YourMT3+ wird das KI-Modell, bis heute, immer weiter gepflegt und verbessert.
+% Diesen Teil und (siehe Transformers → MT3) verbinden????
+
+\subsection{Omnizart}
+\subsection{MT3}
+
 % Einige AMT-Systeme raussuchen, die von KI gestütz werden und vor kurzem (3Jahre) gebaut wurden + deren Aufbau erklären

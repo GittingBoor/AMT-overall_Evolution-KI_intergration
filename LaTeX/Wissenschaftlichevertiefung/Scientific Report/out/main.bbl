@@ -1576,6 +1576,63 @@
       \field{volume}{30}
       \field{year}{2017}
     \endentry
+    \entry{wu2021omnizart}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{7}{}{%
+        {{hash=c0fbf37122a15e8d4b20b99cd4c7361b}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yu-Te},
+           giveni={Y\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=8bedc194dcec83bc6760a1731d18c69f}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yin-Jyun},
+           giveni={Y\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=667613d19067b63b416e0615a58c6fc5}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tsung-Ping},
+           giveni={T\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=8f8c5fd1b32150c3536ed1a259e780d1}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=582192ed36610e209da7352648bd0e38}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Jui-Yang},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=41250c9858d52dd6cf0e67bb0c9f9063}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Yi-Chin},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=edd64bac34a6b49cc3c21a7ab031c893}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{784b27560dcad5c0fd6015f12f2e9ae6}
+      \strng{fullhash}{397418b88eb2f67b3cb2b4de2b78cfe7}
+      \strng{fullhashraw}{397418b88eb2f67b3cb2b4de2b78cfe7}
+      \strng{bibnamehash}{784b27560dcad5c0fd6015f12f2e9ae6}
+      \strng{authorbibnamehash}{784b27560dcad5c0fd6015f12f2e9ae6}
+      \strng{authornamehash}{784b27560dcad5c0fd6015f12f2e9ae6}
+      \strng{authorfullhash}{397418b88eb2f67b3cb2b4de2b78cfe7}
+      \strng{authorfullhashraw}{397418b88eb2f67b3cb2b4de2b78cfe7}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2106.00497}
+      \field{title}{Omnizart: A general toolbox for automatic music transcription}
+      \field{year}{2021}
+    \endentry
     \entry{wu2020comprehensive}{article}{}{}
       \name{author}{6}{}{%
         {{hash=c97b91ddf59fcb75f2d1b52080711566}{%
@@ -1620,6 +1677,7 @@
       \strng{authornamehash}{0d8fc377d7726031a0daf3b3b9ab64b3}
       \strng{authorfullhash}{0f1e0d108c1e93aa577ae493dc7dd45b}
       \strng{authorfullhashraw}{0f1e0d108c1e93aa577ae493dc7dd45b}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
