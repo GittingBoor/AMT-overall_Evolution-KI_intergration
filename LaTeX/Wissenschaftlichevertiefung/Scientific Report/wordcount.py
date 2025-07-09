@@ -35,7 +35,7 @@ def count_most_common_words(section_counts):
         "viele", "wenige", "sehr", "ab", "über", "unter", "zwischen", "gegen",
         "ohne", "wegen", "trotz", "nach", "vor", "seit", "bis", "hin",
         "anhand", "laut", "mithilfe", "unter anderem", "beim", "zur", "anderen", "erkennen", "zudem",
-        "somit", "wurden", "er"
+        "somit", "wurden", "er", "ich", "sie"
     }
 
     # Separate Füllwörter and normal words

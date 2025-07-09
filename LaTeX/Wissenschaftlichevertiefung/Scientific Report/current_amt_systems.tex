@@ -5,14 +5,19 @@ Im Verlauf dieser wissenschaftlichen Arbeit habe ich die Geschichte
 und viele Konzepte der automatischen Musiktranskription dargestellt.
 Deshalb wird sich jetzt dieses Letzte große Kapitel um die state of the art AMT-Systeme handeln.
 Dafür stelle ich zwei verschiedene AMT-Systeme vor.
+Diese sind das CNN + GRU basierte Omnizart und das Transformer basierte MT3.
 Diese nutzen unterschiedliche KI-Modelle.
 Ich werde deren Architektur, sowie deren stärken und schwächen, ausgiebig erläutern.
 
+\subsection{Omnizart}
 Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt.
 \cite{wu2021omnizart}
-Je nach Anwendungsfall werden stärker ausgeprägte KI-Modelle genutzt.
-Bei der Analyse von Drums werden zum Beispiel nur CNNs verwendet,
-während bei Chords und der Melody tiefere CNNs und mehrere RNNs kombiniert werden.
+Der Name Omnizart setzt sich aus den Wörtern Omni (alles) und Mozart zusammen,
+da ihr Ziel darin liegt, so viele Arten von Musik wie möglich zu transkribieren.
+Je nach Anwendungsfall werden verschiedene KIs benutzt.
+Dabei ist der Aufbau dieser KIs meistens gleich.
+Alle KI-Modelle bestehen aus einem CNN und einem GRU.
+Der Anwendungsfall, zum Beispiel Drums oder Melody, hat dabei nur Einfluss auf die Trainingsdaten und dem Output.
 Omnizart ist ein Open-Source-Toolkit für AMT.
 Dadurch kann man, je nach Bedarf, ein KI-Modell auswählen was perfekt auf eine bestimmte aufgabe ausgelegt wurde.
 Omnizart findet ihren Ursprung im Jahre 2020 am Music and Culture Technology Lab, National Taiwan University.
@@ -20,6 +25,112 @@ Omnizart hat seit seiner Gründung keine ausschlaggebenden weiteren Technologien
 Dafür gibt es viele verschiedene CNNs und RNNs und einen open source code,
 welchen man gut zur eigenen Forschung an AMT-Systemen nutzen kann.
 
+\subsubsection{Architektur}
+Omnizart ist ein modulares AMT-System, welches auf einer Deep-Learning-Architektur basiert.
+Der Trainingssatz besteht aus CQT-Spektren.
+Die KI-Modelle lernen dabei durch Supervised Learning.
+
+Die Piepline von Omnizart kann man in drei Schritte aufteilen:
+
+\begin{center}
+    \vspace{1em}
+        \begin{tikzpicture}[>=stealth, thick]
+
+            % Zeilentitel (links)
+            \node[align=right] at (-3,0) (label1) {\textbf{Preprocessing} \\ \footnotesize (Signalaufbereitung)};
+            \node[align=right] at (-3,-2) (label2) {\textbf{KI-Modell} \\ \footnotesize (Merkmalerkennung)};
+            \node[align=right] at (-3,-4) (label3) {\textbf{Postprocessing} \\ \footnotesize (Ausgabeaufbereitung)};
+
+            % Obere Zeile (Preprocessing)
+            \node at (1,0) (audio) {Audio Input};
+            \node at (5,0) (prep) {Preprocessing};
+            \node at (9,0) (cqt) {CQT-Berechnung};
+
+            % Mittlere Zeile (Neural Network)
+            \node at (1,-2) (cnn) {CNN};
+            \node at (5,-2) (gru) {GRU};
+            \node at (9,-2) (dense) {Dense-Layer};
+
+            % Untere Zeile (Output)
+            \node at (1,-4) (post) {Post-Processing};
+            \node at (8.5,-4) (output) {MIDI/CSV/JSON/TXT}
+
+            % Pfeile obere Zeile (Preprocessing)
+            \draw[->] (audio) -- (prep);
+            \draw[->] (prep) -- (cqt);
+
+            % Übergänge zu mittlerer Zeile (Neural Network)
+            \draw[->] (cqt.south) -- ++(0,-0.6) -| (cnn);
+            \draw[->] (cnn) -- (gru);
+            \draw[->] (gru) -- (dense);
+
+            % Übergang zu unterer Zeile (Output)
+            \draw[->] (dense.south) -- ++(0,-0.6) -| (post);
+            \draw[->] (post) -- (output);
+
+        \end{tikzpicture}
+    \vspace{1em}
+\end{center}
+
+Der erste Schritt ist die Vorverarbeitung und Merkmalsextraktion (Preprocessing).
+Dadurch wird die Inputaudiodatei in ein CQT-Spektrogramm umgewandelt.
+Zunächst wird das gegebene Audiosignal durch folgende Methoden standardisiert:
+\begin{enumerate}
+    \item \textbf{Mono-Konvertierung:} Die KI benötigt keine räumlichen Informationen, weshalb der linke und rechte Kanal von Stereosignalen in ein Monosignal addiert werden.
+    \item \textbf{Normalisierung:} Der Wechsel von zu großen und kleinen Amplituden kann die KI überfordern und ungenaue Ergebnisse liefern, weshalb das Audiosignal durch normalisierung auf einen einheitlichen Lautstärkebereich gebracht wird.
+    \item \textbf{Resampling:} Unterschiedliche Abtastraten führen zu Verzerrung und Frequenzverschiebung, deshalb wird diese auf eine einheitliche Rate, passend zu dem genutzten Modul, gebracht.
+    \item \textbf{Trimming:} Falls am Anfang oder Ende des Audiosignals Stille ist, wird diese durch Trimming entfernt, sodass das KI-Modell nicht unnötig verwirrt wird.
+\end{enumerate}
+Danach wird das standardisierte Audiosignal umgeformt zu einem CQT-Spektrogramm.
+% CQT-Spektrogramm erklären und darauf verweisen
+
+Im zweiten Schritt werden die KI-Modelle genutzt, um die Merkmale des Audiosignals vorherzusagen und zu extrahieren.
+Viele der AMT-Systeme, welche ich im Laufe dieser Arbeit vermerkt habe, besitzen eine ähnliche Architektur wie Omnizart.
+\cite{hawthorne2017onsets}
+Der Unterschied zu diesen AMT-Systemen ist das Omnizart, je nach Anwendungsfall, verschiedene Module nutzt.
+Omnizarts Module sind:
+\begin{itemize}
+    \item \textbf{Chord:} Akkorderkennung
+    \item \textbf{Drum:} Drum-Transkription
+    \item \textbf{Melody:} Melodietranskription
+    \item \textbf{Vocal:} Gesangsmelodietranskription
+    \item \textbf{Piano:} Polyphone Klaviertranskription
+    \item \textbf{Multi-Pitch:} Mehrstimmige Tonhöhenschätzung
+    \item \textbf{Beat/Downbeat/Chord-Labelling:} Rhythmus, Takt \& Akkorde
+\end{itemize}
+Jedes Modul bekommt als Input ein CQT-Spektrogramm.
+Dieses wird durch ein CNN verarbeitet, welches die Eigenschaften und Merkmale der Musik extrahiert.
+Mit diesen Daten modelliert dann ein GRU die zeitliche Abhängigkeit.
+Durch den Dense Layer werden die Ergebnisse des GRUs in zum Beispiel Onsets,
+Beats und viele weitere musikalischen Attribute, umgewandelt.
+
+Im dritten Schritt wird der Output der KI-Modelle nochmals aufbereitet.
+Fehler werden zunächst durch folgende Methoden verbessert:
+\begin{enumerate}
+    \item \textbf{Noten-Segmentierung:} Wenn derselbe Ton in zwei nacheinander folgenden Frame ein Onset hat, wir der zweite Onset gelöscht und der Note hinzugefügt, sodass keine Notendopplungen entstehen.
+    \item \textbf{Onset-Korrektur:} Falls ein Onset zeitlich nicht zur richtigen Zeit erfasst wurde, wird der Einschwingzeitpunkt des Onset an seinen Frame genau angepasst.
+    \item \textbf{Thresholding:} Noten, die nicht einen bestimmten Wahrscheinlichkeits-Threshold überschreiten, werden aussortiert.
+    \item \textbf{Quantisierung:} Je nach Taktstruktur können Noten zeitliche angepasst werden, sodass diese besser in zum Beispiel einen 3/4-Takt passen und das Stück rhythmischer ist.
+\end{enumerate}
+Je nach Modul, welches man gerade nutzt, werden nur paar oder alle dieser Methoden eingesetzt.
+Auch deren Parameter unterscheiden sich je nach Modul.
+So hat das Drums-Modul ein viel kleineren Schwellwert als das Melodien-Modul bei Thresholding.
+Danach werden die Vorhersagen in vollständige Noten (Onset/Sustain/etc.)
+zusammengefasst und in das gewünschte Format übertragen.
+MIDI ist dabei das wichtigste Format, da dieses relevant für Musiksoftware ist,
+es gibt aber auch noch drei andere Formate die, je nach Modul, ausgegeben werden.
+Fast immer wird auch eine CSV-Datei ausgegeben.
+Darin befinden sich die Transkriptionsdaten, welche zur Analyse oder Forschung genutzt werden können.
+JSON-Dateien werden in den Chord- und Beat-Modulen ausgegeben.
+Dies liegt daran, dass JSON-Dateien verschachteltet Daten, wie Akkordfolgen über mehrere Takte, besser speichern können.
+In ihnen werden vor allem Takt-Informationen und Daten für Akkorde gespeichert.
+TXT-Dateien werden dahingegen nur wahlweise in Modulen genutzt.
+Sie sind ausschließlich für Debugging dar, weshalb sie für die meisten Nutzer nicht relevant sind.
+Die Daten werden, in einer TXT-Datei, in einer unstrukturierten Liste ausgegeben.
+
+\subsubsection{Stärken und Schwächen von Omnizart}
+
+\subsection{MT3}
 Das Transformer-Modell, welches ich näher erläutere, heißt MT3.
 Auf dieses bin ich schon ein wenig im vorherigem Kapitel (siehe Transformers → MT3) eingegangen.
 Dies liegt daran, dass das MT3-Modell, im gegensatz zu Omnizart, ein alleinstehendes Modell ist,
@@ -30,7 +141,3 @@ Frühere Modelle brauchten zum Beispiel für Drums und die Melody, wie bei Omniz
 Durch die Communityversion YourMT3+ wird das KI-Modell, bis heute, immer weiter gepflegt und verbessert.
 % Diesen Teil und (siehe Transformers → MT3) verbinden????
 
-\subsection{Omnizart}
-\subsection{MT3}
-
-% Einige AMT-Systeme raussuchen, die von KI gestütz werden und vor kurzem (3Jahre) gebaut wurden + deren Aufbau erklären
