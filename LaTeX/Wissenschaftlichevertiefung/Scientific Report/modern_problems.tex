@@ -37,7 +37,7 @@ sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext besser zuor
 und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
 Trotz dessen scheitert auch KI an der einordnung der richtigen Noten, wenn die gespielten Noten
 eine sehr ähnliche Frequenz besitzen oder die Akkorde zu unterschiedlich zu den Trainingsdaten sind.
-In der Arbeit von Lukas Samuel Martak werden diese Probleme nochmals deutlicher aufgegriffen.
+In der folgenden Arbeit werden diese Probleme nochmals deutlicher aufgegriffen.
 \cite{martak2022balancing}
 
 \subsection{Instrument spezifische Probleme}
@@ -61,9 +61,9 @@ Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt spielen, wodurch e
 Zudem verläuft der Klang einer Stimme von einer Note zur nächsten.
 Es gibt nicht immer starke Peaks zur Onset Erkennung.
 Gesang ist auch, wie die vorher genannten Instrumentgruppen, nicht sonderlich vertreten in größeren Datensätzen.
-Xiangming Gu hat sich in folgende Paper speziell auf das Thema des Gesangs in der Musiktranskription fokussiert
+Die folgenden Paper konzentrieren ihren Fokus speziell auf das Thema des Gesangs in der Musiktranskription.
 \cite{gu2023deep,gu2024automatic}
-und kam in seiner Arbeit sogar auf eine Onset Erkennungsgenauigkeit von ungefähr 80\%, wenn Gesang genutzt word.
+Somit wurde eine Onset Erkennungsgenauigkeit von ungefähr 80\% festgestellt, für Gesang.
 
 \subsection{Notendauer}
 Neben dem Onset einer Note muss man auch erkennen, wie lange eine bestimmte Note gespielt wird.
@@ -74,7 +74,7 @@ an dem man den Übergang zwischen der Note und dem Nachhallen eindeutig erkennen
 Die Lautstärke sinkt dabei nicht abrupt, sondern nur langsam ab.
 Natürlich ist dieses Problem in polyphonen Musikstücken nochmal deutlich stärker,
 da sich dort die verschiedenen Nachhallphasen überlappen.
-Fatemeh Jamshidi betont dies in seiner Arbeit als eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
+Dies ist eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
 \cite{jamshidi2024machine}
 
 \subsection{Reale Audioaufnahmen}
@@ -87,10 +87,10 @@ Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte ma
 vor allem auch viele unterschiedliche Hintergrundgeräusche, damit die KI auf alles trainiert wird.
 Um dem entgegenzuwirken, kann man Studio-Datensätze wie MAESTRO durch Data-Augmentation variieren,
 wodurch realistischere Audioaufnahmen entstehen.
-So setzte Yuta Kusaka dies auch in seiner Arbeit, für seine Trainingsdaten, ein.
+So wurde es auch in folgender Arbeit, für die Trainingsdaten, eingesetzt.
 \cite{kusaka2024mobile}
-Er variierte Timber, Reverb, Noise und veränderte die Qualität des Aufnahmegerätes zu der eines Smartphones.
-So bekommt er viele neue Datensätze, die passend auf seinen Anwendungsfall ausgelegt sind.
+Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu der eines Smartphones, veränderte.
+So bekommt man viele neue Datensätze, die passend auf die gegebenen Anwendungsfall ausgelegt sind.
 
 \subsection{Frame-basierte vs Event-basierte AMT-Systeme}
 Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
@@ -151,5 +151,5 @@ Attention-Mapping nimmt den gegebenen Input und gewichtet diesen,
 je nachdem welche Teile davon wichtig für eine bestimmte Vorhersage sind.
 So erkennt man, welche Zeitfenster den meisten Einfluss auf zum Beispiel einen bestimmte Onset hatten.
 Vor allem bei polyphonen Musikstücken kann man relevante zeitliche Zusammenhänge erkennen.
-Ein gutes Beispiel von Attention-Mapping findet man in der Arbeit von Kin Wai Cheuk.
+Ein gutes Beispiel von Attention-Mapping findet man in folgender Arbeit.
 \cite{cheuk2021revisiting}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  9 JUL 2025 21:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  10 JUL 2025 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1516,7 +1516,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 187--191
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 186--190
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1560,7 +1560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [18]
 
 LaTeX Warning: Citation 'chang2024yourmt3' on page 19 undefined on input line 4
-41.
+43.
 
 
 
@@ -1571,7 +1571,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19]
+[19]) (current_amt_systems.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1580,7 +1580,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]) (current_amt_systems.tex
+[20]
 
 ! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
@@ -1605,6 +1605,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 135.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1613,11 +1617,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 135.
-) (conclusion.tex)
+[22]) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1669,10 +1669,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36613 strings out of 469941
- 709168 string characters out of 5469431
- 1512924 words of memory out of 5000000
- 62705 multiletter control sequences out of 15000+600000
+ 36612 strings out of 469941
+ 709398 string characters out of 5469431
+ 1513064 words of memory out of 5000000
+ 62709 multiletter control sequences out of 15000+600000
  674264 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,3070s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1694,9 +1694,9 @@ imes/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
 imes/utmri8a.pfb>
 Output written on "C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\Git
 Hub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific 
-Report\out\main.pdf" (29 pages, 399116 bytes).
+Report\out\main.pdf" (29 pages, 398984 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 144 named destinations out of 1000 (max. 500000)
  468 words of extra memory for PDF output out of 10000 (max. 10000000)
 

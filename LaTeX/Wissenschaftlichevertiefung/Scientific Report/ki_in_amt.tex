@@ -25,11 +25,11 @@ Diese Layer sind Convolutional Layer (Faltungsschicht), Activation Layer (ReLU),
 Batch Normalization, Dropout Layer und Upsampling.
 Mit jedem Layer kann ein CNN immer abstraktere Merkmale erkennen.
 Außer dem Convolutional Layer und Activation Layer sind die anderen Layer jedoch nicht unbedingt notwendig.
-Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt ist die von Curtis Hawthorne.
+Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt, heißt \("\)Onsets and frames\("\).
 \cite{hawthorne2017onsets}
-Er benutzt direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
-Mit diesem System illustriert er die Entwickelung des Forschungsgebietes,
-insbesondere für polyphone Klaviertranskription, ausgezeichnet.
+In dieser Arbeit werden direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
+Mit diesem System wird die Entwickelung des Forschungsgebietes illustriert.
+Insbesondere für polyphone Klaviertranskription ist dieses AMT-System ausgezeichnet.
 Im Folgenden werde ich die verschiedenen Layer eines CNNs, in einem AMT-System, erläutern.
 
 \subsubsection{Layer eines CNNs}
@@ -83,13 +83,13 @@ Meist wird dieser Layer jedoch weggelassen, da er meistens nicht sehr relevant f
 
 \subsubsection{Geschichte von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
-Kunihiko Fukushima erfand damals die Architektur für CNNs unter dem Namen Neocognitron.
+Die erste richtige Architektur für CNNs wurde, unter dem Namen \("\)Neocognitron\("\), veröffentlicht.
 \cite{fukushima1980neocognitron}
 Dies sollte als Vorreiter für spätere CNN Modelle gelten.
-Es dauerte weitere 10 Jahre bis das erste richtige Convolutional Neural Network, von Yann LeCun, veröffentlicht wurde.
+Es dauerte weitere 10 Jahre bis das erste richtige Convolutional Neural Network veröffentlicht wurde.
 \cite{lecun1989backpropagation}
 Dieses CNN Modell unterscheidet sich speziell in drei bestimmten Punkten zu dem Vorgänger Neocognitron.
-LeCun integrierte Gradientenlernen durch Backpropagation,
+In diesem wurde Gradientenlernen durch Backpropagation integriert,
 wodurch das gesamte Netzwerk erstmals auf ein gemeinsames Ziel zu trainieren konnte.
 Neocognitron besaß zudem, im Gegensatz zu LeCuns CNN,
 keine Gewichtsverteilung mithilfe von Filtern, wie es in heutigen CNN Modellen standard ist.
@@ -97,8 +97,7 @@ Zudem hatte Fukushima keine praktische Anwendung.
 Er hatte die Idee und wie man diese umsetzt, doch durch damalige Verhältnisse war es für ihn schwierig diese umzusetzen.
 Für AMT-Systeme wurde CNN jedoch erst ungefähr im Jahre 2015 relevant.
 \cite{sigtia2016end}
-In Siddharth Sigtia Arbeit transkribierte dieser
-erstmals polyphone Musikstücke mithilfe von CNNs, und weiteren KI-Modulen.
+In dieser Arbeit wurde erstmals polyphone Musikstücke mithilfe von CNNs, und weiteren KI-Modulen, transkribiert.
 Seitdem sind CNNs ein wichtiger bestandteil der modernen automatischen Musiktranskription.
 
 Ein CNN gibt als letzte Ausgabe einen 3D-Tensor zurück,
@@ -223,9 +222,9 @@ LSTMs sind verbesserte RNNs.
 Diese kontrollieren durch Gates besser, welche Daten sie wirklich in den Hidden State speicher möchten.
 Dadurch kann man das neuronale Netz noch weiter an seine gewünschten Ansprüche anpassen.
 Ein normals RNN berechnet einen Hidden State mit folgender Formel:
-\begin{equation}
+\begin{equation*}
 h_t = \tanh(W x_t + U h_{t-1} + b)
-\end{equation}
+\end{equation*}
 Dabei werden alle Daten, egal ob sinnvoll oder nicht, miteinander kombiniert.
 Somit kann sich das RNN langfristig schwieriger Information merken.
 Wenn zum Beispiel im 2\. Hidden State ein Onset erkannt wurde, kann der 20\. Hidden State
@@ -237,20 +236,29 @@ Das Forget Gate bestimmt, welche Informationen aus dem vorherigen Cell State gel
 Das Input Gate bestimmt, welche neuen Inhalte aus dem neuen Zeitfenster aufgenommen werden.
 Dabei ist der Cell-candidate die Datenmenge, welche zum Speichern, durch das Input Gate, vorgeschlagen wird.
 Das Output Gate bestimmt, welcher Teil des Cell States zu dem neuen Hidden State hinzugefügt wird.
-\begin{align}
+\begin{align*}
 f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f) \quad &&\text{(Forget Gate)} \\
 i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i) \quad &&\text{(Input Gate)} \\
 o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o) \quad &&\text{(Output Gate)} \\
 \tilde{c}_t &= \tanh(W_c x_t + U_c h_{t-1} + b_c) \quad &&\text{(Cell-candidate)} \\
 c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \quad &&\text{(Cellstate)} \\
 h_t &= o_t \odot \tanh(c_t) \quad &&\text{(Aktueller Hidden State)}
-\end{align}
+\end{align*}
 Dadurch kann sich ein LSTM die verschiedenen musikalischen Ereignisse,
 über das gesamte Audiosignal, besser im Zusammenhang merken.
 
 \subsubsection{Gated Recurrent Units}
-% Hier noch zu GRUs was schreiben
+GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs.
+\cite{chung2014empirical}
+Sie wurden erfunden, um bestimmte Probleme von RNNs zu lösen.
+Insbesondere das Problem des \("\)Vanishing Gradients\("\) sollten GRUs lösen.
+GRUs steuern durch Gates, welche Informationen gemerkt und welche vergessen werden sollen.
+Sie sind, im gegensatz zu LSTMs, eher für kleinere Aufgaben gedacht.
+Dafür sind sie weniger fehleranfällig und haben ein schnelleres Training.
 
+% Gates erklären
+
+% Vanishing Gradients
 
 \subsubsection{Bidirektionale RNNs}
 Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
@@ -262,34 +270,37 @@ Dadurch bekommt man die doppelte Menge Hidden States und die gesamte Vorhersage 
 \]
 Auch in AMT-Systemen sind Bidirektionale RNNs sehr hilfreich,
 da musikalische Ereignisse auch eine klar verständliche Abhängigkeit, von der Zukunft in die Vergangenheit aus, haben.
-Das gleiche Prinzip kann man auch auf LSTMs einsetzen.
-Bidirektionale LSTMs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
-Ein Bidirektionales RNN kann man auch in der Arbeit von Curtis Hawthorne finden.
+Das gleiche Prinzip kann man auch auf LSTMs oder GRUs einsetzen.
+Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
+Ein Bidirektionales RNN kann man auch in folgender Arbeit finden.
 \cite{hawthorne2017onsets}
 
 \subsubsection{Die Geschichte von RNNs}
 Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück.
-Damals wurde das allererste RNN von Jeffrey L. Elman gebaut.
 \cite{elman1990finding}
-Er baute erstmals die Idee der Rückkopplung ein,
+In dieser Arbeit wurde erstmals die Idee der Rückkopplung eingebaut,
 wodurch der Output eines Neurons als zusätzliche Eingabe im nächsten Zeitfenster genutzt wird.
 Das resultierte später in den Hidden States.
 Diese Arbeit baute den Grundstein für alle weiterführenden RNNs.
-Eine weitere wichtige Arbeit über RNNs stammt von Michael I. Jordan.
+Eine weitere wichtige Arbeit über RNNs ist die folgende.
 \cite{jordan1997serial}
-Er publizierte seine Arbeit über RNNs offiziell im Jahre 1997,
-obwohl er schon 1986 einen technischen Bericht über seine Arbeit veröffentlichte.
-Zudem wurde, im Jahre 1997, das erste Bidirektionale RNN, von Mike Schuster,
+Diese Arbeit über RNNs wurde, offiziell im Jahre 1997, publiziert,
+obwohl sie schon 1986 als ein technischer Bericht veröffentlicht war.
+Zudem wurde, im Jahre 1997, das erste Bidirektionale RNN
 \cite{schuster1997bidirectional}
-und das erste LSTM von Hochreiter und Schmidhuber erfunden.
+und das erste LSTM erfunden.
 \cite{hochreiter1997long}
+Erst über ein Jahrzehnt später wurde das erste GRU entwickelt.
+\cite{chung2014empirical}
 RNNs fanden ihren Weg in die automatische Musiktranskription, fast zeitgleich zu CNNs, im Jahre 2015.
 \cite{sigtia2015hybrid}
 Für LSTMs dauerte die Einbindung in AMT-Systeme etwas länger.
-Erst im Jahre 2016 hat Siddharth Sigtia ein LSTM in einem AMT-System eingefügt.
+Erst im Jahre 2016 wurde ein LSTM in einem AMT-System eingefügt.
 \cite{sigtia2016end}
-Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System, von Hawthorne, integriert.
+Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System integriert.
 \cite{hawthorne2017onsets}
+Noch ein Jahr später wurde das erste Mal auch ein GRU in einem AMT-System genutzt.
+\cite{jung2018adaptive}
 
 \subsection{Transformers}
 Transformer sind eine, von Google entwickelte Deep-Learning Architektur,
@@ -418,7 +429,7 @@ Diese heißen zum Beispiel \("\)Note-On C4\("\) oder \("\)Shift +10 ms\("\).
 Als letzten Schritt werden diese Tokens jetzt in ein Output-Format, meistens eine MIDI-Datei, gebracht.
 
 \subsubsection{Geschichte}
-Das erste Transformer-Modell wurde im Jahre 2017 von Ashish Vaswani erfunden.
+Das erste Transformer-Modell wurde im Jahre 2017 erfunden.
 \cite{vaswani2017attention}
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
 Leider dauerte es noch lange bis der erste Transformer auch in AMT-Systemen genutzt wurde.
@@ -437,7 +448,7 @@ Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer (MT
 welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
 \cite{gardner2021mt3}
 Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskription ist das
-YourMT3+ Modell von Sungkyun Chang, indem die MT3-Architektur noch weiter verbessert wurde.
+YourMT3+ Modell, indem die MT3-Architektur noch weiter verbessert wurde.
 \cite{chang2024yourmt3}
 
 \subsection{Weitere Deep-Learning-Module und Entwicklungen}
