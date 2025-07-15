@@ -252,13 +252,31 @@ GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs.
 \cite{chung2014empirical}
 Sie wurden erfunden, um bestimmte Probleme von RNNs zu lösen.
 Insbesondere das Problem des \("\)Vanishing Gradients\("\) sollten GRUs lösen.
-GRUs steuern durch Gates, welche Informationen gemerkt und welche vergessen werden sollen.
-Sie sind, im gegensatz zu LSTMs, eher für kleinere Aufgaben gedacht.
+GRUs steuern mithilfe von Gates, welche Informationen gemerkt und welche vergessen werden sollen.
+Sie sind, im gegensatz zu LSTMs, eher für kleinere Aufgaben geeignet.
 Dafür sind sie weniger fehleranfällig und haben ein schnelleres Training.
 
-% Gates erklären
+Ein GRU besitzt zwei Gates.
+Sie haben, genau wie bei LSTMs, die Aufgabe das Gedächtnis des KI-Models zu verwalten.
+Das Reset Gate schaut sich den alten Hidden State an und entscheidet,
+wie viel von diesem Wissen in den neuen Hidden State mit einfließt.
+Das Update Gate hingegen sieht den aktuellen Hidden State und überlegt,
+welche Informationen davon in das Langzeitgedächtnis mit einbezogen werden.
+Danach führt das Update Gate die beiden überarbeiteten Hidden States zusammen zum neuen Hidden State.
 
-% Vanishing Gradients
+Das Problem des Vanishing Gradients bezieht sich auf das Gedächtnis des KI-Models.
+Das Problem tritt in den Trainingsphasen von neuronalen Netzen auf.
+Die Gradienten werden bei der Backpropagation immer kleiner,
+wodurch die betroffenen Schichten im Netzwerk fast gar nichts lernen.
+Die Gradienten werden kleiner, da eine Aktivierungsfunktion immer einen Wert zwischen 0 und 1 zurückgibt.
+Ein Gradient wird mit der Ableitung der Aktivierungsfunktion multipliziert, wodurch er gleichzeitig kleiner wird.
+Desto tiefer das Netzwerk ist, desto mehr Schichten müssen die Gradienten durchlaufen.
+Mit jeder Schicht wird der Gradient somit exponentiell kleiner.
+Die führt dazu, dass das betroffene KI-Modell sich keine Informationen Langzeitig merken kann.
+Bei GRUs wird das Problem des Vanishing Gradients durch die Gates gelöst.
+Sie stellen eine gewichtete Mischung aus altem und neuen Hidden State dar.
+Dadurch wird der Gradient nicht ständig verkleinert
+und wichtige Informationen können über einen langen Zeitraum gespeichert werden.
 
 \subsubsection{Bidirektionale RNNs}
 Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.

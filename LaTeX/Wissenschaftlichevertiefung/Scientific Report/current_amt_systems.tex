@@ -25,7 +25,6 @@ Omnizart hat seit seiner Gründung keine ausschlaggebenden weiteren Technologien
 Dafür gibt es viele verschiedene CNNs und RNNs und einen open source code,
 welchen man gut zur eigenen Forschung an AMT-Systemen nutzen kann.
 
-\subsubsection{Architektur}
 Omnizart ist ein modulares AMT-System, welches auf einer Deep-Learning-Architektur basiert.
 Der Trainingssatz besteht aus CQT-Spektren.
 Die KI-Modelle lernen dabei durch Supervised Learning.
@@ -36,35 +35,24 @@ Die Piepline von Omnizart kann man in drei Schritte aufteilen:
     \vspace{1em}
         \begin{tikzpicture}[>=stealth, thick]
 
-            % Zeilentitel (links)
             \node[align=right] at (-3,0) (label1) {\textbf{Preprocessing} \\ \footnotesize (Signalaufbereitung)};
             \node[align=right] at (-3,-2) (label2) {\textbf{KI-Modell} \\ \footnotesize (Merkmalerkennung)};
             \node[align=right] at (-3,-4) (label3) {\textbf{Postprocessing} \\ \footnotesize (Ausgabeaufbereitung)};
 
-            % Obere Zeile (Preprocessing)
             \node at (1,0) (audio) {Audio Input};
             \node at (5,0) (prep) {Preprocessing};
             \node at (9,0) (cqt) {CQT-Berechnung};
-
-            % Mittlere Zeile (Neural Network)
             \node at (1,-2) (cnn) {CNN};
             \node at (5,-2) (gru) {GRU};
             \node at (9,-2) (dense) {Dense-Layer};
-
-            % Untere Zeile (Output)
             \node at (1,-4) (post) {Post-Processing};
             \node at (8.5,-4) (output) {MIDI/CSV/JSON/TXT}
 
-            % Pfeile obere Zeile (Preprocessing)
             \draw[->] (audio) -- (prep);
             \draw[->] (prep) -- (cqt);
-
-            % Übergänge zu mittlerer Zeile (Neural Network)
             \draw[->] (cqt.south) -- ++(0,-0.6) -| (cnn);
             \draw[->] (cnn) -- (gru);
             \draw[->] (gru) -- (dense);
-
-            % Übergang zu unterer Zeile (Output)
             \draw[->] (dense.south) -- ++(0,-0.6) -| (post);
             \draw[->] (post) -- (output);
 
@@ -128,8 +116,6 @@ TXT-Dateien werden dahingegen nur wahlweise in Modulen genutzt.
 Sie sind ausschließlich für Debugging dar, weshalb sie für die meisten Nutzer nicht relevant sind.
 Die Daten werden, in einer TXT-Datei, in einer unstrukturierten Liste ausgegeben.
 
-\subsubsection{Stärken und Schwächen von Omnizart}
-
 \subsection{MT3}
 Das Transformer-Modell, welches ich näher erläutere, heißt MT3.
 Auf dieses bin ich schon ein wenig im vorherigem Kapitel (siehe Transformers → MT3) eingegangen.
@@ -141,3 +127,41 @@ Frühere Modelle brauchten zum Beispiel für Drums und die Melody, wie bei Omniz
 Durch die Communityversion YourMT3+ wird das KI-Modell, bis heute, immer weiter gepflegt und verbessert.
 % Diesen Teil und (siehe Transformers → MT3) verbinden????
 
+\subsection{Omnizart vs MT3}
+Die beiden vorgestellten AMT-Systeme sind grundlegend verschieden aufgebaut.
+Jetzt ist die Frage, welche dieser beiden Systeme ist besser geeignet
+und unter welchen Voraussetzungen sollte man sich für welches System entscheiden.
+
+Der größte Unterschied in der Architektur liegt darin,
+das Omnizart verschiedenen KI-Modelle für unterschiedliche Aufgaben besitzt,
+während MT3 ein einziges leistungsstarkes KI-Modell besitzt.
+Somit kann man bei Omnizart leichter einen bestimmten Task verbessern oder analysieren.
+Das ist vor allem gut, wenn man sich auf monophone Musikstücke konzentriert
+und einen einfacheren Einstieg in die automatische Musiktranskription bekommen möchte.
+Zudem gibt Omnizart eine größere Menge an Outputdaten zurück als MT3, bei dem nur eine MIDI-Datei ausgegeben wird.
+MT3 hingegen besitzt ein einziges KI-Modell, wodurch man nicht gezielt einen speziellen Task umstrukturieren kann.
+Dafür eignet sich das KI-Modell direkt wissen der verschiedenen Tasks an un kombiniert dieses.
+Somit können polyphone Musikstücke deutliche besser transkribiert werden.
+Durch YourMT3+ gibt es zudem weiteres Ausbaupotential, dahingegen entwickelt sich Omnizart nicht sonderlich weiter.
+
+Bei den KI-Modellen hat MT3 einen klaren Vorsprung.
+CNNs und GRUs sind schon seit längerem in AMT-Systemen vertreten.
+Sie wurden ausgiebig angepasst und verbessert für diesen Anwendungsfall.
+Hingegen zu diesen KI-Modellen ist das MT3 erst seit paar Jahren im Rennen.
+Durch YourMT3+ wird es immer weiter entwickelt,
+wodurch es in der nahen Zukunft zu einem Standard der automatischen Musiktranskription werden könnte.
+Zudem ist das MT3-Modell deutlich besser auf polyphone Musikstücke ausgelegt.
+In der mehrheit von Audiosignalen gibt es mehrere Stimmen.
+Die meisten Menschen möchten auch lieber eine einfache Lösung, die wenig eigenaufwand benötigt.
+Deshalb wäre ein zentrales KI-Modell, zur transkribierung von allen verschiedenen Audiosignalen, die populärste Lösung.
+Ein Schwachpunkt des MT3-Modells ist der Rechenaufwand.
+Da alles über ein KI-Modell läuft,
+muss dieses umso mehr Rechenschritte durchführen und braucht exponentiell mehr GPU auslastung und Speicherkapazität.
+
+Omnizart ist empfehlenswert, falls man sich gerade mit dem Forschungsgebiet neu auseinandersätz.
+Man sieht viel schneller Fortschritte und kann sich erstmals auf kleiner KI-Modelle konzentrieren.
+In den meisten anderen Fällen würde ich jedoch das MT3-Modell, oder das Nachfolgermodell YourMT3+, empfehlen.
+Dieses ist der State of the Art und wird auch noch in einigen Jahren Support erhalten.
+Zudem ist man bei diesem Modell in keiner Weise eingeschränkt und kann jegliche Musik transkribieren.
+Dieses Modell geht jedoch auch mit viel Rechenaufwand und einem guten Verständnis des Forschungsgebiets einher.
+Deshalb sollte man sich, bevor man das MT3-Modell nutzt, gut damit auseinandergesetzt haben.

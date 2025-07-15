@@ -3,16 +3,34 @@ import re
 from collections import Counter
 
 def count_words_in_file(filename):
-    with open(filename, "r", encoding="utf-8") as f:
-        text = f.read()
-    # Remove LaTeX commands
+    # Versuche mit UTF-8 zu lesen
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            text = f.read()
+    except UnicodeDecodeError:
+        # Fallback: Latin-1 lesen und manuell zu UTF-8 konvertieren
+        with open(filename, "r", encoding="latin-1") as f:
+            text = f.read()
+            text = text.encode("latin-1").decode("utf-8", errors="replace")
+
+    # Ersetze LaTeX-Umlaute manuell
+    replacements = {
+        r"\"a": "ä", r"\"o": "ö", r"\"u": "ü",
+        r"\"A": "Ä", r"\"O": "Ö", r"\"U": "Ü",
+        r"\'e": "é", r"\ss{}": "ß", r"\ss": "ß",
+        r"~": " ", r"\&": "&", r"\%": "%"
+    }
+
+    for latex, char in replacements.items():
+        text = text.replace(latex, char)
+
+    # Entferne LaTeX-Kommandos und Kommentare
     text = re.sub(r"\\[a-zA-Z]+\{[^}]*}", "", text)
     text = re.sub(r"%.*", "", text)
 
     words = re.findall(r"\b\w+\b", text)
     characters = re.findall(r"\w", text)
     return len(words), len(characters), words
-
 
 def count_most_common_words(section_counts):
     word_counter = Counter()
