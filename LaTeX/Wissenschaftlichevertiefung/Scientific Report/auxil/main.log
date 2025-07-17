@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  15 JUL 2025 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  16 JUL 2025 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1283,7 +1283,7 @@ out)
 
 \c@lstlisting=\count497
  (titlepage.tex
-<Graphics/HSDLogo.png, id=222, 274.77657pt x 146.79843pt>
+<Graphics/HSDLogo.png, id=218, 274.77657pt x 146.79843pt>
 File: Graphics/HSDLogo.png Graphic file (type png)
 <use Graphics/HSDLogo.png>
 Package pdftex.def Info: Graphics/HSDLogo.png  used on input line 8.
@@ -1298,7 +1298,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Graphics/FacultyOfMedia.png, id=224, 264.99pt x 195.73125pt>
+<Graphics/FacultyOfMedia.png, id=220, 264.99pt x 195.73125pt>
 File: Graphics/FacultyOfMedia.png Graphic file (type png)
 <use Graphics/FacultyOfMedia.png>
 Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
@@ -1330,6 +1330,12 @@ lof)
 
 
 [4] (introduction.tex
+<Graphics/logMelSpek.png, id=307, 1342.2647pt x 324.46219pt>
+File: Graphics/logMelSpek.png Graphic file (type png)
+<use Graphics/logMelSpek.png>
+Package pdftex.def Info: Graphics/logMelSpek.png  used on input line 71.
+(pdftex.def)             Requested size: 441.01773pt x 106.60251pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1343,19 +1349,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 
-      [1]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
-4.
+l.74 \end{figure}
+                  [1]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+06.
 
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-
-LaTeX Warning: Reference `subsec:ki_integration' on page 2 undefined on input l
-ine 110.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1369,9 +1370,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 
-       [2]
-Overfull \hbox (1.15347pt too wide) in paragraph at lines 134--136
+l.120     \end{itemize}
+                        [2 <./Graphics/logMelSpek.png>]
+
+LaTeX Warning: Reference `subsec:ki_integration' on page 3 undefined on input l
+ine 132.
+
+
+Overfull \hbox (1.15347pt too wide) in paragraph at lines 156--158
 \T1/ptm/m/n/10.95 (Noch nicht an-ge-fan-gen!) Was wird in der Ar-beit be-han-de
 lt, wor-auf liegt der Fo-kus (z.B. KI-Methoden
  []
@@ -1390,8 +1396,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 
-      [3]
+l.25 J
+      eder Ton hat ObertÃ¶ne. [3]
 Overfull \hbox (0.67047pt too wide) in paragraph at lines 63--65
 \T1/ptm/m/n/10.95 Moorers au-to-ma-ti-sche Mu-sik-tran-skrip-ti-ons-sys-tem war
  eins der ers-ten sei-ner Art. Vie-le wei-te-ren AMT-
@@ -1411,8 +1417,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 
-       [4]
+l.95 
+      [4]
 Overfull \hbox (3.5908pt too wide) in paragraph at lines 137--143
 []\T1/ptm/m/n/10.95 MIDI ist ein Stan-dart-pro-to-koll zur kom-mu-ni-ka-ti-on z
 wi-schen elek-tro-ni-schen Mu-sik-in-stru-men-ten, Com-
@@ -1428,7 +1434,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-<Graphics/Martin1996Structure.png, id=354, 357.335pt x 416.55624pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
+<Graphics/Martin1996Structure.png, id=363, 357.335pt x 416.55624pt>
 File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
 Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
@@ -1443,7 +1458,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6]
+[7]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1452,7 +1467,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7 <./Graphics/Martin1996Structure.png>]
+[8 <./Graphics/Martin1996Structure.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1461,16 +1476,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8]) (modern_problems.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[9]
+[9]) (modern_problems.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1488,7 +1494,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11]) (ki_in_amt.tex
+[11]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1497,7 +1503,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12]
+[12]) (ki_in_amt.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1516,12 +1522,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 186--190
-\T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
-nächst wer-den die-se durch ein Ful-ly Connec-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1531,6 +1531,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 186--190
+\T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
+nächst wer-den die-se durch ein Ful-ly Connec-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1559,11 +1565,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 
-LaTeX Warning: Citation 'chang2024yourmt3' on page 19 undefined on input line 4
-70.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1572,6 +1573,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
+
+LaTeX Warning: Citation 'chang2024yourmt3' on page 20 undefined on input line 4
+46.
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1614,10 +1620,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 121.
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1626,7 +1628,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23]) (conclusion.tex)
+[23]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1636,6 +1638,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25]) (conclusion.tex)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
 Overfull \hbox (4.53941pt too wide) in paragraph at lines 123--123
 []\T1/ptm/m/n/10.95 Alex Gra-ves, San-tia-go Fernán-dez und Jür-gen Schmid-hu-b
 er. ``Multi-dimensional re-cur-rent neural
@@ -1650,7 +1670,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25]
+[27]
+Overfull \hbox (7.17693pt too wide) in paragraph at lines 123--123
+\T1/ptm/m/n/10.95 Mood De-tec-ti-on with De-ep Lear-ning''. In: \T1/ptm/m/it/10
+.95 Sen-sors \T1/ptm/m/n/10.95 22.2 (2022), 358? \T1/ptm/m/sc/10.95 doi\T1/ptm/
+m/n/10.95 : []$\T1/cmtt/m/n/10.95 10 . 3390 / s22020358$[]\T1/ptm/m/n/10.95 . 
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1659,7 +1686,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]
+[28]
 (C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\main.
 aux)
@@ -1672,40 +1699,39 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DC18D5DBFE5F8567BE748125BA5BA5B7;10097.
+(rerunfilecheck)             Checksum: C1E12834C1F3973BABDB0B2B35161391;10014.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36611 strings out of 469941
- 709355 string characters out of 5469431
- 1513064 words of memory out of 5000000
- 62708 multiletter control sequences out of 15000+600000
- 674264 words of font info for 91 fonts, out of 8000000 for 9000
+ 36669 strings out of 469941
+ 710651 string characters out of 5469431
+ 1514237 words of memory out of 5000000
+ 62764 multiletter control sequences out of 15000+600000
+ 673923 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,3070s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1095.pk> <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmex10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Benni/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Benni/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Benni/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Benni
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
-ers/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
-imes/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
-imes/utmri8a.pfb>
+1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Benni/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Benni/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Benni/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Be
+nni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
+Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmri8a.pfb>
 Output written on "C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\Git
 Hub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific 
-Report\out\main.pdf" (30 pages, 402661 bytes).
+Report\out\main.pdf" (32 pages, 1144397 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
- 460 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

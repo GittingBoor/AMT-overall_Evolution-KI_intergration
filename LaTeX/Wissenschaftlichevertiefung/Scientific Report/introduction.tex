@@ -33,14 +33,13 @@ arabische oder indische Musikstücke transkribieren möchte.
 \subsection{AMT und Künstliche Intelligenz,}
 Um diese Vielfalt zu bewältigen, ist ein neuer, oft genutzter Ansatz,
 die Nutzung von künstlicher Intelligenz und Machine Learning.
-
 Im Gegensatz zu Algorithmen ist KI flexibler und kann sich besser
 einstellen auf kleine Abweichungen in Musikstücken.
 Reale Audiospuren besitzen immer eine gewisse Menge Rauschen.
-Das kann bei der AMT für schwierigkeiten sorgen,
-da Algorithmen diese als zusätliche Noten ansehen oder richtige Noten dadurch nicht erkennen könnten.
-KIs können sich besser an diese begenheiten anpassen,
-da Neuronale Netzwerke mit genau diesen unperfekten Audiosignalen trainiert werden können.
+Das kann bei der automatischen Musiktranskription für schwierigkeiten sorgen,
+da Algorithmen diese als zusätzliche Noten ansehen oder richtige Noten dadurch nicht erkennen könnten.
+KIs können sich besser an diese begebenheiten anpassen,
+da neuronale Netzwerke mit genau diesen unperfekten Audiosignalen trainiert werden können.
 Somit können AMT-Systeme besser angepasst werden für einen realistischen Gebrauch.
 
 Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
@@ -50,6 +49,29 @@ verschiedene Muster, Stimmen und Eigenschaften zu erlernen.
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
 Sie folgen nur dem, was zuvor vom Menschen fest einprogrammiert wurde.
+
+In der automatischen Musiktranskription nutzt man meistens Spektrogramme, zur darstellung der Audiodatei.
+Spektrogramme zeigen den zeitlichen Verlauf des Freqeunzspektrums eines Audiosignals.
+Es gibt verschiedene Arten von Spektrogrammen.
+Zwei Spektrogrammtypen, die häufig genutzt werden, sind CQT-Spektrogramme und Log-Mel-Spektrogramme.
+CQT steht für Constant-Q Transform und in diesem Spektrogramm werden die Frequenzachsen logarithmisch aufgelöst.
+Zudem bleibt der Q-Faktor konstant, dieser beschreibt das Verhältnis von Frequenz zu Brandbreite.
+Das Log-Mel-Spektrogramm wird zunächst mit einer Short-Time Fourier Transform (STFT) gebildet.
+STFT ist eine Methode, um ein Signal als ein Frequenzspektrum darzustellen.
+Anschließend wird die lineare Frequenzachse auf eine Mel-Skala projiziert.
+Das menschliche Gehör kann 200--400Hz feiner als 5000--5200Hz wahrnehmen.
+Die Mel-Skala sorgt dafür, das sich das Spektrogramm dieser menschlichen Hörweise anpasst.
+Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskription,
+da dieses Töne feiner unterscheiden kann.
+Jedoch werden in vielen neueren KI-Modellen eher Log-Mel-Spektrogramme benutzt,
+da diese robuster sind und vor allem besser in Transformer-basierte KI-Modellen laufen.
+Im folgenden
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/logMelSpek}
+    \caption{Modifizierter Ausschnitt aus \cite{pyrovolakis2022multimodal}}
+    \label{fig:mel-vs-logmel-mfcc}
+\end{figure}
 
 Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.
 Hier werden meistens Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN),

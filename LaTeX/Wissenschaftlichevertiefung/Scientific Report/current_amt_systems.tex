@@ -39,7 +39,7 @@ Die Piepline von Omnizart kann man in drei Schritte aufteilen:
             \node[align=right] at (-3,-2) (label2) {\textbf{KI-Modell} \\ \footnotesize (Merkmalerkennung)};
             \node[align=right] at (-3,-4) (label3) {\textbf{Postprocessing} \\ \footnotesize (Ausgabeaufbereitung)};
 
-            \node at (1,0) (audio) {Audio Input};
+            \node at (1,0) (audio) {Audiodatei};
             \node at (5,0) (prep) {Preprocessing};
             \node at (9,0) (cqt) {CQT-Berechnung};
             \node at (1,-2) (cnn) {CNN};
@@ -118,14 +118,105 @@ Die Daten werden, in einer TXT-Datei, in einer unstrukturierten Liste ausgegeben
 
 \subsection{MT3}
 Das Transformer-Modell, welches ich näher erläutere, heißt MT3.
-Auf dieses bin ich schon ein wenig im vorherigem Kapitel (siehe Transformers → MT3) eingegangen.
-Dies liegt daran, dass das MT3-Modell, im gegensatz zu Omnizart, ein alleinstehendes Modell ist,
-welches darüber hinaus ein wichtiger Meilenstein in der Transformer-basierten automatischen Musiktranskription bildet.
+MT3 steht für \("\)Multi-Task Multitrack Music Transcription\("\).
+MT3 ist gleichzeitig der Name für das Transformer-basierte KI-Modell, als auch für das überliegende AMT-System.
+Diese beiden sind untrennbar voneinander, da sie zu einer End-to-End-Architektur gehören.
+Das MT3-Modell bildet einen wichtigen Meilenstein für die Transformer-basierte automatische Musiktranskription.
 MT3 ist das erste weit verbreitete Multi-Task-Transkriptionsmodell,
-das heißt verschiedene Transkription aufgaben werden von einem einzigen Modell gelöst.
-Frühere Modelle brauchten zum Beispiel für Drums und die Melody, wie bei Omnizart ist, verschiedene KI-Modelle.
-Durch die Communityversion YourMT3+ wird das KI-Modell, bis heute, immer weiter gepflegt und verbessert.
-% Diesen Teil und (siehe Transformers → MT3) verbinden????
+das heißt verschiedene Transkriptionsaufgaben werden von einem einzigen Modell gelöst.
+Frühere Modelle brauchten zum Beispiel für Drums und die Melody,
+wie es bei Omnizart der Fall ist, verschiedene KI-Modelle.
+Durch die Communityversion YourMT3+ wird dieses KI-Modell immer weiter gepflegt und verbessert.
+
+MT3 ist ein Transformer-Modell, welches spezifisch für Musiktranskription entwickelt wurde.
+Es besteht grundlegend aus folgenden Bereichen:
+\begin{center}
+    \vspace{1em}
+    \begin{tikzpicture}[>=stealth, thick]
+
+        \node[align=right] at (-3,0) (label1) {\textbf{Preprocessing} \\ \footnotesize (Signalaufbereitung)};
+        \node[align=right] at (-3,-2) (label2) {\textbf{KI-Modell} \\ \footnotesize (Transformer)};
+        \node[align=right] at (-3,-4) (label3) {\textbf{Postprocessing} \\ \footnotesize (Token-Ausgabe)};
+
+        \node at (0,0) (audio) {Audiodatei};
+        \node at (3,0) (logmel) {Log-Mel-Spek.};
+        \node at (6,0) (frames) {Frames};
+        \node at (9,0) (projection) {Lineare Projektion};
+        \node at (0,-2) (encoder) {Transformer Encoder};
+        \node at (9,-2) (decoder) {Transformer Decoder};
+        \node at (0,-4) (tokens) {Token-Sequenz};
+        \node at (9,-4) (output) {MIDI};
+
+        \draw[->] (audio) -- (logmel);
+        \draw[->] (logmel) -- (frames);
+        \draw[->] (frames) -- (projection);
+        \draw[->] (projection.south) -- ++(0,-0.6) -| (encoder);
+        \draw[->] (encoder) -- (decoder);
+        \draw[->] (decoder.south) -- ++(0,-0.6) -| (tokens);
+        \draw[->] (tokens) -- (output);
+
+    \end{tikzpicture}
+    \vspace{1em}
+\end{center}
+
+Als Input wird eine Audiodatei bereitgestellt.
+Meistens geht man mit dem Datentyp WAV (Waveform Audio File Format), da dieser verlustfrei und standardisiert ist.
+Das Audiosignal wird dann mit STFT analysiert und als Spektrogramm ausgegeben.
+Mithilfe von Librosa wird aus diesem ein Log-Mel-Spektrogramm erzeugt.
+Librosa ist ein Python Paket, welches wichtige Methoden für Musik und Audio analyse bereitstellt.
+Dieses Log-Mel-Spektrogramm wird nun in Frames aufgeteilt.
+In dem MT3-Modell sind diese Frames meist 32ms lang.
+jeder Frame besitzt N Mel-Frequenzbänder, welche die Dimensionsgröße dieses Frames bestimmen.
+Um jetzt für jeden Frame eine einheitliche Dimension zu bekommen,
+mit der die KI Arbeiten kann, wird lineare Projektion genutzt.
+Lineare Projektion ist ein Matrix-Multiplikator, welche ein Frame auf eine,
+für das KI-Modell, normalisierte Dimension bringt, zum Beispiel 512 oder 1024.
+Daraus entstehen Input Embeddings, mit denen die KI nun arbeiten kann.
+
+Jetzt folgt der Encoder, welcher das normale Prinzip eines Transformers,
+mit Self-Attention Layer und Feedforward Layer, ausführt.
+In dem MT3-Modell werden, vor der ausführung der Layer,
+die Positionen der Frames durch Positional Embeddings festgelegt.
+In MT3 besteht der Encoder aus 6 vollständigen Transformer-Layern.
+Der Inhalt jedes Frames wird jetzt zusammenhängen mit allen anderen Frames gesetzt.
+Daraus resultieren Vektoren, welche kontextreiche Informationen des Musikstückes besitzen.
+Diese Vektoren werden weiter an den Decoder geleitet
+
+Aus den gegebenen Vektoren extrahiert der Decoder die wichtigen Daten.
+Neben den Encoder Vektoren als Input bekommt dieser zudem autoregressive Tokens.
+Autoregressive Tokens sind bereits generierte Tokens,
+die im Training meist aus den echten Daten stammen (Teacher Forcing)
+und beim Einsatz vom Modell selbst generiert werden.
+Dadurch bekommt der Decoder mehr Kontext für die zu generierenden Tokens.
+Neben den normalen Tokens bekommen auch die autoregressiven Tokens Positional Embeddings aufaddiert.
+Bevor der Decoder nun durchläuft, kann man mithilfe von Task-Conditioning, einen Task-Token hinzufügen.
+Das MT3-Modell transkribiert immer polyphon, jedoch kann man durch den Task-Token trotzdem den Output auf
+einen bestimmten Task, wie zum Beispiel Klavierstücke oder Trommelnoten, auslegen.
+Durch vorheriges Lernen ist das MT3-Modell darauf ausgelegt,
+nach einem Task-Token die folgenden Tokens in einer bestimmten Art und Weise zu transkribieren.
+Der Ablauf des Decoders sieht folgendermaßen aus:
+\begin{enumerate}
+  \item \textbf{Self-Attention:} verarbeitet den Kontext der autoregressiven Tokens
+  \item \textbf{Cross-Attention:} extrahiert relevante Informationen aus dem Encoder-Output
+  \item \textbf{Feedforward Layer:} verfeinert die Repräsentationen der Tokens lokal
+  \item \textbf{Lineare Layer:} wandelt den Vektor in ein konkretes Token um
+\end{enumerate}
+Dabei besteht der Decoder, im MT3-Modell, auch aus 6 vollständigen Transformer-Layern.
+Jeder Token stellt einen Teil eines musikalischen Events dar.
+Diese heißen zum Beispiel \("\)Note-On C4\("\) oder \("\)Shift +10 ms\("\).
+Ein musikalisches Event wäre somit eine volle Note, mit Notennamen, Onset und Offset,
+Sustain und weiteren musikalischen Eigenschaften, die man auf einer Note anwenden kann.
+Als Output gibt der Decoder jeden einzelnen Token zurück.
+
+Jetzt werden im Post-Processing die Tokens zu Sequenzen (musikalischen Events) zusammengesetzt.
+Durch einige weitere Tools werden die Noten zudem noch bereinigt und verbessert.
+\begin{itemize}
+  \item \textbf{Zeitberechnung:} Die Shift-Tokens werden aufsummiert, sodass alle Noten zur richtigen Zeit abgespielt werden.
+  \item \textbf{Noten validierung:} Jede Note wird darauf geprüft, ob sie ein On- und Offset besitzt.
+  \item \textbf{Velocity Korrektur:} Manche Noten haben keine oder eine fehlerhafte Anschlagstärke, welche bei diesem Schritt im Nachhinein hinzugefügt oder überschrieben wird.
+  \item \textbf{Fehlerbereinigung:} Unlogische Notenfolgen, wie zwei Shifts hintereinander, werden entfernt.
+\end{itemize}
+Am Ende werden die bereinigten Noten in einem standardisierten Musikformat, als MIDI-Datei, ausgegeben.
 
 \subsection{Omnizart vs MT3}
 Die beiden vorgestellten AMT-Systeme sind grundlegend verschieden aufgebaut.

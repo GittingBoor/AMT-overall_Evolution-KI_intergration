@@ -1345,6 +1345,47 @@
       \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
       \endverb
     \endentry
+    \entry{pyrovolakis2022multimodal}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=28db0f0c8921d6f9e90c3a5ba477fcec}{%
+           family={Pyrovolakis},
+           familyi={P\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6e4296e5511ebd6a00e752479cd86a38}{%
+           family={Tzouveli},
+           familyi={T\bibinitperiod},
+           given={Paraskevi\bibnamedelima K.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3a235f9b7cdc316d702a88592f57e242}{%
+           family={Stamou},
+           familyi={S\bibinitperiod},
+           given={Giorgos},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{fullhash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{fullhashraw}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{bibnamehash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{authorbibnamehash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{authornamehash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{authorfullhash}{a3b0a7f5f13880886d57a12872eaad74}
+      \strng{authorfullhashraw}{a3b0a7f5f13880886d57a12872eaad74}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{number}{2}
+      \field{title}{Multi-Modal Song Mood Detection with Deep Learning}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{pages}{358?}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.3390/s22020358
+      \endverb
+    \endentry
     \entry{scheirer1998tempo}{article}{}{}
       \name{author}{1}{}{%
         {{hash=1c5103f2793a261d0122a19a0906d897}{%

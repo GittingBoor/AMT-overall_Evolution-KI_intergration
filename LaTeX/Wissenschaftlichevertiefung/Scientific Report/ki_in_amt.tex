@@ -361,7 +361,7 @@ Das Modell kann die Tokens richtig einordnen durch die gesammelten Daten im Trai
 
 Nun sieht der Transformer die Tokens trotzdem nur als viele Vektoren, ohne Rheinfolge, an.
 Um den Tokens einen Sinn zu geben, müssen diese eine explizite Position erhalten.
-Das wird durch Postion Encoding gemacht.
+Das wird durch Position Encoding gemacht.
 Durch zwei Funktionen, eine Sinus und eine Cosinus, wird für jeden Token ein Positionsvektor berechnet.
 Dadurch kann der Transformer die relative Position, verschiedener Tokens,
 gut miteinander vergleichen und zugleich wiederkehrende Muster erkennen.
@@ -420,32 +420,6 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
   \item $y_t$: Ausgabewert des Feedforward Layers für das Token.
 \end{itemize}
 
-
-\subsubsection{MT3}
-MT3 ist ein Transformer-Modell, welches spezifisch für Musiktranskription entwickelt wurde.
-Dabei liegt ein großer Unterschied, zu normalen Transformern, bei dem Input und Output.
-Zunächst wird als Input ein Log-Mel-Spektrogramm genutzt, welches dann in einzelne Frames (Zeitfenster) zerlegt wird.
-Diese Frames werden durch Learned linear Projection direkt in den Vektorraum überführt.
-Als Nächstes führt, der Encoder, das normale Prinzip eines Transformers mit Self-Attention Layer und Feedforward Layer.
-Daraus resultieren Vektoren, welche kontextreiche Informationen des Musikstückes besitzen.
-Damit man diese Informationen extrahieren kann und als richtige Daten herunterschreiben kann,
-braucht man als Nächstes den Decoder.
-Dieser bekommt als Input die Encoder Vektoren und autoregressive Tokens.
-Autoregressive Tokens sind bereits generierte Tokens,
-die im Training meist aus den echten Daten stammen (Teacher Forcing)
-und beim Einsatz vom Modell selbst generiert werden.
-Dadurch bekommt der Decoder mehr Kontext für die zu generierenden Tokens.
-Der Ablauf des Decoders sieht folgendermaßen aus:
-\begin{enumerate}
-  \item \textbf{Self-Attention:} verarbeitet den Kontext der autoregressiven Tokens
-  \item \textbf{Cross-Attention:} extrahiert relevante Informationen aus dem Encoder-Output
-  \item \textbf{Feedforward Layer:} verfeinert die Repräsentationen der Tokens lokal
-  \item \textbf{Lineare Layer:} wandelt den Vektor in ein konkretes Token um
-\end{enumerate}
-Jeder Token stellt ein musikalisches Event dar.
-Diese heißen zum Beispiel \("\)Note-On C4\("\) oder \("\)Shift +10 ms\("\).
-Als letzten Schritt werden diese Tokens jetzt in ein Output-Format, meistens eine MIDI-Datei, gebracht.
-
 \subsubsection{Geschichte}
 Das erste Transformer-Modell wurde im Jahre 2017 erfunden.
 \cite{vaswani2017attention}
@@ -463,8 +437,10 @@ In der Musiktranskription wird immer mit langen Sequenzen, ein gesamtes Musikst�
 Spezielle Transformer Modelle für diesen Anwednugnsfall mussten noch programmiert werden.
 Die ersten Ansätze für Transformer in AMT-Systemen wurden zwischen den Jahren 2021 und 2023 erstellt.
 Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer (MT3),
-welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
+welches von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
 \cite{gardner2021mt3}
+Dieses spielt eine große Rolle in der Transformer-basierten automatischen Musiktranskription,
+da es das erste weit verbreitete Multi-Task-Transkriptionsmodell ist.
 Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskription ist das
 YourMT3+ Modell, indem die MT3-Architektur noch weiter verbessert wurde.
 \cite{chang2024yourmt3}
