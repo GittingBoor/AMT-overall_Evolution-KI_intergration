@@ -81,7 +81,19 @@ Dadurch kann man bestimmte Features wieder zeitlich präziser bestimmen,
 da die Zeitfenster wieder genauer zum originellen Audiosignal sind.
 Meist wird dieser Layer jedoch weggelassen, da er meistens nicht sehr relevant für AMT-Systeme ist.
 
-\subsubsection{Geschichte von CNNs}
+Ein CNN gibt als letzte Ausgabe einen 3D-Tensor zurück,
+welcher aus den Zeitfenster (Frames / T), der Frequenzachsenlänge (F) und der Anzahl der Filter (C) besteht.
+\[
+\text{CNN-Ausgabe} \in \mathbb{R}^{T \times F \times C}
+\]
+Meist schließt sich nach einem CNN, in einem AMT-System, ein RNN als Nächstes an.
+Dieses kann jedoch nur 1D-Vektoren verarbeiten und nicht einen 3D-Tensor.
+Deshalb wandeln wir vor der übergabe diesen 3D-Tensor um.
+Jedes Zeitfenster aus dem 3D-Tensor wird einzeln zu einem 1D-Vektor umgewandelt.
+Dabei wird der Vektor eine Dimension von F × C erhalten.
+Diese Vektoren werden dann an das folgende RNN weitergeleitet.
+
+\subsubsection{Geschichtliche Einordnung von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
 Die erste richtige Architektur für CNNs wurde, unter dem Namen \("\)Neocognitron\("\), veröffentlicht.
 \cite{fukushima1980neocognitron}
@@ -99,18 +111,6 @@ Für AMT-Systeme wurde CNN jedoch erst ungefähr im Jahre 2015 relevant.
 \cite{sigtia2016end}
 In dieser Arbeit wurde erstmals polyphone Musikstücke mithilfe von CNNs, und weiteren KI-Modulen, transkribiert.
 Seitdem sind CNNs ein wichtiger bestandteil der modernen automatischen Musiktranskription.
-
-Ein CNN gibt als letzte Ausgabe einen 3D-Tensor zurück,
-welcher aus den Zeitfenster (Frames / T), der Frequenzachsenlänge (F) und der Anzahl der Filter (C) besteht.
-\[
-\text{CNN-Ausgabe} \in \mathbb{R}^{T \times F \times C}
-\]
-Meist schließt sich nach einem CNN, in einem AMT-System, ein RNN als Nächstes an.
-Dieses kann jedoch nur 1D-Vektoren verarbeiten und nicht einen 3D-Tensor.
-Deshalb wandeln wir vor der übergabe diesen 3D-Tensor um.
-Jedes Zeitfenster aus dem 3D-Tensor wird einzeln zu einem 1D-Vektor umgewandelt.
-Dabei wird der Vektor eine Dimension von F × C erhalten.
-Diese Vektoren werden dann an das folgende RNN weitergeleitet.
 
 \subsection{Recurrent Neural Networks}
 RNNs sind neuronale Netze, welche entworfen wurden um Daten mit zeitlicher Struktur zu verarbeiten.
@@ -293,7 +293,7 @@ Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei we
 Ein Bidirektionales RNN kann man auch in folgender Arbeit finden.
 \cite{hawthorne2017onsets}
 
-\subsubsection{Die Geschichte von RNNs}
+\subsubsection{Geschichtliche Einordnung von RNNs}
 Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück.
 \cite{elman1990finding}
 In dieser Arbeit wurde erstmals die Idee der Rückkopplung eingebaut,
@@ -420,7 +420,7 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
   \item $y_t$: Ausgabewert des Feedforward Layers für das Token.
 \end{itemize}
 
-\subsubsection{Geschichte}
+\subsubsection{Geschichtliche Einordnung von Transformern}
 Das erste Transformer-Modell wurde im Jahre 2017 erfunden.
 \cite{vaswani2017attention}
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.

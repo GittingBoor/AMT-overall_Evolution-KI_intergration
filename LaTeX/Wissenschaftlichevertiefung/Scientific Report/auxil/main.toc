@@ -27,19 +27,19 @@
 \contentsline {section}{\numberline {4}KI-Module in AMT-Systemen}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Convolutional Neural Networks}{13}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{14}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Geschichte von CNNs}{14}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2}Geschichtliche Einordnung von CNNs}{15}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Recurrent Neural Networks}{15}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Grundstruktur eines RNNs}{15}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Aufgaben eines RNNs}{16}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Long Short-Term Memory}{17}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Gated Recurrent Units}{17}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Bidirektionale RNNs}{18}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Die Geschichte von RNNs}{18}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.6}Geschichtliche Einordnung von RNNs}{18}{subsubsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.3}Transformers}{18}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{18}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Self-Attention Layer}{19}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{19}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Geschichte}{20}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4}Geschichtliche Einordnung von Transformern}{20}{subsubsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.4}Weitere Deep-Learning-Module und Entwicklungen}{20}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Variational Autoencoder}{20}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Graph Neural Network}{21}{subsubsection.4.4.2}%
