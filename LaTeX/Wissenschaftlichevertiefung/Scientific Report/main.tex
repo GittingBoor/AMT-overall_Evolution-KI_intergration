@@ -18,7 +18,7 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{booktabs}
-\usepackage[backend=biber, style=numeric]{biblatex}
+\usepackage[backend=biber, style=authoryear]{biblatex}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{listings}
@@ -27,6 +27,21 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{amsfonts}
+
+% --- command rearrangement ---
+
+\let\cite\parencite
+
+% --- command declarations
+
+% Changes citation brackets to square brackets
+\DeclareCiteCommand{\parencite}[\mkbibbrackets]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\printnames{labelname} \printfield{year}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
 
 % --- Fonts ---
 

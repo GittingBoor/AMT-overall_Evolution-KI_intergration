@@ -7,3 +7,4 @@ biber --input-directory=auxil --output-directory=out main
 pdflatex -interaction=nonstopmode -output-directory=out -aux-directory=auxil main.tex
 pdflatex -interaction=nonstopmode -output-directory=out -aux-directory=auxil main.tex
 python wordcount.py
+python incorrect_words.py

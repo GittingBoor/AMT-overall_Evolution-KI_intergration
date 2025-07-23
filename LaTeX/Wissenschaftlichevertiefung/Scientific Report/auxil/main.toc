@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Blackboard-System}{7}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}RASTA-basiertes System}{9}{subsubsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.5}Einbindung von Künstlicher Intelligenz}{10}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Hindernisse Moderner AMT-Systeme}{10}{section.3}%
+\contentsline {section}{\numberline {3}Hindernisse Moderner AMT-Systeme}{11}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Onset Detection}{11}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Polyphonie und Notenzuordnung}{11}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Instrument spezifische Probleme}{11}{subsection.3.3}%
@@ -41,7 +41,7 @@
 \contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{19}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Geschichtliche Einordnung von Transformern}{20}{subsubsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.4}Weitere Deep-Learning-Module und Entwicklungen}{20}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Variational Autoencoder}{20}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1}Variational Autoencoder}{21}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Graph Neural Network}{21}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}Diffusion Model}{21}{subsubsection.4.4.3}%
 \contentsline {subsubsection}{\numberline {4.4.4}Reinforcement Learning}{21}{subsubsection.4.4.4}%

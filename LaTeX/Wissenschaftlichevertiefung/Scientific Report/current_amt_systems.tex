@@ -1,13 +1,13 @@
 \section{KI-basierende AMT-Systeme im Vergleich}
 Im Laufe der Forschung zu AMT-Systemen wurden schon einige verschiedenen Architekturen eingesetzt und verbessert.
 Jedes neue System hat, unabhängig des KI-Moduls, eine komplett eigene Struktur und vorgehensweise.
-Im Verlauf dieser wissenschaftlichen Arbeit habe ich die Geschichte
+Im Verlauf dieser wissenschaftlichen Arbeit wird die Geschichte
 und viele Konzepte der automatischen Musiktranskription dargestellt.
 Deshalb wird sich jetzt dieses Letzte große Kapitel um die state of the art AMT-Systeme handeln.
-Dafür stelle ich zwei verschiedene AMT-Systeme vor.
-Diese sind das CNN + GRU basierte Omnizart und das Transformer basierte MT3.
+Dafür werden zwei verschiedene AMT-Systeme vor.
+Diese sind das CNN + GRU basierte Omnizart und das Transformer-basierte MT3-Modell.
 Diese nutzen unterschiedliche KI-Modelle.
-Ich werde deren Architektur, sowie deren stärken und schwächen, ausgiebig erläutern.
+Deren Architektur, sowie deren stärken und schwächen, werden in dem folgenden Kapiteln ausgiebig erläutern.
 
 \subsection{Omnizart}
 Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt.
@@ -73,7 +73,7 @@ Danach wird das standardisierte Audiosignal umgeformt zu einem CQT-Spektrogramm.
 % CQT-Spektrogramm erklären und darauf verweisen
 
 Im zweiten Schritt werden die KI-Modelle genutzt, um die Merkmale des Audiosignals vorherzusagen und zu extrahieren.
-Viele der AMT-Systeme, welche ich im Laufe dieser Arbeit vermerkt habe, besitzen eine ähnliche Architektur wie Omnizart.
+Viele der AMT-Systeme, welche im Laufe dieser Arbeit vermerkt wurden, besitzen eine ähnliche Architektur wie Omnizart.
 \cite{hawthorne2017onsets}
 Der Unterschied zu diesen AMT-Systemen ist das Omnizart, je nach Anwendungsfall, verschiedene Module nutzt.
 Omnizarts Module sind:
@@ -117,7 +117,7 @@ Sie sind ausschließlich für Debugging dar, weshalb sie für die meisten Nutzer
 Die Daten werden, in einer TXT-Datei, in einer unstrukturierten Liste ausgegeben.
 
 \subsection{MT3}
-Das Transformer-Modell, welches ich näher erläutere, heißt MT3.
+Das Transformer-Modell, welches jetzt näher erläutert wird, heißt MT3.
 MT3 steht für \("\)Multi-Task Multitrack Music Transcription\("\).
 MT3 ist gleichzeitig der Name für das Transformer-basierte KI-Modell, als auch für das überliegende AMT-System.
 Diese beiden sind untrennbar voneinander, da sie zu einer End-to-End-Architektur gehören.
@@ -251,7 +251,7 @@ muss dieses umso mehr Rechenschritte durchführen und braucht exponentiell mehr 
 
 Omnizart ist empfehlenswert, falls man sich gerade mit dem Forschungsgebiet neu auseinandersätz.
 Man sieht viel schneller Fortschritte und kann sich erstmals auf kleiner KI-Modelle konzentrieren.
-In den meisten anderen Fällen würde ich jedoch das MT3-Modell, oder das Nachfolgermodell YourMT3+, empfehlen.
+In den meisten anderen Fällen wäre jedoch das MT3-Modell, oder das Nachfolgermodell YourMT3+, empfohlen.
 Dieses ist der State of the Art und wird auch noch in einigen Jahren Support erhalten.
 Zudem ist man bei diesem Modell in keiner Weise eingeschränkt und kann jegliche Musik transkribieren.
 Dieses Modell geht jedoch auch mit viel Rechenaufwand und einem guten Verständnis des Forschungsgebiets einher.

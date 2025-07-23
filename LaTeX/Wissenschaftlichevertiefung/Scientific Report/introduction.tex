@@ -19,8 +19,8 @@ Anstatt das man selber diese Lieder, alleine durchs Gehör,
 in Notenschrift überträgt würde diese Aufgabe eine Software für einen erledigen.
 Dieses Ziel ist jedoch schwer zu erreichen,
 da Musik mehrdimensional ist durch zum Beispiel Zeit, Tonhöhe und Polyphonie.
-Vor allem bei polyphonen Musikstücken haben herkömmliche Algorithmen viele Schwierigkeiten.
-In diesen Fällen müssen sie nämlich viele verschiedene Stimmen gleichzeitig analysieren und
+Vor allem bei polyphonen Musikstücken haben herkömmliche Algorithmen häufig Schwierigkeiten.
+In diesen Fällen müssen sie nämlich mehrere verschiedene Stimmen gleichzeitig analysieren und
 im späteren auch die jeweiligen Töne voneinander differenzieren und eindeutig einem Instrument zuordnen.
 Ein weiteres Problem ist die Individualität jedes Musikstückes.
 In realen Aufnahmen können leichtes Rauschen,
@@ -63,7 +63,7 @@ Das menschliche Gehör kann 200--400Hz feiner als 5000--5200Hz wahrnehmen.
 Die Mel-Skala sorgt dafür, das sich das Spektrogramm dieser menschlichen Hörweise anpasst.
 Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskription,
 da dieses Töne feiner unterscheiden kann.
-Jedoch werden in vielen neueren KI-Modellen eher Log-Mel-Spektrogramme benutzt,
+Jedoch werden in neueren KI-Modellen zum großteil Log-Mel-Spektrogramme genutzt,
 da diese robuster sind und vor allem besser in Transformer-basierte KI-Modellen laufen.
 Im folgenden
 \begin{figure}[H]
@@ -74,7 +74,7 @@ Im folgenden
 \end{figure}
 
 Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.
-Hier werden meistens Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN),
+Hier werden größtenteils Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN),
 als einzelne Module, benutzt.
 \cite{Boeck2012}
 Diese Module bilden keine eigenständigen Systeme, sondern lassen sich flexibel innerhalb eines Systems kombinieren.
@@ -82,7 +82,7 @@ Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz v
 Dementsprechend braucht man auch ein zuverlässiges Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien.
 
 CNNs können gut räumliche Strukturen erkennen.
-Das hiflt uns bei der Analyse von Spektrogrammen.
+Das ist sehr hilfreich bei der Analyse von Spektrogrammen.
 Meist werden die verschiedenen Frequenzen der Noten, die gespielt wurden,
 nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben.
 Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt werden,
@@ -91,7 +91,7 @@ Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrument
 \cite{han2016deep}
 
 RNNs hingegen sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
-In der Musik werden viele Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
+In der Musik werden zahlreiche Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
 Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
 um die darauffolgenden Noten besser einordnen zu können.
 So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des Stücks analysieren.
@@ -128,11 +128,11 @@ diese MIDI-Dateien zu standardisierter Notenschrift transkribieren.
 
 Es gibt aber auch Projekte, wo nur ein bestimmter Teil dieser Kette mit KI-Modulen realisiert wird,
 oder andere KI-Module verwendet werden.
-Mehr zu diesen Modulen und CNNs und RNNs im Detail erläutere ich in dem Abschnitt-\ref{subsec:ki_integration}.
+Mehr zu diesen Modulen und CNNs und RNNs im Detail werden in dem Abschnitt-\ref{subsec:ki_integration} erläutert.
 
 \subsection{praktische Anwendungsfelder und Vorteile von AMT}
-AMT kann auch bei vielen anderen Problemen helfen
-oder in vielen Bereichen Quality-of-Life-Changes bringen.
+AMT kann auch häufig bei anderen Problemen helfen
+oder in zahlreichen Bereichen Quality-of-Life-Changes bringen.
 Zum einen kann der Musikunterricht spannender und interaktiver gestaltet werden.
 Es gibt eine breitere Auswahl von Musikstücken, die man den Schülern anbieten kann,
 wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim lernen haben könnten.
