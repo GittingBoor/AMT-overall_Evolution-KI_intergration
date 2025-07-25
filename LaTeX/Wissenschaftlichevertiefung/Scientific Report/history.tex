@@ -1,7 +1,6 @@
-\section{Geschichtliche Entwickelung von AMT-Systemen}
+\usepackage{hyperref}\section{Geschichtliche Entwickelung von AMT-Systemen}
 
-\subsection{Moorer und eines der ersten Musiktranskriptionssysteme}
-\subsubsection{Grundlegende Probleme bei AMTs}
+\subsection{Moorer und das erste AMT-System}
 Einer der ersten Papers über Automatic Music Transcription wurde im Jahr 1977 geschrieben.
 \cite{Moorer1977}
 In dieser beschreibt Moorer seinen Ansatz, polyphone Musik Audiospuren
@@ -9,6 +8,7 @@ direkt über Computerprogramme in Notenschrift zu übertragen.
 Während dieses Prozesses fallen ihm schon große Probleme auf, die auch in späteren Papern und Arbeiten
 eine ausschlaggebende Rolle spielen werden.
 
+\subsubsection{Grundlegende Probleme}
 Eines dieser Probleme wird von ihm als das \("\)Cocktail-Party-Problem\("\) bezeichnet.
 Dieses stellt die Schwierigkeit dar, auf einer Party bestimmten Stimmen zu folgen, während viele verschiedene Stimmen
 gleichzeitig erklingen.
@@ -59,7 +59,7 @@ sie sind eher abhängig von Rhythms und Lautstärke.
 Da Moorers AMT sich jedoch auf das Frequenzmuster der Noten fokussiert,
 können diese Musikinstrumente nicht berücksichtigt werden.
 
-\subsubsection{Der Aufbau von Moorers AMT-Systems}
+\subsubsection{Moorers Aufbau}
 Moorers automatische Musiktranskriptionssystem war eins der ersten seiner Art.
 Viele weitere AMT-Systeme leiten sich von diesem ab.
 
@@ -83,7 +83,8 @@ Zudem werden Gruppierungen von Noten erstellt, welche am wahrscheinlichsten harm
 Zum Schluss ließ Moorer die gewonnenen Daten durch ein Programm laufen, 
 um diese dann mithilfe eines Plotters in eine Notenschrift umzuwandeln.
 
-\subsubsection{Hidden Markov Models}
+\begin{description}[style=nextline]
+\item[Hidden Markov Modelle]\label{itm:hiddenMarkov}
 Hidden Markov Modelle (HMM) sind statische Modelle, welche sich sehr gut zur Analyse von Musikstücken eignen.
 Sie wurden erstmal in den 1960er Jahren erfunden
 \cite{baum1970maximization}
@@ -125,8 +126,10 @@ wie KI-Methoden in diesem Bereich später eingesetzt wurden.
 Sie beeinflussten insbesondere den Umgang mit zeitlichen Abfolgen
 und Unsicherheiten in der Tonerkennung,
 was bis heute relevante Konzepte in KI-basierten AMT-Systemen sind.
+\end{description}
 
-\subsection{MIDI-Dateien}
+\begin{description}[style=nextline]
+\item[MIDI]\label{itm:midi}
 Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
 Zunächst müsste man die gespielten Noten immer wieder zu Notenschrift konvertieren
 und danach diese auch noch in anderen Programmen analysieren, was sehr aufwändig werden würde.
@@ -134,7 +137,7 @@ Eine bessere lösung dafür wäre eine Datenschreibweise,
 bei der alle wichtigen Informationen bestimmter Noten übersichtlich aufgeschrieben sind.
 MIDI-Dateien sind dafür perfekt geeignet.
 
-MIDI ist ein Standartprotokoll zur kommunikation zwischen
+MIDI (Musical Instrument Digital Interface) ist ein Standartprotokoll zur kommunikation zwischen
 elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizer.
 Dieses Protokoll wurde 1983 erstmals eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie.
 \cite{smith1983midi}
@@ -192,8 +195,9 @@ MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
 da man nun ein standardisiertes output Format für diese Programme besaß.
 Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme.
 \cite{telila2025cnn}
+\end{description}
 
-\subsection{Entwickelung von Datensätzen}
+\subsection{AMT-Datensätzen}
 Während der Forschung an neuen AMT-Systemen wurden immer wieder neue Datensätze genutzt,
 um das AMT-System zu bespielen oder heutzutage auch zu trainieren.
 In der Transkription von Musikstücken sind diese sehr relevant,
@@ -219,7 +223,7 @@ Eine der neusten Methoden nutzt HMM- und Viterbi-basierte Alignment-Verfahren,
 um synthetische Audiosignale zu kreieren, damit man mehr Daten hat um sein KI-Modell zu trainieren.
 \cite{joysingh2019development}
 
-\subsection{Polyphone AMT-Systeme und neue Ansätze}
+\subsection{Polyphone AMT-Systeme}
 \subsubsection{Blackboard-System}
 Moorer stellte, mit seinem AMT-System, grundlegende Bausteine für dieses Forschungsgebiet.
 Jedoch gab es noch zahlreiche offene Probleme, die noch überwunden werden mussten.
@@ -353,14 +357,14 @@ Daraufhin werden die resultierenden Energie-Deviate der verschiedenen Bänder su
 Die nun entstehenden Peaks werden als Onsets der Noten interpretiert.
 Als Nächstes werden unharmonische Instrumente und transiente Geräusche, wie zum Beispiel Rauschen, entfernt.
 Dies erfolgt mithilfe der RASTA-Filterung, welches auf das spektrale Signal, vom gegeben Spektrogramm, wirkt.
-Mehr zu der RASTA-Filterung wird im Abschnitt-\ref{itm:rasta}, im Detail, erläutert.
+Mehr zu der RASTA-Filterung wird im Abschnitt-\titleref{itm:rasta}, im Detail, erläutert.
 Um mehrere Töne, die gleichzeitig im Signal erklingen, zu erkennen wird harmonic matching genutzt.
 Die Multipitch-Schätzung funktioniert so, dass zu einer bestimmten Zeit immer die dominanteste Tonhöhe,
 basierend auf der Energieverteilung im Signal, gesucht wird.
 Sobald man diese ermittelt hat, wird sie vom Signal subtrahiert und dieses Verfahren wird erneut eingesetzt,
 bis man jeden signifikanten Pitch untersucht hat.
 Jetzt werden die Stimmenanzahlen geschätzt.
-Dieses Modul wird im Abschnitt-\ref{itm:multi} detailliert wiedergeben.
+Dieses Modul wird im Abschnitt-\titleref{itm:multi} detailliert wiedergeben.
 In dem Modul Note-Formation werden jetzt die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
 Diese MIDI-Datei wäre jetzt bereit in Notenschrift transkribiert zu werden.
 
@@ -400,7 +404,8 @@ Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem 
 \end{description}
 
 \subsection{Einbindung von Künstlicher Intelligenz}
-Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen, wie zum Beispiel HMMs.
+Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen,
+wie zum Beispiel HMMs \titleref{itm:hiddenMarkov}.
 Doch auch diese Systeme waren nicht verschont durch den stetigen Anstieg von KI basierten Lösungswegen.
 2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten.
 \cite{eyben2010universal}

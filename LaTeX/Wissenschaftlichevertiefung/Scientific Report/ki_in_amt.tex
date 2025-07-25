@@ -32,7 +32,7 @@ Mit diesem System wird die Entwickelung des Forschungsgebietes illustriert.
 Insbesondere für polyphone Klaviertranskription ist dieses AMT-System ausgezeichnet.
 Im Folgenden werden die verschiedenen Layer eines CNNs, in einem AMT-System, erläutert.
 
-\subsubsection{Layer eines CNNs}
+\subsubsection*{Layer eines CNNs}
 In dem Convolution Layer werden Filter verwendet.
 Filter sind 2D-Matrizen, die aus trainierbaren Gewichten bestehen.
 Ein Filter deckt jeweils einen 3x3 Pixel Eingabebereich des Inputbildes ab.
@@ -93,7 +93,7 @@ Jedes Zeitfenster aus dem 3D-Tensor wird einzeln zu einem 1D-Vektor umgewandelt.
 Dabei wird der Vektor eine Dimension von F × C erhalten.
 Diese Vektoren werden dann an das folgende RNN weitergeleitet.
 
-\subsubsection{Geschichtliche Einordnung von CNNs}
+\subsubsection*{Geschichtliche Einordnung von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
 Die erste richtige Architektur für CNNs wurde, unter dem Namen \("\)Neocognitron\("\), veröffentlicht.
 \cite{fukushima1980neocognitron}
@@ -119,13 +119,12 @@ Wenn jetzt in einem AMT-System eine bestimmte Tonabfolge gespielt wurde,
 kann sich das RNN diese merken und dementsprechend die fortlaufenden Ausgaben anpassen.
 Dies passiert dank den Hidden States.
 Dieser stellt das Gedächtnis des RNNs dar und ist einer der wichtigsten Faktoren in einem RNN\@.
-Mehr zu den Hidden States werden im Abschnitt-\ref{itm:hidden} ausführlicher beschrieben.
+Mehr zu den Hidden States werden im Abschnitt-\titleref{itm:hidden} ausführlicher beschrieben.
 Dieses Prinzip ist in der Musiktranskription sehr hilfreich,
 da jede Note stark von den vorherigen gespielten Noten abhängt.
 Takt, Rhythmus, Harmonie und die Melodie eines Musikstückes sind alles gute Beispiele,
 warum diese sequenzielle Abfolge so passend in AMT-Systemen ist.
 
-\subsubsection{Grundstruktur eines RNNs}
 RNNs haben in der automatischen Musiktranskription mehrere Aufgabenfelder.
 Je nachdem wie man das RNN trainiert bewältigt dieses alle Aufgaben oder nur einen Teil.
 Diese Aufgaben bestehen aus Frame-Glättung (Temporal smoothing), Kontext-Modellierung (Temporal context modeling),
@@ -150,7 +149,7 @@ Dafür müssen andere Module die Informationen der Hidden States später richtig
 Jeder Hidden State hat eine Anzahl von Dimensionen, welche gleich der Anzahle der Neuronen in einem RNN ist.
 \end{description}
 
-\subsubsection{Aufgaben eines RNNs}
+\subsubsection{Grundstruktur eines RNNs}
 Bei der Frame-Glättung bekommt das RNN als Input die Aktivierungswerte des Zeitfensters.
 Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche vorhersagen auszuschließen.
 Das CNN hat dem RNN schon Vorhersagen für bestimmte Noten gegeben.
@@ -296,7 +295,7 @@ Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei we
 Ein Bidirektionales RNN kann man auch in folgender Arbeit finden.
 \cite{hawthorne2017onsets}
 
-\subsubsection{Geschichtliche Einordnung von RNNs}
+\subsubsection*{Geschichtliche Einordnung von RNNs}
 Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück.
 \cite{elman1990finding}
 In dieser Arbeit wurde erstmals die Idee der Rückkopplung eingebaut,
@@ -423,7 +422,7 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
   \item $y_t$: Ausgabewert des Feedforward Layers für das Token.
 \end{itemize}
 
-\subsubsection{Geschichtliche Einordnung von Transformern}
+\subsubsection*{Geschichtliche Einordnung von Transformern}
 Das erste Transformer-Modell wurde im Jahre 2017 erfunden.
 \cite{vaswani2017attention}
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
@@ -448,7 +447,7 @@ Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskrip
 YourMT3+ Modell, indem die MT3-Architektur noch weiter verbessert wurde.
 \cite{chang2024yourmt3}
 
-\subsection{Weitere Deep-Learning-Module und Entwicklungen}
+\subsection{Potentielle KI-Module}
 CNNs und RNNs oder Transformer Modelle wie MT3 werden überwiegend in AMT-Systemen eingebunden,
 wenn es sich um KI integration handelt.
 Jedoch gibt es noch andere KI-Modelle, die auch ab und zu in AMT-Systemen integriert werden.
@@ -458,7 +457,7 @@ Im folgenden Abschnitt werden einige von diesen, eher experimentellen, KIs vorge
 Wir fangen dabei bei der am meisten erprobten KI an,
 sodass die letzte KIs nur theoretisch, für die Musiktranskription, besprochen worden.
 
-\subsubsection{Variational Autoencoder}
+\subsubsection*{Variational Autoencoder}
 Variational Autoencoder (VAE) ist ein KI-Modell, welches komplexe Daten in eine verdichtete Form überführt
 und durch Wahrscheinlichkeiten bestimmte Muster vorhersagen kann.
 \cite{kingma2019introduction}
@@ -473,7 +472,7 @@ extrahieren könnte man auch kreative Variationen des Musikstückes damit bilden
 Die Methode, welche in VAEs genutzt wird, fand Ihren Ursprung in folgendem Paper.
 \cite{kingma2013auto}
 
-\subsubsection{Graph Neural Network}
+\subsubsection*{Graph Neural Network}
 Graph Neural Network (GNN) ist ein KI-Modell, welches dazu dient Daten, mit abhängigkeit voneinander, zu verarbeiten.
 Diese Daten werden in einem Graphen aus Knoten und Kanten gespeichert.
 Dabei hat jeder Knoten seine eigenen Daten, die er in jedem Rechenschritt mit seinen benachbarten Knoten austauscht.
@@ -484,7 +483,7 @@ Der Unterschied ist hier, das GNNs keine bestimmte Reihenfolge, wie Wissen weite
 Es ist ein anderer Ansatz harmonische Abhängigkeiten miteinander zu kombinieren.
 \cite{wu2020comprehensive}
 
-\subsubsection{Diffusion Model}
+\subsubsection*{Diffusion Model}
 Diffusion Models arbeiten mit Rauschen.
 Aus komplettem rauschen bauen sie Schritt für Schritt ein sauberes Musikstück zusammen.
 Dabei entscheiden sie pro Rechenschritt nur einen kleinen Teil des Musikstückes,
@@ -492,7 +491,7 @@ wodurch mehrdeutige Passagen in Musikstücken auch noch später im Transkription
 In dem Projekt DiffRoll, aus dem Jahre 2022, wurde ein Diffusion Model auf ein AMT-System angewendet.
 \cite{cheuk2022diffroll}
 
-\subsubsection{Reinforcement Learning}
+\subsubsection*{Reinforcement Learning}
 Reinforcement Learning (RL) benutzen ein Belohnungssystem, damit der Agent sich beim training richtig anpasst.
 Sobald der Agent ein bestimmtes Ziel erreicht oder eine Handlung ausführt, wird dieser dafür belohnt.
 Die Agenten, welche am meisten Belohnungen erzielen werden kopiert und in der nächsten iteration eingesetzt,
@@ -506,7 +505,7 @@ Falls die gewählten Noten vom Agenten gleich dem Vergleichsdatensatz sind, beko
 So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von anderen KIs nochmal korrekturlesen.
 \cite{li2018music}
 
-\subsubsection{Energy-Based Model}
+\subsubsection*{Energy-Based Model}
 Der letzte Ansatz ist ein Energy-Based Model (EBM).
 Ein EBM arbeitet mit Energie anstatt von Wahrscheinlichkeiten.
 \cite{lecun2006tutorial}
