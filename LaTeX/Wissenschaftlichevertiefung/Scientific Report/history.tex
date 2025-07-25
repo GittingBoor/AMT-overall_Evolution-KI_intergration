@@ -6,7 +6,7 @@ Einer der ersten Papers über Automatic Music Transcription wurde im Jahr 1977 g
 \cite{Moorer1977}
 In dieser beschreibt Moorer seinen Ansatz, polyphone Musik Audiospuren
 direkt über Computerprogramme in Notenschrift zu übertragen.
-Während dieses Prozesses fallen ihm schon sehr viele schwierigkeiten auf, die auch in späteren Papern und Arbeiten
+Während dieses Prozesses fallen ihm schon große Probleme auf, die auch in späteren Papern und Arbeiten
 eine ausschlaggebende Rolle spielen werden.
 
 Eines dieser Probleme wird von ihm als das \("\)Cocktail-Party-Problem\("\) bezeichnet.
@@ -16,7 +16,7 @@ Das gleiche Problem liegt in der Noten transkription.
 Die meisten Musikstücke haben mehrere Instrumente, welche gleichzeitig spielen.
 Öfter gibt es auch Musikstücke wo es für ein Instrument, wie zum Beispiel Violine, mehrere verschiedene Stimmen gibt.
 Dies erschwert die Zuordnung bestimmter Noten zu einer gewählten Stimme.
-Schon viele Menschen scheitern deshalb daran große Musikstücke richtig zu transkribieren.
+Der großteil aller Menschen scheitert deshalb daran große Musikstücke richtig zu transkribieren.
 Noch schwieriger wird es hier für Computerprogramme.
 Anfangs identifizieren diese bestimmte Töne anhand der Frequenz des Tons.
 Leider reicht das, wie Moorer feststellt, nicht aus um genaustens zu bestimmen,
@@ -24,7 +24,7 @@ welche Töne genau momentan gespielt werden.
 
 Jeder Ton hat Obertöne.
 Diese Obertöne sind jeweils das Vielfache von dem Grundton, den man spielt.
-Heißt, wenn ich auf einem Klavier den Ton C3 mit 130,81 Hz spiele dann hat dieser
+Heißt, wenn auf einem Klavier der Ton C3 mit 130,81 Hz gespielt wird, dann hat dieser
 die Obertöne C4 (261,62 Hz), G4 (392,42 Hz) usw.
 Wenn man nur C3 spielt erklingen für das Computerprogramm auch die jeweiligen Obertöne,
 was man Frequenzüberlagerung nennt.
@@ -61,7 +61,7 @@ können diese Musikinstrumente nicht berücksichtigt werden.
 
 \subsubsection{Der Aufbau von Moorers AMT-Systems}
 Moorers automatische Musiktranskriptionssystem war eins der ersten seiner Art.
-Viele weiteren AMT-System leiten sich von diesen ab.
+Viele weitere AMT-Systeme leiten sich von diesem ab.
 
 Zunächst wird ein analoges Musiksignal mit einem 14-Bit converter digitalisiert.
 Dieses digitale Musiksignal wurden dann genutzt um mithilfe von Bandpassfiltern,
@@ -221,8 +221,8 @@ um synthetische Audiosignale zu kreieren, damit man mehr Daten hat um sein KI-Mo
 
 \subsection{Polyphone AMT-Systeme und neue Ansätze}
 \subsubsection{Blackboard-System}
-Moorer stellte, mit seinem AMT-System, viele grundlegende Bausteine für dieses Forschungsgebiet.
-Jedoch gab es noch viele offene Probleme, die noch überwunden werden mussten.
+Moorer stellte, mit seinem AMT-System, grundlegende Bausteine für dieses Forschungsgebiet.
+Jedoch gab es noch zahlreiche offene Probleme, die noch überwunden werden mussten.
 Eines der ausschlaggebendsten Probleme war die polyphonie von Musikstücken.
 \cite{Martin1996}
 Zuvor wurden höchstens zwei verschiedene Stimmen gleichzeitig zur Musik transkription verwendet.
@@ -267,7 +267,7 @@ zunächst verarbeitet und dann in einem Correlogram dargestellt.
 Dieses Visualisiert die Korrelation der gegebenen Noten in Abhängigkeit der Zeit, Frequenz und Lag.
 Lag soll in diesem Fall darstellen, wann sich ein bestimmtes Signal wiederholt.
 Dabei ist die Wiederholung ein Signal, welches dem Ursprungssignal maximal selbst ähnelt.
-Heißt, wenn ich einen Ton mit der Frequenz x spiele
+Heißt, wenn ein Ton mit der Frequenz x gespielt wird
 und dieser sich nach zum Beispiel 10ms wiederholt wird das rechnerisch durch den Lag dargestellt.
 Als Nächstes wird mithilfe der Summary Autocorrelation das Correlogram komprimiert
 und die Datenstruktur normalisiert.
@@ -353,17 +353,19 @@ Daraufhin werden die resultierenden Energie-Deviate der verschiedenen Bänder su
 Die nun entstehenden Peaks werden als Onsets der Noten interpretiert.
 Als Nächstes werden unharmonische Instrumente und transiente Geräusche, wie zum Beispiel Rauschen, entfernt.
 Dies erfolgt mithilfe der RASTA-Filterung, welches auf das spektrale Signal, vom gegeben Spektrogramm, wirkt.
-Mehr zu der RASTA-Filterung werde ich in einem folgenden Absatz, im Detail, erläutern.
+Mehr zu der RASTA-Filterung wird im Abschnitt-\ref{itm:rasta}, im Detail, erläutert.
 Um mehrere Töne, die gleichzeitig im Signal erklingen, zu erkennen wird harmonic matching genutzt.
 Die Multipitch-Schätzung funktioniert so, dass zu einer bestimmten Zeit immer die dominanteste Tonhöhe,
 basierend auf der Energieverteilung im Signal, gesucht wird.
 Sobald man diese ermittelt hat, wird sie vom Signal subtrahiert und dieses Verfahren wird erneut eingesetzt,
 bis man jeden signifikanten Pitch untersucht hat.
 Jetzt werden die Stimmenanzahlen geschätzt.
-Dieses Modul werde ich ebenfalls ausführlich in einem folgenden Absatz detailliert wiedergeben.
-In dem Modul Note-Formation werden nun die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
+Dieses Modul wird im Abschnitt-\ref{itm:multi} detailliert wiedergeben.
+In dem Modul Note-Formation werden jetzt die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
 Diese MIDI-Datei wäre jetzt bereit in Notenschrift transkribiert zu werden.
 
+\begin{description}[style=nextline]
+\item[RASTA-Filterung]\label{itm:rasta}
 Die RASTA-Filterung ist eine der neuen Module von Klapuri.
 Sie bewirkt, das nicht-harmonische Störsignale, wie
 Rauschen, unharmonische Instrumente und vom Musikstück unabhängige Geräusche ausgefiltert werden.
@@ -377,7 +379,10 @@ Nach der Berechnung gibt der Filter eine Lautstärke-Kurve zurück.
 Alle Frequenzanteile, die entweder zu kurzzeitig sind, wie etwa Claps oder Hi-Hats, oder zu langanhaltend,
 wie dauerhaftes Rauschen, werden durch einen Bandpassfilter aus dem Audiosignal herausgefiltert.
 Dadurch bleiben vor allem die zeitlich stabilen, musikalisch relevanten Komponenten erhalten.
+\end{description}
 
+\begin{description}[style=nextline]
+\item[Multipitch-Schätzung]\label{itm:multi}
 Auch die Stimmanzahl erkennung ist, von Klapuri, ein neu eingefügtes Modul.
 Vor allem bei der Multipitch-Schätzung ist dieses sehr wichtig, da das System dadurch ein Bild davon bekommt,
 wie viele Töne gleichzeitig erklingen können, zu einer bestimmten Zeit.
@@ -392,6 +397,7 @@ Wie viele Stimmen wurden schon erkannt?
 Tragen die weiteren extrahierten Stimmen noch groß etwas zur Erklärung des gesamten Musikstückes bei?
 Dadurch extrahiert die Multipitch-Schätzung nur die nötigen Noten und unnötig Störfaktoren werden ausgelassen.
 Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem jeweiligen Musikstück erklingen.
+\end{description}
 
 \subsection{Einbindung von Künstlicher Intelligenz}
 Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen, wie zum Beispiel HMMs.
@@ -421,8 +427,8 @@ Viele intelligente und erfindungsreiche Personen haben sich über die Jahre mit 
 Dadurch konnten nachfolgende Arbeiten neue Module und Ansätze für sich nutzen, um deren Entwicklung weiter voranzutreiben.
 Auch heutzutage ist dies immer noch der Fall, wodurch es stets neue AMT-Systeme mit neuen Ansätzen gibt.
 Diese neuen, auf KI basierenden Systeme, haben alle jeweils ihre eigenen Stärken und schwächen.
-Auch wenn die Forschung von AMT-Systemen in den letzten Jahren viele Fortschritte erfuhr,
+Auch wenn die Forschung von AMT-Systemen in den letzten Jahren zahlreiche Fortschritte erfuhr,
 gibt es trotz dessen noch große Baustellen und ungelöste Aufgaben.
-Im folgenden Abschnitt werde ich weiter auf den momentanen Stand
-von AMT-Systemen eingehen und anhand einiger Beispiele verschiedene Strukturen darstellen.
-Zudem gehe ich auf momentan relevante Hindernisse in der automatischen Musiktranskription ein.
+Im folgenden Kapitel wird genauer der momentane Stand von AMT-Systemen behandelt.
+So werden anhand einiger unterschiedlichen Beispiele, verschiedene AMT Strukturen dargestellt.
+Zudem werden die relevantesten Hindernisse in der heutigen automatischen Musiktranskription aufgegriffen.

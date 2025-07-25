@@ -1,16 +1,17 @@
 \section{Hindernisse Moderner AMT-Systeme}
-Trotz der Einführung von KI-Modulen gibt es noch viele offene Probleme, die noch nicht gelöst werden konnten
+Trotz der Einführung von KI-Modulen gibt es immer noch zahlreiche offene Probleme, die noch nicht gelöst worden
 oder noch nicht perfekt gelöst sind.
-Auch wenn durch die nutzung von KIs viele Fehler geringer oder sogar komplett behoben werden konnten,
-agieren diese völlig anders als normale Algorithmen.
+Zudem agieren KIs völlig anders als normale Algorithmen.
 Dies führte, zum Teil, auch zu neuen Problemen, welche davor nicht mal bekannt waren.
+In den folgenden Abschnitten werden die größten und wichtigsten Probleme,
+mit der sich die AMT Forschung momentan auseinandersetzt, aufgezählt.
 
 \subsection{Onset Detection}
-Die On-/Offset erkennung von Noten wurde schon ausgiebig in vielen Arbeiten behandelt.
+Die On-/Offset erkennung von Noten wurde schon ausgiebig in zahlreichen Arbeiten behandelt.
 Trotzdem ist diese noch nicht komplett akkurat.
 Das liegt daran, dass man On-/Offsets an Lautstärke sprüngen und spektralen Änderungen erkennt.
 Bei polyphonen Musikstücken mit vielen verschiedenen Noten kann man jedoch schwieriger diese Unterschiede erkennen.
-Lautstärke sprünge werden ungenauer, da viele andere Noten während des Onsets einer bestimmten Note spielen.
+Lautstärke sprünge werden ungenauer, da häufig mehrere Noten während des Onsets einer bestimmten Note spielen.
 Mit spektralen Änderungen sind hier Veränderungen der Energieverteilung gemeint.
 Einer der ausschlaggebendsten Anteile ist die Spektrale Fluktuation.
 Diese stellt den plötzlichen Anstieg von Energie in bestimmten Frequenzbändern dar.
@@ -28,7 +29,7 @@ Dadurch könnten Töne von anderen Instrumenten verdeckt werden, wodurch das Sys
 
 \subsection{Polyphonie und Notenzuordnung}
 Durch die nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung,
-viele Probleme schwerer und deutlicher geworden.
+einige Probleme schwerer und deutlicher geworden.
 Ein weiteres Problem, das gezielt von diesen Anwendungsfällen abhängt, ist die Verwechselung von Noten im Audiosignal.
 Einige Noten haben sehr ähnliche Frequenzen.
 Wenn diese Noten gleichzeitig gespielt werden, ist es schwieriger für das System, die korrekten Noten herauszuhören.
@@ -43,7 +44,7 @@ In der folgenden Arbeit werden diese Probleme nochmals deutlicher aufgegriffen.
 \subsection{Instrument spezifische Probleme}
 Oft ist die Qualität der Transkription auch abhängig von den vertretenen Instrumenten in dem Audiosignal.
 Ethnische Instrumente zum Beispiel sind Instrumente die einer bestimmten Kultur angehören
-und in unserer westlichen Kultur weniger vertreten sind.
+und in der westlichen Kultur weniger vertreten sind.
 Dadurch gibt es auch weniger Datensätze, welche diese Instrumente beinhalten.
 KIs brauchen Trainingsdaten und ohne diese können sie bestimmte Instrumente nicht richtig zuordnen.
 Die meisten Datensätze zur Musiktranskription bestehen hauptsächlich aus Klavier und Geigen Noten.
@@ -84,13 +85,14 @@ Dies war schon vor der Einführung von KI ein Problem und wurde durch die Einbin
 von KI-Modulen nicht sonderlich viel verbessert.
 Das liegt daran, dass KIs mit isolierten Studioaufnahmen, wie es im MAESTRO Datensatz der Fall ist, trainiert werden.
 Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte man dafür viel mehr Trainingsdaten und
-vor allem auch viele unterschiedliche Hintergrundgeräusche, damit die KI auf alles trainiert wird.
+vor allem auch eine große Anzahl von unterschiedliche Hintergrundgeräusche,
+damit die KI auf alle Möglichkeiten trainiert wird.
 Um dem entgegenzuwirken, kann man Studio-Datensätze wie MAESTRO durch Data-Augmentation variieren,
 wodurch realistischere Audioaufnahmen entstehen.
 So wurde es auch in folgender Arbeit, für die Trainingsdaten, eingesetzt.
 \cite{kusaka2024mobile}
 Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu der eines Smartphones, veränderte.
-So bekommt man viele neue Datensätze, die passend auf die gegebenen Anwendungsfall ausgelegt sind.
+So bekommt man zahlreiche neue Datensätze, die passend auf die gegebenen Anwendungsfall ausgelegt sind.
 
 \subsection{Frame-basierte vs Event-basierte AMT-Systeme}
 Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
@@ -124,9 +126,11 @@ Die Forschung in dem Event-basierten Methoden steigt auch in den letzten Jahren 
 \subsection{Blackbox von KI-Modellen}
 Das letzte Problem betrifft KI im generellen.
 Ein neuronales Netz arbeitet mit sehr hochdimensionalen Räumen, die für uns Menschen nicht begreifbar sind.
-Selbst wenn wir uns die Millionen und mehr Gewichtungen anschauen würden in diesen keinen Zusammenhang feststellen.
-In der Musiktranskription ist dies auch ein Problem, da wir somit nicht erfassen können,
-welche Einstellungen unsere KI genau braucht damit sie alle Musikstücke perfekt transkribieren kann.
+Selbst wenn jemand sich die Millionen und mehr Gewichtungen anschauen würde,
+würde dieser in diesen keinen Zusammenhang feststellen können.
+In der Musiktranskription ist dies auch ein Problem, da somit nicht erfasst werden kann,
+welche Einstellungen eine automatischen Musiktranksriptions KI genau braucht,
+damit sie alle Musikstücke perfekt transkribieren kann.
 Jedoch gibt es auch Methoden, welche die Blackbox ein wenig umgehen.
 Im Forschungsgebiet der Explainable AI gibt es einige Methoden,
 welche auch in KI-basierten AMT-Systemen, verwendet werden.

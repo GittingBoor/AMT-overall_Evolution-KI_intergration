@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  23 JUL 2025 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.11)  24 JUL 2025 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,12 +1395,6 @@ been already used, duplicate ignored
                    \relax 
 l.24 
       [3]
-Overfull \hbox (0.67047pt too wide) in paragraph at lines 63--65
-\T1/ptm/m/n/10.95 Moorers au-to-ma-ti-sche Mu-sik-tran-skrip-ti-ons-sys-tem war
- eins der ers-ten sei-ner Art. Vie-le wei-te-ren AMT-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1440,7 +1434,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
-<Graphics/Martin1996Structure.png, id=366, 357.335pt x 416.55624pt>
+<Graphics/Martin1996Structure.png, id=367, 357.335pt x 416.55624pt>
 File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
 Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
@@ -1466,6 +1460,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8 <./Graphics/Martin1996Structure.png>]
 
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.368 \item[RASTA-Filterung]
+                            \label{itm:rasta}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1473,7 +1480,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9]) (modern_problems.tex
+[9]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 \item[Multipitch-Sch√§tzung]
+                                  \label{itm:multi}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (modern_problems.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1520,6 +1540,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 \item[Hidden States]
+                          \label{itm:hidden}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1528,7 +1561,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 186--190
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 189--193
 \T1/ptm/m/n/10.95 Zusammenf¸hrung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 n‰chst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1572,7 +1605,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [19]
 
 LaTeX Warning: Citation 'chang2024yourmt3' on page 20 undefined on input line 4
-46.
+49.
 
 
 
@@ -1643,7 +1676,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25]) (conclusion.tex)
+[25]) (conclusion.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1652,7 +1685,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]
+[26])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
 Overfull \hbox (20.81593pt too wide) in paragraph at lines 138--138
 \T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
 i-li-ty''. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print ar
@@ -1668,7 +1710,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27]
+[28]
 Overfull \hbox (7.74902pt too wide) in paragraph at lines 138--138
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form''. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/1
@@ -1684,7 +1726,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
+[29]
 (C:\Users\bened\OneDrive - Hochschule D√ºsseldorf\Dokumente\GitHub\Automatic-Mu
 sic-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\mai
 n.aux)
@@ -1703,10 +1745,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36773 strings out of 473523
- 712277 string characters out of 5714630
- 1526365 words of memory out of 5000000
- 59287 multiletter control sequences out of 15000+600000
+ 36779 strings out of 473523
+ 712384 string characters out of 5714630
+ 1526546 words of memory out of 5000000
+ 59292 multiletter control sequences out of 15000+600000
  605935 words of font info for 86 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,3139s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1727,9 +1769,9 @@ tmr8a.pfb><C:/Users/bened/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on "C:\Users\bened\OneDrive - Hochschule D√ºsseldorf\Dokumente\G
 itHub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientifi
-c Report\out\main.pdf" (32 pages, 1149831 bytes).
+c Report\out\main.pdf" (33 pages, 1151855 bytes).
 PDF statistics:
- 705 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

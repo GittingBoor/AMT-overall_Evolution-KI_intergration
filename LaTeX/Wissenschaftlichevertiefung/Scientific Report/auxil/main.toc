@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.6}Frame-basierte vs Event-basierte AMT-Systeme}{12}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Blackbox von KI-Modellen}{13}{subsection.3.7}%
 \contentsline {section}{\numberline {4}KI-Module in AMT-Systemen}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Convolutional Neural Networks}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Convolutional Neural Networks}{14}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{14}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Geschichtliche Einordnung von CNNs}{15}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Recurrent Neural Networks}{15}{subsection.4.2}%
@@ -36,19 +36,19 @@
 \contentsline {subsubsection}{\numberline {4.2.5}Bidirektionale RNNs}{18}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Geschichtliche Einordnung von RNNs}{18}{subsubsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.3}Transformers}{18}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{18}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{19}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Self-Attention Layer}{19}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{19}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{20}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Geschichtliche Einordnung von Transformern}{20}{subsubsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.4}Weitere Deep-Learning-Module und Entwicklungen}{20}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Weitere Deep-Learning-Module und Entwicklungen}{21}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Variational Autoencoder}{21}{subsubsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.2}Graph Neural Network}{21}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}Diffusion Model}{21}{subsubsection.4.4.3}%
 \contentsline {subsubsection}{\numberline {4.4.4}Reinforcement Learning}{21}{subsubsection.4.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.5}Energy-Based Model}{21}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.5}Energy-Based Model}{22}{subsubsection.4.4.5}%
 \contentsline {section}{\numberline {5}KI-basierende AMT-Systeme im Vergleich}{22}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Omnizart}{22}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}MT3}{24}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Omnizart vs MT3}{25}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}Omnizart vs MT3}{26}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Fazit}{26}{section.6}%
-\contentsline {section}{Literaturverzeichnis}{27}{section*.5}%
+\contentsline {section}{Literaturverzeichnis}{28}{section*.5}%
