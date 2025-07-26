@@ -64,12 +64,19 @@ Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskripti
 da dieses Töne feiner unterscheiden kann.
 Jedoch werden in neueren KI-Modellen zum großteil Log-Mel-Spektrogramme genutzt,
 da diese robuster sind und vor allem besser in Transformer-basierte KI-Modellen laufen.
-Im folgenden
+Im Folgenden sind vier verschiedene Spektrogramme zu sehen,
+welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5 basieren.
+Dabei ist oben links ein normales lineares Spektrogramm,
+welches ausschließlich auf dem STFT mit linear aufgelöster Frequenz basiert.
+Rechts daneben ist ein Log-Spektrogramm,
+bei dem die Amplitudenwerte des STFT logarithmisch in Dezibel skaliert wurden,
+um Lautstärkeunterschiede besser sichtbar zu machen.
+Das \("\)MelSpec\("\) steht für Log-Mel-Spektrogramm und unten rechts wird ein CQT-Spektrogramm angezeigt.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Graphics/logMelSpek}
-    \caption{Modifizierter Ausschnitt aus \cite{pyrovolakis2022multimodal}}
-    \label{fig:mel-vs-logmel-mfcc}
+    \includegraphics[width=1\textwidth]{Graphics/different_spectrograms}
+    \caption{Vergleich von vier Spektrogrammen basierend auf \cite{cheuk2020impact}}
+    \label{fig:different_specs}
 \end{figure}
 
 Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.

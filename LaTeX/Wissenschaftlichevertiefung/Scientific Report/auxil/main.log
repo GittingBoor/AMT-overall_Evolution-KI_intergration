@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  25 JUL 2025 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  27 JUL 2025 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,7 +1110,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count489
 \enitdp@description=\count490
 )
-Package biblatex Info: Redefining '\parencite' on input line 40.
+Package biblatex Info: Redefining '\parencite' on input line 42.
 
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -1124,8 +1124,8 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count491
 \@quotereset=\count492
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 10
-6.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
+1.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1137,24 +1137,24 @@ Package babel Info: 'ngerman' activates 'ngerman' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1275,9 +1275,9 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 106.
-Package biblatex Info: Reference segment=0 on input line 106.
-Package hyperref Info: Link coloring OFF on input line 106.
+Package biblatex Info: Reference section=0 on input line 111.
+Package biblatex Info: Reference segment=0 on input line 111.
+Package hyperref Info: Link coloring OFF on input line 111.
 
 (C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\main.
@@ -1335,11 +1335,12 @@ lof)
 
 
 [3] (introduction.tex
-<Graphics/logMelSpek.png, id=245, 1342.2647pt x 324.46219pt>
-File: Graphics/logMelSpek.png Graphic file (type png)
-<use Graphics/logMelSpek.png>
-Package pdftex.def Info: Graphics/logMelSpek.png  used on input line 70.
-(pdftex.def)             Requested size: 441.01773pt x 106.60251pt.
+<Graphics/different_spectrograms.png, id=246, 1034.86626pt x 701.62125pt>
+File: Graphics/different_spectrograms.png Graphic file (type png)
+<use Graphics/different_spectrograms.png>
+Package pdftex.def Info: Graphics/different_spectrograms.png  used on input lin
+e 77.
+(pdftex.def)             Requested size: 441.01773pt x 299.00407pt.
 
 
 
@@ -1354,14 +1355,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 \end{figure}
+l.80 \end{figure}
                   [1]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-04.
-
-(C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1375,27 +1370,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.116         \item M
-                     usikalische Phrasen mit zusammenhÃ¤ngender Struktur
-[2 <./Graphics/logMelSpek.png>]
+l.105 
+       [2 <./Graphics/different_spectrograms.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+11.
+
+(C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 
 LaTeX Warning: Reference `subsec:ki_integration' on page 3 undefined on input l
-ine 130.
-
-) (history.tex
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage
-               {hyperref}\section{Geschichtliche Entwickelung von AMT-Systemen}
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ine 137.
 
 
 
@@ -1411,9 +1396,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \usepackage{hyperref}\section
-                                 {Geschichtliche Entwickelung von AMT-Systemen}
-[3]
+l.169 
+       [3]) (history.tex
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage
+               {hyperref}\section{Geschichtliche Entwickelung von AMT-Systemen}
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1466,6 +1465,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8 <./Graphics/Martin1996Structure.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
 Overfull \hbox (7.00163pt too wide) in paragraph at lines 373--386
 \T1/ptm/m/n/10.95 Die RASTA-Filterung ist ei-ne der neu-en Mo-du-le von Kla-pu-
 ri. Sie be-wirkt, das nicht-harmonische
@@ -1480,16 +1488,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9]) (modern_problems.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[10]
+[10]) (modern_problems.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1526,6 +1525,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
+<Graphics/CNN.png, id=381, 1405.25pt x 628.3475pt>
+File: Graphics/CNN.png Graphic file (type png)
+<use Graphics/CNN.png>
+Package pdftex.def Info: Graphics/CNN.png  used on input line 98.
+(pdftex.def)             Requested size: 441.01773pt x 197.19225pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1535,12 +1540,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 188--192
-\T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
-nächst wer-den die-se durch ein Ful-ly Connec-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1549,7 +1548,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16]
+[16 <./Graphics/CNN.png>]
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 195--199
+\T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
+nächst wer-den die-se durch ein Ful-ly Connec-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1578,11 +1583,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 
-LaTeX Warning: Citation 'chang2024yourmt3' on page 20 undefined on input line 4
-48.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1592,6 +1592,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
+LaTeX Warning: Citation 'chang2024yourmt3' on page 21 undefined on input line 4
+55.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1599,7 +1604,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]) (current_amt_systems.tex
+[21]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]) (current_amt_systems.tex
 
 ! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
@@ -1615,15 +1629,6 @@ Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[22]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1650,7 +1655,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25]) (conclusion.tex
+[25]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1659,7 +1664,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26])
+[26]) (conclusion.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1668,8 +1673,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27]
-Overfull \hbox (20.81593pt too wide) in paragraph at lines 140--140
+[27])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28]
+Overfull \hbox (20.81593pt too wide) in paragraph at lines 145--145
 \T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
 i-li-ty''. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print ar
 -Xiv:2210.05148,
@@ -1684,8 +1698,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
-Overfull \hbox (7.74902pt too wide) in paragraph at lines 140--140
+[29]
+Overfull \hbox (7.74902pt too wide) in paragraph at lines 145--145
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form''. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/1
 0.95 . 
@@ -1700,7 +1714,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29]
+[30]
 (C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\main.
 aux)
@@ -1713,19 +1727,19 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C05EF24F4ABE03F72BA39CC39C22F068;7217.
+(rerunfilecheck)             Checksum: 9FD69C43EE4C7966D222E080928220CE;7217.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37097 strings out of 469941
- 717478 string characters out of 5469431
- 1521944 words of memory out of 5000000
- 63190 multiletter control sequences out of 15000+600000
+ 37122 strings out of 469941
+ 718190 string characters out of 5469431
+ 1523221 words of memory out of 5000000
+ 63212 multiletter control sequences out of 15000+600000
  675567 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,14n,107p,695b,3141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,107p,695b,3149s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1743,9 +1757,9 @@ tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on "C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\Git
 Hub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific 
-Report\out\main.pdf" (32 pages, 1144136 bytes).
+Report\out\main.pdf" (33 pages, 1649061 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 145 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

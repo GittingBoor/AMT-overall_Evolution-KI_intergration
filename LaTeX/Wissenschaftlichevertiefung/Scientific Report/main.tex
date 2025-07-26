@@ -36,6 +36,8 @@
 \newcommand{\titleref}[1]{(\nameref{#1})}
 \newcommand{\titlerefN}[1]{\nameref{#1}}
 
+% --- declaration ---
+
 % Changes citation brackets to square brackets
 \DeclareCiteCommand{\parencite}[\mkbibbrackets]
   {\usebibmacro{prenote}}
@@ -44,6 +46,9 @@
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
+\definecolor{captiongray}{gray}{0.4}
+\DeclareCaptionFont{captiongray}{\color{captiongray}\footnotesize}
+\captionsetup[figure]{font=captiongray, labelfont=captiongray}
 
 % --- Fonts ---
 

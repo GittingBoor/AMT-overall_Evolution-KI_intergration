@@ -115,12 +115,12 @@
     \endentry
     \entry{cheuk2021revisiting}{inproceedings}{}{}
       \name{author}{4}{ul=2}{%
-        {{un=0,uniquepart=base,hash=3b44500ec3bf865184968d612dbc09a7}{%
+        {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
            family={Cheuk},
            familyi={C\bibinitperiod},
            given={Kin\bibnamedelima Wai},
            giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=8bedc194dcec83bc6760a1731d18c69f}{%
            family={Luo},
            familyi={L\bibinitperiod},
@@ -165,12 +165,12 @@
     \endentry
     \entry{cheuk2022diffroll}{inproceedings}{}{}
       \name{author}{8}{ul=2}{%
-        {{un=0,uniquepart=base,hash=3b44500ec3bf865184968d612dbc09a7}{%
+        {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
            family={Cheuk},
            familyi={C\bibinitperiod},
            given={Kin\bibnamedelima Wai},
            giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=bc439000c0851260ca124ce6201ca029}{%
            family={Sawata},
            familyi={S\bibinitperiod},
@@ -233,6 +233,51 @@
       \field{note}{arXiv preprint arXiv:2210.05148, Oct 2022}
       \field{title}{DiffRoll: Diffusion-based Generative Music Transcription with Unsupervised Pretraining Capability}
       \field{year}{2023}
+    \endentry
+    \entry{cheuk2020impact}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=5e45d3ebdba58c35848a140bf63d6301}{%
+           family={Cheuk},
+           familyi={C\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=db66747bf7c23ed1dcc643ee56c2d4e4}{%
+           family={Shan},
+           familyi={S\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=799d2cd22b5a583bb9c5af58cb0603f2}{%
+           family={Raphael},
+           familyi={R\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{442438b3ebf08fe016296690334a0836}
+      \strng{fullhash}{442438b3ebf08fe016296690334a0836}
+      \strng{fullhashraw}{442438b3ebf08fe016296690334a0836}
+      \strng{bibnamehash}{442438b3ebf08fe016296690334a0836}
+      \strng{authorbibnamehash}{442438b3ebf08fe016296690334a0836}
+      \strng{authornamehash}{442438b3ebf08fe016296690334a0836}
+      \strng{authorfullhash}{442438b3ebf08fe016296690334a0836}
+      \strng{authorfullhashraw}{442438b3ebf08fe016296690334a0836}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2001.09989}
+      \field{title}{The Impact of Audio Input Representations on Neural Network Based Music Transcription}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2001.09989
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2001.09989
+      \endverb
     \endentry
     \entry{chung2014empirical}{article}{}{}
       \name{author}{4}{}{%
@@ -1512,52 +1557,6 @@
       \verb https://www.jamminpower.org/PDF/JAM/Transcription%20of%20Musical%20Sound%20-%20CMJ%201977.pdf
       \endverb
     \endentry
-    \entry{pyrovolakis2022multimodal}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=28db0f0c8921d6f9e90c3a5ba477fcec}{%
-           family={Pyrovolakis},
-           familyi={P\bibinitperiod},
-           given={Konstantinos},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6e4296e5511ebd6a00e752479cd86a38}{%
-           family={Tzouveli},
-           familyi={T\bibinitperiod},
-           given={Paraskevi\bibnamedelima K.},
-           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3a235f9b7cdc316d702a88592f57e242}{%
-           family={Stamou},
-           familyi={S\bibinitperiod},
-           given={Giorgos},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{fullhash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{fullhashraw}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{bibnamehash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{authorbibnamehash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{authornamehash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{authorfullhash}{a3b0a7f5f13880886d57a12872eaad74}
-      \strng{authorfullhashraw}{a3b0a7f5f13880886d57a12872eaad74}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Sensors}
-      \field{number}{2}
-      \field{title}{Multi-Modal Song Mood Detection with Deep Learning}
-      \field{volume}{22}
-      \field{year}{2022}
-      \field{pages}{358?}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.3390/s22020358
-      \endverb
-    \endentry
     \entry{scheirer1998tempo}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1c5103f2793a261d0122a19a0906d897}{%
@@ -1631,6 +1630,39 @@
       \field{year}{1997}
       \field{pages}{2673\bibrangedash 2681}
       \range{pages}{9}
+    \endentry
+    \entry{shahriar2020cnn}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bdc8319d54e93cc9f06fc5f09a15168}{%
+           family={Shahriar},
+           familyi={S\bibinitperiod},
+           given={Nafiz},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{fullhash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{fullhashraw}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{bibnamehash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{authorbibnamehash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{authornamehash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{authorfullhash}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \strng{authorfullhashraw}{4bdc8319d54e93cc9f06fc5f09a15168}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 27.07.2025}
+      \field{title}{What is Convolutional Neural Network (CNN) — Deep Learning}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://nafizshahriar.medium.com/what-is-convolutional-neural-network-cnn-deep-learning-b3921bdd82d5
+      \endverb
+      \verb{url}
+      \verb https://nafizshahriar.medium.com/what-is-convolutional-neural-network-cnn-deep-learning-b3921bdd82d5
+      \endverb
     \endentry
     \entry{sigtia2015hybrid}{inproceedings}{}{}
       \name{author}{6}{ul=3}{%

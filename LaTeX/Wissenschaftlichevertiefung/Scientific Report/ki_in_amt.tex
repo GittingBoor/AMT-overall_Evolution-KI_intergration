@@ -88,10 +88,17 @@ welcher aus den Zeitfenster (Frames / T), der Frequenzachsenlänge (F) und der A
 \]
 Meist schließt sich nach einem CNN, in einem AMT-System, ein RNN als Nächstes an.
 Dieses kann jedoch nur 1D-Vektoren verarbeiten und nicht einen 3D-Tensor.
-Deshalb wird dieser 3D-Tensor vor der übergabe umgewandelt.
-Jedes Zeitfenster aus dem 3D-Tensor wird einzeln zu einem 1D-Vektor umgewandelt.
-Dabei wird der Vektor eine Dimension von F × C erhalten.
+Dieser 3D-Tensor wird deshalb vor der Übergabe durch eine Flattening-Operation
+zeitschrittweise in 1D-Vektoren umgewandelt.
+Dabei wird der Vektor mit einer Dimension von F × C erhalten.
 Diese Vektoren werden dann an das folgende RNN weitergeleitet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/CNN}
+    \caption{Visualisierung eines CNNs zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \cite{shahriar2020cnn}}
+    \label{fig:cnn-amt}
+\end{figure}
 
 \subsubsection*{Geschichtliche Einordnung von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.

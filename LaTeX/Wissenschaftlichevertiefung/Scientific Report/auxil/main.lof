@@ -1,3 +1,4 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Modifizierter Ausschnitt aus \blx@tocontentsinit {0}\cite {pyrovolakis2022multimodal}}}{2}{figure.caption.3}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), basierend auf \blx@tocontentsinit {0}\cite {Martin1996}.}}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Vergleich von vier Spektrogrammen basierend auf \blx@tocontentsinit {0}\cite {cheuk2020impact}}}{2}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Systemstruktur nach Martin}}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Visualisierung eines CNNs zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \blx@tocontentsinit {0}\cite {shahriar2020cnn}}}{16}{figure.caption.6}%
