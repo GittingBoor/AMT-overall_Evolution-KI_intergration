@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  27 JUL 2025 01:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  27 JUL 2025 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1528,7 +1528,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Graphics/CNN.png, id=381, 1405.25pt x 628.3475pt>
 File: Graphics/CNN.png Graphic file (type png)
 <use Graphics/CNN.png>
-Package pdftex.def Info: Graphics/CNN.png  used on input line 98.
+Package pdftex.def Info: Graphics/CNN.png  used on input line 104.
 (pdftex.def)             Requested size: 441.01773pt x 197.19225pt.
 
 
@@ -1549,7 +1549,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [16 <./Graphics/CNN.png>]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 195--199
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 201--205
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1593,7 +1593,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20]
 
 LaTeX Warning: Citation 'chang2024yourmt3' on page 21 undefined on input line 4
-55.
+61.
 
 
 
@@ -1757,9 +1757,9 @@ tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on "C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\Git
 Hub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific 
-Report\out\main.pdf" (33 pages, 1649061 bytes).
+Report\out\main.pdf" (33 pages, 1649216 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
+ 675 PDF objects out of 1000 (max. 8388607)
  148 named destinations out of 1000 (max. 500000)
  366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

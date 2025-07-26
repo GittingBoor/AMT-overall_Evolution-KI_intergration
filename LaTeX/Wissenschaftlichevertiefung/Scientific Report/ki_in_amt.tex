@@ -93,6 +93,12 @@ zeitschrittweise in 1D-Vektoren umgewandelt.
 Dabei wird der Vektor mit einer Dimension von F × C erhalten.
 Diese Vektoren werden dann an das folgende RNN weitergeleitet.
 
+In der folgenden Darstellung wird ein CNN dargestellt, mit deren gegebenen Layern.
+Als Input wird Beispielhaft ein CQT-Spektrogramm verwendet.
+Durch die Convolution- und Pooling-Schichten werden die Merkmale extrahiert.
+Darauf folgend werden diese Merkmale vektorisiert und durch ein Fully Connected Layer klassifiziert.
+In diesem Beispiel werden als Output Tonhöhen vorhergesagt.
+Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je nachdem wie dieses trainiert wurde.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/CNN}
@@ -126,7 +132,7 @@ Wenn jetzt in einem AMT-System eine bestimmte Tonabfolge gespielt wurde,
 kann sich das RNN diese merken und dementsprechend die fortlaufenden Ausgaben anpassen.
 Dies passiert dank den Hidden States.
 Dieser stellt das Gedächtnis des RNNs dar und ist einer der wichtigsten Faktoren in einem RNN\@.
-Mehr zu den Hidden States werden im Abschnitt-\titleref{itm:hidden} ausführlicher beschrieben.
+Die Hidden States werde im nächsten Abschnitt ausführlicher beschrieben.
 Dieses Prinzip ist in der Musiktranskription sehr hilfreich,
 da jede Note stark von den vorherigen gespielten Noten abhängt.
 Takt, Rhythmus, Harmonie und die Melodie eines Musikstückes sind alles gute Beispiele,
