@@ -218,6 +218,19 @@ Durch einige weitere Tools werden die Noten zudem noch bereinigt und verbessert.
 \end{itemize}
 Am Ende werden die bereinigten Noten in einem standardisierten Musikformat, als MIDI-Datei, ausgegeben.
 
+In der folgenden Darstellung ist der transkriptions Ablauf des MT3-Modells dargestellt.
+Für den Input wird ein Audiosignal angegeben, welches in ein Spektrogramm umgewandelt wird.
+Als nächstes gewichtet der Encoder, mithilfe der Self-Attention Layer, die Tokens und transformiert dann diese,
+mithilfe des Feedforward Layer, um nicht-lineare Merkmale pro Token zu extrahieren.
+Daraufhin wandelt der Decoder, die vom Encoder gegebenen Vektoren, in einzelne Tokens mit musikalischen Merkmalen um.
+Im Output sieht man oben einen Ausschnitt eine MIDI-Datei mit zwei Noten und darunter diese dargestellt als Piano-Roll.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/transcription_transformer}
+    \caption[Verarbeitungspipeline des MT3-Modells]{Verarbeitungspipeline des Transformer-basierenden MT3-Modells \cite{mt3colab}.}
+    \label{fig:mt3_process}
+\end{figure}
+
 \subsection{Omnizart vs MT3}
 Die beiden vorgestellten AMT-Systeme sind grundlegend verschieden aufgebaut.
 Jetzt ist die Frage, welche dieser beiden Systeme ist besser geeignet

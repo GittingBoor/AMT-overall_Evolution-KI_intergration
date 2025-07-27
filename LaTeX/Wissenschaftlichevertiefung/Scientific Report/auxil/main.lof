@@ -1,4 +1,9 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Vergleich von vier Spektrogrammen basierend auf \blx@tocontentsinit {0}\cite {cheuk2020impact}}}{2}{figure.caption.3}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Systemstruktur nach Martin}}{8}{figure.caption.4}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Visualisierung eines CNNs zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \blx@tocontentsinit {0}\cite {shahriar2020cnn}}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Vergleich 4 Spektrogramme}}{2}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces MIDI-Datensatz}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Systemstruktur nach Martin}}{9}{figure.caption.5}%
+\contentsline {figure}{\numberline {4}{\ignorespaces CNN Struktur}}{16}{figure.caption.7}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Entfaltung eines RNN-Blocks}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {6}{\ignorespaces LSTM Zeitschritt}}{20}{figure.caption.10}%
+\contentsline {figure}{\numberline {7}{\ignorespaces GRU Zeitschritt}}{21}{figure.caption.11}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Verarbeitungspipeline des MT3-Modells}}{29}{figure.caption.19}%

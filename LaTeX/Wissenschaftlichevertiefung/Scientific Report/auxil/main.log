@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  27 JUL 2025 01:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.5)  27 JUL 2025 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1335,7 +1335,7 @@ lof)
 
 
 [3] (introduction.tex
-<Graphics/different_spectrograms.png, id=246, 1034.86626pt x 701.62125pt>
+<Graphics/different_spectrograms.png, id=251, 1034.86626pt x 701.62125pt>
 File: Graphics/different_spectrograms.png Graphic file (type png)
 <use Graphics/different_spectrograms.png>
 Package pdftex.def Info: Graphics/different_spectrograms.png  used on input lin
@@ -1440,6 +1440,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
+<Graphics/midi_pianoroll.png, id=306, 816.04875pt x 363.3575pt>
+File: Graphics/midi_pianoroll.png Graphic file (type png)
+<use Graphics/midi_pianoroll.png>
+Package pdftex.def Info: Graphics/midi_pianoroll.png  used on input line 206.
+(pdftex.def)             Requested size: 330.76329pt x 147.2754pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1448,12 +1454,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7]
-<Graphics/Martin1996Structure.png, id=311, 357.335pt x 416.55624pt>
+[7 <./Graphics/midi_pianoroll.png>]
+<Graphics/Martin1996Structure.png, id=321, 357.335pt x 416.55624pt>
 File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
 Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 2
-49.
+60.
 (pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
 
 
@@ -1464,7 +1470,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8 <./Graphics/Martin1996Structure.png>]
+[8]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1473,8 +1479,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9]
-Overfull \hbox (7.00163pt too wide) in paragraph at lines 373--386
+[9 <./Graphics/Martin1996Structure.png>]
+Overfull \hbox (7.00163pt too wide) in paragraph at lines 384--397
 \T1/ptm/m/n/10.95 Die RASTA-Filterung ist ei-ne der neu-en Mo-du-le von Kla-pu-
 ri. Sie be-wirkt, das nicht-harmonische
  []
@@ -1506,7 +1512,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12]) (ki_in_amt.tex
+[12]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1515,7 +1521,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13]
+[13]) (ki_in_amt.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1525,7 +1531,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-<Graphics/CNN.png, id=381, 1405.25pt x 628.3475pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+<Graphics/CNN.png, id=396, 1405.25pt x 628.3475pt>
 File: Graphics/CNN.png Graphic file (type png)
 <use Graphics/CNN.png>
 Package pdftex.def Info: Graphics/CNN.png  used on input line 104.
@@ -1539,7 +1554,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
+[16 <./Graphics/CNN.png>]
+<Graphics/rnn_unfold.png, id=416, 963.6pt x 321.2pt>
+File: Graphics/rnn_unfold.png Graphic file (type png)
+<use Graphics/rnn_unfold.png>
+Package pdftex.def Info: Graphics/rnn_unfold.png  used on input line 185.
+(pdftex.def)             Requested size: 441.01773pt x 147.00392pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1548,8 +1569,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16 <./Graphics/CNN.png>]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 201--205
+[17]
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 221--225
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1563,16 +1584,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17]
+[18 <./Graphics/rnn_unfold.png>]
+<Graphics/LSTM_timestep.png, id=433, 963.6pt x 428.60126pt>
+File: Graphics/LSTM_timestep.png Graphic file (type png)
+<use Graphics/LSTM_timestep.png>
+Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 292.
+(pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[18]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1582,19 +1600,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[20]
-
-LaTeX Warning: Citation 'chang2024yourmt3' on page 21 undefined on input line 4
-61.
-
+<Graphics/GRU_timestep.png, id=442, 963.6pt x 428.60126pt>
+File: Graphics/GRU_timestep.png Graphic file (type png)
+<use Graphics/GRU_timestep.png>
+Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 334.
+(pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
 
@@ -1604,7 +1614,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
+[20 <./Graphics/LSTM_timestep.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1613,7 +1623,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]) (current_amt_systems.tex
+[21 <./Graphics/GRU_timestep.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]
+
+LaTeX Warning: Citation 'chang2024yourmt3' on page 23 undefined on input line 5
+04.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]) (current_amt_systems.tex
 
 ! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
@@ -1637,24 +1679,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[24]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [25]
 
 
@@ -1664,7 +1688,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]) (conclusion.tex
+[26]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1673,7 +1697,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27])
+[27]
+<Graphics/transcription_transformer.png, id=535, 1752.5475pt x 416.55624pt>
+File: Graphics/transcription_transformer.png Graphic file (type png)
+<use Graphics/transcription_transformer.png>
+Package pdftex.def Info: Graphics/transcription_transformer.png  used on input 
+line 229.
+(pdftex.def)             Requested size: 441.01773pt x 104.81891pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1682,7 +1713,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
+[28]) (conclusion.tex
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29 <./Graphics/transcription_transformer.png>])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
 Overfull \hbox (20.81593pt too wide) in paragraph at lines 145--145
 \T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
 i-li-ty''. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print ar
@@ -1698,11 +1747,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29]
+[31]
 Overfull \hbox (7.74902pt too wide) in paragraph at lines 145--145
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form''. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/1
 0.95 . 
+ []
+
+
+Overfull \hbox (9.56747pt too wide) in paragraph at lines 145--145
+[][]\T1/ptm/m/n/10.95 Wikimedia Com-mons con-tri-bu-tors (2016). \T1/ptm/m/it/1
+0.95 Re-cur-rent neural net-work un-fold.svg\T1/ptm/m/n/10.95 . Zu-griff am 27.
+07.2025.
  []
 
 
@@ -1714,7 +1770,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30]
+[32]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
 (C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\GitHub\Automatic-Musi
 c-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific Report\auxil\main.
 aux)
@@ -1727,19 +1792,19 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9FD69C43EE4C7966D222E080928220CE;7217.
+(rerunfilecheck)             Checksum: 3C4F68EC65B61B10440C58B38BBC9756;7217.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37122 strings out of 469941
- 718190 string characters out of 5469431
- 1523221 words of memory out of 5000000
- 63212 multiletter control sequences out of 15000+600000
+ 37200 strings out of 469941
+ 720576 string characters out of 5469431
+ 1525465 words of memory out of 5000000
+ 63280 multiletter control sequences out of 15000+600000
  675567 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 102i,14n,107p,695b,3149s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1757,9 +1822,9 @@ tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on "C:\Users\Benni\OneDrive_Hochschule_Duesseldorf\Dokumente\Git
 Hub\Automatic-Music-Transcription\LaTeX\Wissenschaftlichevertiefung\Scientific 
-Report\out\main.pdf" (33 pages, 1649216 bytes).
+Report\out\main.pdf" (36 pages, 2034123 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

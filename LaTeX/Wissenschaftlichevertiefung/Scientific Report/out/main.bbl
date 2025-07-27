@@ -512,6 +512,7 @@
       \strng{authornamehash}{0daa5b9be28edce6722fbeb9a785ef60}
       \strng{authorfullhash}{fe2afddf971b2e06babe298e77cbb0f3}
       \strng{authorfullhashraw}{fe2afddf971b2e06babe298e77cbb0f3}
+      \field{extraname}{1}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -521,6 +522,64 @@
       \field{journaltitle}{arXiv preprint arXiv:2111.03017}
       \field{title}{MT3: Multi-task multitrack music transcription}
       \field{year}{2021}
+    \endentry
+    \entry{mt3colab}{online}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3963c126f0cb4418865b090dc8f391f2}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b461ec7764bb41a6287a8d0716006a0}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=920370ef63e65050447be131a12b3a21}{%
+           family={Manilow},
+           familyi={M\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4102bf268c4922002c51584dbb63c959}{%
+           family={Hawthorne},
+           familyi={H\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84488af703576ab131f87436b63aeef0}{%
+           family={Engel},
+           familyi={E\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{fullhash}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{fullhashraw}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{bibnamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authorbibnamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authornamehash}{0daa5b9be28edce6722fbeb9a785ef60}
+      \strng{authorfullhash}{fe2afddf971b2e06babe298e77cbb0f3}
+      \strng{authorfullhashraw}{fe2afddf971b2e06babe298e77cbb0f3}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 27.07.2025}
+      \field{title}{Music Transcription with Transformers - MT3 Colab Notebook}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb
+      \endverb
+      \verb{url}
+      \verb https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb
+      \endverb
     \endentry
     \entry{goswami2013timbre}{article}{}{}
       \name{author}{2}{}{%
@@ -1942,6 +2001,36 @@
       \field{title}{Attention is all you need}
       \field{volume}{30}
       \field{year}{2017}
+    \endentry
+    \entry{wikimediaRNN}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=77efa6d4da93ac74efd2ad262684cce9}{%
+           family={{Wikimedia Commons contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{fullhash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{fullhashraw}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{bibnamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorbibnamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authornamehash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorfullhash}{77efa6d4da93ac74efd2ad262684cce9}
+      \strng{authorfullhashraw}{77efa6d4da93ac74efd2ad262684cce9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 27.07.2025}
+      \field{title}{Recurrent neural network unfold.svg}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://commons.wikimedia.org/wiki/File:Recurrent_neural_network_unfold.svg
+      \endverb
+      \verb{url}
+      \verb https://commons.wikimedia.org/wiki/File:Recurrent_neural_network_unfold.svg
+      \endverb
     \endentry
     \entry{wu2021omnizart}{article}{}{}
       \true{moreauthor}

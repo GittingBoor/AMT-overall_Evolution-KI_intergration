@@ -102,7 +102,7 @@ Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je n
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/CNN}
-    \caption{Visualisierung eines CNNs zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \cite{shahriar2020cnn}}
+    \caption[CNN Struktur]{Visualisierung einer CNN Struktur zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \cite{shahriar2020cnn}.}
     \label{fig:cnn-amt}
 \end{figure}
 
@@ -170,8 +170,28 @@ Diese könnten jedoch fehlerhaft.
 Zum Beispiel kann die Note C4 für den Frame 6 und 8 aktiv sein,
 aber bei dem Frame 7 hat das CNN diese Note nicht als aktiv angesehen.
 Es ist sehr unwahrscheinlich, das eine Note für nur einen Frame ausfällt.
-Solche Arten von Fehlern verarbeitet das RNN und glättet dementsprechend die vorher vom CNN gelieferten Daten.
+Solche Arten von Fehlern verarbeitet das RNN über mehrere Zeitfenster hinweg, mithilfe seiner wiederkehrenden Struktur.
+Dieser Vorgang wird auch als zeitliche Entfaltung bezeichnet.
 Dadurch ist der Ton C4 auch im Frame 7 aktiv.
+
+Die folgende Abbildung zeigt die Entfaltung eines einzigen RNN-Blocks über mehrere Zeitpunkte hinweg.
+In der Abbildung steht \("\)x\("\) für den 1D-Inputvektor eines CNNs,
+\("\)h\("\) für den Hidden State und dem somit verbundenen Gedächtnis des RNNs
+und \("\)o\("\) für den Outputvektor, mit dem weiter gerechnet wird.
+Die Buchstaben \("\)W, U und V\("\) stellen dabei die verschiedenen
+Gewichte  \("\)Input-Gewicht, Recurrent-Gewicht und Output-Gewicht\("\) dar.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/rnn_unfold}
+    \caption[Entfaltung eines RNN-Blocks]{Entfaltung eines RNN-Blocks \cite{wikimediaRNN}.}
+    \label{fig:rnn_block_unfold}
+\end{figure}
+Diese Abbildung ist beschreibbar durch folgende Formel.
+Dabei steht \("\)b\("\) für den Bias-Vektor des Hidden Layers und \("\)c\("\) für den Bias-Vektor des Output-Layers.
+\begin{align*}
+h_t &= \tanh\left( W \cdot x_t + U \cdot h_{t-1} + b \right) \\
+o_t &= \sigma\left( V \cdot h_t + c \right)
+\end{align*}
 
 Die Kontext-Modellierung ist etwas komplizierter als die Frame-Glättung.
 Als Input bekommt diese auch die 1D-Vektoren des CNNs.
@@ -226,8 +246,8 @@ Postprocessing ist jedoch nicht relevant für den KI-Ablauf.
 Wenn man zufrieden mit dem Ergebnis ist, kann man dieses jetzt in das gewünschte Output-Format,
 standardmäßig MIDI-Dateien, einfügen.
 
-Heutzutage sind RNNs sind nur die grundlegende Struktur.
-Basierend auf dieser Struktur gibt es einige bessere Systeme,
+Heutzutage sind RNNs nur die grundlegende Struktur.
+Basierend auf dieser gibt es einige verbesserte Systeme,
 welche Aktiv in AMT-Systemen und anderen KI-Systemen genutzt werden.
 Zwei dieser Systeme sind Long Short-Term Memory's (LSTM) und Bidirektionale RNNs (BiRNN).
 Diese werden im jetzt folgendem Abschnitt ausführlicher erklärt.
@@ -262,6 +282,18 @@ h_t &= o_t \odot \tanh(c_t) \quad &&\text{(Aktueller Hidden State)}
 Dadurch kann sich ein LSTM die verschiedenen musikalischen Ereignisse,
 über das gesamte Audiosignal, besser im Zusammenhang merken.
 
+Folgende Abbildung zeigt einen Zeitschritt in einem LSTM.
+Dabei sind die Komponenten gleich benannt wie in der Abbildung-\titleref{fig:rnn_block_unfold}.
+Das \("\)c\("\) steht für den Cell-State.
+Intern in der \("\)LSTM Unit\("\) stehen die Buchstaben \("\)F, I und O\("\) für die Gates:
+\("\)Forget Gate, Input Gate und Output Gate\("\).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/LSTM_timestep}
+    \caption[LSTM Zeitschritt]{Zeitschritt eines LSTMs \cite{wikimediaRNN}.}
+    \label{fig:lstm_timestep}
+\end{figure}
+
 \subsubsection{Gated Recurrent Units}
 GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs.
 \cite{chung2014empirical}
@@ -292,6 +324,17 @@ Bei GRUs wird das Problem des Vanishing Gradients durch die Gates gelöst.
 Sie stellen eine gewichtete Mischung aus altem und neuen Hidden State dar.
 Dadurch wird der Gradient nicht ständig verkleinert
 und wichtige Informationen können über einen langen Zeitraum gespeichert werden.
+
+Folgende Abbildung zeigt einen Zeitschritt in einem GRU.
+Die Komponenten sind gleich benannt wie in der Abbildung-\titleref{fig:rnn_block_unfold}.
+Intern in der \("\)GRU Unit\("\) stehen die Buchstaben \("\)R und Z\("\) für die Gates:
+\("\)Reset Gate und Update Gate\("\).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/GRU_timestep}
+    \caption[GRU Zeitschritt]{Zeitschritt eines GRUs \cite{wikimediaRNN}.}
+    \label{fig:gru_timestep}
+\end{figure}
 
 \subsubsection{Bidirektionale RNNs}
 Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
@@ -451,8 +494,8 @@ Transformer Modelle waren einfach nicht dafür ausgelegt Musikspezifische Daten 
 In der Musiktranskription wird immer mit langen Sequenzen, ein gesamtes Musikstück, gearbeitet.
 Spezielle Transformer Modelle für diesen Anwednugnsfall mussten noch programmiert werden.
 Die ersten Ansätze für Transformer in AMT-Systemen wurden zwischen den Jahren 2021 und 2023 erstellt.
-Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer (MT3),
-welches von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
+Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer MT3,
+welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde.
 \cite{gardner2021mt3}
 Dieses spielt eine große Rolle in der Transformer-basierten automatischen Musiktranskription,
 da es das erste weit verbreitete Multi-Task-Transkriptionsmodell ist.
