@@ -896,6 +896,41 @@
       \field{title}{Onsets and frames: Dual-objective piano transcription}
       \field{year}{2017}
     \endentry
+    \entry{bach_wtk1_nr5}{music}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=8868b2f36ae03bce50603d83173ea749}{%
+           family={Heinemann},
+           familyi={H\bibinitperiod},
+           given={Ernst-Günter},
+           giveni={E\bibinithyphendelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {G. Henle Verlag}%
+      }
+      \strng{namehash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{fullhash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{fullhashraw}{8868b2f36ae03bce50603d83173ea749}
+      \strng{bibnamehash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{editorbibnamehash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{editornamehash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{editorfullhash}{8868b2f36ae03bce50603d83173ea749}
+      \strng{editorfullhashraw}{8868b2f36ae03bce50603d83173ea749}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{edition}{Urtext-Ausgabe}
+      \field{note}{BWV 850}
+      \field{subtitle}{Nr. 5 in D-Dur}
+      \field{title}{Das Wohltemperierte Klavier I, BWV 846–869}
+      \field{year}{1992}
+    \endentry
     \entry{hochreiter1997long}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%

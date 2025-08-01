@@ -1,42 +1,46 @@
 \section{Hindernisse Moderner AMT-Systeme}
-Trotz der Einführung von KI-Modulen gibt es immer noch zahlreiche offene Probleme, die noch nicht gelöst worden
-oder noch nicht perfekt gelöst sind.
+Trotz der Einführung von KI-Modellen bestehen weiterhin zahlreiche Probleme,
+die bislang ungelöst oder nur unzureichend gelöst sind.
 Zudem agieren KIs völlig anders als normale Algorithmen.
-Dies führte, zum Teil, auch zu neuen Problemen, welche davor nicht mal bekannt waren.
+Dadurch entstehen einige zusätzliche Herausforderungen die behandelt werden müssen.
 In den folgenden Abschnitten werden die größten und wichtigsten Probleme,
 mit der sich die AMT Forschung momentan auseinandersetzt, aufgezählt.
 
-\subsection{Onset Detection}
-Die On-/Offset erkennung von Noten wurde schon ausgiebig in zahlreichen Arbeiten behandelt.
+\subsection{Onset Detection}\label{subsec:onset}
+Die On-/Offset Erkennung von Noten wurde schon ausgiebig in zahlreichen Arbeiten behandelt.
 Trotzdem ist diese noch nicht komplett akkurat.
-Das liegt daran, dass man On-/Offsets an Lautstärke sprüngen und spektralen Änderungen erkennt.
-Bei polyphonen Musikstücken mit vielen verschiedenen Noten kann man jedoch schwieriger diese Unterschiede erkennen.
+Das liegt daran, dass On-/Offsets an Lautstärke sprüngen und spektralen Änderungen erkannt werden.
+Bei polyphonen Musikstücken mit vielen verschiedenen Noten ist es schwieriger diese Unterschiede zu erkennen.
 Lautstärke sprünge werden ungenauer, da häufig mehrere Noten während des Onsets einer bestimmten Note spielen.
-Mit spektralen Änderungen sind hier Veränderungen der Energieverteilung gemeint.
+Spektrale Änderungen stehen für Veränderungen der Energieverteilung.
 Einer der ausschlaggebendsten Anteile ist die Spektrale Fluktuation.
 Diese stellt den plötzlichen Anstieg von Energie in bestimmten Frequenzbändern dar.
-Wenn nun ein Ton auf einem Klavier gespielt wird kann somit der Onset sehr gut ermittelt werden.
-Bei Instrument wie einer Geige kann dies jedoch zu problemen führen.
-Hier können Noten gebunden gespielt werden, was zu einem unterschied in der Frequenz,
-jedoch nicht in dem Energie level führt.
+Wenn mehrere einzelne Töne hintereinander, auf einem Klavier, gespielt werden, kann der Onset der gespielten Noten leicht ermittelt werden.
+Bei Instrumenten, wie einer Geige, können dabei Probleme entstehen.
+Auf Geigen können Noten gebunden gespielt werden, was zu einem unterschied in der Frequenz,
+jedoch nicht in dem Energie level führt, da die Stärke des Bogenstrichs gleichmäßig bleibt.
 Zudem kann eine Note, durch Crescendo, zunächst leise gespielt werden und mit der Zeit an Lautstärke zunehmen.
 Dieser Onset hat keinen Energie-Peak und somit erkennt das System hier auch nur schwierig eine scharfe Kante.
 So welche Töne, welche keinen starken Einschlag haben, werden als nicht-perkussiv bezeichnet.
-Ein weiteres Problem der Onset erkennung sind nach wirkende Geräusche oder stör Geräusche.
-Bleiben wir bei dem Beispiel einer Geige, so können einige Töne, sobald man aufhört andere Töne zu spielen, nachklingen.
-Dadurch könnten Töne von anderen Instrumenten verdeckt werden, wodurch das System den Onset nicht erkennt.
-Ähnlich kann dies auch der Fall sein, wenn im Audiosignal ein starkes Rauschen besteht.
+Ein weiteres Problem der Onset erkennung sind nachwirkende Geräusche oder Störgeräusche.
+Bleiben wir bei dem Beispiel einer Geige.
+Wenn ein Ton gespielt wird und der Bogen von der Geige abgehoben wird entsteht eine Resonanz des Tons.
+Das führt zu einem nachklingen des Tons, was sehr natürlich passieren kann,
+jedoch meist kein beabsichtigtes Merkmal eines Tons ist.
+Das KI-Modell sieht dieses nachklingen aber noch als der gespielte Ton und erkennt nicht perfekt das Offset des Tons.
+Zudem könnten Töne von anderen Instrumenten verdeckt werden, wodurch das System den Onset nicht erkennt.
+Ähnlich kann dies auch ein Problem darstellen, wenn im Audiosignal ein starkes Rauschen besteht.
 
 \subsection{Polyphonie}
-Durch die nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung,
-einige Probleme schwerer und deutlicher geworden.
+Durch die nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung angemerkt,
+einige Probleme schwerwiegender und deutlicher geworden.
 Ein weiteres Problem, das gezielt von diesen Anwendungsfällen abhängt, ist die Verwechselung von Noten im Audiosignal.
 Einige Noten haben sehr ähnliche Frequenzen.
 Wenn diese Noten gleichzeitig gespielt werden, ist es schwieriger für das System, die korrekten Noten herauszuhören.
 Neuronale Netzwerke helfen hierbei deutlich, da diese nicht nur das Spektrum zur analyse einbeziehen,
-sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext besser zuordnen können
+sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext zuordnen können
 und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
-Trotz dessen scheitert auch KI an der einordnung der richtigen Noten, wenn die gespielten Noten
+Trotz dessen scheitert auch KI an der Einordnung der richtigen Noten, wenn die gespielten Noten
 eine sehr ähnliche Frequenz besitzen oder die Akkorde zu unterschiedlich zu den Trainingsdaten sind.
 In der folgenden Arbeit werden diese Probleme nochmals deutlicher aufgegriffen.
 \cite{martak2022balancing}
@@ -51,14 +55,14 @@ Die meisten Datensätze zur Musiktranskription bestehen hauptsächlich aus Klavi
 Instrumente wie Flöten oder Orgeln können von diesen Noten gut abgeleitet werden,
 da sich deren Struktur deutlich ähnelt.
 Eine weitere Gruppe von Instrumenten die Probleme bei der Transkription bereitet sind elektronische Instrumente.
-Wenn man zum Beispiel eine E-Gitarre spielt, kann diese Effekte nutzen,
-welche nicht üblich in klassischen Datensätzen von Klavieren vorkommen.
-Somit erkennt die KI diese Töne nicht korrekt an.
+Wenn zum Beispiel eine E-Gitarre gespielt wird, kann diese Effekte nutzen,
+welche nicht üblich in klassischen Klavier Datensätzen vorkommen.
+Somit kann die KI diese Töne nicht korrekt erkennen.
 Das letzte Instrument welches schwierigkeiten bringt, ist der Gesang.
-Jede Stimme ist einzigartig und vor allem nicht statische.
-Wenn man einen Ton auf dem Klavier spielt, besitzt dieser,
+Jede Stimme ist einzigartig und vor allem nicht konstant.
+Wenn ein Ton auf einem Klavier gespielt wird, besitzt dieser,
 wenn das Klavier richtig gestimmt ist, immer die gleiche Frequenz.
-Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt spielen, wodurch eine große varianz an Tönen entsteht.
+Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt singen, wodurch eine große varianz an Tönen entsteht.
 Zudem verläuft der Klang einer Stimme von einer Note zur nächsten.
 Es gibt nicht immer starke Peaks zur Onset Erkennung.
 Gesang ist auch, wie die vorher genannten Instrumentgruppen, nicht sonderlich vertreten in größeren Datensätzen.
@@ -66,12 +70,34 @@ Die folgenden Paper konzentrieren ihren Fokus speziell auf das Thema des Gesangs
 \cite{gu2023deep,gu2024automatic}
 Somit wurde eine Onset Erkennungsgenauigkeit von ungefähr 80\% festgestellt, für Gesang.
 
+Die folgende Tabelle stellt einige traditionelle Instrumente aus verschiedenen ethnischen Gruppen dar.
+Diese Tabelle ist nicht vollständig und dient ausschließlich dazu,
+die Vielfalt der Instrumente in unserer Welt zu veranschaulichen.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Region} & \textbf{Instrumente} \\ \hline
+Europa & Klavier, Violine, Gitarre, Flöte \\ \hline
+Arabische Welt & Oud, Qanun, Nay, Darbuka \\ \hline
+Türkei & Bağlama (Saz), Kemençe, Zurna, Davul \\ \hline
+Persien / Iran & Tar, Setar, Santur, Tombak \\ \hline
+Indien & Sitar, Tabla, Harmonium, Bansuri \\ \hline
+China & Guzheng, Erhu, Pipa, Dizi \\ \hline
+Japan & Koto, Shamisen, Shakuhachi, Taiko \\ \hline
+Indonesien & Gamelan, Kendang, Suling, Rebab \\ \hline
+Afrika & Kora, Djembe, Balafon, Mbira \\ \hline
+\end{tabular}
+\caption{Übersicht populärer Instrumente verschiedener Weltregionen}
+\end{table}
+
 \subsection{Notendauer}
-Neben dem Onset einer Note muss man auch erkennen, wie lange eine bestimmte Note gespielt wird.
-Das kann schwierig sein, da man den Nachhall einer Note von der wirklich gespielten Zeit der Note trennen muss.
+Neben dem Onset einer Note muss auch erkannt werden, wie lange eine bestimmte Note gespielt wird.
+Eine Schwierigkeit dabei ist der, im Abschnitt-\titleref{subsec:onset} angesprochenen, Nachhall einer Note.
+Dieser muss auseinandergehalten werden von der wirklichen Notendauer.
 Es gibt jedoch bei einigen Instrumenten, wie zum Beispiel dem Klavier, ein spezielles Problem.
-Wenn man während des Spielens einer Note das Pedal drückt, gibt es keinen klaren Punkt,
-an dem man den Übergang zwischen der Note und dem Nachhallen eindeutig erkennen kann.
+Wenn während des Spielens einer Note das Dämpferpedal eines Klaviers gedrückt wird, gibt es keinen klaren Punkt,
+an dem der Übergang zwischen der Note und dem Nachhallen eindeutig eingeordnet werden kann.
 Die Lautstärke sinkt dabei nicht abrupt, sondern nur langsam ab.
 Natürlich ist dieses Problem in polyphonen Musikstücken nochmal deutlich stärker,
 da sich dort die verschiedenen Nachhallphasen überlappen.
@@ -80,24 +106,26 @@ Dies ist eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
 
 \subsection{Reale Audioaufnahmen}
 Ein perfektes AMT-System sollte sogar auf realen Audioaufnahmen 100\% Genauigkeit besitzen.
-In der Realität klappt das aber nicht so gut, da Live-Audioaufnahmen mehr Hintergrundrauschen besitzt.
+In der Realität klappt das aber nicht, da Live-Audioaufnahmen immer Hintergrundrauschen besitzt.
 Dies war schon vor der Einführung von KI ein Problem und wurde durch die Einbindung
-von KI-Modulen nicht sonderlich viel verbessert.
+von KI-Modellen nicht sonderlich verbessert.
 Das liegt daran, dass KIs mit isolierten Studioaufnahmen, wie es im MAESTRO Datensatz der Fall ist, trainiert werden.
-Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte man dafür viel mehr Trainingsdaten und
-vor allem auch eine große Anzahl von unterschiedliche Hintergrundgeräusche,
+Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte es dafür viel mehr Trainingsdaten und
+vor allem auch eine große Anzahl von unterschiedlichen Hintergrundgeräuschen,
 damit die KI auf alle Möglichkeiten trainiert wird.
-Um dem entgegenzuwirken, kann man Studio-Datensätze wie MAESTRO durch Data-Augmentation variieren,
-wodurch realistischere Audioaufnahmen entstehen.
-So wurde es auch in folgender Arbeit, für die Trainingsdaten, eingesetzt.
+Um dem entgegenzuwirken, können Studio-Datensätze wie MAESTRO durch Data-Augmentation variiert werden,
+wodurch realistischere Audioaufnahmen erstellt werden können.
+So wurden auch die Trainingsdaten in folgender Arbeit erzeugt.
 \cite{kusaka2024mobile}
-Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu der eines Smartphones, veränderte.
-So bekommt man zahlreiche neue Datensätze, die passend auf die gegebenen Anwendungsfall ausgelegt sind.
+Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu zum Beispiel der eines Smartphones, angepasst.
+So werden zahlreiche neue Datensätze kreiert, die passend auf die gegebenen Anwendungsfälle ausgelegt sind.
+
+% HIER WEITER KORRIGIEREN
 
 \subsection{Frame-basierte vs Event-basierte AMT-Systeme}
 Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
 Frame-basiert bedeutet, das die Analyse des Audiosignals in Zeitfenster, ungefähr 20ms, aufgeteilt wird.
-Jedes Zeitfenster wird somit der momentane Stand das Audiosignal von den verschiedenen Modulen analysiert.
+Für jedes Zeitfenster wird somit der momentane Stand das Audiosignal von den verschiedenen Modulen analysiert.
 Falls nun zum Beispiel ein Onset einer Note genau zwischen zwei Zeitfenstern liegt,
 wird dieser verschoben oder verzerrt, sodass dieser mit den gegebenen Zeitfenstern übereinstimmt.
 Event-basierte AMT-Systeme hingegen fragen immer ab,

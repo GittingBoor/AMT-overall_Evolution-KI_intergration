@@ -1,21 +1,22 @@
 \section{Einleitung}
 \subsection{Automatische Musiktranksription}
-Musik ist seit Jahrtausenden ein zentraler Bestandteil unserer Gesellschaft.
-Während etwa 2000 bis 0 v.Chr. musikalische Werke meist mündlich überliefert wurden,
-entwickelte sich in diesem Zeitraum auch eine Notenschrift.
-Diese Notenschrift ermöglichte es, Musikstücke einfacher zu erlernen und einem breiteren Publikum zugänglich zu machen.
-Durch die Digitalisierung erhielten Digital Audio Workstations zunehmend Einzug in die Musikproduktion,
-wodurch Notenblätter oft nicht mehr notwendig waren und es weniger Bedarf gab diese Lieder zu übersetzen in Notenschrift.
+Musik war schon immer ein zentraler Bestandteil unserer Gesellschaft.
+Während früher musikalische Werke meist mündlich überliefert wurden,
+entwickelte sich während des Mittelalters die Notenschrift, welche wir auch heutzutage noch nutzen.
+Diese Notenschrift ermöglichte es, Musikstücke einfacher zu erlernen und Musik einem breiteren Publikum zugänglich zu machen.
+Durch die Digitalisierung erhielten \("\)Digital Audio Workstations\("\) zunehmend Einzug in die Musikproduktion,
+wodurch Notenblätter irrelevanter wurden und somit weniger Musikstücke in Notenschrift übersetzt wurden.
 
-An dieser Stelle setzt Automatic Music Transcription (AMT) an.
-AMT ist ein Prozess, bei dem eine Audiospur als Input gegeben wird und diese durch Computerprogramme
-Notenblätter oder, was weiter verbreitet ist, MIDI-Dateien als Output wiedergeben.
-Dabei werden durch mehrere Prozesse die Eigenschaften der Noten, zum Beispiel Frequenz oder Lautstärke,
-analysiert und im Kontext des Musikstückes analysiert.
+Ungefähr gleichzeitig begann zudem die Forschung an AMT-Systemen (Automatic Music Transcription).
+AMT ist ein Prozess, zur automatischen transkription von Audiospuren.
+Als Input wird ein Audiosignal gegeben, welches durch verschiedene Prozesse umgewandelt wird.
+Diese Prozesse analysieren die Eigenschaften der Noten, zum Beispiel die Frequenz, Lautstärke und vieles mehr.
+Dadurch entsteht als Output eine MIDI-Datei, ein Notenblatt oder andere Daten,
+die das gegebene Musikstück in Schriftform darstellen.
 
 \subsection{Herausforderungen und Hindernisse}
-Anstatt das man selber diese Lieder, alleine durchs Gehör,
-in Notenschrift überträgt würde diese Aufgabe eine Software für einen erledigen.
+Anstatt durch sein Gehör selber diese Musikstücke in Notenschrift zu übertragen,
+würde ein AMT-System diese Aufgabe für einen übernehmen.
 Dieses Ziel ist jedoch schwer zu erreichen,
 da Musik mehrdimensional ist durch zum Beispiel Zeit, Tonhöhe und Polyphonie.
 Vor allem bei polyphonen Musikstücken haben herkömmliche Algorithmen häufig Schwierigkeiten.
@@ -26,20 +27,50 @@ In realen Aufnahmen können leichtes Rauschen,
 kleine Spielfehler oder stilistische Mittel wie Vibrato auftreten,
 die je nach Interpreten unterschiedlich klingen.
 Zudem sind die meisten AMT-Modelle auf westliche Tonleiter trainiert.
-Dies kann zu Problemen führen, wenn man zum Beispiel
-arabische oder indische Musikstücke transkribieren möchte.
+Dies kann zu Problemen führen, wenn zum Beispiel
+arabische oder indische Musikstücke transkribiert werden sollen.
 
-\subsection{AMT und Künstliche Intelligenz,}
-Um diese Vielfalt zu bewältigen, ist ein neuer, oft genutzter Ansatz,
-die Nutzung von künstlicher Intelligenz und Machine Learning.
-Im Gegensatz zu Algorithmen ist KI flexibler und kann sich besser
-einstellen auf kleine Abweichungen in Musikstücken.
-Reale Audiospuren besitzen immer eine gewisse Menge Rauschen.
+In folgender Tabelle sind einige Regionen aufgelistet und deren Tonleiter, die diese benutzen.
+Die Tabelle ist nicht vollständig, auf der Welt gibt es noch viele weitere Regionen, welche auch ihre ganz eigenen Tonleiter nutzen.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Region} & \textbf{Typische Skalen} \\ \hline
+Europa & Dur, Moll, Kirchentonarten, Pentatonik \\
+\hline
+Arabische Welt & Maqām Rast, Maqām Bayati, Maqām Hijaz, Maqām Kurd, Maqām Nahawand \\
+\hline
+Türkei & Hicaz, Nihavent, Hüseyni, Segah, Uşşak \\
+\hline
+Persien / Iran & Shur, Mahur, Segah, Homayun, Nava \\
+\hline
+Indien & Rāga Yaman, Bhairav, Todi, Kafi, Bhupali \\
+\hline
+China & Gong, Shang, Jue, Zhi, Yu \\
+\hline
+Japan & Hirajoshi, In-sen, Yo, Kumoi \\
+\hline
+Indonesien & Sléndro, Pélog \\
+\hline
+Afrika & Pentatonik, Hexatonik, Balafon-Skalen \\
+\hline
+\end{tabular}
+\caption{Übersicht typischer Skalen verschiedener Weltregionen}
+\end{table}
+
+\subsection{AMT und Künstliche Intelligenz}
+Um diese musikalische Vielfalt zu bewältigen, wird heutzutage künstliche Intelligenz und Machine Learning eingesetzt.
+Im Gegensatz zu Algorithmen ist KI flexibler und kann sich dadurch besser
+auf kleine Abweichungen in Musikstücken einstellen.
+Ein Audiosignal kann entweder im Studio produziert oder im Alltag aufgenommen werden.
+Alltag aufgenommene Signale werden, in dieser Arbeit, als reale Audiosignale bezeichnet.
+Reale Audiosignale besitzen immer eine gewisse Menge an Rauschen.
 Das kann bei der automatischen Musiktranskription für schwierigkeiten sorgen,
 da Algorithmen diese als zusätzliche Noten ansehen oder richtige Noten dadurch nicht erkennen könnten.
-KIs können sich besser an diese begebenheiten anpassen,
+KIs können sich besser an die fehlerhaften Geräusche von Rauschen anpassen,
 da neuronale Netzwerke mit genau diesen unperfekten Audiosignalen trainiert werden können.
-Somit können AMT-Systeme besser angepasst werden für einen realistischen Gebrauch.
+Somit können AMT-Systeme besser angepasst werden für einen realistischen Alltagsgebrauch.
 
 Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
 Neuronale Netze besitzen eine mehrdimensionale Struktur, die es ihnen ermöglicht,
@@ -47,10 +78,10 @@ verschiedene Muster, Stimmen und Eigenschaften zu erlernen.
 \cite{graves2007multi}
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
-Sie folgen nur dem, was zuvor vom Menschen fest einprogrammiert wurde.
+Sie folgen nur den fest einprogrammierten Anweisungen und sind somit nicht anpassungsfähig.
 
-In der automatischen Musiktranskription nutzt man meistens Spektrogramme, zur darstellung der Audiodatei.
-Spektrogramme zeigen den zeitlichen Verlauf des Freqeunzspektrums eines Audiosignals.
+In der automatischen Musiktranskription wird das Input Audiosignal immer zunächst in ein Spektrogramm umgewandelt.
+Spektrogramme zeigen den zeitlichen Verlauf des Frequenzspektrums eines Audiosignals.
 Es gibt verschiedene Arten von Spektrogrammen.
 Zwei Spektrogrammtypen, die häufig genutzt werden, sind CQT-Spektrogramme und Log-Mel-Spektrogramme.
 CQT steht für Constant-Q Transform und in diesem Spektrogramm werden die Frequenzachsen logarithmisch aufgelöst.
@@ -58,19 +89,20 @@ Zudem bleibt der Q-Faktor konstant, dieser beschreibt das Verhältnis von Freque
 Das Log-Mel-Spektrogramm wird zunächst mit einer Short-Time Fourier Transform (STFT) gebildet.
 STFT ist eine Methode, um ein Signal als ein Frequenzspektrum darzustellen.
 Anschließend wird die lineare Frequenzachse auf eine Mel-Skala projiziert.
-Das menschliche Gehör kann 200--400Hz feiner als 5000--5200Hz wahrnehmen.
-Die Mel-Skala sorgt dafür, das sich das Spektrogramm dieser menschlichen Hörweise anpasst.
+Das menschliche Gehör kann zum Beispiel 200--400Hz feiner als 5000--5200Hz wahrnehmen.
+Die Mel-Skala sorgt dafür, das sich das Spektrogramm dem menschlichen Gehör anpasst.
 Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskription,
-da dieses Töne feiner unterscheiden kann.
-Jedoch werden in neueren KI-Modellen zum großteil Log-Mel-Spektrogramme genutzt,
-da diese robuster sind und vor allem besser in Transformer-basierte KI-Modellen laufen.
+da in diesem die Töne feiner unterschieden werden können.
+Jedoch werden in neueren KI-Modellen zum großteil Log-Mel-Spektrogramme genutzt.
+Diese sind robuster und funktionieren, vor allem in Transformer-basierte KI-Modellen, zuverlässiger.
+
 Im Folgenden sind vier verschiedene Spektrogramme zu sehen,
-welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5 basieren.
-Dabei ist oben links ein normales lineares Spektrogramm,
-welches ausschließlich auf dem STFT mit linear aufgelöster Frequenz basiert.
+welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5 \cite{bach_wtk1_nr5} basieren.
+Oben links ist ein normales lineares Spektrogramm zu sehen,
+welches ausschließlich auf dem STFT basiert und eine lineare Frequenzskala besitzt.
 Rechts daneben ist ein Log-Spektrogramm,
 bei dem die Amplitudenwerte des STFT logarithmisch in Dezibel skaliert wurden,
-um Lautstärkeunterschiede besser sichtbar zu machen.
+wodurch der Dynamikumfang im niedrigen Amplitudenbereich erhöht wird.
 Das \("\)MelSpec\("\) steht für Log-Mel-Spektrogramm und unten rechts wird ein CQT-Spektrogramm angezeigt.
 \begin{figure}[H]
     \centering
@@ -79,32 +111,36 @@ Das \("\)MelSpec\("\) steht für Log-Mel-Spektrogramm und unten rechts wird ein 
     \label{fig:different_specs}
 \end{figure}
 
-Um ein AMT-Modell mit KI zu kreieren, muss man sich auch für ein KI-Modell entscheiden.
-Hier werden größtenteils Recurrent Neural Networks (RNN) oder Convolutional Neural Networks (CNN),
-als einzelne Module, benutzt.
+Es gibt verschiedene KI-Modelle, welche für AMT-Systeme in Frage kommen.
+In diesem Abschnitt werden die am weitesten verbreiteten KI-Modelle aufgegriffen.
+Weitere potenzielle KI-Modelle und der heutige
+\("\)State of the Art\("\) werden im Abschnitt-\titleref{sec:ki_integration} ausführlich erläutert.
+Die meisten AMT-Systeme nutzen Recurrent Neural Networks (RNN) und Convolutional Neural Networks (CNN).
 \cite{Boeck2012}
 Diese Module bilden keine eigenständigen Systeme, sondern lassen sich flexibel innerhalb eines Systems kombinieren.
-Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz von Reinforcement Learning nicht sinnvoll.
-Dementsprechend braucht man auch ein zuverlässiges Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien.
+Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz von Supervised Learning am effizientesten.
+Dementsprechend ist es notwendig ein zuverlässiges und großes Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien zu besitzen.
 
 CNNs können gut räumliche Strukturen erkennen.
 Das ist sehr hilfreich bei der Analyse von Spektrogrammen.
-Meist werden die verschiedenen Frequenzen der Noten, die gespielt wurden,
-nach der Verarbeitung des Musikstückes in Spektrogrammen wiedergegeben.
+Da das Input Audiosignal in ein Spektrogramm umgewandelt wird,
+kann das CNN diese bildliche Darstellung analysieren.
 Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt werden,
-die dann einem bestimmten Instrument zugeordnet werden können.
+die darauffolgend einem bestimmten Instrument zugeordnet werden können.
 Das ist vor allem hilfreich dabei verschiedene Stimmen der jeweiligen Instrumente voneinander zu differenzieren.
 \cite{han2016deep}
 
-RNNs hingegen sind spezialisiert, um zeitliche Abläufe besser im Kontext zu verstehen.
-In der Musik werden zahlreiche Noten hintereinander gespielt, diese müssen harmonisch im Stück übereinstimmen.
+RNNs hingegen spezialisieren sich darauf, mithilfe eines Gedächtnis, zeitliche Abläufe zu verstehen.
+In Musikstücken werden zahlreiche Noten hintereinander gespielt, welche harmonisch aufeinander aufbauen.
 Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
 um die darauffolgenden Noten besser einordnen zu können.
-So lassen sich Tonfolgen harmonischen Strukturen zuordnen oder der Rhythmus des Stücks analysieren.
+So lässt sich die harmonische Struktur des Musikstückes analysieren.
+Auch der Rhythmus und vorhandene Vorzeichen lassen sich dadurch interpretieren.
 \cite{Boeck2012}
 
-RNNs und CNNs werden auch häufig kombiniert in AMT-Modellen.
-Meist in folgender Reihenfolge:
+In den meisten AMT-Systemen werden RNNs und CNNs kombiniert.
+Zunächst verarbeitet das CNN das Spektrogramm und extrahiert dabei musikalische Merkmale.
+Darauf folgend verarbeitet das RNN diese Merkmale und bildet konkrete Noten mit deren einzelnen Eigenschaften.
 \begin{enumerate}
     \item \textbf{CNN:} Extrahiert folgende Merkmale aus dem Spektrogramm:
     \begin{itemize}
@@ -129,33 +165,26 @@ Meist in folgender Reihenfolge:
         \item Als MIDI-Datei mit exakten Noteninformationen
     \end{itemize}
 \end{enumerate}
-Nachdem man die KI diesen Prozess durchlaufen lassen hat, kann man mit einem eigenen oder externen Programm
-diese MIDI-Dateien zu standardisierter Notenschrift transkribieren.
-
-Es gibt aber auch Projekte, wo nur ein bestimmter Teil dieser Kette mit KI-Modulen realisiert wird,
-oder andere KI-Module verwendet werden.
-Mehr zu diesen Modulen und CNNs und RNNs im Detail werden in dem Abschnitt-\nameref{subsec:ki_integration} erläutert.
+Nachdem die KI-Modelle die Daten verarbeitet haben, kann die erhaltene MIDI-Datei mit einem externen Programm
+zu standardisierten Musiknoten transkribiert werden.
 
 \subsection{Anwendungsfelder und Vorteile}\label{subsec:praktisch}
 AMT kann auch häufig bei anderen Problemen helfen
 oder in zahlreichen Bereichen Quality-of-Life-Changes bringen.
 Zum einen kann der Musikunterricht spannender und interaktiver gestaltet werden.
-Es gibt eine breitere Auswahl von Musikstücken, die man den Schülern anbieten kann,
-wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim lernen haben könnten.
-Zudem kann man die gespielten Musikstücke der Schüler direkt beim Spielen transkribieren und gezielt erkennen,
-wo der jeweilige Schüler noch Verbesserungsmöglichkeiten hat.
+Es würde eine breitere Auswahl von Musikstücken geben, die den Schülern angeboten werden können,
+wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim Lernen entwickeln.
+Zudem können die gespielten Musikstücke der Schüler während des spielens transkribiert werden,
+wodurch frühzeitig erkannt wird, wo der jeweilige Schüler noch Verbesserungsmöglichkeiten aufweist und Feedback erhalten muss.
 Grundsätzlich können deutlich mehr Musikstücke transkribiert werden,
 wodurch sich große Archive aufbauen lassen.
 Ein größeres Interesse an Musik wird geweckt, da Musikstücke von beliebten Serien, Filmen oder Spielen
 leichter für deren Musikbegeisterte Zielgruppe zugänglich sind.
-Alleine dadurch, dass Computerprogramme Musikstücke besser verstehen,
+Alleine dadurch, dass KI-Modelle Musikstücke besser verstehen,
 können darauf aufbauend weitere Tools für die Musikproduktion entwickelt werden.
-Auch KI würde davon stark profitieren.
+Auch andere Anwendungsfelder von künstlicher Intelligenz würden dadurch profitieren.
 KI-generierte Musik würde verbessert werden, da die KI selber ein besseres Verständnis der Musik entwickelt.
 Audiobasierte Suchmaschinen könnten gewünschte Musikstücke oder bestimmte Videos präziser finden.
-Musik könnte barrierefreier gestaltet werden,
-indem gehörlose Menschen sie lesen können und Musiker beim Spielen direktes Feedback erhalten,
-ob sie die Noten korrekt gespielt haben.
 
 \subsection{Motivation, Zielsetzung und Ablauf}
 Künstliche Intelligenz ist eins der momentan aktivsten Forschungsfelder.
@@ -169,19 +198,19 @@ um unter anderem Spektrogramme zu analysieren und um den Aufbau des Musikstücke
 
 Durch die integration von KI in AMT-Systemen rückt die vorstellung von AMT-Systemen,
 welche im alltag genutzt werden auch immer näher.
-Sobald das erste AMT-System praxisgeeignet ist, werden sich, wie im Abschnitt.\titleref{subsec:praktisch} angeschnitten,
+Sobald das erste AMT-System praxisgeeignet ist, werden sich, wie im Abschnitt-\titlerefN{subsec:praktisch} angeschnitten,
 viele neue Einsatzmöglichkeiten ereignen.
 Dadurch werden andere Forschungsgebiete gefördert, momentane Aufgaben vereinfacht und das Bildungswesen verbessert.
 
 Deshalb wird der Schwerpunkt dieser wissenschaftlichen Vertiefung darin liegen,
-auf die Funktion von KI-Modulen in AMT-Systemen.
+auf die Funktion von KI-Modellen in AMT-Systemen.
 Diese Analyse wird sich aus drei Teilen zusammenfügen.
 Zunächst werden die heutigen Schwachstellen moderner AMT-Systeme aufgelistet.
 Als Nächstes werden die KI-Systeme beschrieben,
-welche man grundlegend in AMT-Systemen nutzt und welche Vorteile diese mit sich bringen.
+welche grundlegend in AMT-Systemen genutzt werden und welche Vorteile diese mit sich bringen.
 Zuletzt werden zwei neu zeitige AMT-Systeme vorgestellt,
 welche beide eine starke Auswirkung auf dieses Forschungsgebiet haben.
 
-Um das Thema automatische Musiktranskription jedoch zu vervollständigen,
+Um das Thema automatische Musiktranskription zu vervollständigen,
 wird im nächsten Kapitel zunächst auf die Geschichte von AMT-Systemen eingegangen,
 und wie frühere AMT-Systeme funktioniert haben und aussahen.

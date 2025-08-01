@@ -1,0 +1,20 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'out\main.blg'
+[83] biber-MSWIN64:342> INFO - === 
+[116] Biber.pm:421> INFO - Reading 'auxil\main.bcf'
+[203] Biber.pm:1002> INFO - Found 48 citekeys in bib section 0
+[213] Biber.pm:4487> INFO - Processing section 0
+[221] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[267] bibtex.pm:1713> INFO - LaTeX decoding ...
+[302] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[511] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[511] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[511] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[511] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[547] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[576] bbl.pm:779> INFO - Output to out\main.bbl
+[576] Biber.pm:132> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
+[576] Biber.pm:132> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
+[576] Biber.pm:132> WARN - legacy month field 'April' in entry 'cheuk2022diffroll' is not an integer - this will probably not sort properly.
+[576] Biber.pm:132> WARN - I didn't find a database entry for 'chang2024yourmt3' (section 0)
+[576] Biber.pm:134> INFO - WARNINGS: 4

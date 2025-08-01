@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.21" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -514,6 +514,7 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string">citepagerange</bcf:option>
     <bcf:option datatype="string">texencoding</bcf:option>
     <bcf:option datatype="string">bibencoding</bcf:option>
     <bcf:option datatype="string">sortingtemplatename</bcf:option>
@@ -559,6 +560,7 @@
     <bcf:option datatype="string">datelabel</bcf:option>
     <bcf:option datatype="string">backrefstyle</bcf:option>
     <bcf:option datatype="string">arxiv</bcf:option>
+    <bcf:option datatype="string">mergedate</bcf:option>
     <bcf:option datatype="boolean">familyinits</bcf:option>
     <bcf:option datatype="boolean">giveninits</bcf:option>
     <bcf:option datatype="boolean">prefixinits</bcf:option>
@@ -643,7 +645,6 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">dashed</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -674,6 +675,7 @@
     <bcf:option datatype="string">loccittracker</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="string">mergedate</bcf:option>
     <bcf:option datatype="boolean">familyinits</bcf:option>
     <bcf:option datatype="boolean">giveninits</bcf:option>
     <bcf:option datatype="boolean">prefixinits</bcf:option>
@@ -725,7 +727,6 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -764,6 +765,7 @@
     <bcf:option datatype="string" backendout="1">loccittracker</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="string" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
     <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
     <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
@@ -814,7 +816,6 @@
     <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2374,75 +2375,76 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">graves2007multi</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">cheuk2020impact</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">bach_wtk1_nr5</bcf:citekey>
     <bcf:citekey order="3" intorder="1">cheuk2020impact</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Boeck2012</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">han2016deep</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Boeck2012</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Moorer1977</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">goswami2013timbre</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">iZotope2025noisefloor</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">baum1970maximization</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">takeda2002hidden</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">smith1983midi</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">telila2025cnn</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">cheuk2020impact</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Boeck2012</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">han2016deep</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Boeck2012</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Moorer1977</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">goswami2013timbre</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">iZotope2025noisefloor</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">baum1970maximization</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">takeda2002hidden</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">smith1983midi</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">telila2025cnn</bcf:citekey>
     <bcf:citekey order="15" intorder="1">mt3colab</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Moorer1977</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">joysingh2019development</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Moorer1977</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">joysingh2019development</bcf:citekey>
     <bcf:citekey order="20" intorder="1">Martin1996</bcf:citekey>
     <bcf:citekey order="21" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">klapuri1998automatic</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">scheirer1998tempo</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">eyben2010universal</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">sigtia2016end</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">martak2022balancing</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">gu2023deep</bcf:citekey>
-    <bcf:citekey order="27" intorder="2">gu2024automatic</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">jamshidi2024machine</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">kusaka2024mobile</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Martin1996</bcf:citekey>
-    <bcf:citekey order="30" intorder="2">klapuri1998automatic</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">performance_rnn2017event</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">cheuk2021revisiting</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">shahriar2020cnn</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">klapuri1998automatic</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">scheirer1998tempo</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">eyben2010universal</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">sigtia2016end</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">martak2022balancing</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">gu2023deep</bcf:citekey>
+    <bcf:citekey order="28" intorder="2">gu2024automatic</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">jamshidi2024machine</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">kusaka2024mobile</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Martin1996</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">klapuri1998automatic</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">performance_rnn2017event</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">cheuk2021revisiting</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">hawthorne2017onsets</bcf:citekey>
     <bcf:citekey order="35" intorder="1">shahriar2020cnn</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">fukushima1980neocognitron</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">lecun1989backpropagation</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">sigtia2016end</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">wikimediaRNN</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">shahriar2020cnn</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">fukushima1980neocognitron</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">lecun1989backpropagation</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">sigtia2016end</bcf:citekey>
     <bcf:citekey order="40" intorder="1">wikimediaRNN</bcf:citekey>
     <bcf:citekey order="41" intorder="1">wikimediaRNN</bcf:citekey>
     <bcf:citekey order="42" intorder="1">wikimediaRNN</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">chung2014empirical</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">wikimediaRNN</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">wikimediaRNN</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">chung2014empirical</bcf:citekey>
     <bcf:citekey order="45" intorder="1">wikimediaRNN</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">elman1990finding</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">jordan1997serial</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">schuster1997bidirectional</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">hochreiter1997long</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">chung2014empirical</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">sigtia2015hybrid</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">sigtia2016end</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">jung2018adaptive</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">vaswani2017attention</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">gardner2021mt3</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">chang2024yourmt3</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">kingma2019introduction</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">kingma2013auto</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">wu2020comprehensive</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">cheuk2022diffroll</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">li2018music</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">lecun2006tutorial</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">wu2021omnizart</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">wikimediaRNN</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">hawthorne2017onsets</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">elman1990finding</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">jordan1997serial</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">schuster1997bidirectional</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">hochreiter1997long</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">chung2014empirical</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">sigtia2015hybrid</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">sigtia2016end</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">hawthorne2017onsets</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">jung2018adaptive</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">gardner2021mt3</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">chang2024yourmt3</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">kingma2019introduction</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">kingma2013auto</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">wu2020comprehensive</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">cheuk2022diffroll</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">li2018music</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">lecun2006tutorial</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">wu2021omnizart</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">hawthorne2017onsets</bcf:citekey>
     <bcf:citekey order="68" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">mt3colab</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
