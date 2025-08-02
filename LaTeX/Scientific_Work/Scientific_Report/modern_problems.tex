@@ -120,68 +120,81 @@ So wurden auch die Trainingsdaten in folgender Arbeit erzeugt.
 Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu zum Beispiel der eines Smartphones, angepasst.
 So werden zahlreiche neue Datensätze kreiert, die passend auf die gegebenen Anwendungsfälle ausgelegt sind.
 
-% HIER WEITER KORRIGIEREN
-
 \subsection{Frame-basierte vs Event-basierte AMT-Systeme}
 Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
-Frame-basiert bedeutet, das die Analyse des Audiosignals in Zeitfenster, ungefähr 20ms, aufgeteilt wird.
-Für jedes Zeitfenster wird somit der momentane Stand das Audiosignal von den verschiedenen Modulen analysiert.
+Frame-basiert bedeutet, das die Analyse des Audiosignals in Zeitfenster, meistens ungefähr 20ms, aufgeteilt wird.
+Ein KI-Modul, wie zum Beispiel ein RNN, analysiert diese Zeitfenster einzeln,
+in Abhängigkeit von den vorherigen Zeitfenstern.
 Falls nun zum Beispiel ein Onset einer Note genau zwischen zwei Zeitfenstern liegt,
-wird dieser verschoben oder verzerrt, sodass dieser mit den gegebenen Zeitfenstern übereinstimmt.
+wird dieser verschoben oder verzerrt, sodass das Onset klar in einem der gegebenen Zeitfenstern liegt.
 Event-basierte AMT-Systeme hingegen fragen immer ab,
 was das nächste musikalische Ereignis im Audiosignal ist und reagieren dementsprechend.
+Somit müssen keine musikalischen Merkmale verschoben werden,
+da sie ihre eigene Position besitzen und nicht abhängig von Zeitfenstern (Rastern) sind.
 Dadurch entspricht der Output viel mehr dem Input, in relation zu der zeitlichen Abfolge.
 Im Ergebnis sind Event-basierte AMT-Systeme somit Frame-basierten AMT-Systemen überlegen.
-Jedoch ist in der Realität trotzdem fast jedes AMT-System Frame-basiert.
+In der Realität sind die meisten AMT-Systeme trotzdem Frame-basiert.
 Das liegt daran, dass Event-basierte AMT-Systeme eine sehr neue Entwickelung sind
-und zudem auch schwerer zu implementieren ist.
+und zudem auch schwerer zu implementieren sind.
 Frame-basierte Methoden wurden ungefähr im Jahre 2000 entwickelt
 und haben sich seitdem in zahlreichen Arbeiten durchgesetzt.
 \cite{Martin1996, klapuri1998automatic}
 Dahingegen sind Event-basierte Methoden erst ungefähr 15 Jahre später entwickelt worden.
 \cite{performance_rnn2017event}
-Deshalb wurden Frame-basierte Methoden lange als der Standard angesehen.
-Zudem ist die Umsetzung von Event-basierten AMT-Systemen schwerer als Frame-basierte.
-Das System muss korrekt jedes Event einschätzen un zuordnen, ist es ein Onset ein Offset oder doch nur Rauschen?
-Wenn es nun einen Fehler macht, wird sich das,
-im gegensatz zu Frame-basierten, auf das ganze weitere Audiosignal auswirken.
-Auch das Training kann nicht parallel verlaufen, sondern muss token weise abgearbeitet werden.
-Diese Gründe, und noch einige andere, machen Event-basierte AMT-Systeme zu einer viel größeren Herausforderung.
-Jedoch ist der übergang von Frame zu Event mit der Zeit irgendwann nötig, da man somit den Inhalt der Musikstücke
-viel präziser wiedergeben kann.
-Die Forschung in dem Event-basierten Methoden steigt auch in den letzten Jahren immer mehr an.
+Dadurch waren Frame-basierte Methoden lange der Standard für AMT-Systeme.
+Zudem ist die Umsetzung von Event-basierten AMT-Systemen komplizierter als Frame-basierte.
+Das System muss jedes Event korrekt einschätzen und zuordnen.
+Zum Beispiel könnte hintergrund Rauschen als Note erkannt werden und somit im
+Gedächtnis eines RNNs, als Note, gespeichert werden.
+In Event-basierenden Systemen wird eine Note nur einmal für die nachfolgenden Frames, in denen sie klingt, vorhergesagt.
+Heißt es existiert eine falsche Note in der transkription,
+die auch nicht mehr von KI-Modellen oder anderen Algorithmen entfernt wird.
+Bei der Frame-basierten transkription hingegen wird eine Note in jedem Zeitfenster neu analysiert,
+wodurch fehlerhafte Noten öfter erkannt werden.
+Eine falsche Note wirkt sich ausschlaggebend auf das weitere Audiosignal aus,
+da zum Beispiel RNNs diese Noten teilweise im Gedächtnis speichern und daraus Rückschlüsse auf zukünftige Noten führen.
+Auch das Training von Event-basierten AMT-Systemen kann nicht parallel verlaufen,
+sondern muss token weise abgearbeitet werden.
+Deswegen sind Event-basierte AMT-Systeme eine viel größeren Herausforderung.
+Sie führen deutliche mehr Risiken mit sich, geben dafür aber auch ein besseres Ergebnis zurück, wenn alles perfekt funktioniert.
+Da irgendwann ein perfektes AMT-System entstehen sollte ist der übergang von
+Frame zu Event mit der Zeit unausweichlich, da somit der Inhalt von Musikstücken
+viel präziser wiedergeben werden kann und ein Ergebnis erzielt wird,
+welches durch Frame-basierte transkription sonst nicht möglich wäre.
+Die Forschung in der Event-basierten Transkription steigt in den letzten Jahren deutlich an.
 
 \subsection{Blackbox von KI-Modellen}
 Das letzte Problem betrifft KI im generellen.
 Ein neuronales Netz arbeitet mit sehr hochdimensionalen Räumen, die für uns Menschen nicht begreifbar sind.
-Selbst wenn jemand sich die Millionen und mehr Gewichtungen anschauen würde,
-würde dieser in diesen keinen Zusammenhang feststellen können.
-In der Musiktranskription ist dies auch ein Problem, da somit nicht erfasst werden kann,
-welche Einstellungen eine automatischen Musiktranksriptions KI genau braucht,
+Selbst wenn sich jemand alle Gewichtungen in einem neuronalen Netz anschauen würde,
+würde dieser keinen Zusammenhang feststellen können.
+Dies stellt auch ein Problem in der Musiktranskription dar, da somit nicht erfasst werden kann,
+welche Einstellungen eine AMT-KI genau braucht,
 damit sie alle Musikstücke perfekt transkribieren kann.
-Jedoch gibt es auch Methoden, welche die Blackbox ein wenig umgehen.
-Im Forschungsgebiet der Explainable AI gibt es einige Methoden,
-welche auch in KI-basierten AMT-Systemen, verwendet werden.
-Unter diesen fallen Saliency Maps, Feature-Visualisierung und Attention-Mapping.
-Concept Activation Vectors, Layer-wise Relevance Propagation, Surrogat-Modelle sind andere Explainable AI Methoden,
-die zur nutzung in AMT-Systemen diskutiert werden, aber noch nicht richtig integriert sind.
-Dies liegt an mehreren Gründen.
-Musikalische Konzepte wie Akkorde oder Onsets sind nicht direkt lablebar, wie zum beispiel Katzen oder Hunde,
+Um dieses Problem zu lösen, gibt es Methoden, welche die Blackbox ein wenig umgehen.
+Das Forschungsgebiet der Explainable AI befasst sich damit,
+KI-Modelle zu entwickeln, welche für den Menschen nachvollziehbar und verständlich sind.
+Dies geschieht durch verschiedene Methoden und Darstellungen, welche den Denkfluss einer KI veranschaulichen sollen.
+Einige von diesen Methoden finden ihre Anwendung auch in KI-basierten AMT-Systemen wieder.
+Methoden die zur nutzung in AMT-Systemen diskutiert werden, sind Concept Activation Vectors,
+Layer-wise Relevance Propagation und Surrogat-Modelle.
+Diese wurden jedoch noch in keinem AMT-System richtig implementiert.
+Musikalische Konzepte wie Akkorde oder Onsets sind nicht direkt lable bar, wie zum Beispiel Katzen oder Hunde,
 da diese stark abhängig von spektralen und zeitlichen Mustern sind.
 AMT-Systeme sind zeitlich-sequenziell und besitzen pro Zeitfenster mehrere Outputs.
 Viele lokale Änderungen auf ein bestimmtes Zeitfenster, wie den dB-Wert ändern, haben einen globalen Einfluss.
 Methoden, welche in AMT-Systemen angewendet werden,
 haben dahingegen Eigenschaften, die durch die Struktur von AMT-Systemen profitieren.
-Saliency Maps stellen dar, wie stark jedes Zeitfenster im Spektrogramm,
-beeinflusst hat, das zum Beispiel ein bestimmter Ton erkannt wurde.
+Methoden die schon in AMT-Systemen eingesetz werden sind Saliency Maps, Feature-Visualisierung und Attention-Mapping.
+Saliency Maps stellen dar, wie stark jedes Zeitfenster beeinflusst, das ein bestimmter Ton erkannt wurde.
 Dies basiert auf dem Gradienten und ist besonders hilfreich bei CNN-basierten Modellen.
 Feature-Visualisierung beobachtet konkret die einzelnen Neuronen jeder Ebene im neuronalen Netzwerk.
 Es wird geschaut, welche neuronen sehr stark bei bestimmten Inputs reagieren.
-So kann man erkennen, welche Teile des Netzes für welche Aufgaben verantwortlich sind
+So kann erkannt werden, welche Teile des Netzes für welche Aufgaben verantwortlich sind
 und ob vielleicht bestimmte stellen des Netzes gar nicht genutzt werden.
 Attention-Mapping nimmt den gegebenen Input und gewichtet diesen,
 je nachdem welche Teile davon wichtig für eine bestimmte Vorhersage sind.
-So erkennt man, welche Zeitfenster den meisten Einfluss auf zum Beispiel einen bestimmte Onset hatten.
-Vor allem bei polyphonen Musikstücken kann man relevante zeitliche Zusammenhänge erkennen.
-Ein gutes Beispiel von Attention-Mapping findet man in folgender Arbeit.
+So wird erkannt, welche Zeitfenster den meisten Einfluss auf einen bestimmte Onset hatten.
+Vor allem bei polyphonen Musikstücken können relevante zeitliche Zusammenhänge erkannt werden.
+Ein gutes Beispiel von Attention-Mapping kann in folgender Arbeit gefunden werden.
 \cite{cheuk2021revisiting}
