@@ -32,7 +32,7 @@ Zudem könnten Töne von anderen Instrumenten verdeckt werden, wodurch das Syste
 Ähnlich kann dies auch ein Problem darstellen, wenn im Audiosignal ein starkes Rauschen besteht.
 
 \subsection{Polyphonie}
-Durch die nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung angemerkt,
+Durch die Nutzung von polyphonen Musikstücken sind, wie schon bei der Onset Erkennung angemerkt,
 einige Probleme schwerwiegender und deutlicher geworden.
 Ein weiteres Problem, das gezielt von diesen Anwendungsfällen abhängt, ist die Verwechselung von Noten im Audiosignal.
 Einige Noten haben sehr ähnliche Frequenzen.
@@ -42,10 +42,9 @@ sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext zuordnen k�
 und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
 Trotz dessen scheitert auch KI an der Einordnung der richtigen Noten, wenn die gespielten Noten
 eine sehr ähnliche Frequenz besitzen oder die Akkorde zu unterschiedlich zu den Trainingsdaten sind.
-In der folgenden Arbeit werden diese Probleme nochmals deutlicher aufgegriffen.
-\cite{martak2022balancing}
+In der Referenzierten Arbeit \cite{martak2022balancing} werden diese Probleme nochmals deutlicher aufgegriffen.
 
-\subsection{Spezifische Instrument}
+\subsection{Spezielle Instrumente}
 Oft ist die Qualität der Transkription auch abhängig von den vertretenen Instrumenten in dem Audiosignal.
 Ethnische Instrumente zum Beispiel sind Instrumente die einer bestimmten Kultur angehören
 und in der westlichen Kultur weniger vertreten sind.
@@ -58,11 +57,11 @@ Eine weitere Gruppe von Instrumenten die Probleme bei der Transkription bereitet
 Wenn zum Beispiel eine E-Gitarre gespielt wird, kann diese Effekte nutzen,
 welche nicht üblich in klassischen Klavier Datensätzen vorkommen.
 Somit kann die KI diese Töne nicht korrekt erkennen.
-Das letzte Instrument welches schwierigkeiten bringt, ist der Gesang.
+Ein weiteres Instrument welches Schwierigkeiten bringt, ist der Gesang.
 Jede Stimme ist einzigartig und vor allem nicht konstant.
 Wenn ein Ton auf einem Klavier gespielt wird, besitzt dieser,
 wenn das Klavier richtig gestimmt ist, immer die gleiche Frequenz.
-Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt singen, wodurch eine große varianz an Tönen entsteht.
+Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt singen, wodurch eine große Varianz an Tönen entsteht.
 Zudem verläuft der Klang einer Stimme von einer Note zur nächsten.
 Es gibt nicht immer starke Peaks zur Onset Erkennung.
 Gesang ist auch, wie die vorher genannten Instrumentgruppen, nicht sonderlich vertreten in größeren Datensätzen.
@@ -99,30 +98,30 @@ Es gibt jedoch bei einigen Instrumenten, wie zum Beispiel dem Klavier, ein spezi
 Wenn während des Spielens einer Note das Dämpferpedal eines Klaviers gedrückt wird, gibt es keinen klaren Punkt,
 an dem der Übergang zwischen der Note und dem Nachhallen eindeutig eingeordnet werden kann.
 Die Lautstärke sinkt dabei nicht abrupt, sondern nur langsam ab.
-Natürlich ist dieses Problem in polyphonen Musikstücken nochmal deutlich stärker,
+Natürlich ist dieses Problem in polyphonen Musikstücken deutlich stärker,
 da sich dort die verschiedenen Nachhallphasen überlappen.
 Dies ist eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung.
 \cite{jamshidi2024machine}
 
 \subsection{Reale Audioaufnahmen}
 Ein perfektes AMT-System sollte sogar auf realen Audioaufnahmen 100\% Genauigkeit besitzen.
-In der Realität klappt das aber nicht, da Live-Audioaufnahmen immer Hintergrundrauschen besitzt.
+In der Realität funktioniert dies jedoch noch nicht, da Live-Audioaufnahmen Hintergrundrauschen enthält.
 Dies war schon vor der Einführung von KI ein Problem und wurde durch die Einbindung
 von KI-Modellen nicht sonderlich verbessert.
 Das liegt daran, dass KIs mit isolierten Studioaufnahmen, wie es im MAESTRO Datensatz der Fall ist, trainiert werden.
-Natürlich gibts auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte es dafür viel mehr Trainingsdaten und
+Natürlich gibt es auch Datensätze mit realen Audioaufnahmen, jedoch bräuchte es dafür viel mehr Trainingsdaten und
 vor allem auch eine große Anzahl von unterschiedlichen Hintergrundgeräuschen,
 damit die KI auf alle Möglichkeiten trainiert wird.
 Um dem entgegenzuwirken, können Studio-Datensätze wie MAESTRO durch Data-Augmentation variiert werden,
 wodurch realistischere Audioaufnahmen erstellt werden können.
 So wurden auch die Trainingsdaten in folgender Arbeit erzeugt.
 \cite{kusaka2024mobile}
-Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes, zu zum Beispiel der eines Smartphones, angepasst.
+Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes angepasst.
 So werden zahlreiche neue Datensätze kreiert, die passend auf die gegebenen Anwendungsfälle ausgelegt sind.
 
 \subsection{Frame-basierte vs Event-basierte AMT-Systeme}
 Die meisten AMT-Systeme sind Frame-basiert und nicht Event-basiert.
-Frame-basiert bedeutet, das die Analyse des Audiosignals in Zeitfenster, meistens ungefähr 20ms, aufgeteilt wird.
+Frame-basiert bedeutet, dass die Analyse des Audiosignals in Zeitfenster, von ungefähr 20ms, aufgeteilt wird.
 Ein KI-Modul, wie zum Beispiel ein RNN, analysiert diese Zeitfenster einzeln,
 in Abhängigkeit von den vorherigen Zeitfenstern.
 Falls nun zum Beispiel ein Onset einer Note genau zwischen zwei Zeitfenstern liegt,
@@ -154,14 +153,14 @@ wodurch fehlerhafte Noten öfter erkannt werden.
 Eine falsche Note wirkt sich ausschlaggebend auf das weitere Audiosignal aus,
 da zum Beispiel RNNs diese Noten teilweise im Gedächtnis speichern und daraus Rückschlüsse auf zukünftige Noten führen.
 Auch das Training von Event-basierten AMT-Systemen kann nicht parallel verlaufen,
-sondern muss token weise abgearbeitet werden.
-Deswegen sind Event-basierte AMT-Systeme eine viel größeren Herausforderung.
+sondern muss tokenweise abgearbeitet werden.
+Deswegen sind Event-basierte AMT-Systeme eine größere Herausforderung.
 Sie führen deutliche mehr Risiken mit sich, geben dafür aber auch ein besseres Ergebnis zurück, wenn alles perfekt funktioniert.
-Da irgendwann ein perfektes AMT-System entstehen sollte ist der übergang von
+Da irgendwann ein perfektes AMT-System entstehen sollte ist der Übergang von
 Frame zu Event mit der Zeit unausweichlich, da somit der Inhalt von Musikstücken
-viel präziser wiedergeben werden kann und ein Ergebnis erzielt wird,
+präziser wiedergeben werden kann und ein Ergebnis erzielt wird,
 welches durch Frame-basierte transkription sonst nicht möglich wäre.
-Die Forschung in der Event-basierten Transkription steigt in den letzten Jahren deutlich an.
+Die Forschung im Bereich der Event-basierten Transkription hat sich in den letzten Jahren deutlich intensiviert.
 
 \subsection{Blackbox von KI-Modellen}
 Das letzte Problem betrifft KI im generellen.
@@ -176,7 +175,7 @@ Das Forschungsgebiet der Explainable AI befasst sich damit,
 KI-Modelle zu entwickeln, welche für den Menschen nachvollziehbar und verständlich sind.
 Dies geschieht durch verschiedene Methoden und Darstellungen, welche den Denkfluss einer KI veranschaulichen sollen.
 Einige von diesen Methoden finden ihre Anwendung auch in KI-basierten AMT-Systemen wieder.
-Methoden die zur nutzung in AMT-Systemen diskutiert werden, sind Concept Activation Vectors,
+Methoden die zur Nutzung in AMT-Systemen diskutiert werden, sind Concept Activation Vectors,
 Layer-wise Relevance Propagation und Surrogat-Modelle.
 Diese wurden jedoch noch in keinem AMT-System richtig implementiert.
 Musikalische Konzepte wie Akkorde oder Onsets sind nicht direkt lable bar, wie zum Beispiel Katzen oder Hunde,
@@ -189,9 +188,9 @@ Methoden die schon in AMT-Systemen eingesetz werden sind Saliency Maps, Feature-
 Saliency Maps stellen dar, wie stark jedes Zeitfenster beeinflusst, das ein bestimmter Ton erkannt wurde.
 Dies basiert auf dem Gradienten und ist besonders hilfreich bei CNN-basierten Modellen.
 Feature-Visualisierung beobachtet konkret die einzelnen Neuronen jeder Ebene im neuronalen Netzwerk.
-Es wird geschaut, welche neuronen sehr stark bei bestimmten Inputs reagieren.
+Es wird geschaut, welche Neuronen sehr stark bei bestimmten Inputs reagieren.
 So kann erkannt werden, welche Teile des Netzes für welche Aufgaben verantwortlich sind
-und ob vielleicht bestimmte stellen des Netzes gar nicht genutzt werden.
+und ob vielleicht bestimmte Stellen des Netzes gar nicht genutzt werden.
 Attention-Mapping nimmt den gegebenen Input und gewichtet diesen,
 je nachdem welche Teile davon wichtig für eine bestimmte Vorhersage sind.
 So wird erkannt, welche Zeitfenster den meisten Einfluss auf einen bestimmte Onset hatten.
