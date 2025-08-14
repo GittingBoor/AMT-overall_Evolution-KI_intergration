@@ -1530,6 +1530,96 @@
       \field{title}{Performance RNN: Generating Expressive Piano Performances with Neural Networks}
       \field{year}{2017}
     \endentry
+    \entry{mankowitz2023faster}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=d53f04077b0434704ab60a1a7bc58a71}{%
+           family={Mankowitz},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a5e4ea03f41f66cf1f1ac30f185966d}{%
+           family={Michi},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3ab5f442753698103d11a19a2c18d62}{%
+           family={Zhernov},
+           familyi={Z\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=162f52ed11548b9e2d8344c12c76e1fe}{%
+           family={Gelmi},
+           familyi={G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9adc916e7760b4e611f064fefa84eae}{%
+           family={Selvi},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a58a4770e2e7fd035b28393767299b9e}{%
+           family={Paduraru},
+           familyi={P\bibinitperiod},
+           given={Cosmin},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b53512730787663ca2ecd7377cdf557}{%
+           family={Leurent},
+           familyi={L\bibinitperiod},
+           given={Edouard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fb7c7ca1c2dd528601fdff6327cb704}{%
+           family={Iqbal},
+           familyi={I\bibinitperiod},
+           given={Shariq},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a444aafc3cc0fa1bbe095e57d43927ba}{%
+           family={Lespiau},
+           familyi={L\bibinitperiod},
+           given={Jean-Baptiste},
+           giveni={J\bibinithyphendelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d07a881a4e36c30d9b9726d37a34e04}{%
+           family={Ahern},
+           familyi={A\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{ce3163606ea9c8a43fe386ef6a6e54fd}
+      \strng{fullhash}{76b05a05108d807793e484f51ba08b8b}
+      \strng{fullhashraw}{76b05a05108d807793e484f51ba08b8b}
+      \strng{bibnamehash}{ce3163606ea9c8a43fe386ef6a6e54fd}
+      \strng{authorbibnamehash}{ce3163606ea9c8a43fe386ef6a6e54fd}
+      \strng{authornamehash}{ce3163606ea9c8a43fe386ef6a6e54fd}
+      \strng{authorfullhash}{76b05a05108d807793e484f51ba08b8b}
+      \strng{authorfullhashraw}{76b05a05108d807793e484f51ba08b8b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7964}
+      \field{title}{Faster sorting algorithms discovered using deep reinforcement learning}
+      \field{volume}{618}
+      \field{year}{2023}
+      \field{pages}{257\bibrangedash 263}
+      \range{pages}{7}
+    \endentry
     \entry{martak2022balancing}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=e0611a611f2df93040fc0ea4aff4f409}{%

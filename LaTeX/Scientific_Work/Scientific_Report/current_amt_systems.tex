@@ -10,8 +10,7 @@ Diese nutzen unterschiedliche KI-Modelle.
 Deren Architektur, sowie deren stärken und schwächen, werden in dem folgenden Kapiteln ausgiebig erläutern.
 
 \subsection{Omnizart}
-Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt.
-\cite{wu2021omnizart}
+Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt\cite{wu2021omnizart}.
 Der Name Omnizart setzt sich aus den Wörtern Omni (alles) und Mozart zusammen,
 da ihr Ziel darin liegt, so viele Arten von Musik wie möglich zu transkribieren.
 Je nach Anwendungsfall werden verschiedene KIs benutzt.
@@ -58,7 +57,7 @@ Die Piepline von Omnizart kann man in drei Schritte aufteilen:
 
         \end{tikzpicture}
     \vspace{1em}
-    \label{fig:figure}
+    \label{fig:omnizart}
     \caption[Omnizart Pipeline]{Eigene Darstellung der Omnizart Pipeline}
 \end{figure}
 
@@ -75,8 +74,7 @@ Danach wird das standardisierte Audiosignal umgeformt zu einem CQT-Spektrogramm.
 % CQT-Spektrogramm erklären und darauf verweisen
 
 Im zweiten Schritt werden die KI-Modelle genutzt, um die Merkmale des Audiosignals vorherzusagen und zu extrahieren.
-Die meisten AMT-Systeme, welche im Laufe dieser Arbeit vermerkt wurden, besitzen eine ähnliche Architektur wie Omnizart.
-\cite{hawthorne2017onsets}
+Die meisten AMT-Systeme, welche im Laufe dieser Arbeit vermerkt wurden, besitzen eine ähnliche Architektur wie Omnizart\cite{hawthorne2017onsets}.
 Der Unterschied zu diesen AMT-Systemen ist das Omnizart, je nach Anwendungsfall, verschiedene Module nutzt.
 Omnizarts Module sind:
 \begin{itemize}
@@ -120,7 +118,7 @@ Die Daten werden, in einer TXT-Datei, in einer unstrukturierten Liste ausgegeben
 
 \subsection{MT3}
 Das Transformer-Modell, welches jetzt näher erläutert wird, heißt MT3.
-MT3 steht für \("\)Multi-Task Multitrack Music Transcription\("\).
+MT3 steht für \enquote{Multi-Task Multitrack Music Transcription}.
 MT3 ist gleichzeitig der Name für das Transformer-basierte KI-Modell, als auch für das überliegende AMT-System.
 Diese beiden sind untrennbar voneinander, da sie zu einer End-to-End-Architektur gehören.
 Das MT3-Modell bildet einen wichtigen Meilenstein für die Transformer-basierte automatische Musiktranskription.
@@ -132,7 +130,7 @@ Durch die Communityversion YourMT3+ wird dieses KI-Modell immer weiter gepflegt 
 
 MT3 ist ein Transformer-Modell, welches spezifisch für Musiktranskription entwickelt wurde.
 Es besteht grundlegend aus folgenden Bereichen:
-\begin{center}
+\begin{figure}
     \vspace{1em}
     \begin{tikzpicture}[>=stealth, thick]
 
@@ -159,7 +157,10 @@ Es besteht grundlegend aus folgenden Bereichen:
 
     \end{tikzpicture}
     \vspace{1em}
-\end{center}
+
+    \label{fig:mt3}
+    \caption[MT3 Pipeline]{Eigene Darstellung der MT3 Pipeline}
+\end{figure}
 
 Als Input wird eine Audiodatei bereitgestellt.
 Meistens geht man mit dem Datentyp WAV (Waveform Audio File Format), da dieser verlustfrei und standardisiert ist.
@@ -205,7 +206,7 @@ Der Ablauf des Decoders sieht folgendermaßen aus:
 \end{enumerate}
 Dabei besteht der Decoder, im MT3-Modell, auch aus 6 vollständigen Transformer-Layern.
 Jeder Token stellt einen Teil eines musikalischen Events dar.
-Diese heißen zum Beispiel \("\)Note-On C4\("\) oder \("\)Shift +10 ms\("\).
+Diese heißen zum Beispiel \enquote{Note-On C4} oder \enquote{Shift +10 ms}.
 Ein musikalisches Event wäre somit eine volle Note, mit Notennamen, Onset und Offset,
 Sustain und weiteren musikalischen Eigenschaften, die man auf einer Note anwenden kann.
 Als Output gibt der Decoder jeden einzelnen Token zurück.

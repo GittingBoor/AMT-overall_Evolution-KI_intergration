@@ -1,15 +1,14 @@
-\usepackage{hyperref}\section{Geschichtliche Entwickelung von AMT-Systemen}
+\section{Geschichtliche Entwickelung von AMT-Systemen}
 
 \subsection{Moorer und das erste AMT-System}
-Einer der ersten Papers über Automatic Music Transcription wurde im Jahr 1977 geschrieben.
-\cite{Moorer1977}
+Einer der ersten Papers über Automatic Music Transcription wurde im Jahr 1977 geschrieben\cite{Moorer1977}.
 In dieser beschreibt Moorer seinen Ansatz, polyphone Musik Audiospuren
 direkt über Computerprogramme in Notenschrift zu übertragen.
 Während dieses Prozesses fallen ihm schon große Probleme auf, die auch in späteren Papern und Arbeiten
 eine ausschlaggebende Rolle spielen werden.
 
 \subsubsection{Grundlegende Probleme}
-Eines dieser Probleme wird von ihm als das \("\)Cocktail-Party-Problem\("\) bezeichnet.
+Eines dieser Probleme wird von ihm als das \enquote{Cocktail-Party-Problem} bezeichnet.
 Dieses stellt die Schwierigkeit dar, auf einer Party bestimmten Stimmen zu folgen, während viele verschiedene Stimmen
 gleichzeitig erklingen.
 Das gleiche Problem liegt in der Noten transkription.
@@ -29,8 +28,7 @@ die Obertöne C4 (261,62 Hz), G4 (392,42 Hz) usw.
 Wenn man nur C3 spielt erklingen für das Computerprogramm auch die jeweiligen Obertöne,
 was man Frequenzüberlagerung nennt.
 Diese Frequenzüberlagerung sorgt dafür, das zum Beispiel ein Klavier anders klingt als eine Violine.
-Daraus resultiert dann die Klangfarbe (Timbre) eines bestimmten Instrumentes.
-\cite{goswami2013timbre}
+Daraus resultiert dann die Klangfarbe (Timbre) eines bestimmten Instrumentes\cite{goswami2013timbre}.
 Leider konnte Moorer zu dieser Zeit noch nicht die Klangfarbe eines Instruments erkennen.
 Er konnte auch noch nicht das Problem der Obertöne lösen,
 da die damaligen Algorithmen und Verfahren noch nicht in der Lage waren die Grundfrequenz von den Obertönen zu trennen,
@@ -38,8 +36,7 @@ weshalb er sich ausschließlich auf zweistimmige polyphone Musikstücke fokussie
 
 Ein weiteres Problem war Rauschen in realistischen Audiospuren und
 Stilistische mittel in der Musik, wie zum Beispiel Vibrato.
-In real aufgenommenen Audiospuren gibt es immer ein gewisses Hintergrundrauschen.
-\cite{iZotope2025noisefloor}
+In real aufgenommenen Audiospuren gibt es immer ein gewisses Hintergrundrauschen\cite{iZotope2025noisefloor}.
 Dieses kann von einem Computerprogramm auch als Note erkannt werden oder verhindern, das bestimmte Noten
 richtig vom Computerprogramm erkannt werden.
 Moorer hat ein Musikstück analog aufgenommen und dieses dann mit einem 14-Bit converter digitalisiert.
@@ -86,10 +83,9 @@ um diese dann mithilfe eines Plotters in eine Notenschrift umzuwandeln.
 \begin{description}[style=nextline]
 \item[Hidden Markov Modelle]\label{itm:hiddenMarkov}
 Hidden Markov Modelle (HMM) sind statische Modelle, welche sich sehr gut zur Analyse von Musikstücken eignen.
-Sie wurden erstmal in den 1960er Jahren erfunden
-\cite{baum1970maximization}
-und sind ein zentraler bestandteil früherer AMT-Systeme.
-HMMs beschreiben eine Abfolge von \("\)versteckten Zuständen\("\),
+Sie wurden erstmal in den 1960er Jahren erfunden\cite{baum1970maximization} und
+sind ein zentraler bestandteil früherer AMT-Systeme.
+HMMs beschreiben eine Abfolge von \enquote{versteckten Zuständen},
 welche im Kontext von AMT-Systemen Noten im Audiosignal darstellen.
 Durch indirekt beobachtbare Daten, wie zum Beispiel die Spektraldaten des Audiosignals,
 können diese Noten erschlossen werden.
@@ -113,9 +109,8 @@ Deshalb kommt als zweite Instanz die Emissionswahrscheinlichkeit hinzu.
 Diese gibt an, wie Wahrscheinlich ein bestimmter Zustand in der momentanen Beobachtung ist.
 Die Beobachtung wird dabei zusammengesetzt aus Eigenschaften, wie Frequenzverteilung, Spektrogramm
 oder anderen Merkmalen die man aus anderen Modulen herleiten kann.
-Aus den gesammelten Daten kann nun mithilfe von zum Beispiel dem Viterbi-Algorithmus
-\cite{takeda2002hidden}
-die wahrscheinlichste Abfolge von Zuständen berechnet werden.
+Aus den gesammelten Daten kann nun mithilfe von zum Beispiel dem Viterbi-Algorithmus\cite{takeda2002hidden} die
+wahrscheinlichste Abfolge von Zuständen berechnet werden.
 
 In gewisser Weise lassen sich HMMs auf KI-Modelle übertragen.
 Beide arbeiten mit versteckten Zuständen und
@@ -139,8 +134,7 @@ MIDI-Dateien sind dafür perfekt geeignet.
 
 MIDI (Musical Instrument Digital Interface) ist ein Standartprotokoll zur kommunikation zwischen
 elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizer.
-Dieses Protokoll wurde 1983 erstmals eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie.
-\cite{smith1983midi}
+Dieses Protokoll wurde 1983 erstmals eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie\cite{smith1983midi}.
 In MIDI-Dateien werden Daten von Tönen gelagert,
 welche zum Beispiel zuvor von einem elektronischen Instrument gespielt wurden oder durch AMTs erfasst wurden.
 
@@ -193,8 +187,7 @@ Das liegt daran, dass in MIDI-Dateien eher zusammenhängende Funktionen gespeich
 
 MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
 da man nun ein standardisiertes output Format für diese Programme besaß.
-Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme.
-\cite{telila2025cnn}
+Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme\cite{telila2025cnn}.
 \end{description}
 
 Im folgenden Bild wird ein Auszug einer MIDI-Datei, mit zwei Noten, angezeigt.
@@ -231,15 +224,13 @@ In Moorers und anderen AMT-Systemen ist die Erkennung von unharmonischen Instrum
 KI-Modelle können mithilfe von dem ADTOF Datensatz sich speziell auf diese Instrumente vorbereiten.
 Es gibt auch Methoden schnell seine eigenen Datensätze zu generieren.
 Eine der neusten Methoden nutzt HMM- und Viterbi-basierte Alignment-Verfahren,
-um synthetische Audiosignale zu kreieren, damit man mehr Daten hat um sein KI-Modell zu trainieren.
-\cite{joysingh2019development}
+um synthetische Audiosignale zu kreieren, damit man mehr Daten hat um sein KI-Modell zu trainieren\cite{joysingh2019development}.
 
 \subsection{Polyphone AMT-Systeme}
 \subsubsection{Blackboard-System}
 Moorer stellte, mit seinem AMT-System, grundlegende Bausteine für dieses Forschungsgebiet.
 Jedoch gab es noch zahlreiche offene Probleme, die noch überwunden werden mussten.
-Eines der ausschlaggebendsten Probleme war die polyphonie von Musikstücken.
-\cite{Martin1996}
+Eines der ausschlaggebendsten Probleme war die polyphonie von Musikstücken\cite{Martin1996}.
 Zuvor wurden höchstens zwei verschiedene Stimmen gleichzeitig zur Musik transkription verwendet.
 Ein großer Teil von Musikstücken verwendet jedoch mehr Stimmen.
 Um diese polyphonen Musikstücke zu transkribieren,
@@ -312,16 +303,15 @@ Dadurch können Melodien, Basslinien oder Begleitungen voneinander getrennt werd
 Zum Schluss werden dadurch die verschiedenen Stimmen, in Martins Modell, aufgetrennt.
 
 \subsubsection{RASTA-basiertes System}
-Ende 1997 publizierte Kalpuri seine Masterarbeit \("\)Automatic transcription of Music\("\).
-\cite{klapuri1998automatic}
+Ende 1997 publizierte Klapuri seine Masterarbeit \enquote{Automatic transcription of Music}\cite{klapuri1998automatic}.
 In seiner Arbeit benutzt er ein neues RASTA-basiertes Verfahren, zur Unterdrückung nicht harmonischer Signalkomponenten.
 Somit konnten auch Musikstücke mit nicht harmonischen Instrumenten, wie Trommeln, transkribiert werden.
 Zudem führte er ein Modul ein, zur Schätzung der Anzahl an gleichzeitigen Stimmen, die in dem Musikstück vorkommen.
-Kalpuris AMT-System konzentriert sich, gegenüber Martins AMT-System, viel mehr auf die robustheit gegenüber
+Klapuris AMT-System konzentriert sich, gegenüber Martins AMT-System, viel mehr auf die robustheit gegenüber
 echten polyphonen Audioaufnahmen mit rauschen, Störgeräuschen und nicht harmonischen Instrumenten.
 Die Struktur des Systems ist linear aufgebaut und sehr präzise in dem Aufgabenfeld, für die es entwickelt wurde.
 
-\begin{center}
+\begin{figure}
     \vspace{1em}
     \begin{tikzpicture}[>=stealth, thick]
 
@@ -352,16 +342,18 @@ Die Struktur des Systems ist linear aufgebaut und sehr präzise in dem Aufgabenf
 
     \end{tikzpicture}
     \vspace{1em}
-\end{center}
+    
+    \label{fig:klapuri_rasta}
+    \caption[Struktur eines RASTA-basiertem AMT-System]{Eigene Darstellung: Struktur von Klapuris RASTA-basiertem AMT-System}
+\end{figure}
 
-Kalpuris System ist sequentiell aufgebaut und besteht aus sechs Modulen.
+Klapuris System ist sequentiell aufgebaut und besteht aus sechs Modulen.
 Als Input wird eine reale Audioaufnahme genutzt, welche in ein Monosignal umgewandelt wird.
 Dieses Monosignal wird mithilfe von STFT transformiert,
 sodass durch das entstandene Spektrogramm Zeit,
 Frequenz und Amplitude der gegebenen Noten ausgelesen werden kann.
 Anhand dieser Daten werden als Nächstes die Onsets der Noten bestimmt.
-Kalpuri nutzt, zur Onset erkennung, ein Schema von Eric D. Scheirer.
-\cite{scheirer1998tempo}
+Klapuri nutzt, zur Onset erkennung, ein Schema von Eric D. Scheirer\cite{scheirer1998tempo}.
 Bei diesem wird das Audiosignal in Frequenzbänder aufgeteilt und
 auf jedem Band die zeitliche Änderung der Energie analysiert.
 Daraufhin werden die resultierenden Energie-Deviate der verschiedenen Bänder summiert.
@@ -418,15 +410,13 @@ Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem 
 Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen,
 wie zum Beispiel HMMs \titleref{itm:hiddenMarkov}.
 Doch auch diese Systeme waren nicht verschont durch den stetigen Anstieg von KI basierten Lösungswegen.
-2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten.
-\cite{eyben2010universal}
+2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten\cite{eyben2010universal}.
 Oft wurden KI-Modelle nur für bestimmte Teilprobleme genutzt
 wie Onset Detection, pitch estimation oder instrument classification.
 Dieser Trend zog sich durch, wodurch heutzutage so gut wie jedes AMT-System eine Art von KI-Modell nutzt.
 
 Einige AMT-Systeme nutzen auch mehrere KI-Modelle gleichzeitig.
-Solch ein AMT-System wird auch einer 2016 veröffentlichen Arbeit beschrieben.
-\cite{sigtia2016end}
+Solch ein AMT-System wird auch einer 2016 veröffentlichen Arbeit beschrieben\cite{sigtia2016end}.
 Es ist eins der ersten KI basierenden Ent-to-End AMT-Systeme, welches polyphone Musikstücke transkribieren kann.
 Der KI-Ablauf des AMT-Systems ist folgendermaßen aufgebaut.
 Ein CNN bekommt als Input ein Log-Mel-Spektrogramm des Audiosignals bereitgestellt
