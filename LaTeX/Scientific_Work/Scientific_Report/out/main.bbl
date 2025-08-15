@@ -113,6 +113,60 @@
       \verb https://www.cp.jku.at/people/schedl/Research/Publications/pdf/boeck_schedl_icassp_2012.pdf
       \endverb
     \endentry
+    \entry{brown2016patternvep}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6bfe4201912afb6d68205eaa8a418448}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=237fdc560afc36ff92a7e88852bdc0e8}{%
+           family={Crewther},
+           familyi={C\bibinitperiod},
+           given={Sheila\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=f28a8387c56675a961366196501fab5a}{%
+           family={Crewther},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{fullhash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{fullhashraw}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{bibnamehash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{authorbibnamehash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{authornamehash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{authorfullhash}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \strng{authorfullhashraw}{6f9eea146ee5b7018d2ef3b1149c9779}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Documenta Ophthalmologica}
+      \field{title}{Pattern-onset and pattern-offset visual evoked potentials: normative data and clinical applications}
+      \field{volume}{133}
+      \field{year}{2016}
+      \field{pages}{141\bibrangedash 156}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/s10633-016-9554-y
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/figure/A-typical-pattern-onset-offset-VEP-Note-that-with-a-300-ms-sweep-only-the-pattern-onset_fig2_305480881
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/figure/A-typical-pattern-onset-offset-VEP-Note-that-with-a-300-ms-sweep-only-the-pattern-onset_fig2_305480881
+      \endverb
+    \endentry
     \entry{cheuk2021revisiting}{inproceedings}{}{}
       \name{author}{4}{ul=2}{%
         {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
@@ -326,28 +380,28 @@
     \endentry
     \entry{smith1983midi}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=dc423c1a176caf95bd2fba94ac0a0efa}{%
-           family={dave},
-           familyi={d\bibinitperiod},
-           prefix={smith},
-           prefixi={s\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=2935ebdc5b3d2db24518a401de59a815}{%
-           family={chet},
-           familyi={c\bibinitperiod},
-           prefix={wood},
-           prefixi={w\bibinitperiod},
-           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=42c355ce6e3182744639bed31a684825}{%
+           family={Dave},
+           familyi={D\bibinitperiod},
+           given={Smith},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb4b13094f853e0542c4f253c3bd7af8}{%
+           family={Chet},
+           familyi={C\bibinitperiod},
+           given={Wood},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{fullhash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{fullhashraw}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{bibnamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{authorbibnamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{authornamehash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{authorfullhash}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \strng{authorfullhashraw}{6ca597e9cda8f3e250f1eab66ee3a29d}
-      \field{sortinit}{d}
+      \strng{namehash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{fullhash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{fullhashraw}{acf7fd39c80826c923a5428a165c1094}
+      \strng{bibnamehash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{authorbibnamehash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{authornamehash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{authorfullhash}{acf7fd39c80826c923a5428a165c1094}
+      \strng{authorfullhashraw}{acf7fd39c80826c923a5428a165c1094}
+      \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}

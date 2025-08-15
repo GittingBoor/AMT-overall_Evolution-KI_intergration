@@ -14,14 +14,157 @@ Diese Prozesse analysieren die Eigenschaften der Noten, zum Beispiel die Frequen
 Dadurch entsteht als Output eine MIDI-Datei, ein Notenblatt oder andere Daten,
 die das gegebene Musikstück in Schriftform darstellen.
 
+\subsection{Grundlegende Begriffe in AMT-Systemen}
+\begin{description}[style=nextline]
+\item[Onsets und Offsets]\label{itm:onset_offset}
+Onsets beschreiben den exakten Zeitpunkt, an dem eine Note beginnt.
+Dementsprechend zeigen Offsets den Zeitpunkt, an dem diese endet.
+Onsets werden in der Signalverarbeitung typischerweise durch plötzliche Änderungen im Audiosignal erkannt.
+Durch einen starken Anstieg der Amplitude, Änderungen im Spektrum oder plötzliche Energiezunahmen im Frequenzbereichen.
+Offsets markieren den Zeitpunkt, an dem die im Onset erfassten Merkmale nicht mehr vorhanden sind und die Note endet.
+Die präzise Erkennung von Onsets und Offsets ist essenziell,
+um die Dauer einer Note korrekt zu bestimmen und eine vollständig korrekte Notenschrift zu erzeugen.
+Fehler in der Erkennung können zu falscher Notenlänge, fehlenden Noten oder zusätzlichen Phantomnoten führen.
+In späteren Modellen, wie RNNs, können falsche Onsets und Offsets auch zu Folgefehler führen.
+
+Die folgende Darstellung verdeutlicht,
+wie musikalische Ereignisse anhand von Änderungen in der Amplitude erkannt werden können.
+Ein deutlicher Anstieg der Amplitude markiert den Onset einer Note.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graphics/Onset_detection}
+    \caption[Noten Onsets]{3 Noten Onsets mit Abhängigkeit von Amplitude und Zeit\cite{brown2016patternvep}.}
+    \label{fig:onsets}
+\end{figure}
+\end{description}
+
+\begin{description}[style=nextline]
+\item[Polyphonie]\label{itm:polyphonie}
+Polyphonie beschreibt in der Musik die Mehrstimmigkeit.
+Das bedeutet, dass ein Musikstück mehrere Stimmen gleichzeitig wiedergibt.
+In der automatischen Musiktranskription muss das System diese gleichzeitig erklingenden Stimmen erkennen, voneinander unterscheiden und den jeweiligen Stimmen zuordnen.
+Je mehr Stimmen ein Musikstück besitzt, desto schwieriger ist die transkription.
+Ein klassisches Beispiel für polyphone Musik sind Klavierstücke, Orchesterwerke oder Chormusik, bei denen oft viele Noten gleichzeitig erklingen.
+\end{description}
+
+\begin{description}[style=nextline]
+\item[Spektrogramme]\label{itm:spektrogramm}
+In der automatischen Musiktranskription wird das Input Audiosignal immer zunächst in ein Spektrogramm umgewandelt.
+Spektrogramme zeigen den zeitlichen Verlauf des Frequenzspektrums eines Audiosignals.
+Es gibt verschiedene Arten von Spektrogrammen.
+Zwei Spektrogrammtypen, die häufig genutzt werden, sind CQT-Spektrogramme und Log-Mel-Spektrogramme.
+CQT steht für Constant-Q Transform und in diesem Spektrogramm werden die Frequenzachsen logarithmisch aufgelöst.
+Zudem bleibt der Q-Faktor konstant, dieser beschreibt das Verhältnis von Frequenz zu Brandbreite.
+Das Log-Mel-Spektrogramm wird zunächst mit einer Short-Time Fourier Transform (STFT) gebildet.
+STFT ist eine Methode, um ein Signal als ein Frequenzspektrum darzustellen.
+Anschließend wird die lineare Frequenzachse auf eine Mel-Skala projiziert.
+Das menschliche Gehör kann zum Beispiel 200--400Hz feiner als 5000--5200Hz wahrnehmen.
+Die Mel-Skala sorgt dafür, das sich das Spektrogramm dem menschlichen Gehör anpasst.
+Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskription,
+da in diesem die Töne feiner unterschieden werden können.
+Jedoch werden in neueren KI-Modellen zum Großteil Log-Mel-Spektrogramme genutzt.
+Diese sind robuster und funktionieren, vor allem in Transformer-basierte KI-Modellen, zuverlässiger.
+
+Im Folgenden sind vier verschiedene Spektrogramme zu sehen,
+welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5\cite{bach_wtk1_nr5} basieren.
+Oben links ist ein normales lineares Spektrogramm zu sehen,
+welches ausschließlich auf dem STFT basiert und eine lineare Frequenzskala besitzt.
+Rechts daneben ist ein Log-Spektrogramm,
+bei dem die Amplitudenwerte des STFT logarithmisch in Dezibel skaliert wurden,
+wodurch der Dynamikumfang im niedrigen Amplitudenbereich erhöht wird.
+Das \enquote{MelSpec} steht für Log-Mel-Spektrogramm und unten rechts wird ein CQT-Spektrogramm angezeigt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Graphics/different_spectrograms}
+    \caption[Vergleich 4 Spektrogramme]{Vergleich von vier Spektrogrammen basierend auf \cite{cheuk2020impact}.}
+    \label{fig:different_specs}
+\end{figure}
+\end{description}
+
+\begin{description}[style=nextline]
+\item[MIDI-Dateien]\label{itm:midi}
+Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
+Zunächst müssten die gespielten Noten stets in Notenschrift umgewandelt und anschließend in anderen Programmen analysiert werden.
+Dieser Prozess ist sehr aufwändig.
+Eine bessere lösung wäre eine Datenschreibweise,
+bei der alle wichtigen Informationen der Noten übersichtlich aufgeschrieben sind.
+MIDI-Dateien sind dafür perfekt geeignet.
+
+MIDI (Musical Instrument Digital Interface) ist ein Standartprotokoll zur Kommunikation zwischen
+elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizern.
+Dieses Protokoll wurde erstmals 1983 eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie\cite{smith1983midi}.
+In MIDI-Dateien werden Daten von Tönen gespeichert,
+welche zum Beispiel zuvor von einem elektronischen Instrument gespielt wurden oder durch AMTs erfasst wurden.
+
+In MIDI-Dateien werden folgende Daten gespeichert:
+\begin{enumerate}
+    \item \textbf{MIDI Header-Chunk (MThd):} Enthält grundlegende Informationen zur Struktur der Datei:
+    \begin{itemize}
+        \item Dateiformat (Formattyp: 0 = eine Spur, 1 = mehrere synchrone Spuren, 2 = unabhängige Spuren)
+        \item Anzahl der folgenden MTrk-Blöcke
+        \item Zeitauflösung (Ticks pro Viertelnote)
+    \end{itemize}
+
+    \item \textbf{MIDI Track-Chunks (MTrk):} Jede Spur enthält eine zeitlich sortierte Liste von MIDI-Events:
+    \begin{itemize}
+        \item \textbf{MIDI-Events:}
+        \begin{itemize}
+            \item Onset / Offset
+            \item Lautstärkeänderung (Control Change)
+            \item Angabe des spielenden Instruments (Program Change)
+            \item Tonhöhenänderung (Pitch)
+            \item Druckstärke pro Taste (Aftertouch / Polyphonic Key Pressure)
+        \end{itemize}
+        \item \textbf{Meta-Events):}
+        \begin{itemize}
+            \item Tempo in Mikrosekunden pro Viertelnote (Set Tempo)
+            \item Taktart (Time Signature)
+            \item Tonart (Key Signature)
+            \item Spurname (Track Name)
+            \item Liedtext (Lyrics)
+            \item Markierungen (Markers)
+            \item Ende der Spur (End of Track)
+        \end{itemize}
+        \item \textbf{Systemexklusive Ereignisse (SysEx):}
+        \begin{itemize}
+            \item Herstellerspezifische Daten wie Synthesizer-Voreinstellungen oder Spezialbefehle
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Delta-Time:} Gibt die Zeit in Ticks an, die seit dem letzten Ereignis vergangen ist:
+    \begin{itemize}
+        \item Ermöglicht die genaue zeitliche Positionierung jedes MIDI-Ereignisses
+        \item Grundlage für das Timing und die rhythmische Struktur der Datei
+    \end{itemize}
+\end{enumerate}
+Am wichtigsten sind dabei die MTrk-Blöcke, in denen die Daten der einzelnen Noten gespeichert werden.
+Dabei stellt ein Track die Eventliste einer ganzen Stimme dar,
+wie zum Beispiel die Melodiestimme, eine Violine, die Pedalsteuerung eines Klaviers oder Metadaten.
+Es fällt auf das diese vier Beispiele alle sehr unterschiedliche Aufgaben und Bedeutungen haben.
+Das liegt daran, dass in MIDI-Dateien zusammenhängende Funktionen gespeichert werden und nicht nur Musiknoten.
+
+MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
+da man nun ein standardisiertes Output-Format für diese Programme besaß.
+Später werden diese zudem sehr essenziell bei dem Training KI basierter AMT-Systeme\cite{telila2025cnn}.
+
+Im folgenden Bild wird ein Auszug einer MIDI-Datei, mit zwei Noten, angezeigt.
+Darunter ist ein Piano-Roll abgebildet, zugehörig zu oben genannten Noten.
+Ein Piano-Roll ist eine grafische Darstellung von Musiknoten über die Zeit.
+Dabei gibt die Position die Tonhöhe an und die Länge die Spieldauer.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Graphics/midi_pianoroll}
+    \caption[MIDI-Datensatz]{MIDI-Datensatz mit zugehörigem Piano-Roll. Ausschnitt aus der Varbeitungspipeline des MT3-Modells \cite{mt3colab}.}
+    \label{fig:mt3_output_tokens}
+\end{figure}
+\end{description}
+
 \subsection{Herausforderungen und Hindernisse}
 Anstatt durch sein Gehör selber diese Musikstücke in Notenschrift zu übertragen,
 würde ein AMT-System diese Aufgabe übernehmen.
 Dieses Ziel war jedoch schwer zu erreichen,
 da Musik mehrdimensional, durch Aspekte wie zeitlicher Abfolge, Tonhöhe und Polyphonie, ist.
 Vor allem bei polyphonen Musikstücken haben herkömmliche Algorithmen häufig Schwierigkeiten.
-Polyphonie beschreibt in der Musik die Mehrstimmigkeit.
-Heißt, wenn ein Musikstück mehrere verschiedene Stimmen besitzt, die gleichzeitig erklingen.
 In diesen Fällen müssen AMT-Systeme mehrere verschiedene Stimmen gleichzeitig analysieren und
 im späteren die jeweiligen Töne voneinander differenzieren um diese dann eindeutig einem Instrument zuordnen zu können.
 Ein weiteres Problem ist die Individualität jedes Musikstückes.
@@ -62,6 +205,24 @@ Die Tabelle ist nicht vollständig, auf der Welt gibt es noch viele weitere Regi
     \caption{Übersicht typischer Skalen/Tonleiter verschiedener Weltregionen}
 \end{table}
 
+\subsection{Anwendungsfelder und Vorteile}\label{subsec:praktisch}
+AMT kann auch häufig bei anderen Problemen helfen
+oder in zahlreichen Bereichen \enquote{Quality-of-Life-Changes} bringen.
+Zum einen kann der Musikunterricht spannender und interaktiver gestaltet werden.
+Es würde eine breitere Auswahl von Musikstücken geben, die den Schülern angeboten werden können,
+wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim Lernen entwickeln.
+Zudem können die gespielten Musikstücke der Schüler während des spielens transkribiert werden,
+wodurch frühzeitig erkannt wird, wo der jeweilige Schüler noch Verbesserungsmöglichkeiten aufweist und Feedback erhalten muss.
+Grundsätzlich können deutlich mehr Musikstücke transkribiert werden,
+wodurch sich große Archive aufbauen lassen.
+Ein größeres Interesse an Musik wird geweckt, da Musikstücke von beliebten Serien, Filmen oder Spielen
+leichter für deren Musikbegeisterte Zielgruppe zugänglich sind.
+Alleine dadurch, dass KI-Modelle Musikstücke besser verstehen,
+können darauf aufbauend weitere Tools für die Musikproduktion entwickelt werden.
+Auch andere Anwendungsfelder von künstlicher Intelligenz würden dadurch profitieren.
+KI-generierte Musik würde verbessert werden, da die KI selber ein besseres Verständnis der Musik entwickelt.
+Audiobasierte Suchmaschinen könnten gewünschte Musikstücke oder bestimmte Videos präziser finden.
+
 \subsection{AMT und Künstliche Intelligenz}
 Um diese musikalische Vielfalt zu bewältigen, wird heutzutage künstliche Intelligenz und Machine Learning eingesetzt.
 Im Gegensatz zu Algorithmen ist KI flexibler und kann sich dadurch besser
@@ -81,37 +242,6 @@ verschiedene Muster, Stimmen und Eigenschaften zu erlernen\cite{graves2007multi}
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
 Sie folgen nur den fest einprogrammierten Anweisungen und sind somit nicht anpassungsfähig.
-
-In der automatischen Musiktranskription wird das Input Audiosignal immer zunächst in ein Spektrogramm umgewandelt.
-Spektrogramme zeigen den zeitlichen Verlauf des Frequenzspektrums eines Audiosignals.
-Es gibt verschiedene Arten von Spektrogrammen.
-Zwei Spektrogrammtypen, die häufig genutzt werden, sind CQT-Spektrogramme und Log-Mel-Spektrogramme.
-CQT steht für Constant-Q Transform und in diesem Spektrogramm werden die Frequenzachsen logarithmisch aufgelöst.
-Zudem bleibt der Q-Faktor konstant, dieser beschreibt das Verhältnis von Frequenz zu Brandbreite.
-Das Log-Mel-Spektrogramm wird zunächst mit einer Short-Time Fourier Transform (STFT) gebildet.
-STFT ist eine Methode, um ein Signal als ein Frequenzspektrum darzustellen.
-Anschließend wird die lineare Frequenzachse auf eine Mel-Skala projiziert.
-Das menschliche Gehör kann zum Beispiel 200--400Hz feiner als 5000--5200Hz wahrnehmen.
-Die Mel-Skala sorgt dafür, das sich das Spektrogramm dem menschlichen Gehör anpasst.
-Insgesamt ist ein CQT-Spektrogramm besser für die automatische Musiktranskription,
-da in diesem die Töne feiner unterschieden werden können.
-Jedoch werden in neueren KI-Modellen zum Großteil Log-Mel-Spektrogramme genutzt.
-Diese sind robuster und funktionieren, vor allem in Transformer-basierte KI-Modellen, zuverlässiger.
-
-Im Folgenden sind vier verschiedene Spektrogramme zu sehen,
-welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5 \cite{bach_wtk1_nr5} basieren.
-Oben links ist ein normales lineares Spektrogramm zu sehen,
-welches ausschließlich auf dem STFT basiert und eine lineare Frequenzskala besitzt.
-Rechts daneben ist ein Log-Spektrogramm,
-bei dem die Amplitudenwerte des STFT logarithmisch in Dezibel skaliert wurden,
-wodurch der Dynamikumfang im niedrigen Amplitudenbereich erhöht wird.
-Das \enquote{MelSpec} steht für Log-Mel-Spektrogramm und unten rechts wird ein CQT-Spektrogramm angezeigt.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{Graphics/different_spectrograms}
-    \caption[Vergleich 4 Spektrogramme]{Vergleich von vier Spektrogrammen basierend auf \cite{cheuk2020impact}.}
-    \label{fig:different_specs}
-\end{figure}
 
 Es gibt verschiedene KI-Modelle, welche für AMT-Systeme in Frage kommen.
 In diesem Abschnitt werden die am weitesten verbreiteten KI-Modelle aufgegriffen.
@@ -169,24 +299,6 @@ Darauf folgend verarbeitet das RNN diese Merkmale und bildet konkrete Noten mit 
 \end{enumerate}
 Nachdem die KI-Modelle die Daten verarbeitet haben, kann die erhaltene MIDI-Datei mit einem externen Programm
 zu standardisierten Musiknoten transkribiert werden.
-
-\subsection{Anwendungsfelder und Vorteile}\label{subsec:praktisch}
-AMT kann auch häufig bei anderen Problemen helfen
-oder in zahlreichen Bereichen \enquote{Quality-of-Life-Changes} bringen.
-Zum einen kann der Musikunterricht spannender und interaktiver gestaltet werden.
-Es würde eine breitere Auswahl von Musikstücken geben, die den Schülern angeboten werden können,
-wodurch diese durch individuell angepasste Musikstücke mehr Spaß und Ehrgeiz beim Lernen entwickeln.
-Zudem können die gespielten Musikstücke der Schüler während des spielens transkribiert werden,
-wodurch frühzeitig erkannt wird, wo der jeweilige Schüler noch Verbesserungsmöglichkeiten aufweist und Feedback erhalten muss.
-Grundsätzlich können deutlich mehr Musikstücke transkribiert werden,
-wodurch sich große Archive aufbauen lassen.
-Ein größeres Interesse an Musik wird geweckt, da Musikstücke von beliebten Serien, Filmen oder Spielen
-leichter für deren Musikbegeisterte Zielgruppe zugänglich sind.
-Alleine dadurch, dass KI-Modelle Musikstücke besser verstehen,
-können darauf aufbauend weitere Tools für die Musikproduktion entwickelt werden.
-Auch andere Anwendungsfelder von künstlicher Intelligenz würden dadurch profitieren.
-KI-generierte Musik würde verbessert werden, da die KI selber ein besseres Verständnis der Musik entwickelt.
-Audiobasierte Suchmaschinen könnten gewünschte Musikstücke oder bestimmte Videos präziser finden.
 
 \subsection{Motivation, Zielsetzung und Ablauf}
 Künstliche Intelligenz ist momentan eins der aktivsten Forschungsfelder.

@@ -27,11 +27,11 @@ Mit jedem Layer kann ein CNN immer abstraktere Merkmale erkennen.
 Außer dem Convolutional Layer und Activation Layer sind die anderen Layer jedoch nicht unbedingt notwendig.
 Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt, heißt \enquote{Onsets and frames}\cite{hawthorne2017onsets}.
 In dieser Arbeit werden direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
-Mit diesem System wird die Entwickelung des Forschungsgebietes illustriert.
+Mit diesem System wird die Entwicklung des Forschungsgebietes illustriert.
 Insbesondere für polyphone Klaviertranskription ist dieses AMT-System ausgezeichnet.
 Im Folgenden werden die verschiedenen Layer eines CNNs, in einem AMT-System, erläutert.
 
-\subsubsection*{Layer eines CNNs}
+\subsubsection{Layer eines CNNs}
 In dem Convolution Layer werden Filter verwendet.
 Filter sind 2D-Matrizen, die aus trainierbaren Gewichten bestehen.
 Ein Filter deckt jeweils einen 3x3 Pixel Eingabebereich des Inputbildes ab.
@@ -105,7 +105,7 @@ Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je n
     \label{fig:cnn-amt}
 \end{figure}
 
-\subsubsection*{Geschichtliche Einordnung von CNNs}
+\subsubsection{Geschichtliche Einordnung von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
 Die erste richtige Architektur für CNNs wurde, unter dem Namen \enquote{Neocognitron}, veröffentlicht\cite{fukushima1980neocognitron}.
 Dies sollte als Vorreiter für spätere CNN Modelle gelten.
@@ -345,7 +345,7 @@ Das gleiche Prinzip kann man auch auf LSTMs oder GRUs einsetzen.
 Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
 Ein Bidirektionales RNN kann man auch in folgender Arbeit finden\cite{hawthorne2017onsets}.
 
-\subsubsection*{Geschichtliche Einordnung von RNNs}
+\subsubsection{Geschichtliche Einordnung von RNNs}
 Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück\cite{elman1990finding}.
 In dieser Arbeit wurde erstmals die Idee der Rückkopplung eingebaut,
 wodurch der Output eines Neurons als zusätzliche Eingabe im nächsten Zeitfenster genutzt wird.
@@ -463,7 +463,7 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
   \item $y_t$: Ausgabewert des Feedforward Layers für das Token.
 \end{itemize}
 
-\subsubsection*{Geschichtliche Einordnung von Transformern}
+\subsubsection{Geschichtliche Einordnung von Transformern}
 Das erste Transformer-Modell wurde im Jahre 2017 erfunden\cite{vaswani2017attention}.
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
 Leider dauerte es noch lange bis der erste Transformer auch in AMT-Systemen genutzt wurde.

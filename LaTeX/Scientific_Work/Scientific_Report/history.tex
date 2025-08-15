@@ -1,71 +1,72 @@
-\section{Geschichtliche Entwickelung von AMT-Systemen}
+\section{Geschichtliche Entwicklung von AMT-Systemen}
 
 \subsection{Moorer und das erste AMT-System}
-Einer der ersten Papers über Automatic Music Transcription wurde im Jahr 1977 geschrieben\cite{Moorer1977}.
-In dieser beschreibt Moorer seinen Ansatz, polyphone Musik Audiospuren
+Eine der ersten Arbeiten über automatische Musiktranskription wurde im Jahr 1977 geschrieben\cite{Moorer1977}.
+In dieser beschreibt Moorer seinen Ansatz, polyphone Musikaudiospuren
 direkt über Computerprogramme in Notenschrift zu übertragen.
-Während dieses Prozesses fallen ihm schon große Probleme auf, die auch in späteren Papern und Arbeiten
-eine ausschlaggebende Rolle spielen werden.
+Während dieses Prozesses fallen ihm schon große Probleme auf, die auch in späteren Arbeiten
+eine ausschlaggebende Rolle spielen.
 
 \subsubsection{Grundlegende Probleme}
 Eines dieser Probleme wird von ihm als das \enquote{Cocktail-Party-Problem} bezeichnet.
 Dieses stellt die Schwierigkeit dar, auf einer Party bestimmten Stimmen zu folgen, während viele verschiedene Stimmen
 gleichzeitig erklingen.
-Das gleiche Problem liegt in der Noten transkription.
+Das gleiche Problem existiert in der Noten transkription.
 Die meisten Musikstücke haben mehrere Instrumente, welche gleichzeitig spielen.
-Öfter gibt es auch Musikstücke wo es für ein Instrument, wie zum Beispiel Violine, mehrere verschiedene Stimmen gibt.
+Oft gibt es auch Musikstücke, bei denen es mehrere Stimmen für ein Instrument gibt.
+Ein Beispiel dafür ist die Violine, die zum Beispiel in Orchesterstücken oft auf mehrere Stimmen (erste, zweite, dritte) aufgeteilt wird.
 Dies erschwert die Zuordnung bestimmter Noten zu einer gewählten Stimme.
-Der großteil aller Menschen scheitert deshalb daran große Musikstücke richtig zu transkribieren.
-Noch schwieriger wird es hier für Computerprogramme.
+Der Großteil aller Menschen scheitert daran große Musikstücke richtig zu transkribieren.
+Noch schwieriger wird es für Computerprogramme.
 Anfangs identifizieren diese bestimmte Töne anhand der Frequenz des Tons.
-Leider reicht das, wie Moorer feststellt, nicht aus um genaustens zu bestimmen,
-welche Töne genau momentan gespielt werden.
+Moorer stellte fest, dass sich allein anhand der Frequenz nicht eindeutig bestimmen lässt,
+welche Töne zu einem bestimmten Zeitpunkt gespielt werden.
 
+Das nächste Problem ist die Frequenzüberladung durch Obertöne.
 Jeder Ton hat Obertöne.
 Diese Obertöne sind jeweils das Vielfache von dem Grundton, den man spielt.
-Heißt, wenn auf einem Klavier der Ton C3 mit 130,81 Hz gespielt wird, dann hat dieser
-die Obertöne C4 (261,62 Hz), G4 (392,42 Hz) usw.
-Wenn man nur C3 spielt erklingen für das Computerprogramm auch die jeweiligen Obertöne,
+Spielt man beispielsweise auf einem Klavier
+den Ton C3 (130,81 Hz), so entstehen die Obertöne C4 (261,62 Hz), G4 (392,42 Hz) und weitere.
+Wenn man nur C3 spielt, erklingen für das Computerprogramm auch die jeweiligen Obertöne,
 was man Frequenzüberlagerung nennt.
 Diese Frequenzüberlagerung sorgt dafür, das zum Beispiel ein Klavier anders klingt als eine Violine.
-Daraus resultiert dann die Klangfarbe (Timbre) eines bestimmten Instrumentes\cite{goswami2013timbre}.
-Leider konnte Moorer zu dieser Zeit noch nicht die Klangfarbe eines Instruments erkennen.
-Er konnte auch noch nicht das Problem der Obertöne lösen,
-da die damaligen Algorithmen und Verfahren noch nicht in der Lage waren die Grundfrequenz von den Obertönen zu trennen,
-weshalb er sich ausschließlich auf zweistimmige polyphone Musikstücke fokussierte.
+Daraus resultiert die Klangfarbe (Timbre) eines bestimmten Instrumentes\cite{goswami2013timbre}.
+Moorer konnte das Problem der Obertöne nicht lösen.
+Zum einen war es ihm aufgrund des damaligen technischen Stands nicht möglich, die Klangfarbe eines Instruments zu erkennen.
+Zum anderen waren die Algorithmen und Verfahren jener Zeit nicht in der Lage, die Grundfrequenz von den Obertönen zu trennen.
+Deshalb fokussierte er sich ausschließlich auf zweistimmige polyphone Musikstücke.
 
-Ein weiteres Problem war Rauschen in realistischen Audiospuren und
-Stilistische mittel in der Musik, wie zum Beispiel Vibrato.
+Ein weiteres Problem war Rauschen in unter realen Aufnahmebedingungen erstellten Audiospuren
+sowie stilistische Mittel in der Musik, wie etwa Vibrato.
 In real aufgenommenen Audiospuren gibt es immer ein gewisses Hintergrundrauschen\cite{iZotope2025noisefloor}.
-Dieses kann von einem Computerprogramm auch als Note erkannt werden oder verhindern, das bestimmte Noten
-richtig vom Computerprogramm erkannt werden.
-Moorer hat ein Musikstück analog aufgenommen und dieses dann mit einem 14-Bit converter digitalisiert.
-Dadurch war das Rauschen nicht weg, aber da er das Musikstück selber aufgenommen hat und dieses konvertiert hat
-sorgte es für insgesamt geringeres Rauschen.
-Zudem konnte er so die Musiker davon abhalten bestimmte Stilistische mittel zu verwenden,
-um bessere Daten zur Transkription zu erhalten.
-Stilistische mittel, wie Vibrato, konnten nicht genutzt werden,
-da diese eine kleine aber kontinuierliche Veränderung der Frequenz verursachen.
+Dieses kann von einem Computerprogramm auch als Note erkannt werden oder verhindern,
+dass bestimmte Noten richtig erkannt werden.
+Moorer nahm das Musikstück selbst analog auf und digitalisierte es anschließend mit einem 14-Bit-A/D-Wandler.
+Durch die eigene Aufnahme konnte er die Aufnahmeumgebung, die Mikrofonposition
+und die genutzte Technik kontrollieren, wodurch sich das Rauschen im Vergleich zu unkontrollierten Aufnahmen verringerte.
+Zudem wies er die Musiker an auf stilistische Mittel zu verzichten.
+Stilistische Mittel wie Vibrato verursachen kleine, aber kontinuierliche Veränderungen der Frequenz.
 Dadurch kann das Computerprogramm nicht korrekt erkennen, das eigentlich eine einzelne Note gespielt wurde.
-Somit war der Onset und Offset der Note komplett falsch.
+Die Folge davon wäre eine falsche Zuordnung des Onsets und Offsets der Noten.
+Ohne diese erhielt Moorer klarere und besser verwertbare Daten für die Transkription.
 
-Das letzte Problem, was Moorer angesprochen hat, ist das Nutzen von nicht
+Das letzte Problem, was Moorer angesprochen hat, ist die Nutzung von nicht
 harmonischen Instrumenten wie Trommeln oder einem Schlagzeug.
-Diese Instrumente haben keinen eindeutigen Pitch für deren Töne,
-sie sind eher abhängig von Rhythms und Lautstärke.
+Diese Instrumente haben keinen eindeutigen Pitch.
+Sie sind abhängig von dem Rhythms und der Lautstärke.
 Da Moorers AMT sich jedoch auf das Frequenzmuster der Noten fokussiert,
-können diese Musikinstrumente nicht berücksichtigt werden.
+konnten diese Musikinstrumente nicht berücksichtigt werden.
 
-\subsubsection{Moorers Aufbau}
+\subsubsection{Der Aufbau von Moorers AMT-System}
 Moorers automatische Musiktranskriptionssystem war eins der ersten seiner Art.
 Viele weitere AMT-Systeme leiten sich von diesem ab.
 
-Zunächst wird ein analoges Musiksignal mit einem 14-Bit converter digitalisiert.
-Dieses digitale Musiksignal wurden dann genutzt um mithilfe von Bandpassfiltern,
-ein Filter welcher nur bestimmte Frequenzen durchlässt,
+Zunächst wird ein analoges Musiksignal mit einem 14-Bit-A/D-Wandler digitalisiert.
+Dieses digitale Musiksignal wurde anschließend genutzt, um mithilfe von Bandpassfiltern,
 bestimmte Frequenzbereiche zu isolieren.
+Ein Bandpassfiltern ist ein Filter welcher nur bestimmte Frequenzen durchlässt.
 Dadurch konnte Moorer die gespielte Note und deren Dauer,
-also zugleich auch deren Onset und Offset, feststellen.
+wie deren Onset und Offset, feststellen.
 
 Nun mussten die bestimmten Noten einer gewählten Stimme zugeordnet werden.
 Dies wurde durch melodische Gruppierung verwirklicht.
@@ -74,17 +75,19 @@ Inseln sind Noten die sich Zeitlich vollständig überlappen.
 Wir gehen davon aus das jede Stimme nur eine Note gleichzeitig spielt,
 wodurch diese Noten nicht der gleichen Stimme zugeordnet werden können.
 Als Nächstes müssen die anderen Noten auf verschiedene Kombinationen getestet werden.
-Desto kleiner die Frequenz sprünge je Note sind, desto wahrscheinlicher gehören sie einer Stimme zu.
+Je geringer die Frequenzunterschiede zwischen aufeinanderfolgenden Noten sind,
+desto wahrscheinlicher stammen sie aus derselben Stimme.
+Dies liegt daran, dass melodische Linien in der Regel durch kleine, schrittweise Intervalle fortgeführt werden,
+während größere Sprünge häufiger auf einen Wechsel der Stimme hindeuten.
 Zudem werden Gruppierungen von Noten erstellt, welche am wahrscheinlichsten harmonisch nacheinander gespielt worden.
 
 Zum Schluss ließ Moorer die gewonnenen Daten durch ein Programm laufen, 
 um diese dann mithilfe eines Plotters in eine Notenschrift umzuwandeln.
 
-\begin{description}[style=nextline]
-\item[Hidden Markov Modelle]\label{itm:hiddenMarkov}
+\subsection{Hidden Markov Modelle}\label{subsec:hiddenMarkov}
 Hidden Markov Modelle (HMM) sind statische Modelle, welche sich sehr gut zur Analyse von Musikstücken eignen.
-Sie wurden erstmal in den 1960er Jahren erfunden\cite{baum1970maximization} und
-sind ein zentraler bestandteil früherer AMT-Systeme.
+Sie wurden erstmals in den 1960er Jahren erfunden\cite{baum1970maximization} und
+sind ein zentraler bestandteil früher AMT-Systeme.
 HMMs beschreiben eine Abfolge von \enquote{versteckten Zuständen},
 welche im Kontext von AMT-Systemen Noten im Audiosignal darstellen.
 Durch indirekt beobachtbare Daten, wie zum Beispiel die Spektraldaten des Audiosignals,
@@ -101,12 +104,12 @@ Nehmen wir das Beispiel eines Klaviers.
 Ein Klavier hat 88 Tasten, und somit mindestens 88 Zustände.
 Durch Akkorde können zudem mehr Zustände generiert werden.
 Die Übergangswahrscheinlichkeit stellt dar,
-wie wahrscheinliche es ist von einem Zustand zu einem bestimmten anderen Zustand zu wechseln.
+wie wahrscheinlich es ist, von einem Zustand zu einem bestimmten anderen Zustand zu wechseln.
 Zum Beispiel könnte es wahrscheinlicher sein, dass auf die Note C4 der Ton G3 folgt statt D1,
 da diese Tonfolge harmonischer und musikalisch plausibler klingt.
 Dies ist jedoch nur eine Annahme anhand von gesammelten Testdaten, weshalb es nicht als Begründung ausreicht.
 Deshalb kommt als zweite Instanz die Emissionswahrscheinlichkeit hinzu.
-Diese gibt an, wie Wahrscheinlich ein bestimmter Zustand in der momentanen Beobachtung ist.
+Diese gibt an, wie wahrscheinlich ein bestimmter Zustand in der momentanen Beobachtung ist.
 Die Beobachtung wird dabei zusammengesetzt aus Eigenschaften, wie Frequenzverteilung, Spektrogramm
 oder anderen Merkmalen die man aus anderen Modulen herleiten kann.
 Aus den gesammelten Daten kann nun mithilfe von zum Beispiel dem Viterbi-Algorithmus\cite{takeda2002hidden} die
@@ -114,92 +117,13 @@ wahrscheinlichste Abfolge von Zuständen berechnet werden.
 
 In gewisser Weise lassen sich HMMs auf KI-Modelle übertragen.
 Beide arbeiten mit versteckten Zuständen und
-berechnen anhand von Testdaten die Wahrscheinlichste kombination von Zuständen.
+berechnen anhand von Testdaten die wahrscheinlichste Kombination von Zuständen.
 Natürlich sind moderne KI-Modelle weitaus komplexer,
 doch HMMs spielten im Kontext automatischer Musiktranskriptionssysteme eine zentrale Rolle dabei,
 wie KI-Methoden in diesem Bereich später eingesetzt wurden.
 Sie beeinflussten insbesondere den Umgang mit zeitlichen Abfolgen
 und Unsicherheiten in der Tonerkennung,
 was bis heute relevante Konzepte in KI-basierten AMT-Systemen sind.
-\end{description}
-
-\begin{description}[style=nextline]
-\item[MIDI]\label{itm:midi}
-Notenschrift als Input für ein Computerprogramm, Synthesizer oder ähnliches ist unhandlich.
-Zunächst müsste man die gespielten Noten immer wieder zu Notenschrift konvertieren
-und danach diese auch noch in anderen Programmen analysieren, was sehr aufwändig werden würde.
-Eine bessere lösung dafür wäre eine Datenschreibweise,
-bei der alle wichtigen Informationen bestimmter Noten übersichtlich aufgeschrieben sind.
-MIDI-Dateien sind dafür perfekt geeignet.
-
-MIDI (Musical Instrument Digital Interface) ist ein Standartprotokoll zur kommunikation zwischen
-elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizer.
-Dieses Protokoll wurde 1983 erstmals eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie\cite{smith1983midi}.
-In MIDI-Dateien werden Daten von Tönen gelagert,
-welche zum Beispiel zuvor von einem elektronischen Instrument gespielt wurden oder durch AMTs erfasst wurden.
-
-In MIDI-Dateien werden folgenden Daten gespeichert:
-\begin{enumerate}
-    \item \textbf{MIDI Header-Chunk (MThd):} Enthält grundlegende Informationen zur Struktur der Datei:
-    \begin{itemize}
-        \item Formattyp (0 = eine Spur, 1 = mehrere synchrone Spuren, 2 = unabhängige Spuren)
-        \item Anzahl der folgenden MTrk-Blöcke (Tracks)
-        \item Zeitauflösung (Ticks pro Viertelnote)
-    \end{itemize}
-
-    \item \textbf{MIDI Track-Chunks (MTrk):} Jede Spur enthält eine zeitlich sortierte Liste von MIDI-Events:
-    \begin{itemize}
-        \item \textbf{MIDI-Events:}
-        \begin{itemize}
-            \item Note Onset / Offset
-            \item Control Change (Lautstärke)
-            \item Program Change (gibt das spielende Instrument an)
-            \item Pitch Bend (verändert die Tonhöhe)
-            \item Aftertouch / Polyphonic Key Pressure (Druckstärke pro Taste)
-        \end{itemize}
-        \item \textbf{Meta-Events:}
-        \begin{itemize}
-            \item Set Tempo (Tempo in Mikrosekunden pro Viertelnote)
-            \item Time Signature (Taktart zum Beispiel 4/4 oder 3/4)
-            \item Key Signature (Tonart zum Beispiel C-Dur oder A-Moll)
-            \item Track Name
-            \item Lyrics
-            \item Markers
-            \item End of Track (Ende einer Spur)
-        \end{itemize}
-        \item \textbf{System Exclusive Events (SysEx):}
-        \begin{itemize}
-            \item Herstellerspezifische Daten wie Synthesizer-Presets oder Spezialbefehle
-        \end{itemize}
-    \end{itemize}
-
-    \item \textbf{Delta-Time:} Gibt die Zeit (in Ticks) an, die seit dem letzten Event vergangen ist:
-    \begin{itemize}
-        \item Ermöglicht die genaue zeitliche Positionierung jedes MIDI-Events
-        \item Grundlage für das Timing und die rhythmische Struktur der Datei
-    \end{itemize}
-\end{enumerate}
-Am wichtigsten sind dabei die MTrk-Blöcke, in denen die Daten der einzelnen Noten gespeichert werden.
-Dabei stellt ein Track die Eventliste einer ganzen Stimme dar,
-wie zum Beispiel die Melodiestimme, eine Violine, die Pedalsteuerung eines Klaviers oder Metadaten.
-Es fällt auf das diese vier Beispiele alle sehr unterschiedliche Aufgaben und bedeutungen haben.
-Das liegt daran, dass in MIDI-Dateien eher zusammenhängende Funktionen gespeichert werden und nicht nur Musiknoten.
-
-MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
-da man nun ein standardisiertes output Format für diese Programme besaß.
-Später werden diese zudem sehr Essenziell bei dem Training KI basierter AMT-Systeme\cite{telila2025cnn}.
-\end{description}
-
-Im folgenden Bild wird ein Auszug einer MIDI-Datei, mit zwei Noten, angezeigt.
-Darunter ist ein Piano-Roll abgebildet, zugehörig zu oben genannten Noten.
-Piano-Roll ist eine grafische Darstellung von Musiknoten über die Zeit.
-Dabei gibt die Position die Tonhöhe an und die länge die Spieldauer.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{Graphics/midi_pianoroll}
-    \caption[MIDI-Datensatz]{MIDI-Datensatz mit zugehörigem Piano-Roll. Ausschnitt aus der Varbeitungspipeline des MT3-Modells \cite{mt3colab}.}
-    \label{fig:mt3_output_tokens}
-\end{figure}
 
 \subsection{AMT-Datensätzen}
 Während der Forschung an neuen AMT-Systemen wurden immer wieder neue Datensätze genutzt,
@@ -408,7 +332,7 @@ Zudem kann man eine ungefähre Einschätzung bekommen, wie viele Stimmen in dem 
 
 \subsection{Einbindung von Künstlicher Intelligenz}
 Für eine lange Zeit basierten AMT-Systeme größtenteils auf signal verarbeitenden Algorithmen,
-wie zum Beispiel HMMs \titleref{itm:hiddenMarkov}.
+wie zum Beispiel HMMs \titleref{subsec:hiddenMarkov}.
 Doch auch diese Systeme waren nicht verschont durch den stetigen Anstieg von KI basierten Lösungswegen.
 2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten\cite{eyben2010universal}.
 Oft wurden KI-Modelle nur für bestimmte Teilprobleme genutzt
