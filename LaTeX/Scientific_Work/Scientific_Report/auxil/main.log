@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  16 AUG 2025 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  16 AUG 2025 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,7 @@ Package csquotes Info: ... configuration file loaded successfully.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
 ))
-Package biblatex Info: Redefining '\parencite' on input line 43.
+Package biblatex Info: Redefining '\parencite' on input line 45.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
@@ -1145,7 +1145,7 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
-3.
+5.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1156,24 +1156,24 @@ Package babel Info: 'ngerman' activates 'ngerman' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1293,9 +1293,9 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 113.
-Package biblatex Info: Reference segment=0 on input line 113.
-Package hyperref Info: Link coloring OFF on input line 113.
+Package biblatex Info: Reference section=0 on input line 115.
+Package biblatex Info: Reference segment=0 on input line 115.
+Package hyperref Info: Link coloring OFF on input line 115.
 
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
 t\auxil\main.out)
@@ -1497,7 +1497,7 @@ File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
 Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 1
 83.
-(pdftex.def)             Requested size: 264.61333pt x 308.48196pt.
+(pdftex.def)             Requested size: 220.50887pt x 257.05453pt.
 
 
 
@@ -1523,6 +1523,12 @@ ri. Sie be-wirkt, das nicht-harmonische
  []
 
 
+Overfull \hbox (8.17262pt too wide) in paragraph at lines 343--350
+\T1/ptm/m/n/10.95 basierter Lö-sungs-an-sät-ze nicht un-be-rührt. 2010 bis 2012
+ wur-den die ers-ten An-sät-ze von AMT-Systemen
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1541,25 +1547,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13]
-! Undefined control sequence.
-l.45 In der Referenzierten Arbeit \cit
-                                      {martak2022balancing} werden diese Pro...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.68 ...des Gesangs in der Musiktranskription \cit
-                                                  {gu2023deep,gu2024automatic}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1569,225 +1556,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-! Undefined control sequence.
-l.102 ...me, zusammen mit der Onset Erkennung \cit
-                                                  {jamshidi2024machine}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.115 ...ngsdaten in folgender Arbeit erzeugt \cit
-                                                  {kusaka2024mobile}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.136 ...in zahlreichen Arbeiten durchgesetzt \cit
-                                                  {Martin1996, klapuri1998au...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.137 ...r 15 Jahre spÃ¤ter entwickelt worden \cit
-                                                  {performance_rnn2017event}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.137 ...Ã¤ter entwickelt worden \cit{performance_
-                                                  rnn2017event}.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-l.137 ...elt worden \cit{performance_rnn2017event}
-                                                  .
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 138.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 140.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 141.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 142.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 143.
-
-
-LaTeX Warning: Command \ss invalid in math mode on input line 144.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 147.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 149.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 149.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 149.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 149.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 149.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 152.
-
-
-LaTeX Warning: Command \ss invalid in math mode on input line 152.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 153.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 153.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 153.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 154.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 155.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 156.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 157.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 157.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.159 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ä in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ä in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ÿ in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ä in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ÿ in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no Ü in font cmr10!
-Missing character: There is no ü in font cmr10!
-Missing character: There is no ä in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ä in font cmr10!
-
-Overfull \hbox (54.68712pt too wide) in paragraph at lines 120--159
-\T1/ptm/m/n/10.95 Me-tho-den erst un-ge-fähr 15 Jah-re spä-ter ent-wi-ckelt wor
--den performance$[]\OML/cmm/m/it/10.95 nn\OT1/cmr/m/n/10.95 2017\OML/cmm/m/it/1
-0.95 event:DadurchwarenFrame \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (2.79759pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basierteMethodenlangederStandardfrAMT \OMS/cmsy/m/n/10.95 ^
-^@ \OML/cmm/m/it/10.95 Systeme:ZudemistdieUmsetzungvonEvent \OMS/cmsy/m/n/10.95
- ^^@
- []
-
-
-Overfull \hbox (831.578pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basiertenAMT \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 Sy
-stemenkomplizierteralsFrame \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 basiert
-e:DasSystemmussjedesEventkorrekteinschtzenundzuordnen:ZumBeispielknntehintergru
-ndRauschenalsNoteerkanntwerdenundsomitimGedchtniseinesRNNs; alsNote; gespeicher
-twerden:InEvent \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (471.98703pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basierendenSystemenwirdeineNotenureinmalfrdienachfolgendenF
-rames; indenensieklingt; vorhergesagt:HeitesexistierteinefalscheNoteindertransk
-ription; dieauchnichtmehrvonKI \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (1570.73141pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 ModellenoderanderenAlgorithmenentferntwird:BeiderFrame \OMS
-/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 basiertentranskriptionhingegenwirdeineN
-oteinjedemZeitfensterneuanalysiert; wodurchfehlerhafteNotenftererkanntwerden:Ei
-nefalscheNotewirktsichausschlaggebendaufdasweitereAudiosignalaus; dazumBeispiel
-RNNsdieseNotenteilweiseimGedchtnisspeichernunddarausRckschlsseaufzuknftigeNoten
-fhren:AuchdasTrainingvonEvent \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (159.79517pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basiertenAMT \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 Sy
-stemenkannnichtparallelverlaufen; sondernmusstokenweiseabgearbeitetwerden:Deswe
-gensindEvent \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (567.6786pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basierteAMT \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 Sys
-temeeinegrereHerausforderung:SiefhrendeutlichemehrRisikenmitsich; gebendafraber
-aucheinbesseresErgebniszurck; wennallesperfektfunktioniert:Dairgendwanneinperfe
-ktesAMT \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (540.8007pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 SystementstehensollteistderbergangvonFramezuEventmitderZeit
-unausweichlich; dasomitderInhaltvonMusikstckenprziserwiedergebenwerdenkannundei
-nErgebniserzieltwird; welchesdurchFrame \OMS/cmsy/m/n/10.95 ^^@
- []
-
-
-Overfull \hbox (301.03275pt too wide) in paragraph at lines 120--159
-\OML/cmm/m/it/10.95 basiertetranskriptionsonstnichtmglichwre:DieForschungimBere
-ichderEvent \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 basiertenTranskriptionh
-atsichindenletztenJahrendeutlichintensiviert:$ 
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1796,17 +1564,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
-! Undefined control sequence.
-l.193 ... in folgender Arbeit gefunden werden \cit
-                                                  {cheuk2021revisiting}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-) (ki_in_amt.tex
+[15]) (ki_in_amt.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1825,7 +1583,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-<Graphics/CNN.png, id=440, 1405.25pt x 628.3475pt>
+<Graphics/CNN.png, id=451, 1405.25pt x 628.3475pt>
 File: Graphics/CNN.png Graphic file (type png)
 <use Graphics/CNN.png>
 Package pdftex.def Info: Graphics/CNN.png  used on input line 103.
@@ -1840,7 +1598,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18 <./Graphics/CNN.png>]
-<Graphics/rnn_unfold.png, id=456, 963.6pt x 321.2pt>
+<Graphics/rnn_unfold.png, id=468, 963.6pt x 321.2pt>
 File: Graphics/rnn_unfold.png Graphic file (type png)
 <use Graphics/rnn_unfold.png>
 Package pdftex.def Info: Graphics/rnn_unfold.png  used on input line 181.
@@ -1870,7 +1628,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20 <./Graphics/rnn_unfold.png>]
-<Graphics/LSTM_timestep.png, id=472, 963.6pt x 428.60126pt>
+<Graphics/LSTM_timestep.png, id=486, 963.6pt x 428.60126pt>
 File: Graphics/LSTM_timestep.png Graphic file (type png)
 <use Graphics/LSTM_timestep.png>
 Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 288.
@@ -1885,7 +1643,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
-<Graphics/GRU_timestep.png, id=481, 963.6pt x 428.60126pt>
+<Graphics/GRU_timestep.png, id=495, 963.6pt x 428.60126pt>
 File: Graphics/GRU_timestep.png Graphic file (type png)
 <use Graphics/GRU_timestep.png>
 Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 329.
@@ -1983,7 +1741,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [29]
-<Graphics/transcription_transformer.png, id=572, 1752.5475pt x 416.55624pt>
+<Graphics/transcription_transformer.png, id=586, 1752.5475pt x 416.55624pt>
 File: Graphics/transcription_transformer.png Graphic file (type png)
 <use Graphics/transcription_transformer.png>
 Package pdftex.def Info: Graphics/transcription_transformer.png  used on input 
@@ -2017,9 +1775,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [32]
+Overfull \hbox (20.81593pt too wide) in paragraph at lines 150--150
+\T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
+i-li-ty^^P. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print a
+r-Xiv:2210.05148,
+ []
+
 
 Package biblatex Warning: No driver for 'music'.
-(biblatex)                Using fallback driver on input line 148.
+(biblatex)                Using fallback driver on input line 150.
 
 
 
@@ -2031,14 +1795,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [33]
-Overfull \hbox (7.74902pt too wide) in paragraph at lines 148--148
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+Overfull \hbox (7.74902pt too wide) in paragraph at lines 150--150
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form^^P. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/
 10.95 . 
  []
 
 
-Overfull \hbox (9.56747pt too wide) in paragraph at lines 148--148
+Overfull \hbox (9.56747pt too wide) in paragraph at lines 150--150
 [][]\T1/ptm/m/n/10.95 Wikimedia Com-mons con-tri-bu-tors (2016). \T1/ptm/m/it/1
 0.95 Re-cur-rent neural net-work un-fold.svg\T1/ptm/m/n/10.95 . Zu-griff am 27.
 07.2025.
@@ -2053,7 +1826,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34]
+[35]
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
 t\auxil\main.aux)
  ***********
@@ -2065,38 +1838,34 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 137 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 37797 strings out of 468134
- 728500 string characters out of 5430740
- 1564871 words of memory out of 5000000
- 65673 multiletter control sequences out of 15000+600000
+ 37837 strings out of 468134
+ 729889 string characters out of 5430740
+ 1565456 words of memory out of 5000000
+ 65705 multiletter control sequences out of 15000+600000
  675567 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\ectt1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Benni/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Benni/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Benni/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Benn
-i/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Use
-rs/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/times/utmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/times/utmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/times/utmri8a.pfb>
+ <C:\Users\Benni\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1095.pk><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Benni/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Benni/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Benni/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Be
+nni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
+Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmri8a.pfb>
 Output written on D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work
-\Scientific_Report\out\main.pdf (37 pages, 2076156 bytes).
+\Scientific_Report\out\main.pdf (38 pages, 2075839 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 172 named destinations out of 1000 (max. 500000)
  444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

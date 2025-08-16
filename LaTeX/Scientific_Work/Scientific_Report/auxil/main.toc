@@ -24,7 +24,7 @@
 \contentsline {subsection}{\numberline {3.5}Reale Audioaufnahmen}{15}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Frame-basierte vs Event-basierte AMT-Systeme}{15}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Blackbox von KI-Modellen}{16}{subsection.3.7}%
-\contentsline {section}{\numberline {4}KI-Modelle in AMT-Systemen}{16}{section.4}%
+\contentsline {section}{\numberline {4}KI-Modelle in AMT-Systemen}{17}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Convolutional Neural Networks}{17}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{17}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Geschichtliche Einordnung von CNNs}{18}{subsubsection.4.1.2}%

@@ -180,7 +180,7 @@ lassen sich die erkannten Noten nachträglich den einzelnen Stimmen korrekt zuor
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Graphics/Martin1996Structure}
+    \includegraphics[width=0.5\textwidth]{Graphics/Martin1996Structure}
     \caption[Systemstruktur nach Martin]{Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), aus  \cite{Martin1996}.}
     \label{fig:martin-structure}
 \end{figure}
@@ -224,7 +224,7 @@ Jeder Onset wird präzise im Envelope, durch einen plötzlichen Anstieg der Laut
 Nachdem die beiden Pfade durchlaufen wurden, liegen bereits Noten vor,
 die grundsätzlich in Notenschrift transkribiert werden können.
 Musikalisch sind diese Noten jedoch noch nicht interpretiert.
-In der Abbildung-\ref{fig:martin-structure} gibt es noch die Bestandteile Simultaneous und Sequential Intervals.
+In der Abbildung-\pref{fig:martin-structure} gibt es noch die Bestandteile Simultaneous und Sequential Intervals.
 In dem Modul Simultaneous Intervals wird ermittelt, welche Töne gleichzeitig erklingen.
 Diese können, wenn sie harmonisch zueinander sind, zu einem Chord gebunden werden.
 Sequential Intervals analysieren dahingegen, welche Töne nacheinander gespielt werden und
@@ -242,7 +242,7 @@ Klapuris AMT-System konzentriert sich, im Gegensatz zu Martins AMT-System, mehr 
 echten polyphonen Audioaufnahmen mit Rauschen, Störgeräuschen und nicht harmonischen Instrumenten.
 Die Struktur des Systems ist linear aufgebaut und präzise in dem Aufgabenfeld, für die es entwickelt wurde.
 
-\begin{figure}
+\begin{figure}[H]
     \vspace{1em}
     \begin{tikzpicture}[>=stealth, thick]
 
@@ -291,14 +291,14 @@ Anschließend werden die resultierenden Energieänderungen der verschiedenen Bä
 Die nun entstehenden Peaks werden als Onsets der Noten interpretiert.
 Als Nächstes werden unharmonische Instrumente und transiente Geräusche, wie zum Beispiel Rauschen, entfernt.
 Dies erfolgt mithilfe der RASTA-Filterung, welches auf das spektrale Signal, vom gegeben Spektrogramm, wirkt.
-Mehr zu der RASTA-Filterung wird im folgenden Abschnitt, \enquote{RASTA-Filterung}, im Detail erläutert.
+Mehr zu der RASTA-Filterung wird im folgenden Abschnitt im Detail erläutert.
 Um mehrere Töne, die gleichzeitig im Signal erklingen, zu erkennen wird \enquote{harmonic matching} genutzt.
 Die Multipitch-Schätzung funktioniert so, dass zu einer bestimmten Zeit immer die dominanteste Tonhöhe,
 basierend auf der Energieverteilung im Signal, gesucht wird.
 Sobald diese ermittelt wurde, wird sie vom Signal subtrahiert,
 und das Verfahren wird erneut angewendet, bis jeder signifikante Pitch untersucht ist.
 Jetzt wird die Stimmenanzahl geschätzt.
-Dieses Modul wird im übernächsten Abschnitt, \enquote{Multipitch-Schätzung}, detailliert erklärt.
+Dieses Modul wird im übernächsten Abschnitt detailliert erklärt.
 In dem Modul Note-Formation werden jetzt die gegebenen Daten zusammengeführt und in eine MIDI-Datei zusammengefasst.
 Diese MIDI-Datei wäre jetzt bereit in Notenschrift transkribiert zu werden.
 
@@ -341,7 +341,7 @@ Zudem lässt sich eine ungefähre Einschätzung darüber gewinnen, wie viele Sti
 
 \subsection{Einbindung von Künstlicher Intelligenz}
 Für eine lange Zeit basierten AMT-Systeme größtenteils auf Signalverarbeitenden Algorithmen,
-wie zum Beispiel HMMs \ref{subsec:hiddenMarkov}.
+wie zum Beispiel HMMs \pref{subsec:hiddenMarkov}.
 Doch auch diese Systeme blieben vom zunehmenden Aufkommen KI-basierter Lösungsansätze nicht unberührt.
 2010 bis 2012 wurden die ersten Ansätze von AMT-Systemen erstellt, welche maschinelles Lernen nutzten \cite{eyben2010universal}.
 Oft wurden KI-Modelle nur für bestimmte Teilprobleme genutzt
