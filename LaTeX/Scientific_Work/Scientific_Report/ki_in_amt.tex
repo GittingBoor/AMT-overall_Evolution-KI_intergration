@@ -25,7 +25,7 @@ Diese Layer sind Convolutional Layer (Faltungsschicht), Activation Layer (ReLU),
 Batch Normalization, Dropout Layer und Upsampling.
 Mit jedem Layer kann ein CNN immer abstraktere Merkmale erkennen.
 Außer dem Convolutional Layer und Activation Layer sind die anderen Layer jedoch nicht unbedingt notwendig.
-Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt, heißt \enquote{Onsets and frames}\cite{hawthorne2017onsets}.
+Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt, heißt \enquote{Onsets and frames} \cite{hawthorne2017onsets}.
 In dieser Arbeit werden direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
 Mit diesem System wird die Entwicklung des Forschungsgebietes illustriert.
 Insbesondere für polyphone Klaviertranskription ist dieses AMT-System ausgezeichnet.
@@ -101,15 +101,15 @@ Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je n
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/CNN}
-    \caption[CNN Struktur]{Visualisierung einer CNN Struktur zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an \cite{shahriar2020cnn}.}
+    \caption[CNN Struktur]{Visualisierung einer CNN Struktur zur automatischen Musiktranskription. Eigene Darstellung in Anlehnung an  \cite{shahriar2020cnn}.}
     \label{fig:cnn-amt}
 \end{figure}
 
 \subsubsection{Geschichtliche Einordnung von CNNs}
 CNNs finden Ihren Ursprung im Jahre 1979.
-Die erste richtige Architektur für CNNs wurde, unter dem Namen \enquote{Neocognitron}, veröffentlicht\cite{fukushima1980neocognitron}.
+Die erste richtige Architektur für CNNs wurde, unter dem Namen \enquote{Neocognitron}, veröffentlicht \cite{fukushima1980neocognitron}.
 Dies sollte als Vorreiter für spätere CNN Modelle gelten.
-Es dauerte weitere 10 Jahre bis das erste richtige Convolutional Neural Network veröffentlicht wurde\cite{lecun1989backpropagation}.
+Es dauerte weitere 10 Jahre bis das erste richtige Convolutional Neural Network veröffentlicht wurde \cite{lecun1989backpropagation}.
 Dieses CNN Modell unterscheidet sich speziell in drei bestimmten Punkten zu dem Vorgänger Neocognitron.
 In diesem wurde Gradientenlernen durch Backpropagation integriert,
 wodurch das gesamte Netzwerk erstmals auf ein gemeinsames Ziel zu trainieren konnte.
@@ -117,7 +117,7 @@ Neocognitron besaß zudem, im Gegensatz zu LeCuns CNN,
 keine Gewichtsverteilung mithilfe von Filtern, wie es in heutigen CNN Modellen standard ist.
 Zudem hatte Fukushima keine praktische Anwendung.
 Er hatte die Idee und wie man diese umsetzt, doch durch damalige Verhältnisse war es für ihn schwierig diese umzusetzen.
-Für AMT-Systeme wurde CNN jedoch erst ungefähr im Jahre 2015 relevant\cite{sigtia2016end}.
+Für AMT-Systeme wurde CNN jedoch erst ungefähr im Jahre 2015 relevant \cite{sigtia2016end}.
 In dieser Arbeit wurde erstmals polyphone Musikstücke mithilfe von CNNs, und weiteren KI-Modelle, transkribiert.
 Seitdem sind CNNs ein wichtiger bestandteil der modernen automatischen Musiktranskription.
 
@@ -171,19 +171,19 @@ Dieser Vorgang wird auch als zeitliche Entfaltung bezeichnet.
 Dadurch ist der Ton C4 auch im Frame 7 aktiv.
 
 Die folgende Abbildung zeigt die Entfaltung eines einzigen RNN-Blocks über mehrere Zeitpunkte hinweg.
-In der Abbildung steht \enquote{x} für den 1D-Inputvektor eines CNNs,
-\enquote{h} für den Hidden State und dem somit verbundenen Gedächtnis des RNNs
-und \enquote{o} für den Outputvektor, mit dem weiter gerechnet wird.
-Die Buchstaben \enquote{W, U und V} stellen dabei die verschiedenen
+In der Abbildung steht $x$ für den 1D-Inputvektor eines CNNs,
+$h$ für den Hidden State und dem somit verbundenen Gedächtnis des RNNs
+und $o$ für den Outputvektor, mit dem weiter gerechnet wird.
+Die Buchstaben $W$, $U$ und $V$ stellen dabei die verschiedenen
 Gewichte  \enquote{Input-Gewicht, Recurrent-Gewicht und Output-Gewicht} dar.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/rnn_unfold}
-    \caption[Entfaltung eines RNN-Blocks]{Entfaltung eines RNN-Blocks \cite{wikimediaRNN}.}
+    \caption[Entfaltung eines RNN-Blocks]{Entfaltung eines RNN-Blocks  \cite{wikimediaRNN}.}
     \label{fig:rnn_block_unfold}
 \end{figure}
 Diese Abbildung ist beschreibbar durch folgende Formel.
-Dabei steht \enquote{b} für den Bias-Vektor des Hidden Layers und \enquote{c} für den Bias-Vektor des Output-Layers.
+Dabei steht $b$ für den Bias-Vektor des Hidden Layers und $c$ für den Bias-Vektor des Output-Layers.
 \begin{align*}
 h_t &= \tanh\left( W \cdot x_t + U \cdot h_{t-1} + b \right) \\
 o_t &= \sigma\left( V \cdot h_t + c \right)
@@ -279,19 +279,19 @@ Dadurch kann sich ein LSTM die verschiedenen musikalischen Ereignisse,
 über das gesamte Audiosignal, besser im Zusammenhang merken.
 
 Folgende Abbildung zeigt einen Zeitschritt in einem LSTM.
-Dabei sind die Komponenten gleich benannt wie in der Abbildung-\titleref{fig:rnn_block_unfold}.
-Das \enquote{c} steht für den Cell-State.
-Intern in der \enquote{LSTM Unit} stehen die Buchstaben \enquote{F, I und O} für die Gates:
+Dabei sind die Komponenten gleich benannt wie in der Abbildung-\ref{fig:rnn_block_unfold}.
+Das $c$ steht für den Cell-State.
+Intern in der \enquote{LSTM Unit} stehen die Buchstaben $F$, $I$ und $O$ für die Gates:
 \enquote{Forget Gate, Input Gate und Output Gate}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/LSTM_timestep}
-    \caption[LSTM Zeitschritt]{Zeitschritt eines LSTMs \cite{wikimediaRNN}.}
+    \caption[LSTM Zeitschritt]{Zeitschritt eines LSTMs  \cite{wikimediaRNN}.}
     \label{fig:lstm_timestep}
 \end{figure}
 
 \subsubsection{Gated Recurrent Units}
-GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs\cite{chung2014empirical}.
+GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs \cite{chung2014empirical}.
 Sie wurden erfunden, um bestimmte Probleme von RNNs zu lösen.
 Insbesondere das Problem des \enquote{Vanishing Gradients} sollten GRUs lösen.
 GRUs steuern mithilfe von Gates, welche Informationen gemerkt und welche vergessen werden sollen.
@@ -321,13 +321,13 @@ Dadurch wird der Gradient nicht ständig verkleinert
 und wichtige Informationen können über einen langen Zeitraum gespeichert werden.
 
 Folgende Abbildung zeigt einen Zeitschritt in einem GRU.
-Die Komponenten sind gleich benannt wie in der Abbildung-\titleref{fig:rnn_block_unfold}.
+Die Komponenten sind gleich benannt wie in der Abbildung-\ref{fig:rnn_block_unfold}.
 Intern in der \enquote{GRU Unit} stehen die Buchstaben \enquote{R und Z} für die Gates:
 \enquote{Reset Gate und Update Gate}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/GRU_timestep}
-    \caption[GRU Zeitschritt]{Zeitschritt eines GRUs \cite{wikimediaRNN}.}
+    \caption[GRU Zeitschritt]{Zeitschritt eines GRUs  \cite{wikimediaRNN}.}
     \label{fig:gru_timestep}
 \end{figure}
 
@@ -343,25 +343,25 @@ Auch in AMT-Systemen sind Bidirektionale RNNs sehr hilfreich,
 da musikalische Ereignisse auch eine klar verständliche Abhängigkeit, von der Zukunft in die Vergangenheit aus, haben.
 Das gleiche Prinzip kann man auch auf LSTMs oder GRUs einsetzen.
 Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
-Ein Bidirektionales RNN kann man auch in folgender Arbeit finden\cite{hawthorne2017onsets}.
+Ein Bidirektionales RNN kann man auch in folgender Arbeit finden \cite{hawthorne2017onsets}.
 
 \subsubsection{Geschichtliche Einordnung von RNNs}
-Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück\cite{elman1990finding}.
+Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück \cite{elman1990finding}.
 In dieser Arbeit wurde erstmals die Idee der Rückkopplung eingebaut,
 wodurch der Output eines Neurons als zusätzliche Eingabe im nächsten Zeitfenster genutzt wird.
 Das resultierte später in den Hidden States.
 Diese Arbeit baute den Grundstein für alle weiterführenden RNNs.
-Eine weitere wichtige Arbeit über RNNs ist die folgende\cite{jordan1997serial}.
+Eine weitere wichtige Arbeit über RNNs ist die folgende \cite{jordan1997serial}.
 Diese Arbeit über RNNs wurde, offiziell im Jahre 1997, publiziert,
 obwohl sie schon 1986 als ein technischer Bericht veröffentlicht war.
-Zudem wurde, im Jahre 1997, das erste Bidirektionale RNN\cite{schuster1997bidirectional}
-und das erste LSTM erfunden\cite{hochreiter1997long}.
-Erst über ein Jahrzehnt später wurde das erste GRU entwickelt\cite{chung2014empirical}.
-RNNs fanden ihren Weg in die automatische Musiktranskription, fast zeitgleich zu CNNs, im Jahre 2015\cite{sigtia2015hybrid}.
+Zudem wurde, im Jahre 1997, das erste Bidirektionale RNN \cite{schuster1997bidirectional}
+und das erste LSTM erfunden \cite{hochreiter1997long}.
+Erst über ein Jahrzehnt später wurde das erste GRU entwickelt \cite{chung2014empirical}.
+RNNs fanden ihren Weg in die automatische Musiktranskription, fast zeitgleich zu CNNs, im Jahre 2015 \cite{sigtia2015hybrid}.
 Für LSTMs dauerte die Einbindung in AMT-Systeme etwas länger.
-Erst im Jahre 2016 wurde ein LSTM in einem AMT-System eingefügt\cite{sigtia2016end}.
-Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System integriert\cite{hawthorne2017onsets}.
-Noch ein Jahr später wurde das erste Mal auch ein GRU in einem AMT-System genutzt\cite{jung2018adaptive}.
+Erst im Jahre 2016 wurde ein LSTM in einem AMT-System eingefügt \cite{sigtia2016end}.
+Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System integriert \cite{hawthorne2017onsets}.
+Noch ein Jahr später wurde das erste Mal auch ein GRU in einem AMT-System genutzt \cite{jung2018adaptive}.
 
 \subsection{Transformers}
 Transformer sind eine, von Google entwickelte Deep-Learning Architektur,
@@ -464,7 +464,7 @@ y_t = \text{FFN}(x_t) = \left( x_t W_1 + b_1 \right) \xrightarrow{\text{ReLU}} W
 \end{itemize}
 
 \subsubsection{Geschichtliche Einordnung von Transformern}
-Das erste Transformer-Modell wurde im Jahre 2017 erfunden\cite{vaswani2017attention}.
+Das erste Transformer-Modell wurde im Jahre 2017 erfunden \cite{vaswani2017attention}.
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
 Leider dauerte es noch lange bis der erste Transformer auch in AMT-Systemen genutzt wurde.
 Das liegt an mehreren Gründen.
@@ -479,11 +479,11 @@ In der Musiktranskription wird immer mit langen Sequenzen, ein gesamtes Musikst�
 Spezielle Transformer Modelle für diesen Anwednugnsfall mussten noch programmiert werden.
 Die ersten Ansätze für Transformer in AMT-Systemen wurden zwischen den Jahren 2021 und 2023 erstellt.
 Eine der ausschlaggebendsten Modelle war der Music Transcription Transformer MT3,
-welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde\cite{gardner2021mt3}.
+welcher von Magenta/Google Brain erstmals im Jahre 2022 veröffentlicht wurde \cite{gardner2021mt3}.
 Dieses spielt eine große Rolle in der Transformer-basierten automatischen Musiktranskription,
 da es das erste weit verbreitete Multi-Task-Transkriptionsmodell ist.
 Eine der Letzten bedeutenden Errungenschaften zu Transformern und Musiktranskription ist das
-YourMT3+ Modell, indem die MT3-Architektur noch weiter verbessert wurde\cite{chang2024yourmt3}.
+YourMT3+ Modell, indem die MT3-Architektur noch weiter verbessert wurde \cite{chang2024yourmt3}.
 
 \subsection{Potentielle KI-Modelle}
 CNNs und RNNs oder Transformer Modelle wie MT3 werden überwiegend in AMT-Systemen eingebunden,
@@ -497,7 +497,7 @@ sodass die letzte KIs nur theoretisch, für die Musiktranskription, besprochen w
 
 \subsubsection*{Variational Autoencoder}
 Variational Autoencoder (VAE) ist ein KI-Modell, welches komplexe Daten in eine verdichtete Form überführt
-und durch Wahrscheinlichkeiten bestimmte Muster vorhersagen kann\cite{kingma2019introduction}.
+und durch Wahrscheinlichkeiten bestimmte Muster vorhersagen kann \cite{kingma2019introduction}.
 Dabei ist wichtig das VAE kein alleinstehendes KI-Modell ist,
 sondern eher als zusatz gilt um bestimmte Bereiche zu verbessern.
 In der Musiktranskription könnte ein VAE zum Beispiel bei der Mehrdeutigkeit von Musik helfen.
@@ -506,7 +506,7 @@ Da VAEs, anders als CNNs oder RNNs, als ausgabe keine eindeutigen Noten herausge
 sondern eine Wahrscheinlichkeit, könnte dies helfen die entscheidung, welche Note gerade spielt, robuster zu gestalten.
 Dadurch das sich VAEs nur eine wahrscheinliche Version der Musik, aus den Daten,
 extrahieren könnte man auch kreative Variationen des Musikstückes damit bilden.
-Die Methode, welche in VAEs genutzt wird, fand Ihren Ursprung in folgendem Paper\cite{kingma2013auto}.
+Die Methode, welche in VAEs genutzt wird, fand Ihren Ursprung in folgendem Paper \cite{kingma2013auto}.
 
 \subsubsection*{Graph Neural Network}
 Graph Neural Network (GNN) ist ein KI-Modell, welches dazu dient Daten, mit abhängigkeit voneinander, zu verarbeiten.
@@ -516,14 +516,14 @@ Knoten sind benachbart, wenn sie durch Kanten verbunden sind.
 Dadurch wird jeder Knoten im Netzwerk schlauer.
 Natürlich machen RNNs und Transformer etwas Ähnliches wie ein GNN, mit zum Beispiel Backpropagation.
 Der Unterschied ist hier, das GNNs keine bestimmte Reihenfolge, wie Wissen weitergeleitet wird, haben.
-Es ist ein anderer Ansatz harmonische Abhängigkeiten miteinander zu kombinieren\cite{wu2020comprehensive}.
+Es ist ein anderer Ansatz harmonische Abhängigkeiten miteinander zu kombinieren \cite{wu2020comprehensive}.
 
 \subsubsection*{Diffusion Model}
 Diffusion Models arbeiten mit Rauschen.
 Aus komplettem rauschen bauen sie Schritt für Schritt ein sauberes Musikstück zusammen.
 Dabei entscheiden sie pro Rechenschritt nur einen kleinen Teil des Musikstückes,
 wodurch mehrdeutige Passagen in Musikstücken auch noch später im Transkriptionsprozess behandelt werden können.
-In dem Projekt DiffRoll, aus dem Jahre 2022, wurde ein Diffusion Model auf ein AMT-System angewendet\cite{cheuk2022diffroll}.
+In dem Projekt DiffRoll, aus dem Jahre 2022, wurde ein Diffusion Model auf ein AMT-System angewendet \cite{cheuk2022diffroll}.
 
 \subsubsection*{Reinforcement Learning}
 Reinforcement Learning (RL) benutzen ein Belohnungssystem, damit der Agent sich beim training richtig anpasst.
@@ -536,11 +536,11 @@ Man gibt dem Agenten als Input eine Audiodatei.
 Danach lässt man ihm Noten nacheinander erzeugen.
 Durch eine andere KI oder vorgefertigte MIDI-Dateien besitzt man einen Vergleichsdatensatz.
 Falls die gewählten Noten vom Agenten gleich dem Vergleichsdatensatz sind, bekommt der Agent Belohnungen.
-So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von anderen KIs nochmal korrekturlesen\cite{li2018music}.
+So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von anderen KIs nochmal korrekturlesen \cite{li2018music}.
 
 \subsubsection*{Energy-Based Model}
 Der letzte Ansatz ist ein Energy-Based Model (EBM).
-Ein EBM arbeitet mit Energie anstatt von Wahrscheinlichkeiten\cite{lecun2006tutorial}.
+Ein EBM arbeitet mit Energie anstatt von Wahrscheinlichkeiten \cite{lecun2006tutorial}.
 Die verschiedenen Arten, wie das EBM das Musikstück transkribieren kann haben alle jeweils ihre eigene Energie.
 Dabei haben die besten möglichkeiten immer die niedrigste Energie, wie bei dem Gradientenabstiegsverfahren.
 Dies ist für AMT-Systeme interessant, da das EBM somit zahlreiche verschiedene Transkriptionsraten wählen könnte.

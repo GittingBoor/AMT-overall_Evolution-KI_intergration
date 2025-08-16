@@ -42,7 +42,7 @@ sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext zuordnen k�
 und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
 Trotz dessen scheitert auch KI an der Einordnung der richtigen Noten, wenn die gespielten Noten
 eine sehr ähnliche Frequenz besitzen oder die Akkorde zu unterschiedlich zu den Trainingsdaten sind.
-In der Referenzierten Arbeit\cite{martak2022balancing} werden diese Probleme nochmals deutlicher aufgegriffen.
+In der Referenzierten Arbeit \cit{martak2022balancing} werden diese Probleme nochmals deutlicher aufgegriffen.
 
 \subsection{Spezielle Instrumente}
 Oft ist die Qualität der Transkription auch abhängig von den vertretenen Instrumenten in dem Audiosignal.
@@ -65,7 +65,7 @@ Ein Mensch kann jedoch nicht jeden Ton immer komplett perfekt singen, wodurch ei
 Zudem verläuft der Klang einer Stimme von einer Note zur nächsten.
 Es gibt nicht immer starke Peaks zur Onset Erkennung.
 Gesang ist auch, wie die vorher genannten Instrumentgruppen, nicht sonderlich vertreten in größeren Datensätzen.
-Die folgenden Paper konzentrieren ihren Fokus speziell auf das Thema des Gesangs in der Musiktranskription\cite{gu2023deep,gu2024automatic}.
+Die folgenden Paper konzentrieren ihren Fokus speziell auf das Thema des Gesangs in der Musiktranskription \cit{gu2023deep,gu2024automatic}.
 Somit wurde eine Onset Erkennungsgenauigkeit von ungefähr 80\% festgestellt, für Gesang.
 
 Die folgende Tabelle stellt einige traditionelle Instrumente aus verschiedenen ethnischen Gruppen dar.
@@ -91,7 +91,7 @@ Afrika & Kora, Djembe, Balafon, Mbira \\ \hline
 
 \subsection{Notendauer}
 Neben dem Onset einer Note muss auch erkannt werden, wie lange eine bestimmte Note gespielt wird.
-Eine Schwierigkeit dabei ist der, im Abschnitt-\titleref{subsec:onset} angesprochenen, Nachhall einer Note.
+Eine Schwierigkeit dabei ist der, im Abschnitt-\ref{subsec:onset} angesprochenen, Nachhall einer Note.
 Dieser muss auseinandergehalten werden von der wirklichen Notendauer.
 Es gibt jedoch bei einigen Instrumenten, wie zum Beispiel dem Klavier, ein spezielles Problem.
 Wenn während des Spielens einer Note das Dämpferpedal eines Klaviers gedrückt wird, gibt es keinen klaren Punkt,
@@ -99,7 +99,7 @@ an dem der Übergang zwischen der Note und dem Nachhallen eindeutig eingeordnet 
 Die Lautstärke sinkt dabei nicht abrupt, sondern nur langsam ab.
 Natürlich ist dieses Problem in polyphonen Musikstücken deutlich stärker,
 da sich dort die verschiedenen Nachhallphasen überlappen.
-Dies ist eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung\cite{jamshidi2024machine}.
+Dies ist eins der grundlegendsten Probleme, zusammen mit der Onset Erkennung \cit{jamshidi2024machine}.
 
 \subsection{Reale Audioaufnahmen}
 Ein perfektes AMT-System sollte sogar auf realen Audioaufnahmen 100\% Genauigkeit besitzen.
@@ -112,7 +112,7 @@ vor allem auch eine große Anzahl von unterschiedlichen Hintergrundgeräuschen,
 damit die KI auf alle Möglichkeiten trainiert wird.
 Um dem entgegenzuwirken, können Studio-Datensätze wie MAESTRO durch Data-Augmentation variiert werden,
 wodurch realistischere Audioaufnahmen erstellt werden können.
-So wurden auch die Trainingsdaten in folgender Arbeit erzeugt\cite{kusaka2024mobile}.
+So wurden auch die Trainingsdaten in folgender Arbeit erzeugt \cit{kusaka2024mobile}.
 Es wird Timber, Reverb, Noise variierte und die Qualität des Aufnahmegerätes angepasst.
 So werden zahlreiche neue Datensätze kreiert, die passend auf die gegebenen Anwendungsfälle ausgelegt sind.
 
@@ -133,8 +133,8 @@ In der Realität sind die meisten AMT-Systeme trotzdem Frame-basiert.
 Das liegt daran, dass Event-basierte AMT-Systeme eine sehr neue Entwickelung sind
 und zudem auch schwerer zu implementieren sind.
 Frame-basierte Methoden wurden ungefähr im Jahre 2000 entwickelt
-und haben sich seitdem in zahlreichen Arbeiten durchgesetzt\cite{Martin1996, klapuri1998automatic}.
-Dahingegen sind Event-basierte Methoden erst ungefähr 15 Jahre später entwickelt worden\cite{performance_rnn2017event}.
+und haben sich seitdem in zahlreichen Arbeiten durchgesetzt \cit{Martin1996, klapuri1998automatic}.
+Dahingegen sind Event-basierte Methoden erst ungefähr 15 Jahre später entwickelt worden \cit{performance_rnn2017event}.
 Dadurch waren Frame-basierte Methoden lange der Standard für AMT-Systeme.
 Zudem ist die Umsetzung von Event-basierten AMT-Systemen komplizierter als Frame-basierte.
 Das System muss jedes Event korrekt einschätzen und zuordnen.
@@ -190,4 +190,4 @@ Attention-Mapping nimmt den gegebenen Input und gewichtet diesen,
 je nachdem welche Teile davon wichtig für eine bestimmte Vorhersage sind.
 So wird erkannt, welche Zeitfenster den meisten Einfluss auf einen bestimmte Onset hatten.
 Vor allem bei polyphonen Musikstücken können relevante zeitliche Zusammenhänge erkannt werden.
-Ein gutes Beispiel von Attention-Mapping kann in folgender Arbeit gefunden werden\cite{cheuk2021revisiting}.
+Ein gutes Beispiel von Attention-Mapping kann in folgender Arbeit gefunden werden \cit{cheuk2021revisiting}.

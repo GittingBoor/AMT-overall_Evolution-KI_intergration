@@ -167,58 +167,8 @@
       \verb https://www.researchgate.net/figure/A-typical-pattern-onset-offset-VEP-Note-that-with-a-300-ms-sweep-only-the-pattern-onset_fig2_305480881
       \endverb
     \endentry
-    \entry{cheuk2021revisiting}{inproceedings}{}{}
-      \name{author}{4}{ul=2}{%
-        {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
-           family={Cheuk},
-           familyi={C\bibinitperiod},
-           given={Kin\bibnamedelima Wai},
-           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=8bedc194dcec83bc6760a1731d18c69f}{%
-           family={Luo},
-           familyi={L\bibinitperiod},
-           given={Yin-Jyun},
-           giveni={Y\bibinithyphendelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b068724f00d17295882e712edcc6315c}{%
-           family={Benetos},
-           familyi={B\bibinitperiod},
-           given={Emmanouil},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fdae87cad6eeb39b72cfdb074d296c7b}{%
-           family={Herremans},
-           familyi={H\bibinitperiod},
-           given={Dorien},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{41308946d264f6405b2a3afb7ff7ee06}
-      \strng{fullhash}{d92bb1e07b0e6698eb4522ab88cf6396}
-      \strng{fullhashraw}{d92bb1e07b0e6698eb4522ab88cf6396}
-      \strng{bibnamehash}{41308946d264f6405b2a3afb7ff7ee06}
-      \strng{authorbibnamehash}{41308946d264f6405b2a3afb7ff7ee06}
-      \strng{authornamehash}{41308946d264f6405b2a3afb7ff7ee06}
-      \strng{authorfullhash}{d92bb1e07b0e6698eb4522ab88cf6396}
-      \strng{authorfullhashraw}{d92bb1e07b0e6698eb4522ab88cf6396}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2021 International Joint Conference on Neural Networks (IJCNN)}
-      \field{title}{Revisiting the onsets and frames model with additive attention}
-      \field{year}{2021}
-      \field{pages}{1\bibrangedash 8}
-      \range{pages}{8}
-    \endentry
     \entry{cheuk2022diffroll}{inproceedings}{}{}
-      \name{author}{8}{ul=2}{%
+      \name{author}{8}{}{%
         {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
            family={Cheuk},
            familyi={C\bibinitperiod},
@@ -268,12 +218,12 @@
            giveni={Y\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{3a57cb1c3aba210d4de0bc082a80fda6}
+      \strng{namehash}{c1b5cfb9508a1d031e3d38938a00686f}
       \strng{fullhash}{720983b6e89aa753416c346368d14180}
       \strng{fullhashraw}{720983b6e89aa753416c346368d14180}
-      \strng{bibnamehash}{3a57cb1c3aba210d4de0bc082a80fda6}
-      \strng{authorbibnamehash}{3a57cb1c3aba210d4de0bc082a80fda6}
-      \strng{authornamehash}{3a57cb1c3aba210d4de0bc082a80fda6}
+      \strng{bibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authorbibnamehash}{c1b5cfb9508a1d031e3d38938a00686f}
+      \strng{authornamehash}{c1b5cfb9508a1d031e3d38938a00686f}
       \strng{authorfullhash}{720983b6e89aa753416c346368d14180}
       \strng{authorfullhashraw}{720983b6e89aa753416c346368d14180}
       \field{sortinit}{C}
@@ -714,121 +664,6 @@
       \field{pages}{549\bibrangedash 558}
       \range{pages}{10}
     \endentry
-    \entry{gu2024automatic}{article}{}{}
-      \name{author}{6}{ul=2}{%
-        {{un=0,uniquepart=base,hash=e6e7254968e77d760a500fb3959476d6}{%
-           family={Gu},
-           familyi={G\bibinitperiod},
-           given={Xiangming},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=724099a04b0a2fab58cd2cbe840c3b6c}{%
-           family={Ou},
-           familyi={O\bibinitperiod},
-           given={Longshen},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c14a2b98f3681abab1366793dca49c73}{%
-           family={Zeng},
-           familyi={Z\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a9347b2232469d8d075c4d3340476443}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jianan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a78e2af39586aee020c1e0385d620a96}{%
-           family={Wong},
-           familyi={W\bibinitperiod},
-           given={Nicholas},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=33f1f8102ae8d032fb301ab80a09459d}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Ye},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {ACM New York, NY}%
-      }
-      \strng{namehash}{59d119e3f8b2c0f9fe1163e91cc1f6b6}
-      \strng{fullhash}{db130dbab1dc426c7b8dc0a2d1cb83e7}
-      \strng{fullhashraw}{db130dbab1dc426c7b8dc0a2d1cb83e7}
-      \strng{bibnamehash}{59d119e3f8b2c0f9fe1163e91cc1f6b6}
-      \strng{authorbibnamehash}{59d119e3f8b2c0f9fe1163e91cc1f6b6}
-      \strng{authornamehash}{59d119e3f8b2c0f9fe1163e91cc1f6b6}
-      \strng{authorfullhash}{db130dbab1dc426c7b8dc0a2d1cb83e7}
-      \strng{authorfullhashraw}{db130dbab1dc426c7b8dc0a2d1cb83e7}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{ACM Transactions on Multimedia Computing, Communications and Applications}
-      \field{number}{7}
-      \field{title}{Automatic lyric transcription and automatic music transcription from multimodal singing}
-      \field{volume}{20}
-      \field{year}{2024}
-      \field{pages}{1\bibrangedash 29}
-      \range{pages}{29}
-    \endentry
-    \entry{gu2023deep}{article}{}{}
-      \name{author}{5}{ul=2}{%
-        {{un=0,uniquepart=base,hash=e6e7254968e77d760a500fb3959476d6}{%
-           family={Gu},
-           familyi={G\bibinitperiod},
-           given={Xiangming},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c14a2b98f3681abab1366793dca49c73}{%
-           family={Zeng},
-           familyi={Z\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a9347b2232469d8d075c4d3340476443}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jianan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=724099a04b0a2fab58cd2cbe840c3b6c}{%
-           family={Ou},
-           familyi={O\bibinitperiod},
-           given={Longshen},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=33f1f8102ae8d032fb301ab80a09459d}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Ye},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{af2ad12bd03843a763ddcb0d754c2693}
-      \strng{fullhash}{3cd996b1fbb91da9ac8c681ca85c4671}
-      \strng{fullhashraw}{3cd996b1fbb91da9ac8c681ca85c4671}
-      \strng{bibnamehash}{af2ad12bd03843a763ddcb0d754c2693}
-      \strng{authorbibnamehash}{af2ad12bd03843a763ddcb0d754c2693}
-      \strng{authornamehash}{af2ad12bd03843a763ddcb0d754c2693}
-      \strng{authorfullhash}{3cd996b1fbb91da9ac8c681ca85c4671}
-      \strng{authorfullhashraw}{3cd996b1fbb91da9ac8c681ca85c4671}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2304.12082}
-      \field{title}{Deep audio-visual singing voice transcription based on self-supervised learning models}
-      \field{year}{2023}
-    \endentry
     \entry{han2016deep}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=4a1e25a86fbcddf1e82056630f705db9}{%
@@ -1054,51 +889,6 @@
       \verb{url}
       \verb https://www.izotope.com/en/learn/what-is-the-noise-floor.html
       \endverb
-    \endentry
-    \entry{jamshidi2024machine}{article}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=dd4bcf80177cb7bbbed17e36d598a9bf}{%
-           family={Jamshidi},
-           familyi={J\bibinitperiod},
-           given={Fatemeh},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=20de91b2a1a93ccf75d63b42b82d6f68}{%
-           family={Pike},
-           familyi={P\bibinitperiod},
-           given={Gary},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bf2072ef6bebbc9caf1bd20314d70376}{%
-           family={Das},
-           familyi={D\bibinitperiod},
-           given={Amit},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0c5e236ea512fa823d7cb2221e7043b9}{%
-           family={Chapman},
-           familyi={C\bibinitperiod},
-           given={Richard},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a6e8a658c705a79b96301e1e6a363ba6}
-      \strng{fullhash}{e1887a4da8d065d7eb67a3944ef6244d}
-      \strng{fullhashraw}{e1887a4da8d065d7eb67a3944ef6244d}
-      \strng{bibnamehash}{a6e8a658c705a79b96301e1e6a363ba6}
-      \strng{authorbibnamehash}{a6e8a658c705a79b96301e1e6a363ba6}
-      \strng{authornamehash}{a6e8a658c705a79b96301e1e6a363ba6}
-      \strng{authorfullhash}{e1887a4da8d065d7eb67a3944ef6244d}
-      \strng{authorfullhashraw}{e1887a4da8d065d7eb67a3944ef6244d}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2406.15249}
-      \field{title}{Machine learning techniques in automatic music transcription: A systematic survey}
-      \field{year}{2024}
     \endentry
     \entry{jordan1997serial}{incollection}{}{}
       \name{author}{1}{}{%
@@ -1338,44 +1128,6 @@
       \field{pages}{6\bibrangedash 9}
       \range{pages}{4}
     \endentry
-    \entry{kusaka2024mobile}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=44418b72bb375bc4204de7a18e753efd}{%
-           family={Kusaka},
-           familyi={K\bibinitperiod},
-           given={Yuta},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=72c90dfc673d1abcb8048488fb58abf5}{%
-           family={Maezawa},
-           familyi={M\bibinitperiod},
-           given={Akira},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{fullhash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{fullhashraw}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{bibnamehash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{authorbibnamehash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{authornamehash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{authorfullhash}{a36be344513afe5370cb8e1f4c9f01de}
-      \strng{authorfullhashraw}{a36be344513afe5370cb8e1f4c9f01de}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2024 32nd European Signal Processing Conference (EUSIPCO)}
-      \field{title}{Mobile-AMT: Real-Time Polyphonic Piano Transcription for In-the-Wild Recordings}
-      \field{year}{2024}
-      \field{pages}{36\bibrangedash 40}
-      \range{pages}{5}
-    \endentry
     \entry{lecun1989backpropagation}{article}{}{}
       \name{author}{7}{ul=2}{%
         {{un=0,uniquepart=base,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
@@ -1559,31 +1311,6 @@
       \field{volume}{31}
       \field{year}{2018}
     \endentry
-    \entry{performance_rnn2017event}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ad630040e50482691cc564f6925724ae}{%
-           family={{Magenta Team}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{ad630040e50482691cc564f6925724ae}
-      \strng{fullhash}{ad630040e50482691cc564f6925724ae}
-      \strng{fullhashraw}{ad630040e50482691cc564f6925724ae}
-      \strng{bibnamehash}{ad630040e50482691cc564f6925724ae}
-      \strng{authorbibnamehash}{ad630040e50482691cc564f6925724ae}
-      \strng{authornamehash}{ad630040e50482691cc564f6925724ae}
-      \strng{authorfullhash}{ad630040e50482691cc564f6925724ae}
-      \strng{authorfullhashraw}{ad630040e50482691cc564f6925724ae}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://magenta.tensorflow.org/performance-rnn}}
-      \field{note}{Accessed: 2025-06-22}
-      \field{title}{Performance RNN: Generating Expressive Piano Performances with Neural Networks}
-      \field{year}{2017}
-    \endentry
     \entry{mankowitz2023faster}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1673,51 +1400,6 @@
       \field{year}{2023}
       \field{pages}{257\bibrangedash 263}
       \range{pages}{7}
-    \endentry
-    \entry{martak2022balancing}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=e0611a611f2df93040fc0ea4aff4f409}{%
-           family={Marták},
-           familyi={M\bibinitperiod},
-           given={Lukáš\bibnamedelima Samuel},
-           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=07a942196507cd4f935998a268c8a84c}{%
-           family={Kelz},
-           familyi={K\bibinitperiod},
-           given={Rainer},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8296a6d278bcf9dc9f972c25929ae2d0}{%
-           family={Widmer},
-           familyi={W\bibinitperiod},
-           given={Gerhard},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Frontiers Media SA}%
-      }
-      \strng{namehash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{fullhash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{fullhashraw}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{bibnamehash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{authorbibnamehash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{authornamehash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{authorfullhash}{90b36b0020b8cad28b32ff76240d025a}
-      \strng{authorfullhashraw}{90b36b0020b8cad28b32ff76240d025a}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Frontiers in Signal Processing}
-      \field{title}{Balancing bias and performance in polyphonic piano transcription systems}
-      \field{volume}{2}
-      \field{year}{2022}
-      \field{pages}{975932}
-      \range{pages}{1}
     \endentry
     \entry{Martin1996}{report}{}{}
       \name{author}{1}{}{%

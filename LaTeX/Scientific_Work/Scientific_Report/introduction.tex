@@ -33,7 +33,7 @@ Ein deutlicher Anstieg der Amplitude markiert den Onset einer Note.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Graphics/Onset_detection}
-    \caption[Noten Onsets]{3 Noten Onsets mit Abhängigkeit von Amplitude und Zeit\cite{brown2016patternvep}.}
+    \caption[Noten Onsets]{3 Noten Onsets mit Abhängigkeit von Amplitude und Zeit \cite{brown2016patternvep}.}
     \label{fig:onsets}
 \end{figure}
 \end{description}
@@ -66,7 +66,7 @@ Jedoch werden in neueren KI-Modellen zum Großteil Log-Mel-Spektrogramme genutzt
 Diese sind robuster und funktionieren, vor allem in Transformer-basierte KI-Modellen, zuverlässiger.
 
 Im Folgenden sind vier verschiedene Spektrogramme zu sehen,
-welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5\cite{bach_wtk1_nr5} basieren.
+welche alle auf den identischen Ausschnitt aus Bachs WTK I, Nr.5 \cite{bach_wtk1_nr5} basieren.
 Oben links ist ein normales lineares Spektrogramm zu sehen,
 welches ausschließlich auf dem STFT basiert und eine lineare Frequenzskala besitzt.
 Rechts daneben ist ein Log-Spektrogramm,
@@ -76,7 +76,7 @@ Das \enquote{MelSpec} steht für Log-Mel-Spektrogramm und unten rechts wird ein 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/different_spectrograms}
-    \caption[Vergleich 4 Spektrogramme]{Vergleich von vier Spektrogrammen basierend auf \cite{cheuk2020impact}.}
+    \caption[Vergleich 4 Spektrogramme]{Vergleich von vier Spektrogrammen basierend auf  \cite{cheuk2020impact}.}
     \label{fig:different_specs}
 \end{figure}
 \end{description}
@@ -92,7 +92,7 @@ MIDI-Dateien sind dafür perfekt geeignet.
 
 MIDI (Musical Instrument Digital Interface) ist ein Standartprotokoll zur Kommunikation zwischen
 elektronischen Musikinstrumenten, Computern und anderen Geräten wie zum Beispiel Synthesizern.
-Dieses Protokoll wurde erstmals 1983 eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie\cite{smith1983midi}.
+Dieses Protokoll wurde erstmals 1983 eingeführt und wurde schnell zu einem Standard in der digitalen Musikindustrie \cite{smith1983midi}.
 In MIDI-Dateien werden Daten von Tönen gespeichert,
 welche zum Beispiel zuvor von einem elektronischen Instrument gespielt wurden oder durch AMTs erfasst wurden.
 
@@ -145,7 +145,7 @@ Das liegt daran, dass in MIDI-Dateien zusammenhängende Funktionen gespeichert w
 
 MIDI-Dateien kamen auch der Forschung für AMT-Systemen sehr gelegen,
 da man nun ein standardisiertes Output-Format für diese Programme besaß.
-Später werden diese zudem sehr essenziell bei dem Training KI basierter AMT-Systeme\cite{telila2025cnn}.
+Später werden diese zudem sehr essenziell bei dem Training KI basierter AMT-Systeme \cite{telila2025cnn}.
 
 Im folgenden Bild wird ein Auszug einer MIDI-Datei, mit zwei Noten, angezeigt.
 Darunter ist ein Piano-Roll abgebildet, zugehörig zu oben genannten Noten.
@@ -154,7 +154,7 @@ Dabei gibt die Position die Tonhöhe an und die Länge die Spieldauer.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{Graphics/midi_pianoroll}
-    \caption[MIDI-Datensatz]{MIDI-Datensatz mit zugehörigem Piano-Roll. Ausschnitt aus der Varbeitungspipeline des MT3-Modells \cite{mt3colab}.}
+    \caption[MIDI-Datensatz]{MIDI-Datensatz mit zugehörigem Piano-Roll. Ausschnitt aus der Varbeitungspipeline des MT3-Modells  \cite{mt3colab}.}
     \label{fig:mt3_output_tokens}
 \end{figure}
 \end{description}
@@ -238,7 +238,7 @@ Somit können AMT-Systeme besser angepasst werden an einen realistischen Alltags
 
 Auch die Mehrdimensionalität von Musik kann KI deutlich besser bewältigen als Algorithmen.
 Neuronale Netze besitzen eine mehrdimensionale Struktur, die es ihnen ermöglicht,
-verschiedene Muster, Stimmen und Eigenschaften zu erlernen\cite{graves2007multi}.
+verschiedene Muster, Stimmen und Eigenschaften zu erlernen \cite{graves2007multi}.
 Auf der anderen Seite müssen klassische Algorithmen diese verschiedenen Dimensionen
 explizit modellieren und sind nicht in der Lage, Muster selbstständig zu erkennen.
 Sie folgen nur den fest einprogrammierten Anweisungen und sind somit nicht anpassungsfähig.
@@ -246,8 +246,8 @@ Sie folgen nur den fest einprogrammierten Anweisungen und sind somit nicht anpas
 Es gibt verschiedene KI-Modelle, welche für AMT-Systeme in Frage kommen.
 In diesem Abschnitt werden die am weitesten verbreiteten KI-Modelle aufgegriffen.
 Weitere potenzielle KI-Modelle und der heutige
-\enquote{State of the Art} werden im Abschnitt-\titleref{sec:ki_integration} ausführlich erläutert.
-Die meisten AMT-Systeme nutzen Recurrent Neural Networks (RNN) und Convolutional Neural Networks (CNN)\cite{Boeck2012}.
+\enquote{State of the Art} werden im Abschnitt-\ref{sec:ki_integration} ausführlich erläutert.
+Die meisten AMT-Systeme nutzen Recurrent Neural Networks (RNN) und Convolutional Neural Networks (CNN) \cite{Boeck2012}.
 Diese Module bilden keine eigenständigen Systeme, sondern lassen sich flexibel innerhalb eines Systems kombinieren.
 Da es keine objektiv richtigen oder falschen Notenfolgen gibt, ist der Einsatz von Supervised Learning am effizientesten.
 Dementsprechend ist es notwendig ein zuverlässiges und großes Datenset aus Audiodateien und deren zugehörigen MIDI-Dateien zu besitzen.
@@ -258,14 +258,14 @@ Da das Input Audiosignal in ein Spektrogramm umgewandelt wird,
 kann das CNN diese bildliche Darstellung analysieren.
 Durch die Analyse von dem Spektrogramm können gewisse Frequenzmuster erkannt werden,
 die darauffolgend einem bestimmten Instrument zugeordnet werden können.
-Das ist vor allem dabei hilfreich, die verschiedenen Stimmen der jeweiligen Instrumente voneinander zu differenzieren\cite{han2016deep}.
+Das ist vor allem dabei hilfreich, die verschiedenen Stimmen der jeweiligen Instrumente voneinander zu differenzieren \cite{han2016deep}.
 
 RNNs hingegen spezialisieren sich darauf, mithilfe eines Gedächtnis, zeitliche Abläufe zu verstehen.
 In Musikstücken werden zahlreiche Noten hintereinander gespielt, welche harmonisch aufeinander aufbauen.
 Das RNN verarbeitet die jeweiligen Sequenzen und merkt sich die Informationen der schon gespielten Noten,
 um die darauffolgenden Noten besser einordnen zu können.
 So lässt sich die harmonische Struktur des Musikstückes analysieren.
-Auch der Rhythmus und vorhandene Vorzeichen lassen sich dadurch interpretieren\cite{Boeck2012}.
+Auch der Rhythmus und vorhandene Vorzeichen lassen sich dadurch interpretieren \cite{Boeck2012}.
 
 In den meisten AMT-Systemen werden RNNs und CNNs kombiniert.
 Zunächst verarbeitet das CNN das Spektrogramm und extrahiert dabei musikalische Merkmale.
@@ -304,7 +304,7 @@ zu standardisierten Musiknoten transkribiert werden.
 Künstliche Intelligenz ist momentan eins der aktivsten Forschungsfelder.
 Durch KIs wurden und werden noch viele grundlegende Probleme
 und Algorithmen komplett umstrukturiert, verworfen oder gelöst.
-Ein perfektes Beispiel dafür ist AlphaDev von DeepMind\cite{mankowitz2023faster},
+Ein perfektes Beispiel dafür ist AlphaDev von DeepMind \cite{mankowitz2023faster},
 welches durch Reinforcement Learning ein neues, effizienteres Sortier- und Hashverfahren entwickelt hat.
 Ein Forschungsgebiet, das unter anderem auch sehr stark durch die Einführung von KI profitiert hat,
 ist die automatische Musiktranskription.
@@ -314,7 +314,7 @@ um unter anderem Spektrogramme zu analysieren und um den Aufbau des Musikstücke
 
 Durch die integration von KI in AMT-Systemen rückt die Vorstellung von AMT-Systemen,
 welche im Alltag genutzt werden auch immer näher.
-Sobald das erste AMT-System praxisgeeignet ist, werden sich, wie im Abschnitt-\titlerefN{subsec:praktisch} angeschnitten,
+Sobald das erste AMT-System praxisgeeignet ist, werden sich, wie im Abschnitt-\ref{subsec:praktisch} angeschnitten,
 viele neue Einsatzmöglichkeiten ermöglicht.
 Dadurch werden andere Forschungsgebiete gefördert, momentane Aufgaben vereinfacht und das Bildungswesen verbessert.
 
