@@ -1,6 +1,6 @@
 \section{KI-Modelle in AMT-Systemen}
 \label{sec:ki_integration}
-KI-Systeme haben, in den letzten Jahren stark an beliebtheit gewonnen.
+KI-Systeme haben in den letzten Jahren stark an Beliebtheit gewonnen.
 AMT-Systeme bilden da keine Ausnahmen.
 Vor allem durch die integration von CNNs und RNNs konnten AMT-Systeme zahlreiche Prozesse deutlich verbessern
 und neue Errungenschaften in dem Forschungsgebiet erzielen.
@@ -10,23 +10,23 @@ In diesem Kapitel werden genau diese KI-Modelle stärker behandelt
 und deren Aufgaben in der automatischen Musik transkription weiter erläutert.
 
 \subsection{Convolutional Neural Networks}
-CNNs sind neuronale Netze, welcher besonders gut räumlich strukturierte Daten analysieren können.
-Deshalb werden diese vor allem in der analyse von Bildern genutzt.
-Sie können zum Beispiel erkennen, was auf einem Bild genau passiert oder welche Objekte in einem Bild zu erkennen sind.
+CNNs sind neuronale Netze, welche besonders gut räumlich strukturierte Daten analysieren können.
+Deshalb werden diese vor allem in der Analyse von Bildern genutzt.
+Sie sind in der Lage, den Inhalt eines Bildes präzise zu analysieren und darin enthaltene Objekte zuverlässig zu identifizieren.
 Auch KIs wie ChatGPT nutzen eine verbesserte Form von CNNs, um Bilder zu analysieren.
 Im Fall der Musiktranskription wird als Input Bild ein Spektrogramm verwendet.
-Spektrogramme können ähnliche wie zweidimensionale Bilder gehandhabt werden,
+Spektrogramme können ähnlich wie zweidimensionale Bilder gehandhabt werden,
 da auf diesen auch alle wichtigen Daten des Inputs Audiosignals zu finden sind.
 CNNs bestehen aus mehreren verschiedenen Layern.
-Einfache CNN Modelle bestehen nur aus 2 bis 5 Layern,
-wobei komplexere CNNs aus über tausende Layern bestehen können.
+Einfache CNN Modelle bestehen nur aus zwei bis fünf Layern,
+wobei komplexere CNNs aus über Tausenden Layern bestehen können.
 In AMT-Systemen haben die meisten CNNs etwa drei bis zehn Layer.
-Diese Layer sind Convolutional Layer (Faltungsschicht), Activation Layer (ReLU), Pooling Layer,
+Diese Layer sind Convolutional Layer, Activation Layer (ReLU), Pooling Layer,
 Batch Normalization, Dropout Layer und Upsampling.
 Mit jedem Layer kann ein CNN immer abstraktere Merkmale erkennen.
 Außer dem Convolutional Layer und Activation Layer sind die anderen Layer jedoch nicht unbedingt notwendig.
-Eine Arbeit, welche die stärke, von CNN-Modellen in AMT-Systemen, sehr gut darstellt, heißt \enquote{Onsets and frames} \cite{hawthorne2017onsets}.
-In dieser Arbeit werden direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten.
+Eine Arbeit, die die Stärke von CNN-Modellen in AMT-Systemen sehr gut darstellt, heißt \enquote{Onsets and Frames} \cite{hawthorne2017onsets}.
+In dieser Arbeit werden direkt zwei verschieden spezialisierte Teilnetzwerke für Onsets und Sustain der Noten behandelt.
 Mit diesem System wird die Entwicklung des Forschungsgebietes illustriert.
 Insbesondere für polyphone Klaviertranskription ist dieses AMT-System ausgezeichnet.
 Im Folgenden werden die verschiedenen Layer eines CNNs, in einem AMT-System, erläutert.
@@ -34,22 +34,25 @@ Im Folgenden werden die verschiedenen Layer eines CNNs, in einem AMT-System, erl
 \subsubsection{Layer eines CNNs}
 In dem Convolution Layer werden Filter verwendet.
 Filter sind 2D-Matrizen, die aus trainierbaren Gewichten bestehen.
-Ein Filter deckt jeweils einen 3x3 Pixel Eingabebereich des Inputbildes ab.
-Jeden Filter, den man auf das Bild anwendet,
-wird über das gesamte Bild gezogen und analysieren dadurch erstmal jeden Eingabebereich einzeln.
+Ein Filter deckt jeweils einen Eingabebereich des Inputbildes ab.
+Je nach Aufgabenfeld und Rechenaufwand  unterscheidet sich die größe eines Filters.
+Ein 3x3 Pixel Filter ist der am weitesten verbreitete Standard.
+Je größer ein Filter ist, desto mehr Rechenaufwand wird benötigt.
+In AMT-Systemen werden häufig 5x3 oder 7x3 Pixel Filter genutzt,
+da somit mehr zeitlicher Kontext als Frequenzkontext abgedeckt wird.
+Jeder auf das Bild angewendete Filter wird über die gesamte Eingabe verschoben und analysiert dabei nacheinander alle Bildbereiche.
 Ein Skalarprodukt aus Filter und Eingabebereich beschreibt dann einen Aktivierungswert.
 Aus allen Aktivierungswerten eines Filters entsteht eine Feature Map.
-Wenn man Aktivierungswerte miteinander vergleicht,
-können somit Patterns und Eigenschaften erkannt werden.
-In der Musiktranskription filtert man somit Onsets, Sustains oder harmonische Verläufe heraus.
-Zum Beispiel Onsets werden erkannt, wenn es eine plötzliche Energieänderung gibt.
-Am Ende bekommt man einen 3D-Tensor raus, welcher alle Feature Maps beinhaltet.
+Beim Vergleich von Aktivierungswerten können Patterns und Eigenschaften erkannt werden.
+In der Musiktranskription werden dadurch Onsets, Sustains oder harmonische Verläufe herausgefiltert.
+Onsets werden beispielsweise erkannt, wenn es eine plötzliche Energieänderung gibt.
+Am Ende entsteht ein 3D-Tensor, welcher alle Feature Maps beinhaltet.
 
 Die Batch Normalization sorgt dafür, das die Aktivierungswerte normalisiert werden.
 Jede Feature Map wird dabei einzeln normalisiert.
 Dadurch wird Rechenleistung eingespart.
-Zudem kann man im Training durch Mini-Batches mehrere Spektrogramme gleichzeitig durch die CNN Struktur leiten.
-Dadurch wird das Training schneller und man kommt früher an Ergebnisse.
+Zudem lassen sich im Training durch Mini-Batches mehrere Spektrogramme gleichzeitig durch die CNN-Struktur leiten.
+Dadurch wird das Training schneller und Ergebnisse werden früher erreicht.
 
 Es kann passieren das die Summe eines Convolution Layers negativ ist.
 Dies kann passieren, wenn stärker gewichtete Filter einen negativen Aktivierungswert herausgeben.
@@ -59,45 +62,44 @@ alle negativen Aktivierungswerte auf 0 gesetzt.
 So kann das Netz nichtlineare Beziehungen modellieren.
 
 Als Nächstes wird mit dem Pooling Layer der Rechenaufwand verringert.
-Dieser nimmt jede Feature Map einzeln und reduziert deren Matrix zu einer kleineren, standardmäßig eine 2x2, Matrix.
+Dieser nimmt jede Feature Map einzeln und reduziert ihre Matrix zu einer kleineren, standardmäßig 2x2, Matrix.
 Das erfolgt, indem sich der Pooling Layer zunächst eine
 gesamte Feature Map nimmt und diese dann in kleinere Blöcke aufteilt.
 Es gibt entweder Max-Pooling oder Average-Pooling.
-Je nachdem welche Methode man wählt, wird immer der höchste Wert oder der durchschnittliche Wert extrahiert.
+Je nachdem welche Methode gewählt wird, wird immer der höchste Wert oder der durchschnittliche Wert extrahiert.
 Der extrahierte Wert von jedem Block wird nun in die reduzierte Feature Map zurückgeführt.
-Dadurch reduziert man nicht nur Rechenaufwand, sondern vermeidet auch überanpassung.
-Wenn das System jeden kleinsten Wert berücksichtigt passt es sich zu sehr an den trainingsdaten an
+Dadurch wird nicht nur Rechenaufwand reduziert, sondern auch Überanpassung vermieden.
+Wenn das System jeden kleinsten Wert berücksichtigt, passt es sich zu sehr an die Trainingsdaten an
 und kann womöglich andere Daten nicht mehr richtig analysieren.
 
-Der Dropout Layer ist, im gegensatz zu den anderen Layern, nur im Training relevant.
-Er schaltet zufällig bestimmte Neuronen aus,
+Der Dropout Layer ist, im Gegensatz zu den anderen Layern, nur im Training relevant.
+Er schaltet zufällig Neuronen aus,
 sodass sich Neuronen nicht ausschließlich auf bestimmte andere Neuronen verlassen können.
 Somit wird das gesamte neuronale Netzwerk robuster und vielseitiger.
 
 Upsampling ist das Gegenteil von dem Pooling Layer.
 Anstatt die Feature Maps zu reduzieren, werden diese wieder hochskaliert.
-Dadurch kann man bestimmte Features wieder zeitlich präziser bestimmen,
-da die Zeitfenster wieder genauer zum originellen Audiosignal sind.
+Dadurch lassen sich bestimmte Features wieder zeitlich präziser bestimmen,
+da die Zeitfenster wieder genauer zum originellen Audiosignal passen.
 Meist wird dieser Layer jedoch weggelassen, da er häufig nicht sehr relevant für AMT-Systeme ist.
 
 Ein CNN gibt als letzte Ausgabe einen 3D-Tensor zurück,
-welcher aus den Zeitfenster (Frames / T), der Frequenzachsenlänge (F) und der Anzahl der Filter (C) besteht.
+welcher aus den Zeitfenster (Frames) $T$, der Frequenzachsenlänge $F$ und der Anzahl der Filter $C$ besteht.
+
 \[
 \text{CNN-Ausgabe} \in \mathbb{R}^{T \times F \times C}
 \]
-Meist schließt sich nach einem CNN, in einem AMT-System, ein RNN als Nächstes an.
-Dieses kann jedoch nur 1D-Vektoren verarbeiten und nicht einen 3D-Tensor.
-Dieser 3D-Tensor wird deshalb vor der Übergabe durch eine Flattening-Operation
-zeitschrittweise in 1D-Vektoren umgewandelt.
-Dabei wird der Vektor mit einer Dimension von F × C erhalten.
-Diese Vektoren werden dann an das folgende RNN weitergeleitet.
 
 In der folgenden Darstellung wird ein CNN dargestellt, mit deren gegebenen Layern.
-Als Input wird Beispielhaft ein CQT-Spektrogramm verwendet.
-Durch die Convolution- und Pooling-Schichten werden die Merkmale extrahiert.
+Als Input wird beispielhaft ein CQT-Spektrogramm verwendet.
+Ein Kernel extrahiert einen lokalen Eingabebereich.
+Durch die Convolution-Layer und ReLU-Layer werden die Merkmale extrahiert und somit entstehen Feature Maps.
+Diese Feature Maps werden durch Batch Normalization normalisiert und anschließend durch Pooling-Layer sukzessive reduziert.
 Darauf folgend werden diese Merkmale vektorisiert und durch ein Fully Connected Layer klassifiziert.
+Am Ende entsteht eine Wahrscheinlichkeitsverteilung über mögliche Klassen.
 In diesem Beispiel werden als Output Tonhöhen vorhergesagt.
 Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je nachdem wie dieses trainiert wurde.
+Die Darstellung veranschaulicht somit die Merkmalsextraktion mithilfe eines CNNs.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/CNN}
@@ -105,29 +107,38 @@ Das gleiche CNN könnte aber auch andere musikalische Merkmale extrahieren, je n
     \label{fig:cnn-amt}
 \end{figure}
 
+Üblicherweise schließt sich, in einem AMT-System, nach einem CNN ein RNN an.
+Dieses kann jedoch nur 1D-Vektoren verarbeiten und nicht einen 3D-Tensor.
+Dieser 3D-Tensor wird deshalb vor der Übergabe durch eine Flattening-Operation
+zeitschrittweise in 1D-Vektoren umgewandelt.
+Dabei wird der Vektor mit einer Dimension von F × C erhalten.
+Diese Vektoren werden dann an das folgende RNN weitergeleitet.
+
 \subsubsection{Geschichtliche Einordnung von CNNs}
-CNNs finden Ihren Ursprung im Jahre 1979.
-Die erste richtige Architektur für CNNs wurde, unter dem Namen \enquote{Neocognitron}, veröffentlicht \cite{fukushima1980neocognitron}.
-Dies sollte als Vorreiter für spätere CNN Modelle gelten.
-Es dauerte weitere 10 Jahre bis das erste richtige Convolutional Neural Network veröffentlicht wurde \cite{lecun1989backpropagation}.
+CNNs finden ihren Ursprung im Jahre 1979.
+Die erste Architektur für CNNs wurde, unter dem Namen \enquote{Neocognitron}, veröffentlicht \cite{fukushima1980neocognitron}.
+Das Neocognitron kann zwar als Vorläufer moderner Convolutional Neural Networks betrachtet werden,
+unterschied sich jedoch wesentlich von späteren CNN-Architekturen.
+Es dauerte weitere 10 Jahre bis das erste vollwertige Convolutional Neural Network veröffentlicht wurde \cite{lecun1989backpropagation}.
 Dieses CNN Modell unterscheidet sich speziell in drei bestimmten Punkten zu dem Vorgänger Neocognitron.
-In diesem wurde Gradientenlernen durch Backpropagation integriert,
+LeCun integriert in seinem CNN Gradientenlernen durch Backpropagation,
 wodurch das gesamte Netzwerk erstmals auf ein gemeinsames Ziel zu trainieren konnte.
 Neocognitron besaß zudem, im Gegensatz zu LeCuns CNN,
-keine Gewichtsverteilung mithilfe von Filtern, wie es in heutigen CNN Modellen standard ist.
-Zudem hatte Fukushima keine praktische Anwendung.
-Er hatte die Idee und wie man diese umsetzt, doch durch damalige Verhältnisse war es für ihn schwierig diese umzusetzen.
-Für AMT-Systeme wurde CNN jedoch erst ungefähr im Jahre 2015 relevant \cite{sigtia2016end}.
-In dieser Arbeit wurde erstmals polyphone Musikstücke mithilfe von CNNs, und weiteren KI-Modelle, transkribiert.
-Seitdem sind CNNs ein wichtiger bestandteil der modernen automatischen Musiktranskription.
+keine Gewichtsverteilung mithilfe von Filtern, wie es in heutigen CNN Modellen Standard ist.
+Das Neocognitron hatte zudem keine praktische Anwendung.
+Es stellte zwar ein theoretisch wegweisendes Architekturkonzept dar,
+doch die damaligen technischen Rahmenbedingungen erschwerten eine praktische Umsetzung.
+Für AMT-Systeme wurden CNNs erst etwa ab dem Jahre 2015 relevant \cite{sigtia2016end}.
+In dieser Arbeit wurden erstmals polyphone Musikstücke mithilfe von CNNs und weiteren KI-Modelle, transkribiert.
+Seitdem sind CNNs ein wichtiger Bestandteil der modernen automatischen Musiktranskription.
 
 \subsection{Recurrent Neural Networks}
 RNNs sind neuronale Netze, welche entworfen wurden um Daten mit zeitlicher Struktur zu verarbeiten.
-Dabei ist die besonderheit von RNNs das diese ein Gedächtnis haben.
-Wenn jetzt in einem AMT-System eine bestimmte Tonabfolge gespielt wurde,
+Dabei ist die Besonderheit von RNNs das diese ein Gedächtnis haben.
+Wenn in einem AMT-System eine bestimmte Tonabfolge gespielt wurde,
 kann sich das RNN diese merken und dementsprechend die fortlaufenden Ausgaben anpassen.
 Dies passiert dank den Hidden States.
-Dieser stellt das Gedächtnis des RNNs dar und ist einer der wichtigsten Faktoren in einem RNN\@.
+Diese stellen das Gedächtnis des RNNs dar und sind einer der wichtigsten Faktoren in einem RNN\@.
 Die Hidden States werde im nächsten Abschnitt ausführlicher beschrieben.
 Dieses Prinzip ist in der Musiktranskription sehr hilfreich,
 da jede Note stark von den vorherigen gespielten Noten abhängt.
@@ -135,54 +146,61 @@ Takt, Rhythmus, Harmonie und die Melodie eines Musikstückes sind alles gute Bei
 warum diese sequenzielle Abfolge so passend in AMT-Systemen ist.
 
 RNNs haben in der automatischen Musiktranskription mehrere Aufgabenfelder.
-Je nachdem wie man das RNN trainiert bewältigt dieses alle Aufgaben oder nur einen Teil.
+Je nachdem wie das RNN trainiert wird, bewältigt dieses alle Aufgaben oder nur einen Teil.
 Diese Aufgaben bestehen aus Frame-Glättung (Temporal smoothing), Kontext-Modellierung (Temporal context modeling),
 Feature-Zusammenführung (Sequential integration of acoustic features)
 und Ausgabevorbereitung (time-distributed output classification).
 Diese Aufgaben werden auf jedes Zeitfenster, auf jeden 1D-Vektor des CNNs, angewendet.
-Doch bevor man sich auf diese einzelnen Aufgaben konzentrieren kann, muss man noch wissen, was Hidden States sind.
+Doch bevor der Fokus auf diese einzelnen Aufgaben gelegt werden kann, muss zunächst geklärt werden, was Hidden States sind.
 
 \begin{description}[style=nextline]
 \item[Hidden States]\label{itm:hidden}
 Hidden States sind das grundlegende Prinzip, warum RNNs funktioniere.
-Sie stellen praktisch das Gedächtnis des RNNs dar und helfen somit
+Sie stellen das Gedächtnis des RNNs dar und helfen somit
 anderen Modulen Vorhersagen über bestimmte musikalische Eigenschaften zu treffen.
 Für jeden 1D-Vektor, den das CNN liefert, wird ein Hidden State erstellt.
-Diese werden sequenziell nacheinander, mit abhängigkeit des vorherigen Hidden States, definiert.
+Diese werden sequenziell, mit Abhängigkeit zum vorherigen Hidden States, definiert.
+
+Die folgende Gleichung beschreibt, wie der aktuelle Hidden State $h_t$ aus dem Eingabevektor $x_t$ und dem vorherigen Hidden State $h_{t-1}$ berechnet wird.
+Der vorherige Hidden State $h_{t-1}$ repräsentiert nicht nur den unmittelbar vorausgehenden Zustand,
+sondern auch alle davorliegenden, da diese in die Berechnung jedes neuen Hidden States einfließen.
+Die Funktion $f$ repräsentiert dabei eine nichtlineare Transformation, mithilfe der Gewichte des RNNs.
+Somit wird sichergestellt, dass der neue Hidden State sowohl den aktuellen Eingabevektor $x_t$, als auch die vorherigen Hidden States $h_{t-1}$ berücksichtigt.
 \[
 \mathbf{h}_t = f(\mathbf{x}_t, \mathbf{h}_{t-1})
 \]
-In Hidden States ist das Wissen der vorherigen Zeitfenster über zeitliche Muster, wie Sustain und Akkordstruktur.
-Sie alleine können jedoch noch keine eigene Entscheidung über bestimmte Noten fallen.
+
+Hidden States enthalten das Wissen der vorherigen Zeitfenster über zeitliche Muster, wie Sustain und Akkordstruktur.
+Alleine können Hidden States keine eigene Entscheidung über bestimmte Noten fallen.
 Dafür müssen andere Module die Informationen der Hidden States später richtig verwerten.
-Jeder Hidden State hat eine Anzahl von Dimensionen, welche gleich der Anzahle der Neuronen in einem RNN ist.
+Jeder Hidden State hat eine Anzahl von Dimensionen, welche gleich der Anzahl der Neuronen im RNN ist.
 \end{description}
 
 \subsubsection{Grundstruktur eines RNNs}
 Bei der Frame-Glättung bekommt das RNN als Input die Aktivierungswerte des Zeitfensters.
-Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche vorhersagen auszuschließen.
+Es betrachtet diese mit Kontext zu den vorherigen Zeitfenstern, um falsche Vorhersagen auszuschließen.
 Das CNN hat dem RNN schon Vorhersagen für bestimmte Noten gegeben.
-Diese könnten jedoch fehlerhaft.
+Diese Vorhersagen könnten jedoch Fehler enthalten.
 Zum Beispiel kann die Note C4 für den Frame 6 und 8 aktiv sein,
 aber bei dem Frame 7 hat das CNN diese Note nicht als aktiv angesehen.
 Es ist sehr unwahrscheinlich, das eine Note für nur einen Frame ausfällt.
 Solche Arten von Fehlern verarbeitet das RNN über mehrere Zeitfenster hinweg, mithilfe seiner wiederkehrenden Struktur.
 Dieser Vorgang wird auch als zeitliche Entfaltung bezeichnet.
-Dadurch ist der Ton C4 auch im Frame 7 aktiv.
+Deshalb aktiviert das RNN den Ton C4 auch im Frame 7.
 
 Die folgende Abbildung zeigt die Entfaltung eines einzigen RNN-Blocks über mehrere Zeitpunkte hinweg.
 In der Abbildung steht $x$ für den 1D-Inputvektor eines CNNs,
 $h$ für den Hidden State und dem somit verbundenen Gedächtnis des RNNs
 und $o$ für den Outputvektor, mit dem weiter gerechnet wird.
 Die Buchstaben $W$, $U$ und $V$ stellen dabei die verschiedenen
-Gewichte  \enquote{Input-Gewicht, Recurrent-Gewicht und Output-Gewicht} dar.
+Gewichte \enquote{Input-Weight}, \enquote{Recurrent-Weight} und \enquote{Output-Weight} dar.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/rnn_unfold}
     \caption[Entfaltung eines RNN-Blocks]{Entfaltung eines RNN-Blocks  \cite{wikimediaRNN}.}
     \label{fig:rnn_block_unfold}
 \end{figure}
-Diese Abbildung ist beschreibbar durch folgende Formel.
+Diese Abbildung illustriert folgende Formel.
 Dabei steht $b$ für den Bias-Vektor des Hidden Layers und $c$ für den Bias-Vektor des Output-Layers.
 \begin{align*}
 h_t &= \tanh\left( W \cdot x_t + U \cdot h_{t-1} + b \right) \\
@@ -193,7 +211,7 @@ Die Kontext-Modellierung ist etwas komplizierter als die Frame-Glättung.
 Als Input bekommt diese auch die 1D-Vektoren des CNNs.
 In der Kontext-Modellierung werden größere zeitliche Zusammenhänge betrachtet.
 So kann die Kontext-Modellierung, mithilfe des Hidden States,
-den Notenverlauf oder auch die länge einer Note vorhersehen.
+den Notenverlauf oder auch die Länge einer Note vorhersehen.
 Je nach den Trainingsdaten ist es zum Beispiel üblicher das auf C4 ein D3 folgt,
 was durch die Kontext-Modellierung angepasst wird.
 Dies ist aber immer stark von der Musikrichtung und Musikern abhängig, welche in den Trainingsdaten vorhanden sind.
@@ -201,17 +219,17 @@ Jazz und Pop oder Bach und Taylor Swift unterscheidet sich der style der Tonabfo
 Zudem wird Onset, Sustain und Offset stabilisiert.
 Durch vorherige Beispiele weis die Kontext-Modellierung,
 wie lange eine bestimmte Note andauern wird und kann so das Offset der Note einschätzen.
-Als Output bekommt man Kontextabhängige Vektoren.
+Als Output entstehen kontextabhängige Vektoren.
 Sie haben die gleiche Struktur wie die 1D-Vektoren vom CNN, sind aber entsprechend dem Kontext angepasst.
 
 Die Feature-Zusammenführung ist der letzte wichtige interne Schritt eines RNNs.
 Bei diesem werden aus, lokalen alleinstehenden, Informationen eines Zeitfensters, konkrete musikalische Ereignisse.
 Dadurch schreibt das RNN Ereignisse, wie Akkorde, Noten, Onsets und vieles mehr, heraus.
-Dafür muss die Feature-Zusammenführung sich die einzelnen 1D-Vektoren als eine folge von Events anschauen.
+Dafür muss die Feature-Zusammenführung sich die einzelnen 1D-Vektoren als eine Folge von Events anschauen.
 Dies passiert wiedermal über den Hidden State.
-Das wird vor allem wichtig, wenn man später eine MIDI-Datei ausgeben möchte,
+Das wird vor allem wichtig, wenn später eine MIDI-Datei ausgegeben werden soll,
 da in dieser auch die einzelnen musikalischen Ereignisse aufgeschrieben sind.
-Als Output bekommt man kontextreiche Vektoren.
+Als Output entstehen kontextreiche Vektoren.
 Diese Vektoren sind, durch die vorherigen Module angepasste und verbesserte, Hidden States.
 
 Die Ausgabevorbereitung ist der letzte Schritt des RNNs,
@@ -222,7 +240,7 @@ Zunächst werden diese durch ein Fully Connected Layer geschickt.
 \mathbf{z}_t = W \cdot \mathbf{h}_t + \mathbf{b}
 \]
 Ein Fully Connected Layer ist ein Klassifikator, welcher den Hidden States auf eine gewünschte Dimension bringt.
-Wenn man zum Beispiel Klaviertasten vorhersagen möchte werden alle Hidden States auf mit 88 Dimensionen ausgestattet.
+Wenn zum Beispiel Klaviertasten vorhergesagt werden sollen, werden alle Hidden States mit 88 Dimensionen ausgestattet.
 Bei MIDI-Dateien wären es 128 Dimensionen.
 Die Werte, welche aus dem Fully Connected Layer stammen, sind jetzt noch nicht richtig interpretierbar.
 Um diese als konkrete und normalisierte Wahrscheinlichkeiten darstellen zu können,
@@ -234,13 +252,13 @@ Dann hat jeder Hidden State jetzt für alle Klaviertasten einen eigenen Wert mit
 das diese Taste zu dem gewählten Moment gespielt wurde.
 Zu guter Letzt muss jetzt ein Threshold bestimmt werden.
 In polyphonen Musikstücken können immer mehrere Noten gleichzeitig erklingen,
-weshalb man nicht einfach die Note mit der höchsten Wahrscheinlichkeit auswählen kann.
-Deshalb nutzt man einen Threshold, zum Beispiel bei 50\%,
-welcher bestimmt wie viel Prozent eine Note braucht um als aktiv zu gelten.
+weshalb nicht einfach die Note mit der höchsten Wahrscheinlichkeit ausgewählt werden kann.
+Deshalb wird ein Threshold genutzt, zum Beispiel bei 50 %,
+welcher bestimmt, wie viel Prozent eine Note braucht, um als aktiv zu gelten.
 Durch Postprocessing können einige Eigenschaften wie Rauschen noch herausgefiltert werden.
 Postprocessing ist jedoch nicht relevant für den KI-Ablauf.
-Wenn man zufrieden mit dem Ergebnis ist, kann man dieses jetzt in das gewünschte Output-Format,
-standardmäßig MIDI-Dateien, einfügen.
+Wenn das Ergebnis zufriedenstellend ist, kann es in das gewünschte Output-Format,
+standardmäßig MIDI-Dateien, eingefügt werden.
 
 Heutzutage sind RNNs nur die grundlegende Struktur.
 Basierend auf dieser gibt es einige verbesserte Systeme,
@@ -251,7 +269,7 @@ Diese werden im jetzt folgendem Abschnitt ausführlicher erklärt.
 \subsubsection{Long Short-Term Memory}
 LSTMs sind verbesserte RNNs.
 Diese kontrollieren durch Gates besser, welche Daten sie wirklich in den Hidden State speicher möchten.
-Dadurch kann man das neuronale Netz noch weiter an seine gewünschten Ansprüche anpassen.
+Dadurch lässt sich das neuronale Netz noch weiter an die gewünschten Ansprüche anpassen.
 Ein normals RNN berechnet einen Hidden State mit folgender Formel:
 \begin{equation*}
 h_t = \tanh(W x_t + U h_{t-1} + b)
@@ -295,7 +313,7 @@ GRUs sind, neben LSTMs, eine weitere spezielle Art von RNNs \cite{chung2014empir
 Sie wurden erfunden, um bestimmte Probleme von RNNs zu lösen.
 Insbesondere das Problem des \enquote{Vanishing Gradients} sollten GRUs lösen.
 GRUs steuern mithilfe von Gates, welche Informationen gemerkt und welche vergessen werden sollen.
-Sie sind, im gegensatz zu LSTMs, eher für kleinere Aufgaben geeignet.
+Sie sind, im Gegensatz zu LSTMs, eher für kleinere Aufgaben geeignet.
 Dafür sind sie weniger fehleranfällig und haben ein schnelleres Training.
 
 Ein GRU besitzt zwei Gates.
@@ -309,11 +327,11 @@ Danach führt das Update Gate die beiden überarbeiteten Hidden States zusammen 
 Das Problem des Vanishing Gradients bezieht sich auf das Gedächtnis des KI-Models.
 Das Problem tritt in den Trainingsphasen von neuronalen Netzen auf.
 Die Gradienten werden bei der Backpropagation immer kleiner,
-wodurch die betroffenen Schichten im Netzwerk fast gar nichts lernen.
+wodurch die betroffenen Layer im Netzwerk fast gar nichts lernen.
 Die Gradienten werden kleiner, da eine Aktivierungsfunktion immer einen Wert zwischen 0 und 1 zurückgibt.
 Ein Gradient wird mit der Ableitung der Aktivierungsfunktion multipliziert, wodurch er gleichzeitig kleiner wird.
-Desto tiefer das Netzwerk ist, desto mehr Schichten müssen die Gradienten durchlaufen.
-Mit jeder Schicht wird der Gradient somit exponentiell kleiner.
+Desto tiefer das Netzwerk ist, desto mehr Layer müssen die Gradienten durchlaufen.
+Mit jedem Layer wird der Gradient somit exponentiell kleiner.
 Die führt dazu, dass das betroffene KI-Modell sich keine Informationen Langzeitig merken kann.
 Bei GRUs wird das Problem des Vanishing Gradients durch die Gates gelöst.
 Sie stellen eine gewichtete Mischung aus altem und neuen Hidden State dar.
@@ -332,18 +350,18 @@ Intern in der \enquote{GRU Unit} stehen die Buchstaben \enquote{R und Z} für di
 \end{figure}
 
 \subsubsection{Bidirektionale RNNs}
-Um ein noch besseres Ergebnis zu erhalten, kann man auch ein Bidirektionales RNN nutzen.
+Um ein noch besseres Ergebnis zu erhalten, kann auch ein bidirektionales RNN genutzt werden.
 Dieses besteht aus zwei RNNs.
 Eines liest die Zeitfenster von vorne und das andere von hinten ab.
-Dadurch bekommt man die doppelte Menge Hidden States und die gesamte Vorhersage wird sehr viel robuster.
+Dadurch entsteht die doppelte Menge Hidden States und die gesamte Vorhersage wird sehr viel robuster.
 \[
 \mathbf{h}_t = \left[ \overrightarrow{\mathbf{h}}_t \ ;\ \overleftarrow{\mathbf{h}}_t \right]
 \]
-Auch in AMT-Systemen sind Bidirektionale RNNs sehr hilfreich,
-da musikalische Ereignisse auch eine klar verständliche Abhängigkeit, von der Zukunft in die Vergangenheit aus, haben.
-Das gleiche Prinzip kann man auch auf LSTMs oder GRUs einsetzen.
+Auch in AMT-Systemen sind bidirektionale RNNs sehr hilfreich,
+da musikalische Ereignisse auch eine klar verständliche Abhängigkeit von der Zukunft in die Vergangenheit haben.
+Das gleiche Prinzip lässt sich auch auf LSTMs oder GRUs anwenden.
 Bidirektionale RNNs sind noch robuster, aber dafür ist der Rechenaufwand bei weitem höher.
-Ein Bidirektionales RNN kann man auch in folgender Arbeit finden \cite{hawthorne2017onsets}.
+Ein bidirektionales RNN findet sich auch in folgender Arbeit \cite{hawthorne2017onsets}.
 
 \subsubsection{Geschichtliche Einordnung von RNNs}
 Die Geschichte von Recurrent neural networks reicht bis in das Jahr 1990 zurück \cite{elman1990finding}.
@@ -371,7 +389,7 @@ Jedoch wurde zu dieser Verarbeitung noch der Attentionmechanismus hinzugefügt,
 welcher der grundlegende Baustein eines Transformer-Modells ist.
 Die Architektur eines Transformers besteht grundlegend aus 3 Bausteinen.
 Diese 3 sind Input Embedding + Position Encoding, der Self-Attention Layer und der Feedforward Layer.
-Input Embedding und Position Encoding nur einmalig am anfang des Transformers durchgeführt.
+Input Embedding und Position Encoding nur einmalig am Anfang des Transformers durchgeführt.
 Dahingegen werden Self-Attention und Feedforward mehrmals hintereinander aufgerufen.
 Dies passiert grundsätzlich 6-, 12- oder 24-mal, wodurch das Transformer-Modell an Layer gewinnt.
 Dieser Schritt wird so oft wiederholt, damit der Transformer immer komplexere musikalische Strukturen erkennen kann.
@@ -381,7 +399,7 @@ Als Nächstes werden die einzelnen Schritte eines Transformers näher erläutert
 Zunächst müssen die Daten, welche der Transformer verarbeiten soll in das richtige Format für diesen umgewandelt werden.
 Dafür ist das Input Embedding zuständig.
 Tokens sind einzelne Datenpunkte wie zum Beispiel kleine Wörter wie \enquote{hallo}.
-Wenn man zum Beispiel bei ChatGPT die Anfrage stellt, \enquote{Wie alt sind die Planeten unseres Sonnensystems},
+Wenn zum Beispiel bei ChatGPT die Anfrage \enquote{Wie alt sind die Planeten unseres Sonnensystems} gestellt wird,
 dann wird zwar das Wort \enquote{alt} als ein Token gespeichert, aber längere Wörter wie \enquote{Sonnensystem}
 werden aufgeteilt in \enquote{Sonn} und \enquote{ensystem}.
 Je nach Tokenizer-Version, die der jeweilige Transformer nutzt, kann dies jedoch abweichen.
@@ -391,7 +409,7 @@ Für verschiedene Transformer Modelle gibt es immer eine maximale Tokenanzahl,
 bei GPT-3.5 sind es um Beispiel ungefähr 4000 Tokens.
 Diese Tokens sind für den Input und Output.
 Heißt, wenn der Input zu viele Tokens nutzt, gibt es weniger Tokens für den Output.
-Dies ist jedoch häufig, wie man an der Menge der Tokens für unseren Beispielsatz sehen kann, kein größeres Problem.
+Dies ist jedoch häufig, wie an der Menge der Tokens für unseren Beispielsatz zu sehen ist, kein größeres Problem.
 In AMT-Systemen stellen Tokens Zeitfenster (Frames) oder Musik-Events (Onsets etc.) dar.
 Jedoch können diese von einem Transformer nicht verarbeitet werden,
 weshalb sie durch Input Embedding erstmals in Vektoren  umgewandelt werden.
@@ -425,7 +443,7 @@ Diese Vektoren heißen Query, Key und Value.
 \end{itemize}
 Als Nächstes wird der Attention Score berechnet.
 Durch diesen wird die Kompatibilität zu anderen Tokens berechnet.
-Als Ergebnis bekommt man, für jeden Token, eine Matrix.
+Als Ergebnis entsteht für jeden Token eine Matrix.
 Jeder Wert in dieser Matrix steht für die Ähnlichkeit zwischen zwei verschiedenen Tokens.
 Diese Werte sind die Attention Weights.
 Durch Softmax werden diese Werte normalisiert.
@@ -443,7 +461,7 @@ Das funktioniert so, da die jeweilige Gewichtung schon im Self-Attention Layer s
 Im Feedforward Layer passiert dann folgendes.
 Zunächst werden die Vektoren, welche aus dem Self-Attention Layer stammen,
 mit einer Gewichtsmatrix auf eine höhere Dimension transformiert.
-Durch die erhöhung der Dimension bekommt das Netzwerk mehr Freiraum Informationen voneinander zu trennen
+Durch die Erhöhung der Dimension bekommt das Netzwerk mehr Freiraum Informationen voneinander zu trennen
 und komplexere Zusammenhänge zu modellieren.
 Durch eine Aktivierungsfunktion, zum Beispiel ReLU, erlernt das Modell jetzt nichtlineare Abhängigkeiten.
 Diese Aktivierungsfunktion gehört zu dem Hidden Layer des FNN.
@@ -468,7 +486,7 @@ Das erste Transformer-Modell wurde im Jahre 2017 erfunden \cite{vaswani2017atten
 Durch den Self-Attention Layer wurde die sequenzielle Modellierung von Daten revolutioniert.
 Leider dauerte es noch lange bis der erste Transformer auch in AMT-Systemen genutzt wurde.
 Das liegt an mehreren Gründen.
-Einerseits gibt es im gegensatz zu Natural Language Processing (NLP) viel weniger Datensätze zum Lernen.
+Einerseits gibt es im Gegensatz zu Natural Language Processing (NLP) viel weniger Datensätze zum Lernen.
 Transformer trainieren auf einem globalen Level und brauchen daher eine große Menge an Datensätzen.
 Die Rechenkosten von Transformer sind auch weitaus höher als andere Systeme wie CNN und RNN.
 Zudem lag der Fokus bei AMT-Systemen für eine sehr lange Zeit überwiegend bei CNN und RNN basierenden Systemen,
@@ -499,17 +517,17 @@ sodass die letzte KIs nur theoretisch, für die Musiktranskription, besprochen w
 Variational Autoencoder (VAE) ist ein KI-Modell, welches komplexe Daten in eine verdichtete Form überführt
 und durch Wahrscheinlichkeiten bestimmte Muster vorhersagen kann \cite{kingma2019introduction}.
 Dabei ist wichtig das VAE kein alleinstehendes KI-Modell ist,
-sondern eher als zusatz gilt um bestimmte Bereiche zu verbessern.
+sondern eher als Zusatz gilt um bestimmte Bereiche zu verbessern.
 In der Musiktranskription könnte ein VAE zum Beispiel bei der Mehrdeutigkeit von Musik helfen.
 Wenn mehrere Instrumente spielen ist es schwer die genauen Noten herauszuschreiben.
-Da VAEs, anders als CNNs oder RNNs, als ausgabe keine eindeutigen Noten herausgeben,
-sondern eine Wahrscheinlichkeit, könnte dies helfen die entscheidung, welche Note gerade spielt, robuster zu gestalten.
-Dadurch das sich VAEs nur eine wahrscheinliche Version der Musik, aus den Daten,
-extrahieren könnte man auch kreative Variationen des Musikstückes damit bilden.
+Da VAEs, anders als CNNs oder RNNs, als Ausgabe keine eindeutigen Noten herausgeben,
+sondern eine Wahrscheinlichkeit, könnte dies helfen die Entscheidung, welche Note gerade spielt, robuster zu gestalten.
+Dadurch, dass VAEs nur eine wahrscheinliche Version der Musik aus den Daten extrahieren,
+könnten damit auch kreative Variationen des Musikstückes gebildet werden.
 Die Methode, welche in VAEs genutzt wird, fand Ihren Ursprung in folgendem Paper \cite{kingma2013auto}.
 
 \subsubsection*{Graph Neural Network}
-Graph Neural Network (GNN) ist ein KI-Modell, welches dazu dient Daten, mit abhängigkeit voneinander, zu verarbeiten.
+Graph Neural Network (GNN) ist ein KI-Modell, welches dazu dient Daten, mit Abhängigkeit voneinander, zu verarbeiten.
 Diese Daten werden in einem Graphen aus Knoten und Kanten gespeichert.
 Dabei hat jeder Knoten seine eigenen Daten, die er in jedem Rechenschritt mit seinen benachbarten Knoten austauscht.
 Knoten sind benachbart, wenn sie durch Kanten verbunden sind.
@@ -528,13 +546,13 @@ In dem Projekt DiffRoll, aus dem Jahre 2022, wurde ein Diffusion Model auf ein A
 \subsubsection*{Reinforcement Learning}
 Reinforcement Learning (RL) benutzen ein Belohnungssystem, damit der Agent sich beim training richtig anpasst.
 Sobald der Agent ein bestimmtes Ziel erreicht oder eine Handlung ausführt, wird dieser dafür belohnt.
-Die Agenten, welche am meisten Belohnungen erzielen werden kopiert und in der nächsten iteration eingesetzt,
-bis man einen Agenten besitzt, welche die gewünschte Aufgabe erfüllt.
-Dieses Prinzip wird vor allem in Videospielen, wo es grundlegend eindeutige Ziele gibt, eingesetzt.
-In der Musiktranskription könnte man dieses Prinzip folgendermaßen umsetzen.
-Man gibt dem Agenten als Input eine Audiodatei.
-Danach lässt man ihm Noten nacheinander erzeugen.
-Durch eine andere KI oder vorgefertigte MIDI-Dateien besitzt man einen Vergleichsdatensatz.
+Die Agenten, welche am meisten Belohnungen erzielen, werden kopiert und in der nächsten Iteration eingesetzt,
+bis ein Agent die gewünschte Aufgabe erfüllt.
+Dieses Prinzip wird vor allem in Videospielen eingesetzt, wo es grundlegend eindeutige Ziele gibt.
+In der Musiktranskription könnte dieses Prinzip folgendermaßen umgesetzt werden:
+Der Agent erhält als Input eine Audiodatei.
+Danach erzeugt er Noten nacheinander.
+Durch eine andere KI oder vorgefertigte MIDI-Dateien steht ein Vergleichsdatensatz zur Verfügung.
 Falls die gewählten Noten vom Agenten gleich dem Vergleichsdatensatz sind, bekommt der Agent Belohnungen.
 So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von anderen KIs nochmal korrekturlesen \cite{li2018music}.
 
@@ -542,14 +560,14 @@ So kann er sich selber Musikalisches wissen aneignen und Transkriptionen von and
 Der letzte Ansatz ist ein Energy-Based Model (EBM).
 Ein EBM arbeitet mit Energie anstatt von Wahrscheinlichkeiten \cite{lecun2006tutorial}.
 Die verschiedenen Arten, wie das EBM das Musikstück transkribieren kann haben alle jeweils ihre eigene Energie.
-Dabei haben die besten möglichkeiten immer die niedrigste Energie, wie bei dem Gradientenabstiegsverfahren.
+Dabei haben die besten Möglichkeiten immer die niedrigste Energie, wie bei dem Gradientenabstiegsverfahren.
 Dies ist für AMT-Systeme interessant, da das EBM somit zahlreiche verschiedene Transkriptionsraten wählen könnte.
 In mehr improvisierten Musikrichtungen, wie Jazz, bildet das eine größere viel fallt.
-Man kann auch Musiktheorie in das Modell mit einbauen,
-wodurch aus einem Musikstück unmengen an Remixen kreiert werden können.
+Auch Musiktheorie lässt sich in das Modell einbauen,
+wodurch aus einem Musikstück Unmengen an Remixen kreiert werden können.
 Der Ansatz von EBMs in AMT-Systemen ist,
-von den zusätzlich vorgestellten KI-Modellen, wahrscheinlich einer der interessantesten.
+von den zusätzlich vorgestellten KI-Modellen, wahrscheinlich einer der Interessantesten.
 Leider sind EBMs sowohl schwer zu trainieren, als auch sehr rechenintensiv.
 AMT-Systeme ohnehin schon recht anspruchsvoll,
-weshalb noch kein EBM-Modell in der automatischen Musiktranskription zum einsatz kam.
+weshalb noch kein EBM-Modell in der automatischen Musiktranskription zum Einsatz kam.
 

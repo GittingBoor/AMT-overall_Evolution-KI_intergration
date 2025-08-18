@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  16 AUG 2025 19:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  18 AUG 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1492,7 +1492,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-<Graphics/Martin1996Structure.png, id=382, 357.335pt x 416.55624pt>
+<Graphics/Martin1996Structure.png, id=383, 357.335pt x 416.55624pt>
 File: Graphics/Martin1996Structure.png Graphic file (type png)
 <use Graphics/Martin1996Structure.png>
 Package pdftex.def Info: Graphics/Martin1996Structure.png  used on input line 1
@@ -1539,6 +1539,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]) (modern_problems.tex
 
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage
+               {csquotes}\section{Hindernisse Moderner AMT-Systeme}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1583,10 +1597,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-<Graphics/CNN.png, id=451, 1405.25pt x 628.3475pt>
+<Graphics/CNN.png, id=452, 1405.25pt x 628.3475pt>
 File: Graphics/CNN.png Graphic file (type png)
 <use Graphics/CNN.png>
-Package pdftex.def Info: Graphics/CNN.png  used on input line 103.
+Package pdftex.def Info: Graphics/CNN.png  used on input line 105.
 (pdftex.def)             Requested size: 441.01773pt x 197.19225pt.
 
 
@@ -1598,10 +1612,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18 <./Graphics/CNN.png>]
-<Graphics/rnn_unfold.png, id=468, 963.6pt x 321.2pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+<Graphics/rnn_unfold.png, id=475, 963.6pt x 321.2pt>
 File: Graphics/rnn_unfold.png Graphic file (type png)
 <use Graphics/rnn_unfold.png>
-Package pdftex.def Info: Graphics/rnn_unfold.png  used on input line 181.
+Package pdftex.def Info: Graphics/rnn_unfold.png  used on input line 199.
 (pdftex.def)             Requested size: 441.01773pt x 147.00392pt.
 
 
@@ -1612,8 +1635,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 217--221
+[20 <./Graphics/rnn_unfold.png>]
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 235--239
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1627,26 +1650,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20 <./Graphics/rnn_unfold.png>]
-<Graphics/LSTM_timestep.png, id=486, 963.6pt x 428.60126pt>
+[21]
+<Graphics/LSTM_timestep.png, id=491, 963.6pt x 428.60126pt>
 File: Graphics/LSTM_timestep.png Graphic file (type png)
 <use Graphics/LSTM_timestep.png>
-Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 288.
-(pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[21]
-<Graphics/GRU_timestep.png, id=495, 963.6pt x 428.60126pt>
-File: Graphics/GRU_timestep.png Graphic file (type png)
-<use Graphics/GRU_timestep.png>
-Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 329.
+Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 306.
 (pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
@@ -1658,6 +1666,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22 <./Graphics/LSTM_timestep.png>]
+<Graphics/GRU_timestep.png, id=503, 963.6pt x 428.60126pt>
+File: Graphics/GRU_timestep.png Graphic file (type png)
+<use Graphics/GRU_timestep.png>
+Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 347.
+(pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1677,8 +1691,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24]
 
-LaTeX Warning: Citation 'chang2024yourmt3' on page 25 undefined on input line 4
-86.
+LaTeX Warning: Citation 'chang2024yourmt3' on page 25 undefined on input line 5
+04.
 
 
 
@@ -1700,21 +1714,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]) (current_amt_systems.tex
 
-! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50             \draw
-                      [->] (audio) -- (prep);
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1723,6 +1722,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27]
+
+! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51             \draw
+                      [->] (audio) -- (prep);
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1741,11 +1755,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [29]
-<Graphics/transcription_transformer.png, id=586, 1752.5475pt x 416.55624pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
+<Graphics/transcription_transformer.png, id=594, 1752.5475pt x 416.55624pt>
 File: Graphics/transcription_transformer.png Graphic file (type png)
 <use Graphics/transcription_transformer.png>
 Package pdftex.def Info: Graphics/transcription_transformer.png  used on input 
-line 232.
+line 233.
 (pdftex.def)             Requested size: 441.01773pt x 104.81891pt.
 
 
@@ -1756,16 +1779,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30]) (conclusion.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[31 <./Graphics/transcription_transformer.png>])
+[31 <./Graphics/transcription_transformer.png>]) (conclusion.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1863,7 +1877,7 @@ tmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work
-\Scientific_Report\out\main.pdf (38 pages, 2075839 bytes).
+\Scientific_Report\out\main.pdf (38 pages, 2077559 bytes).
 PDF statistics:
  788 PDF objects out of 1000 (max. 8388607)
  172 named destinations out of 1000 (max. 500000)

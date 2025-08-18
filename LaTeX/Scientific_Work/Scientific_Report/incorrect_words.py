@@ -11,7 +11,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 TABUWÖRTER = {
     "persönlich": {"ich", "wir", "mein", "meine", "unser", "unsere", "mich", "mir", "uns"},
     "umgangssprachlich": {"krass", "cool", "mega", "irgendwie", "naja", "halt"},
-    "vage": {"einige", "viele", "manche", "öfter", "teilweise", "meistens"}
+    "vage": {"man", "einige", "viele", "manche", "öfter", "teilweise", "meistens"}
 }
 
 def clean_latex_text(text):

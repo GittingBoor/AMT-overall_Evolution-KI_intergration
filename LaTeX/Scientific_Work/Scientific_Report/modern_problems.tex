@@ -1,4 +1,4 @@
-\section{Hindernisse Moderner AMT-Systeme}
+\usepackage{csquotes}\section{Hindernisse Moderner AMT-Systeme}
 Trotz der Einführung von KI-Modellen bestehen weiterhin zahlreiche Probleme,
 die bislang ungelöst oder nur unzureichend gelöst sind.
 Zudem agieren KIs völlig anders als normale Algorithmen.
@@ -9,20 +9,20 @@ mit der sich die AMT Forschung momentan auseinandersetzt, aufgezählt.
 \subsection{Onset Detection}\label{subsec:onset}
 Die On-/Offset Erkennung von Noten wurde schon ausgiebig in zahlreichen Arbeiten behandelt.
 Trotzdem ist diese noch nicht komplett akkurat.
-Das liegt daran, dass On-/Offsets an Lautstärke sprüngen und spektralen Änderungen erkannt werden.
+Das liegt daran, dass On-/Offsets an Lautstärkesprüngen und spektralen Änderungen erkannt werden.
 Bei polyphonen Musikstücken mit vielen verschiedenen Noten ist es schwieriger diese Unterschiede zu erkennen.
-Lautstärke sprünge werden ungenauer, da häufig mehrere Noten während des Onsets einer bestimmten Note spielen.
+Lautstärkesprünge werden ungenauer, da häufig mehrere Noten während des Onsets einer bestimmten Note spielen.
 Spektrale Änderungen stehen für Veränderungen der Energieverteilung.
 Einer der ausschlaggebendsten Anteile ist die Spektrale Fluktuation.
 Diese stellt den plötzlichen Anstieg von Energie in bestimmten Frequenzbändern dar.
 Wenn mehrere einzelne Töne hintereinander, auf einem Klavier, gespielt werden, kann der Onset der gespielten Noten leicht ermittelt werden.
 Bei Instrumenten, wie einer Geige, können dabei Probleme entstehen.
-Auf Geigen können Noten gebunden gespielt werden, was zu einem unterschied in der Frequenz,
+Auf Geigen können Noten gebunden gespielt werden, was zu einem Unterschied in der Frequenz,
 jedoch nicht in dem Energie level führt, da die Stärke des Bogenstrichs gleichmäßig bleibt.
 Zudem kann eine Note, durch Crescendo, zunächst leise gespielt werden und mit der Zeit an Lautstärke zunehmen.
 Dieser Onset hat keinen Energie-Peak und somit erkennt das System hier auch nur schwierig eine scharfe Kante.
 So welche Töne, welche keinen starken Einschlag haben, werden als nicht-perkussiv bezeichnet.
-Ein weiteres Problem der Onset erkennung sind nachwirkende Geräusche oder Störgeräusche.
+Ein weiteres Problem der Onset Erkennung sind nachwirkende Geräusche oder Störgeräusche.
 Bleiben wir bei dem Beispiel einer Geige.
 Wenn ein Ton gespielt wird und der Bogen von der Geige abgehoben wird entsteht eine Resonanz des Tons.
 Das führt zu einem nachklingen des Tons, was sehr natürlich passieren kann,
@@ -37,7 +37,7 @@ einige Probleme schwerwiegender und deutlicher geworden.
 Ein weiteres Problem, das gezielt von diesen Anwendungsfällen abhängt, ist die Verwechselung von Noten im Audiosignal.
 Einige Noten haben sehr ähnliche Frequenzen.
 Wenn diese Noten gleichzeitig gespielt werden, ist es schwieriger für das System, die korrekten Noten herauszuhören.
-Neuronale Netzwerke helfen hierbei deutlich, da diese nicht nur das Spektrum zur analyse einbeziehen,
+Neuronale Netzwerke helfen hierbei deutlich, da diese nicht nur das Spektrum zur Analyse einbeziehen,
 sondern auch auf einer zeitlichen und harmonischen Ebene den Kontext zuordnen können
 und somit die wahrscheinlichsten nächsten Noten zurückgeben können.
 Trotz dessen scheitert auch KI an der Einordnung der richtigen Noten, wenn die gespielten Noten
@@ -141,9 +141,9 @@ Das System muss jedes Event korrekt einschätzen und zuordnen.
 Zum Beispiel könnte hintergrund Rauschen als Note erkannt werden und somit im
 Gedächtnis eines RNNs, als Note, gespeichert werden.
 In Event-basierenden Systemen wird eine Note nur einmal für die nachfolgenden Frames, in denen sie klingt, vorhergesagt.
-Heißt es existiert eine falsche Note in der transkription,
+Heißt es existiert eine falsche Note in der Transkription,
 die auch nicht mehr von KI-Modellen oder anderen Algorithmen entfernt wird.
-Bei der Frame-basierten transkription hingegen wird eine Note in jedem Zeitfenster neu analysiert,
+Bei der Frame-basierten Transkription hingegen wird eine Note in jedem Zeitfenster neu analysiert,
 wodurch fehlerhafte Noten öfter erkannt werden.
 Eine falsche Note wirkt sich ausschlaggebend auf das weitere Audiosignal aus,
 da zum Beispiel RNNs diese Noten teilweise im Gedächtnis speichern und daraus Rückschlüsse auf zukünftige Noten führen.
@@ -170,8 +170,8 @@ Das Forschungsgebiet der Explainable AI befasst sich damit,
 KI-Modelle zu entwickeln, welche für den Menschen nachvollziehbar und verständlich sind.
 Dies geschieht durch verschiedene Methoden und Darstellungen, welche den Denkfluss einer KI veranschaulichen sollen.
 Einige von diesen Methoden finden ihre Anwendung auch in KI-basierten AMT-Systemen wieder.
-Methoden die zur Nutzung in AMT-Systemen diskutiert werden, sind Concept Activation Vectors,
-Layer-wise Relevance Propagation und Surrogat-Modelle.
+Methoden die zur Nutzung in AMT-Systemen diskutiert werden, sind \enquote{Concept Activation Vectors},
+\enquote{Layer-wise Relevance Propagation} und \enquote{Surrogat-Modelle}.
 Diese wurden jedoch noch in keinem AMT-System richtig implementiert.
 Musikalische Konzepte wie Akkorde oder Onsets sind nicht direkt lable bar, wie zum Beispiel Katzen oder Hunde,
 da diese stark abhängig von spektralen und zeitlichen Mustern sind.

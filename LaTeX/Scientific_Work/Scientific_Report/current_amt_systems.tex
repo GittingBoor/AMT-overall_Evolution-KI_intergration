@@ -3,11 +3,11 @@ Im Laufe der Forschung zu AMT-Systemen wurden schon einige verschiedenen Archite
 Jedes neue System hat, unabhängig des KI-Modells, eine komplett eigene Struktur und vorgehensweise.
 Im Verlauf dieser wissenschaftlichen Arbeit wurde die Geschichte von AMT-Systemen behandelt
 und die wichtigsten Konzepte der automatischen Musiktranskription dargestellt.
-Deshalb wird sich jetzt dieses Letzte große Kapitel um die state of the art AMT-Systeme handeln.
+Deshalb wird sich jetzt dieses letzte große Kapitel um die state of the art AMT-Systeme handeln.
 Dafür werden zwei verschiedene AMT-Systeme vor.
 Diese sind das CNN + GRU basierte Omnizart und das Transformer-basierte MT3-Modell.
 Diese nutzen unterschiedliche KI-Modelle.
-Deren Architektur, sowie deren stärken und schwächen, werden in dem folgenden Kapiteln ausgiebig erläutern.
+Deren Architektur, sowie deren Stärken und schwächen, werden in dem folgenden Kapiteln ausgiebig erläutern.
 
 \subsection{Omnizart}
 Zum einen haben wir Omnizart, welches CNNs und RNNs als KI-Modelle nutzt \cite{wu2021omnizart}.
@@ -18,17 +18,18 @@ Dabei ist der Aufbau dieser KIs meistens gleich.
 Alle KI-Modelle bestehen aus einem CNN und einem bidirektionalen GRU.
 Der Anwendungsfall, zum Beispiel Drums oder Melody, hat dabei nur Einfluss auf die Trainingsdaten und dem Output.
 Omnizart ist ein Open-Source-Toolkit für AMT.
-Dadurch kann man, je nach Bedarf, ein KI-Modell auswählen was perfekt auf eine bestimmte aufgabe ausgelegt wurde.
+Dadurch lässt sich je nach Bedarf ein KI-Modell auswählen, das perfekt auf eine bestimmte Aufgabe ausgelegt wurde.
 Omnizart findet ihren Ursprung im Jahre 2020 am Music and Culture Technology Lab, National Taiwan University.
-Omnizart hat seit seiner Gründung keine ausschlaggebenden weiteren Technologien, in der richtung KI, hinzugefügt.
+Omnizart hat seit seiner Gründung keine ausschlaggebenden weiteren Technologien, in der Richtung KI, hinzugefügt.
 Dafür gibt es für jeden vertretenen Anwendungsfall verschiedene CNNs und RNNs und einen open source code,
-welchen man gut zur eigenen Forschung an AMT-Systemen nutzen kann.
+welcher gut zur eigenen Forschung an AMT-Systemen genutzt werden kann.
+
 
 Omnizart ist ein modulares AMT-System, welches auf einer Deep-Learning-Architektur basiert.
 Der Trainingssatz besteht aus CQT-Spektren.
 Die KI-Modelle lernen dabei durch Supervised Learning.
 
-Die Piepline von Omnizart kann man in drei Schritte aufteilen:
+Die Pipeline von Omnizart lässt sich in drei Schritte aufteilen:
 
 \begin{figure}[H]
     \vspace{1em}
@@ -66,7 +67,7 @@ Dadurch wird die Inputaudiodatei in ein CQT-Spektrogramm umgewandelt.
 Zunächst wird das gegebene Audiosignal durch folgende Methoden standardisiert:
 \begin{enumerate}
     \item \textbf{Mono-Konvertierung:} Die KI benötigt keine räumlichen Informationen, weshalb der linke und rechte Kanal von Stereosignalen in ein Monosignal addiert werden.
-    \item \textbf{Normalisierung:} Der Wechsel von zu großen und kleinen Amplituden kann die KI überfordern und ungenaue Ergebnisse liefern, weshalb das Audiosignal durch normalisierung auf einen einheitlichen Lautstärkebereich gebracht wird.
+    \item \textbf{Normalisierung:} Der Wechsel von zu großen und kleinen Amplituden kann die KI überfordern und ungenaue Ergebnisse liefern, weshalb das Audiosignal durch Normalisierung auf einen einheitlichen Lautstärkebereich gebracht wird.
     \item \textbf{Resampling:} Unterschiedliche Abtastraten führen zu Verzerrung und Frequenzverschiebung, deshalb wird diese auf eine einheitliche Rate, passend zu dem genutzten Modul, gebracht.
     \item \textbf{Trimming:} Falls am Anfang oder Ende des Audiosignals Stille ist, wird diese durch Trimming entfernt, sodass das KI-Modell nicht unnötig verwirrt wird.
 \end{enumerate}
@@ -89,7 +90,7 @@ Omnizarts Module sind:
 Jedes Modul bekommt als Input ein CQT-Spektrogramm.
 Dieses wird durch ein CNN verarbeitet, welches die Eigenschaften und Merkmale der Musik extrahiert.
 Mit diesen Daten modelliert dann ein GRU die zeitliche Abhängigkeit.
-Durch den Dense Layer werden die Ergebnisse des GRUs in zum Beispiel Onsets,
+Durch den Dense-Layer werden die Ergebnisse des GRUs in zum Beispiel Onsets,
 Beats und zahlreiche weitere musikalischen Attribute, umgewandelt.
 
 Im dritten Schritt wird der Output der KI-Modelle nochmals aufbereitet.
@@ -100,7 +101,7 @@ Fehler werden zunächst durch folgende Methoden verbessert:
     \item \textbf{Thresholding:} Noten, die nicht einen bestimmten Wahrscheinlichkeits-Threshold überschreiten, werden aussortiert.
     \item \textbf{Quantisierung:} Je nach Taktstruktur können Noten zeitliche angepasst werden, sodass diese besser in zum Beispiel einen 3/4-Takt passen und das Stück rhythmischer ist.
 \end{enumerate}
-Je nach Modul, welches man gerade nutzt, werden nur paar oder alle dieser Methoden eingesetzt.
+Je nach Modul, welches gerade genutzt wird, werden nur paar oder alle dieser Methoden eingesetzt.
 Auch deren Parameter unterscheiden sich je nach Modul.
 So hat das Drums-Modul ein viel kleineren Schwellwert als das Melodien-Modul bei Thresholding.
 Danach werden die Vorhersagen in vollständige Noten (Onset/Sustain/etc.)
@@ -141,7 +142,7 @@ Es besteht grundlegend aus folgenden Bereichen:
         \node at (0,0) (audio) {Audiodatei};
         \node at (3,0) (logmel) {Log-Mel-Spek.};
         \node at (6,0) (frames) {Frames};
-        \node at (9,0) (projection) {Lineare Projektion};
+        \node at (9,0) (projection) {lineare Projektion};
         \node at (0,-2) (encoder) {Transformer Encoder};
         \node at (9,-2) (decoder) {Transformer Decoder};
         \node at (0,-4) (tokens) {Token-Sequenz};
@@ -163,22 +164,22 @@ Es besteht grundlegend aus folgenden Bereichen:
 \end{figure}
 
 Als Input wird eine Audiodatei bereitgestellt.
-Meistens geht man mit dem Datentyp WAV (Waveform Audio File Format), da dieser verlustfrei und standardisiert ist.
+Meistens wird der Datentyp WAV (Waveform Audio File Format) genutzt, da dieser verlustfrei und standardisiert ist.
 Das Audiosignal wird dann mit STFT analysiert und als Spektrogramm ausgegeben.
 Mithilfe von Librosa wird aus diesem ein Log-Mel-Spektrogramm erzeugt.
-Librosa ist ein Python Paket, welches wichtige Methoden für Musik und Audio analyse bereitstellt.
+Librosa ist ein Python Paket, welches wichtige Methoden für Musik und Audio Analyse bereitstellt.
 Dieses Log-Mel-Spektrogramm wird nun in Frames aufgeteilt.
 In dem MT3-Modell sind diese Frames meist 32ms lang.
-jeder Frame besitzt N Mel-Frequenzbänder, welche die Dimensionsgröße dieses Frames bestimmen.
+Jeder Frame besitzt N Mel-Frequenzbänder, welche die Dimensionsgröße dieses Frames bestimmen.
 Um jetzt für jeden Frame eine einheitliche Dimension zu bekommen,
 mit der die KI Arbeiten kann, wird lineare Projektion genutzt.
 Lineare Projektion ist ein Matrix-Multiplikator, welche ein Frame auf eine,
 für das KI-Modell, normalisierte Dimension bringt, zum Beispiel 512 oder 1024.
-Daraus entstehen Input Embeddings, mit denen die KI nun arbeiten kann.
+Daraus entstehen Input Embeddings, mit denen die KI jetzt arbeiten kann.
 
 Jetzt folgt der Encoder, welcher das normale Prinzip eines Transformers,
 mit Self-Attention Layer und Feedforward Layer, ausführt.
-In dem MT3-Modell werden, vor der ausführung der Layer,
+In dem MT3-Modell werden, vor der Ausführung der Layer,
 die Positionen der Frames durch Positional Embeddings festgelegt.
 In MT3 besteht der Encoder aus 6 vollständigen Transformer-Layern.
 Der Inhalt jedes Frames wird jetzt zusammenhängen mit allen anderen Frames gesetzt.
@@ -192,9 +193,9 @@ die im Training meist aus den echten Daten stammen (Teacher Forcing)
 und beim Einsatz vom Modell selbst generiert werden.
 Dadurch bekommt der Decoder mehr Kontext für die zu generierenden Tokens.
 Neben den normalen Tokens bekommen auch die autoregressiven Tokens Positional Embeddings aufaddiert.
-Bevor der Decoder nun durchläuft, kann man mithilfe von Task-Conditioning, einen Task-Token hinzufügen.
-Das MT3-Modell transkribiert immer polyphon, jedoch kann man durch den Task-Token trotzdem den Output auf
-einen bestimmten Task, wie zum Beispiel Klavierstücke oder Trommelnoten, auslegen.
+Bevor der Decoder nun durchläuft, lässt sich mithilfe von Task-Conditioning ein Task-Token hinzufügen.
+Das MT3-Modell transkribiert immer polyphon, jedoch kann durch den Task-Token trotzdem der Output auf
+einen bestimmten Task, wie zum Beispiel Klavierstücke oder Trommelnoten, ausgelegt werden.
 Durch vorheriges Lernen ist das MT3-Modell darauf ausgelegt,
 nach einem Task-Token die folgenden Tokens in einer bestimmten Art und Weise zu transkribieren.
 Der Ablauf des Decoders sieht folgendermaßen aus:
@@ -208,7 +209,7 @@ Dabei besteht der Decoder, im MT3-Modell, auch aus 6 vollständigen Transformer-
 Jeder Token stellt einen Teil eines musikalischen Events dar.
 Diese heißen zum Beispiel \enquote{Note-On C4} oder \enquote{Shift +10 ms}.
 Ein musikalisches Event wäre somit eine volle Note, mit Notennamen, Onset und Offset,
-Sustain und weiteren musikalischen Eigenschaften, die man auf einer Note anwenden kann.
+Sustain und weiteren musikalischen Eigenschaften, die auf einer Note angewendet werden können.
 Als Output gibt der Decoder jeden einzelnen Token zurück.
 
 Jetzt werden im Post-Processing die Tokens zu Sequenzen (musikalischen Events) zusammengesetzt.
@@ -226,7 +227,7 @@ Für den Input wird ein Audiosignal angegeben, welches in ein Spektrogramm umgew
 Als nächstes gewichtet der Encoder, mithilfe der Self-Attention Layer, die Tokens und transformiert dann diese,
 mithilfe des Feedforward Layer, um nicht-lineare Merkmale pro Token zu extrahieren.
 Daraufhin wandelt der Decoder, die vom Encoder gegebenen Vektoren, in einzelne Tokens mit musikalischen Merkmalen um.
-Im Output sieht man oben einen Ausschnitt eine MIDI-Datei mit zwei Noten und darunter diese dargestellt als Piano-Roll.
+Im Output ist oben ein Ausschnitt einer MIDI-Datei mit zwei Noten zu sehen und darunter diese dargestellt als Piano-Roll.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Graphics/transcription_transformer}
@@ -237,18 +238,19 @@ Im Output sieht man oben einen Ausschnitt eine MIDI-Datei mit zwei Noten und dar
 \subsection{Omnizart vs MT3}
 Die beiden vorgestellten AMT-Systeme sind grundlegend verschieden aufgebaut.
 Jetzt ist die Frage, welche dieser beiden Systeme ist besser geeignet
-und unter welchen Voraussetzungen sollte man sich für welches System entscheiden.
+Jetzt ist die Frage, welches dieser beiden Systeme besser geeignet ist
+und unter welchen Voraussetzungen sich für welches System entschieden werden sollte.
 
 Der größte Unterschied in der Architektur liegt darin,
 das Omnizart verschiedenen KI-Modelle für unterschiedliche Aufgaben besitzt,
 während MT3 ein einziges leistungsstarkes KI-Modell besitzt.
-Somit kann man bei Omnizart leichter einen bestimmten Task verbessern oder analysieren.
-Das ist vor allem gut, wenn man sich auf monophone Musikstücke konzentriert
-und einen einfacheren Einstieg in die automatische Musiktranskription bekommen möchte.
+Somit lässt sich bei Omnizart leichter ein bestimmter Task verbessern oder analysieren.
+Das ist vor allem gut, wenn der Fokus auf monophonen Musikstücken liegt
+und ein einfacherer Einstieg in die automatische Musiktranskription erreicht werden soll.
 Zudem gibt Omnizart eine größere Menge an Outputdaten zurück als MT3, bei dem nur eine MIDI-Datei ausgegeben wird.
-MT3 hingegen besitzt ein einziges KI-Modell, wodurch man nicht gezielt einen speziellen Task umstrukturieren kann.
+MT3 hingegen besitzt ein einziges KI-Modell, wodurch kein spezieller Task gezielt umstrukturiert werden kann.
 Dafür eignet sich das KI-Modell direkt wissen der verschiedenen Tasks an un kombiniert dieses.
-Somit können polyphone Musikstücke deutliche besser transkribiert werden.
+Somit können polyphone Musikstücke deutlich besser transkribiert werden.
 Durch YourMT3+ gibt es zudem weiteres Ausbaupotential, dahingegen entwickelt sich Omnizart nicht sonderlich weiter.
 
 Bei den KI-Modellen hat MT3 einen klaren Vorsprung.
@@ -258,17 +260,17 @@ Hingegen zu diesen KI-Modellen ist das MT3 erst seit paar Jahren im Rennen.
 Durch YourMT3+ wird es immer weiter entwickelt,
 wodurch es in der nahen Zukunft zu einem Standard der automatischen Musiktranskription werden könnte.
 Zudem ist das MT3-Modell deutlich besser auf polyphone Musikstücke ausgelegt.
-In der mehrheit von Audiosignalen gibt es mehrere Stimmen.
+In der Mehrheit von Audiosignalen gibt es mehrere Stimmen.
 Die meisten Menschen möchten auch lieber eine einfache Lösung, die wenig eigenaufwand benötigt.
 Deshalb wäre ein zentrales KI-Modell, zur transkribierung von allen verschiedenen Audiosignalen, die populärste Lösung.
 Ein Schwachpunkt des MT3-Modells ist der Rechenaufwand.
 Da alles über ein KI-Modell läuft,
-muss dieses umso mehr Rechenschritte durchführen und braucht exponentiell mehr GPU auslastung und Speicherkapazität.
+muss Dieses umso mehr Rechenschritte durchführen und braucht exponentiell mehr GPU Auslastung und Speicherkapazität.
 
-Omnizart ist empfehlenswert, falls man sich gerade mit dem Forschungsgebiet neu auseinandersätz.
-Man sieht viel schneller Fortschritte und kann sich erstmals auf kleiner KI-Modelle konzentrieren.
-In den meisten anderen Fällen wäre jedoch das MT3-Modell, oder das Nachfolgermodell YourMT3+, empfohlen.
+Omnizart ist empfehlenswert, falls gerade ein neuer Einstieg in das Forschungsgebiet erfolgt.
+Fortschritte werden deutlich schneller sichtbar, und der Fokus kann zunächst auf kleinere KI-Modelle gelegt werden.
+In den meisten anderen Fällen wäre jedoch das MT3-Modell oder das Nachfolgermodell YourMT3+ empfohlen.
 Dieses ist der State of the Art und wird auch noch in einigen Jahren Support erhalten.
-Zudem ist man bei diesem Modell in keiner Weise eingeschränkt und kann jegliche Musik transkribieren.
+Zudem bestehen bei diesem Modell keinerlei Einschränkungen, und jegliche Musik kann transkribiert werden.
 Dieses Modell geht jedoch auch mit viel Rechenaufwand und einem guten Verständnis des Forschungsgebiets einher.
-Deshalb sollte man sich, bevor man das MT3-Modell nutzt, gut damit auseinandergesetzt haben.
+Deshalb sollte vor der Nutzung des MT3-Modells eine gründliche Auseinandersetzung damit erfolgen.
