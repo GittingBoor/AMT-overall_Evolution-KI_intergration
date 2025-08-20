@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  18 AUG 2025 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  20 AUG 2025 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1284,15 +1284,7 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
-t\out\main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                chang2024yourmt3
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+t\out\main.bbl)
 Package biblatex Info: Reference section=0 on input line 115.
 Package biblatex Info: Reference segment=0 on input line 115.
 Package hyperref Info: Link coloring OFF on input line 115.
@@ -1580,6 +1572,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]) (ki_in_amt.tex
 
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \usepackage
+               {csquotes}\section{KI-Modelle in AMT-Systemen}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1636,7 +1642,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20 <./Graphics/rnn_unfold.png>]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 235--239
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 236--240
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1654,7 +1660,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Graphics/LSTM_timestep.png, id=491, 963.6pt x 428.60126pt>
 File: Graphics/LSTM_timestep.png Graphic file (type png)
 <use Graphics/LSTM_timestep.png>
-Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 306.
+Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 302.
 (pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
@@ -1669,7 +1675,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Graphics/GRU_timestep.png, id=503, 963.6pt x 428.60126pt>
 File: Graphics/GRU_timestep.png Graphic file (type png)
 <use Graphics/GRU_timestep.png>
-Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 347.
+Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 339.
 (pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
@@ -1690,11 +1696,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
-
-LaTeX Warning: Citation 'chang2024yourmt3' on page 25 undefined on input line 5
-04.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1764,7 +1765,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [30]
-<Graphics/transcription_transformer.png, id=594, 1752.5475pt x 416.55624pt>
+<Graphics/transcription_transformer.png, id=597, 1752.5475pt x 416.55624pt>
 File: Graphics/transcription_transformer.png Graphic file (type png)
 <use Graphics/transcription_transformer.png>
 Package pdftex.def Info: Graphics/transcription_transformer.png  used on input 
@@ -1779,7 +1780,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31 <./Graphics/transcription_transformer.png>]) (conclusion.tex)
+[31 <./Graphics/transcription_transformer.png>]) (conclusion.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1788,7 +1789,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32]
+[32])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
 Overfull \hbox (20.81593pt too wide) in paragraph at lines 150--150
 \T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
 i-li-ty^^P. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print a
@@ -1808,7 +1818,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33]
+[34]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1817,7 +1827,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34]
+[35]
 Overfull \hbox (7.74902pt too wide) in paragraph at lines 150--150
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form^^P. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/
@@ -1840,7 +1850,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[35]
+[36]
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
 t\auxil\main.aux)
  ***********
@@ -1848,16 +1858,16 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 417A224D672073F5203F20C394543174;8736.
+(rerunfilecheck)             Checksum: BF59EF755C559BD69A6BF89F90BFA320;8883.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37837 strings out of 468134
- 729889 string characters out of 5430740
- 1565456 words of memory out of 5000000
- 65705 multiletter control sequences out of 15000+600000
+ 37843 strings out of 468134
+ 730094 string characters out of 5430740
+ 1566507 words of memory out of 5000000
+ 65709 multiletter control sequences out of 15000+600000
  675567 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1877,9 +1887,9 @@ tmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work
-\Scientific_Report\out\main.pdf (38 pages, 2077559 bytes).
+\Scientific_Report\out\main.pdf (39 pages, 2073610 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
+ 797 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
  444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -167,6 +167,56 @@
       \verb https://www.researchgate.net/figure/A-typical-pattern-onset-offset-VEP-Note-that-with-a-300-ms-sweep-only-the-pattern-onset_fig2_305480881
       \endverb
     \endentry
+    \entry{chang2024yourmt3+}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=860a14ef1c4185f853e9b169ecd23e1a}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Sungkyun},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b068724f00d17295882e712edcc6315c}{%
+           family={Benetos},
+           familyi={B\bibinitperiod},
+           given={Emmanouil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ca17fe3861dfa20595de8a2c58bc77f}{%
+           family={Kirchhoff},
+           familyi={K\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9aae0a8ca29e8a3ecc7d2bbf3f6c76e}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{40fa95d2346d21177ea879a54c17b79f}
+      \strng{fullhash}{03182d2ead140fcd5915474e8408efcd}
+      \strng{fullhashraw}{03182d2ead140fcd5915474e8408efcd}
+      \strng{bibnamehash}{40fa95d2346d21177ea879a54c17b79f}
+      \strng{authorbibnamehash}{40fa95d2346d21177ea879a54c17b79f}
+      \strng{authornamehash}{40fa95d2346d21177ea879a54c17b79f}
+      \strng{authorfullhash}{03182d2ead140fcd5915474e8408efcd}
+      \strng{authorfullhashraw}{03182d2ead140fcd5915474e8408efcd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE 34th International Workshop on Machine Learning for Signal Processing (MLSP)}
+      \field{title}{YourMT3+: Multi-Instrument Music Transcription with Enhanced Transformer Architectures and Cross-Dataset STEM Augmentation}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
     \entry{cheuk2021revisiting}{inproceedings}{}{}
       \name{author}{4}{ul=2}{%
         {{un=1,uniquepart=given,hash=3b44500ec3bf865184968d612dbc09a7}{%
@@ -2341,7 +2391,6 @@
       \range{pages}{21}
     \endentry
   \enddatalist
-  \missing{chang2024yourmt3}
 \endrefsection
 \endinput
 

@@ -2436,18 +2436,19 @@
     <bcf:citekey order="58" intorder="1">hawthorne2017onsets</bcf:citekey>
     <bcf:citekey order="59" intorder="1">jung2018adaptive</bcf:citekey>
     <bcf:citekey order="60" intorder="1">vaswani2017attention</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">gardner2021mt3</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">chang2024yourmt3</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">kingma2019introduction</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">kingma2013auto</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">wu2020comprehensive</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">cheuk2022diffroll</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">li2018music</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">lecun2006tutorial</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">wu2021omnizart</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">gardner2021mt3</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">chang2024yourmt3+</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">kingma2019introduction</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">kingma2013auto</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">wu2020comprehensive</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">cheuk2022diffroll</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">li2018music</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">lecun2006tutorial</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">wu2021omnizart</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">hawthorne2017onsets</bcf:citekey>
     <bcf:citekey order="72" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">mt3colab</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
