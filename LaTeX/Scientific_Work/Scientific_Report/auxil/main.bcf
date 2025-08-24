@@ -2447,8 +2447,9 @@
     <bcf:citekey order="69" intorder="1">lecun2006tutorial</bcf:citekey>
     <bcf:citekey order="70" intorder="1">wu2021omnizart</bcf:citekey>
     <bcf:citekey order="71" intorder="1">hawthorne2017onsets</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">gardner2021mt3</bcf:citekey>
     <bcf:citekey order="73" intorder="1">mt3colab</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">mt3colab</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
