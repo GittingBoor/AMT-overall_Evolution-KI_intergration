@@ -83,12 +83,15 @@ Dadurch lassen sich bestimmte Features wieder zeitlich präziser bestimmen,
 da die Zeitfenster wieder genauer zum originellen Audiosignal passen.
 Meist wird dieser Layer jedoch weggelassen, da er häufig nicht sehr relevant für AMT-Systeme ist.
 
-Ein CNN gibt als letzte Ausgabe einen 3D-Tensor zurück,
-welcher aus den Zeitfenster (Frames) $T$, der Frequenzachsenlänge $F$ und der Anzahl der Filter $C$ besteht.
-
+Der Output eines CNNs ist ein 3D-Tensor:
 \[
 \text{CNN-Ausgabe} \in \mathbb{R}^{T \times F \times C}
 \]
+\begin{itemize}
+\item $T$: Anzahl der Zeitfenster (Frames) im Spektrogramm.
+\item $F$: Frequenzachsenlänge.
+\item $C$: Anzahl der Filter des CNNs.
+\end{itemize}
 
 In der folgenden Darstellung wird ein CNN dargestellt, mit deren gegebenen Layern.
 Als Input wird beispielhaft ein CQT-Spektrogramm verwendet.
@@ -169,6 +172,12 @@ Somit wird sichergestellt, dass der neue Hidden State sowohl den aktuellen Einga
 \[
 \mathbf{h}_t = f(\mathbf{x}_t, \mathbf{h}_{t-1})
 \]
+\begin{itemize}
+\item $\mathbf{x}_t$: Eingabevektor zum Zeitpunkt $t$.
+\item $\mathbf{h}_{t-1}$: Vorheriger Hidden State.
+\item $f$: Nichtlineare Transformationsfunktion.
+\item $\mathbf{h}_t$: Neuer Hidden State.
+\end{itemize}
 
 Hidden States enthalten das Wissen der vorherigen Zeitfenster über zeitliche Muster, wie Sustain und Akkordstruktur.
 Alleine können Hidden States keine eigene Entscheidung über bestimmte Noten fallen.
@@ -358,6 +367,12 @@ sodass der gewonnene Hidden State Informationen über das gesamte Musikstück en
 \[
 \mathbf{h}_t = \left[ \overrightarrow{\mathbf{h}}_t \ ;\ \overleftarrow{\mathbf{h}}_t \right]
 \]
+\begin{itemize}
+\item $\overrightarrow{\mathbf{h}}_t$: Vorwärts-Hidden-State.
+\item $\overleftarrow{\mathbf{h}}_t$: Rückwärts-Hidden-State.
+\item $\left[ \cdot \ ; \ \cdot \right]$: Zusammenfügung der beiden Hidden States.
+\item $\mathbf{h}_t$: Vollständiger Hidden State zum Zeitpunkt $t$.
+\end{itemize}
 
 Auch in AMT-Systemen sind bidirektionale RNNs sehr hilfreich,
 da musikalische Ereignisse auch eine klar verständliche Abhängigkeit von der Zukunft in die Vergangenheit haben.
