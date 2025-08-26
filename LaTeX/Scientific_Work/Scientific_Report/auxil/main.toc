@@ -7,15 +7,15 @@
 \contentsline {subsection}{\numberline {1.5}AMT und Künstliche Intelligenz}{5}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}Motivation, Zielsetzung und Ablauf}{6}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Geschichtliche Entwicklung von AMT-Systemen}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Moorer und das erste AMT-System}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Das erste AMT-System}{7}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Grundlegende Probleme}{7}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau von Moorers AMT-System}{8}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau des ersten AMT-Systems}{8}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Hidden Markov Modelle}{8}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Datensätze für AMT-Systeme}{9}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Polyphone AMT-Systeme}{9}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Blackboard-System}{10}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}RASTA-basiertes System}{11}{subsubsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.5}Einbindung von Künstlicher Intelligenz}{12}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Einbindung von Künstlicher Intelligenz}{13}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Hindernisse Moderner AMT-Systeme}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Onset Detection}{13}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Polyphonie}{14}{subsection.3.2}%
@@ -25,16 +25,16 @@
 \contentsline {subsection}{\numberline {3.6}Frame-basierte vs Event-basierte AMT-Systeme}{15}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Blackbox von KI-Modellen}{16}{subsection.3.7}%
 \contentsline {section}{\numberline {4}KI-Modelle in AMT-Systemen}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Convolutional Neural Networks}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Convolutional Neural Network}{17}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{17}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Geschichtliche Einordnung von CNNs}{19}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Recurrent Neural Networks}{19}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Recurrent Neural Network}{19}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Grundstruktur eines RNNs}{20}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Long Short-Term Memory}{21}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2}Long Short-Term Memory}{22}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Gated Recurrent Units}{22}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Bidirektionale RNNs}{23}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Geschichte und Weiterentwicklung von RNNs und ihren Varianten}{24}{subsubsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.3}Transformers}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Transformer}{24}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{24}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Self-Attention Layer}{25}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{25}{subsubsection.4.3.3}%

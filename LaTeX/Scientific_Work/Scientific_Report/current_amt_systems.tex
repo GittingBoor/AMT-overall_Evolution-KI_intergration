@@ -1,4 +1,4 @@
-\usepackage{csquotes}\section{KI-basierende AMT-Systeme im Vergleich}
+\section{KI-basierende AMT-Systeme im Vergleich}
 Im Laufe der Forschung zu AMT-Systemen wurden schon einige verschiedenen Architekturen eingesetzt und verbessert.
 Jedes neue System hat, unabhängig des KI-Modells, eine komplett eigene Struktur und Vorgehensweise.
 Im Verlauf dieser wissenschaftlichen Arbeit wurde die Geschichte von AMT-Systemen behandelt
@@ -8,7 +8,7 @@ handelt das letzte Kapitel von den heutigen \enquote{State of the Art} AMT-Syste
 Dafür werden zwei verschiedene AMT-Systeme jetzt vorgestellt.
 Diese sind das CNN + GRU basierte Omnizart und das Transformer-basierte MT3-Modell.
 Diese nutzen unterschiedliche KI-Modelle.
-Deren Architektur, sowie deren Stärken und schwächen, werden in dem folgenden Kapiteln ausgiebig erläutert.
+Deren Architektur, sowie deren Stärken und schwächen, werden in den folgenden Kapiteln ausgiebig erläutert.
 
 \subsection{Omnizart}
 Das erste System ist Omnizart, welches CNNs und GRUs als KI-Modelle nutzt \cite{wu2021omnizart}.
@@ -61,7 +61,6 @@ Die Pipeline von Omnizart lässt sich in drei Schritte aufteilen:
 \end{figure}
 
 Der erste Schritt ist die Vorverarbeitung und Merkmalsextraktion (Preprocessing).
-Dadurch wird die Inputaudiodatei in ein CQT-Spektrogramm umgewandelt.
 Zunächst wird das gegebene Audiosignal durch folgende Methoden standardisiert:
 \begin{enumerate}
     \item \textbf{Mono-Konvertierung:} Die KI benötigt keine räumlichen Informationen, weshalb der linke und rechte Kanal von Stereosignalen in ein Monosignal addiert werden.
@@ -90,7 +89,7 @@ Mit diesen Daten modelliert dann ein GRU die zeitliche Abhängigkeit.
 Durch den Dense-Layer werden die Ergebnisse des GRUs in zum Beispiel Onsets,
 Beats und zahlreiche weitere musikalischen Attribute, umgewandelt.
 
-Im dritten Schritt wird der Output der KI-Modelle nochmals aufbereitet.
+Im dritten Schritt wird der Output der KI-Modelle nochmals aufbereitet (Post-Processing).
 Fehler werden zunächst durch folgende Methoden verbessert:
 \begin{enumerate}
     \item \textbf{Noten-Segmentierung:} Wenn derselbe Ton in zwei nacheinander folgenden Frame ein Onset hat, wird der zweite Onset gelöscht und der Note hinzugefügt, sodass keine Notendopplungen entstehen.

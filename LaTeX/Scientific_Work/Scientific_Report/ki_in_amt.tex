@@ -1,4 +1,4 @@
-\usepackage{csquotes}\section{KI-Modelle in AMT-Systemen}
+\section{KI-Modelle in AMT-Systemen}
 \label{sec:ki_integration}
 KI-Systeme haben in den letzten Jahren stark an Beliebtheit gewonnen.
 AMT-Systeme bilden da keine Ausnahmen.
@@ -9,11 +9,11 @@ oder zur integration in Planung stehen.
 In diesem Kapitel werden genau diese KI-Modelle stärker behandelt
 und deren Aufgaben in der automatischen Musik transkription weiter erläutert.
 
-\subsection{Convolutional Neural Networks}
+\subsection{Convolutional Neural Network}
 CNNs sind neuronale Netze, welche besonders gut räumlich strukturierte Daten analysieren können.
 Deshalb werden diese vor allem in der Analyse von Bildern genutzt.
 Sie sind in der Lage, den Inhalt eines Bildes präzise zu analysieren und darin enthaltene Objekte zuverlässig zu identifizieren.
-Auch KIs wie ChatGPT nutzen eine verbesserte Form von CNNs, um Bilder zu analysieren.
+Auch multimodulare KI-Systeme, wie das System hinter ChatGPT, nutzen weiterentwickelte Formen von CNNs zur Bildanalyse.
 Im Fall der Musiktranskription wird als Input Bild ein Spektrogramm verwendet.
 Spektrogramme können ähnlich wie zweidimensionale Bilder gehandhabt werden,
 da auf diesen auch alle wichtigen Daten des Inputs Audiosignals zu finden sind.
@@ -135,7 +135,7 @@ Für AMT-Systeme wurden CNNs erst etwa ab dem Jahre 2015 relevant \cite{sigtia20
 In dieser Arbeit wurden erstmals polyphone Musikstücke mithilfe von CNNs und weiteren KI-Modelle, transkribiert.
 Seitdem sind CNNs ein wichtiger Bestandteil der modernen automatischen Musiktranskription.
 
-\subsection{Recurrent Neural Networks}
+\subsection{Recurrent Neural Network}
 RNNs sind neuronale Netze, welche entworfen wurden um Daten mit zeitlicher Struktur zu verarbeiten.
 Dabei ist die Besonderheit von RNNs das diese ein Gedächtnis haben.
 Wenn in einem AMT-System eine bestimmte Tonabfolge gespielt wurde,
@@ -215,6 +215,14 @@ Dabei steht $b$ für den Bias-Vektor des Hidden Layers und $c$ für den Bias-Vek
 h_t &= \tanh\left( W \cdot x_t + U \cdot h_{t-1} + b \right) \\
 o_t &= \sigma\left( V \cdot h_t + c \right)
 \end{align*}
+\begin{itemize}
+    \item $x_t$, $o_t$: Eingabevektor und Outputvektor zum Zeitpunkt $t$.
+    \item $h_t$, $h_{t-1}$: Neuer und vorheriger Hidden State.
+    \item $W$, $U$, $V$: Input-Weight, Recurrent-Weight und Output-Weight.
+    \item $b$, $c$: Bias-Vektor des Hidden Layers und des Output-Layers.
+    \item $\tanh$: Aktivierungsfunktion, beschränkt den Wertebereich des Hidden States auf $[-1, 1]$.
+    \item $\sigma$: Aktivierungsfunktion des Output-Layers.
+\end{itemize}
 
 Neben der Frame-Glättung wird die Kontext-Modellierung auf den gegebenen Input angewendet.
 Als Input bekommt diese auch die 1D-Vektoren des CNNs.
@@ -400,7 +408,7 @@ Erst im Jahre 2016 wurde ein LSTM in einem AMT-System eingefügt \cite{sigtia201
 Dahingegen wurde das erste Bidirektionale RNN erst Ende 2017 in ein AMT-System integriert \cite{hawthorne2017onsets}.
 Noch ein Jahr später wurde das erste Mal auch ein GRU in einem AMT-System genutzt \cite{jung2018adaptive}.
 
-\subsection{Transformers}
+\subsection{Transformer}
 Transformer sind eine, von Google entwickelte Deep-Learning Architektur \cite{vaswani2017attention},
 die mit dem Prinzip der Self-Attention, zur natürliche Sprachverarbeitung genutzt wird.
 Auch Transformer verarbeiten die Daten, wie ein LSTM, sequentiell.

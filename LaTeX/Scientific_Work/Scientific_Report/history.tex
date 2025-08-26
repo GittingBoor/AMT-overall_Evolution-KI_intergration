@@ -1,6 +1,6 @@
 \section{Geschichtliche Entwicklung von AMT-Systemen}
 
-\subsection{Moorer und das erste AMT-System}
+\subsection{Das erste AMT-System}
 Eine der ersten Arbeiten über automatische Musiktranskription wurde im Jahr 1977 geschrieben \cite{Moorer1977}.
 In dieser beschreibt Moorer seinen Ansatz, polyphone Musikaudiospuren
 direkt über Computerprogramme in Notenschrift zu übertragen.
@@ -57,7 +57,7 @@ Sie sind abhängig von dem Rhythms und der Lautstärke.
 Da Moorers AMT sich jedoch auf das Frequenzmuster der Noten fokussiert,
 konnten diese Musikinstrumente nicht berücksichtigt werden.
 
-\subsubsection{Der Aufbau von Moorers AMT-System}
+\subsubsection{Der Aufbau des ersten AMT-Systems}
 Moorers automatische Musiktranskriptionssystem war eins der ersten seiner Art.
 Viele weitere AMT-Systeme leiten sich von diesem ab.
 
@@ -95,7 +95,7 @@ können diese Noten erschlossen werden.
 
 HMMs bestehen aus:
 \begin{itemize}
-    \item Zustände (States)
+    \item Zuständen (States)
     \item Übergangswahrscheinlichkeiten (Transition Probabilities)
     \item Emissionswahrscheinlichkeiten (Emission Probabilities)
     \item Beobachtungen (Observations)
@@ -181,7 +181,7 @@ lassen sich die erkannten Noten nachträglich den einzelnen Stimmen korrekt zuor
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Graphics/Martin1996Structure}
-    \caption[Systemstruktur nach Martin]{Systemstruktur des AMT-Ansatzes von Keith D. Martin (1996), aus  \cite{Martin1996}.}
+    \caption[Systemstruktur nach Martin]{Systemstruktur des AMT-Ansatzes von Keith D. Martin, aus  \cite{Martin1996}.}
     \label{fig:martin-structure}
 \end{figure}
 
@@ -247,10 +247,10 @@ Die Struktur des Systems ist linear aufgebaut und präzise in dem Aufgabenfeld, 
     \begin{tikzpicture}[>=stealth, thick]
 
         % Obere Zeile
-        \node at (0,0) (input) {Audio Input};
-        \node at (5,0) (prep) {Vorverarbeitung};
-        \node at (9,0) (onset) {Onset-Detektion};
-        \node at (12.75,0) (rasta) {RASTA-Filtering};
+        \node at (0,1) (input) {Audio Input};
+        \node at (5,1) (prep) {Vorverarbeitung};
+        \node at (9,1) (onset) {Onset-Detektion};
+        \node at (12.75,1) (rasta) {RASTA-Filtering};
 
         % Untere Zeile
         \node at (0.75,-1) (multi) {Multipitch-Schätzung};
@@ -264,7 +264,7 @@ Die Struktur des Systems ist linear aufgebaut und präzise in dem Aufgabenfeld, 
         \draw[->] (onset) -- (rasta);
 
         % Übergangspfeil
-        \draw[->] (rasta.south) -- ++(0,-0.1) -| (multi);
+        \draw[->] (rasta.south) -- ++(0,-0.6) -| (multi);
 
         % Pfeile untere Zeile
         \draw[->] (multi) -- (voice);

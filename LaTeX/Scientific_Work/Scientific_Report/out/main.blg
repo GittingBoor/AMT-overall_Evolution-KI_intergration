@@ -1,19 +1,19 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'out\main.blg'
-[82] biber-MSWIN64:342> INFO - === 
-[115] Biber.pm:421> INFO - Reading 'auxil\main.bcf'
-[225] Biber.pm:1002> INFO - Found 50 citekeys in bib section 0
-[241] Biber.pm:4487> INFO - Processing section 0
-[255] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[306] bibtex.pm:1713> INFO - LaTeX decoding ...
-[356] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[622] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[622] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[622] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[622] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[664] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[698] bbl.pm:779> INFO - Output to out\main.bbl
-[698] Biber.pm:132> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
-[698] Biber.pm:132> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
-[698] Biber.pm:132> WARN - legacy month field 'April' in entry 'cheuk2022diffroll' is not an integer - this will probably not sort properly.
-[698] Biber.pm:134> INFO - WARNINGS: 3
+[78] biber-MSWIN64:342> INFO - === 
+[111] Biber.pm:421> INFO - Reading 'auxil\main.bcf'
+[197] Biber.pm:1002> INFO - Found 50 citekeys in bib section 0
+[207] Biber.pm:4487> INFO - Processing section 0
+[215] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[265] bibtex.pm:1713> INFO - LaTeX decoding ...
+[301] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[524] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[524] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[524] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[524] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[561] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[591] bbl.pm:779> INFO - Output to out\main.bbl
+[592] Biber.pm:132> WARN - legacy month field 'october' in entry 'smith1983midi' is not an integer - this will probably not sort properly.
+[592] Biber.pm:132> WARN - legacy year field 'n.d.' in entry 'iZotope2025noisefloor' is not an integer - this will probably not sort properly.
+[592] Biber.pm:132> WARN - legacy month field 'April' in entry 'cheuk2022diffroll' is not an integer - this will probably not sort properly.
+[592] Biber.pm:134> INFO - WARNINGS: 3

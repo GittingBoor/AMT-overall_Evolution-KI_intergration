@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  24 AUG 2025 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.14)  26 AUG 2025 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,7 @@ Package csquotes Info: ... configuration file loaded successfully.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
 ))
-Package biblatex Info: Redefining '\parencite' on input line 45.
+Package biblatex Info: Redefining '\parencite' on input line 49.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
@@ -1145,7 +1145,7 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
-5.
+9.
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1156,24 +1156,24 @@ Package babel Info: 'ngerman' activates 'ngerman' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1285,9 +1285,9 @@ Package biblatex Info: ... file 'main.bbl' found.
 
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
 t\out\main.bbl)
-Package biblatex Info: Reference section=0 on input line 115.
-Package biblatex Info: Reference segment=0 on input line 115.
-Package hyperref Info: Link coloring OFF on input line 115.
+Package biblatex Info: Reference section=0 on input line 119.
+Package biblatex Info: Reference segment=0 on input line 119.
+Package hyperref Info: Link coloring OFF on input line 119.
 
 (D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work\Scientific_Repor
 t\auxil\main.out)
@@ -1317,7 +1317,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: Graphics/FacultyOfMedia.png Graphic file (type png)
 <use Graphics/FacultyOfMedia.png>
 Package pdftex.def Info: Graphics/FacultyOfMedia.png  used on input line 13.
-(pdftex.def)             Requested size: 138.91902pt x 102.6111pt.
+(pdftex.def)             Requested size: 119.07518pt x 87.9528pt.
 
 
 [1
@@ -1350,14 +1350,8 @@ t\auxil\main.lot)
 <Graphics/Onset_detection.png, id=293, 351.3125pt x 188.705pt>
 File: Graphics/Onset_detection.png Graphic file (type png)
 <use Graphics/Onset_detection.png>
-Package pdftex.def Info: Graphics/Onset_detection.png  used on input line 35.
+Package pdftex.def Info: Graphics/Onset_detection.png  used on input line 43.
 (pdftex.def)             Requested size: 220.50887pt x 118.4471pt.
-
-Overfull \hbox (13.47035pt too wide) in paragraph at lines 52--67
-\T1/ptm/m/n/10.95 gramm-ty-pen, die häu-fig ge-nutzt wer-den, sind CQT-Spektrog
-ramme und Log-Mel-Spektrogramme.
- []
-
 
 
 
@@ -1372,13 +1366,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 
-      [1 <./Graphics/Onset_detection.png (PNG copy)>]
+l.56 \end{description}
+                       [1 <./Graphics/Onset_detection.png (PNG copy)>]
+Overfull \hbox (13.47035pt too wide) in paragraph at lines 60--75
+\T1/ptm/m/n/10.95 gramm-ty-pen, die häu-fig ge-nutzt wer-den, sind CQT-Spektrog
+ramme und Log-Mel-Spektrogramme.
+ []
+
 <Graphics/different_spectrograms.png, id=301, 1034.86626pt x 701.62125pt>
 File: Graphics/different_spectrograms.png Graphic file (type png)
 <use Graphics/different_spectrograms.png>
 Package pdftex.def Info: Graphics/different_spectrograms.png  used on input lin
-e 78.
+e 86.
 (pdftex.def)             Requested size: 441.01773pt x 299.00407pt.
 
 
@@ -1394,11 +1393,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 M
-      IDI (Musical Instrument Digital Interface) ist ein Standartprotokoll z...
-[2 <./Graphics/different_spectrograms.png>]
+l.100 
+       [2 <./Graphics/different_spectrograms.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-03.
+11.
 
 (C:\Users\Benni\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1416,15 +1414,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.145 
-       [3]
+l.146     \end{itemize}
+                        [3]
 <Graphics/midi_pianoroll.png, id=319, 816.04875pt x 363.3575pt>
 File: Graphics/midi_pianoroll.png Graphic file (type png)
 <use Graphics/midi_pianoroll.png>
-Package pdftex.def Info: Graphics/midi_pianoroll.png  used on input line 156.
+Package pdftex.def Info: Graphics/midi_pianoroll.png  used on input line 164.
 (pdftex.def)             Requested size: 330.76329pt x 147.2754pt.
 
-Underfull \hbox (badness 1221) in paragraph at lines 188--189
+Underfull \hbox (badness 1221) in paragraph at lines 196--197
 []|\T1/ptm/m/n/10.95 Maq[]am Rast, Maq[]am Ba-ya-ti, Maq[]am Hi-jaz, Maq[]am Ku
 rd,
  []
@@ -1531,20 +1529,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]) (modern_problems.tex
 
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage
-               {csquotes}\section{Hindernisse Moderner AMT-Systeme}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1571,20 +1555,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]) (ki_in_amt.tex
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage
-               {csquotes}\section{KI-Modelle in AMT-Systemen}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1642,7 +1612,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20 <./Graphics/rnn_unfold.png>]
-Overfull \hbox (9.2791pt too wide) in paragraph at lines 245--249
+Overfull \hbox (9.2791pt too wide) in paragraph at lines 253--257
 \T1/ptm/m/n/10.95 Zusammenführung ver-bes-ser-ten, Hid-den States ge-nutzt. Zu-
 nächst wer-den die-se durch ein Ful-ly Connec-
  []
@@ -1660,7 +1630,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Graphics/LSTM_timestep.png, id=491, 963.6pt x 428.60126pt>
 File: Graphics/LSTM_timestep.png Graphic file (type png)
 <use Graphics/LSTM_timestep.png>
-Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 311.
+Package pdftex.def Info: Graphics/LSTM_timestep.png  used on input line 319.
 (pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
@@ -1675,7 +1645,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Graphics/GRU_timestep.png, id=503, 963.6pt x 428.60126pt>
 File: Graphics/GRU_timestep.png Graphic file (type png)
 <use Graphics/GRU_timestep.png>
-Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 348.
+Package pdftex.def Info: Graphics/GRU_timestep.png  used on input line 356.
 (pdftex.def)             Requested size: 441.01773pt x 196.15836pt.
 
 
@@ -1713,21 +1683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]) (current_amt_systems.tex
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \usepackage
-               {csquotes}\section{KI-basierende AMT-Systeme im Vergleich}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
+[26]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1736,7 +1692,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27]
+[27]) (current_amt_systems.tex
 
 ! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
@@ -1813,7 +1769,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [33]
-Overfull \hbox (20.81593pt too wide) in paragraph at lines 150--150
+Overfull \hbox (20.81593pt too wide) in paragraph at lines 154--154
 \T1/ptm/m/n/10.95 Tran-s-crip-ti-on with Un-su-per-vi-sed Pre-trai-ning Ca-pa-b
 i-li-ty^^P. In: \T1/ptm/m/it/10.95 ICASSP\T1/ptm/m/n/10.95 . ar-Xiv pre-print a
 r-Xiv:2210.05148,
@@ -1821,7 +1777,7 @@ r-Xiv:2210.05148,
 
 
 Package biblatex Warning: No driver for 'music'.
-(biblatex)                Using fallback driver on input line 150.
+(biblatex)                Using fallback driver on input line 154.
 
 
 
@@ -1842,14 +1798,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [35]
-Overfull \hbox (7.74902pt too wide) in paragraph at lines 150--150
+Overfull \hbox (7.74902pt too wide) in paragraph at lines 154--154
 \T1/ptm/m/n/10.95 using con-vo-lu-tio-nal neural net-works and constant-q trans
 -form^^P. In: \T1/ptm/m/it/10.95 ar-Xiv pre-print ar-Xiv:2505.04451\T1/ptm/m/n/
 10.95 . 
  []
 
 
-Overfull \hbox (9.56747pt too wide) in paragraph at lines 150--150
+Overfull \hbox (9.56747pt too wide) in paragraph at lines 154--154
 [][]\T1/ptm/m/n/10.95 Wikimedia Com-mons con-tri-bu-tors (2016). \T1/ptm/m/it/1
 0.95 Re-cur-rent neural net-work un-fold.svg\T1/ptm/m/n/10.95 . Zu-griff am 27.
 07.2025.
@@ -1872,16 +1828,16 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 63E31F0E1ACC0216F81255F653D5DEF4;9004.
+(rerunfilecheck)             Checksum: 8CF1E5A92BE35AA8279A778E503B36AA;8928.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37844 strings out of 468134
- 730106 string characters out of 5430740
- 1566512 words of memory out of 5000000
- 65710 multiletter control sequences out of 15000+600000
+ 37843 strings out of 468134
+ 730089 string characters out of 5430740
+ 1566511 words of memory out of 5000000
+ 65709 multiletter control sequences out of 15000+600000
  675567 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  102i,14n,107p,695b,2371s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1901,7 +1857,7 @@ tmb8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/Benni/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
 Output written on D:\GitHub\Automatic-Music-Transcription\LaTeX\Scientific_Work
-\Scientific_Report\out\main.pdf (39 pages, 2075389 bytes).
+\Scientific_Report\out\main.pdf (39 pages, 2076067 bytes).
 PDF statistics:
  799 PDF objects out of 1000 (max. 8388607)
  174 named destinations out of 1000 (max. 500000)
