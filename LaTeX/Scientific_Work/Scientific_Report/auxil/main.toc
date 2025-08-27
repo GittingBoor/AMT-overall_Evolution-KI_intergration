@@ -2,47 +2,47 @@
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Automatische Musiktranksription}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Grundlegende Begriffe in AMT-Systemen}{1}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Herausforderungen und Hindernisse}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.3}Herausforderungen und Hindernisse}{5}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Anwendungsfelder und Vorteile}{5}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}AMT und Künstliche Intelligenz}{5}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Motivation, Zielsetzung und Ablauf}{6}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Geschichtliche Entwicklung von AMT-Systemen}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Das erste AMT-System}{7}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Grundlegende Probleme}{7}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau des ersten AMT-Systems}{8}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Hidden Markov Modelle}{8}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Datensätze für AMT-Systeme}{9}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Polyphone AMT-Systeme}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {1.5}AMT und Künstliche Intelligenz}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Motivation, Zielsetzung und Ablauf}{7}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Geschichtliche Entwicklung von AMT-Systemen}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Das erste AMT-System}{8}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Grundlegende Probleme}{8}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Der Aufbau des ersten AMT-Systems}{9}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Hidden Markov Modelle}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Datensätze für AMT-Systeme}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Polyphone AMT-Systeme}{10}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Blackboard-System}{10}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}RASTA-basiertes System}{11}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2}RASTA-basiertes System}{12}{subsubsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.5}Einbindung von Künstlicher Intelligenz}{13}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Hindernisse Moderner AMT-Systeme}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Onset Detection}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Polyphonie}{14}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Spezielle Instrumente}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Notendauer}{15}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Reale Audioaufnahmen}{15}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Frame-basierte vs Event-basierte AMT-Systeme}{15}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Blackbox von KI-Modellen}{16}{subsection.3.7}%
+\contentsline {section}{\numberline {3}Hindernisse Moderner AMT-Systeme}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Onset Detection}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Polyphonie}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Spezielle Instrumente}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Notendauer}{16}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Reale Audioaufnahmen}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Frame-basierte vs Event-basierte AMT-Systeme}{16}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Blackbox von KI-Modellen}{17}{subsection.3.7}%
 \contentsline {section}{\numberline {4}KI-Modelle in AMT-Systemen}{17}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Convolutional Neural Network}{17}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{17}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Layer eines CNNs}{18}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Geschichtliche Einordnung von CNNs}{19}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Recurrent Neural Network}{19}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Grundstruktur eines RNNs}{20}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2}Recurrent Neural Network}{20}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Grundstruktur eines RNNs}{21}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Long Short-Term Memory}{22}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Gated Recurrent Units}{22}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Bidirektionale RNNs}{23}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Geschichte und Weiterentwicklung von RNNs und ihren Varianten}{24}{subsubsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.3}Transformer}{24}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{24}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Self-Attention Layer}{25}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{25}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Geschichtliche Einordnung von Transformern}{26}{subsubsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.4}Potentielle KI-Modelle}{26}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.2.3}Gated Recurrent Units}{23}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Bidirektionale RNNs}{24}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Geschichte und Weiterentwicklung von RNNs und ihren Varianten}{25}{subsubsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.3}Transformer}{25}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Input Embedding und Position Encoding}{25}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Self-Attention Layer}{26}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Feedforward Layer}{26}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Geschichtliche Einordnung von Transformern}{27}{subsubsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.4}Potentielle KI-Modelle}{27}{subsection.4.4}%
 \contentsline {section}{\numberline {5}KI-basierende AMT-Systeme im Vergleich}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Omnizart}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}MT3}{30}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Bewertung der AMT-Systeme im Vergleich}{32}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Fazit}{32}{section.6}%
-\contentsline {section}{Literaturverzeichnis}{34}{section*.23}%
+\contentsline {subsection}{\numberline {5.1}Omnizart}{29}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}MT3}{31}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Bewertung der AMT-Systeme im Vergleich}{33}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Fazit}{33}{section.6}%
+\contentsline {section}{Literaturverzeichnis}{35}{section*.23}%
