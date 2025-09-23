@@ -1,0 +1,4 @@
+Inferenz:
+    Der Prozess, bei dem das Modell eine Ausgabe erzeugt,
+    indem es sein Wissen aus den Trainingsdaten auf zuvor
+    ungesehene Daten anwendet.

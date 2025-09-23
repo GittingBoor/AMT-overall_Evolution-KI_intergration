@@ -1,0 +1,40 @@
+Top-Level-Skripte:
+[Dateien, mit der Standard Nutzer größtenteils Arbeitet]
+    infer.py:
+        Führt die Inferenz aus.
+        Nutzt die Trainingsdaten, Torchaudio und Inputdatei.
+        Gibt als Output die MIDI-Datei zurück.
+    train.py:
+        Trainingsskript des Modells.
+        Lädt Datensätze, definiert Trainingsparameter und startet das Training.
+    install_dataset.py:
+        Lädt Datensätze aus dem Internet herunter und entpackt diese.
+        Reproduziert die Trainingsumgebung korrekt.
+    test.py:
+        Test und Validierung des Modells.
+        Test-Datensätze für einen Benchmark-Test.
+
+Konfigurationsverzeichnis (config/):
+[Einstellungen für Audio-Preprocessing, Modellarchitektur und Instrumenten]
+    config.py:
+        Globale Standardparameter.
+        Legt das Standard Encoder-/Decoder-Modell fest.
+    data_preset.py:
+        Datensatz-Voreinstellungen.
+    task.py:
+        Definiert die Transkriptions-Aufgaben und Instrument-Klassen.
+    vocabulary.py:
+        Enthält und bestimmt die Instrumenten-Vokabulare und deren Programmnummern.
+
+Modellverzeichnis (model/):
+[Quellcode der Modellarchitektur]
+    ymt3.py:
+        Hauptmodell-Klasse "YourMT3".
+        Verbindet den Encoder und Decoder.
+        Definiert wie Eingabe-Mel-Spektrogramme in das Modell fließen.
+        Definiert wie Ausgabe-Token generiert werden.
+        Konstruktor läd Konfigurationen aus "config.py".
+        TaskManager-Instanz wird initialisiert.
+        Richtet den Decoder ein.
+        Enthält Methoden für die Inferenz und das Training
+
