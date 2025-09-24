@@ -1,0 +1,47 @@
+Inhalt der Ausgabe MIDI-Datei:
+    MIDI-Note:
+        - Onset (Beginnzeit)
+        - Offset (Endzeit)
+        - Pitch (Tonhöhe)
+        - Velocity (Anschlagsstärke)
+
+    Mehrere Instrumente / Gesangstimmen:
+        Noten werden auf unterschiedliche Spuren / MIDI-Kanälen verteilt.
+        MIDI-Programmnummern werden genutzt um Instrumenttypen zu codieren,
+        z.B. Schlagzeugnoten haben intern die Nummer 128, was zum Drum-Kanal führt.
+        Gesang liegt auf der Programmnummer 100 (Lead Voice) und 101 (Chor/Hintergrund),
+        diese liegen außerhalb der normalen 0-127 General MIDI Instrumente.
+        Jede Programmnummer wird einem Kanal in der MIDI-Datei zugewiesen.
+        Kanäle werden in Instrumentfamilien aufgeteilt (z.B. Streicher 40-55).
+
+    Standard Werte:
+        Tempowert wird nicht vorgeschrieben, also: Standard-MIDI-Tempo
+
+    Nachteile:
+        MIDI liegt nicht auf einem sauberen Taktraster (zeitlich nicht quantisiert).
+        Daraus generierte Notenblätter sind dementsprechend unleserlich.
+        AMT-Datensätze haben vereinfachte oder keine Velocity-Annotationen (0-127),
+        sodass dieser Wert nicht gut trainiert wurde.
+
+
+Verwendungsmöglichkeiten der Ausgegebenen MIDI-Datei:
+    Manuelle / halbautomatische Aufbereitung zu Noten:
+        Durch notensatzprogramme kann die MIDI-Datei quantisiert werden
+        und in leserliche Noten mit sinnvollen Werten umgewandelt werden.
+        Das erfordert jedoch Musikverständnis und Zeit
+    Musikalische Analyse:
+        Einzelne Instrumente können isoliert betrachtet werden und analysiert werden.
+        Karaoke-Melodien erzeugen.
+        Harmonien können extrahiert werden.
+    Klangliche Wiedergabe und Remixe:
+        MIDI-Datei in DAW (Digital Audio Workstation) oder MIDI-Player-Software laden.
+        Remixe erstellen aus einzelnen Inhalten.
+        Notendaten können beliebig umkonfiguriert werden.
+    Unterstützung für Musiker und Lernen:
+        MIDI-Datei als Grundlage um ein bestimmtes Stück zu lernen.
+        In Lernprogramm Synthesia laden.
+    Interaktive Musiksysteme und MIR-Forschung:
+        Music Information Retrieval Aufgaben.
+        Automatische Begleitgenerierung und Performance-Bewertung.
+    Weiterverarbeitung mit KI-Modellen:
+        Datensätze für neue KI-Modelle.

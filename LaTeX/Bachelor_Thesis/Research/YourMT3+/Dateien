@@ -37,4 +37,45 @@ Modellverzeichnis (model/):
         TaskManager-Instanz wird initialisiert.
         Richtet den Decoder ein.
         Enthält Methoden für die Inferenz und das Training
+    t5mod.py (T5DecoderYMT3, T5EncoderYMT3):
+        Auf T5-Sprachmodell angepasste Transformer-Encoder/-Decoder.
+    perceiver_mod.py:
+        PerceiverTF-Encoder.
+    decmod.py / t5mod_helper:
+        Varianten des Decoders:
+    lm_head.py:
+        Language Model Head für die Token-Vorhersage
+    adapter_utils.py:
+        Hilfsklassen
+    pitchshift_layer.py:
+        Für Pitch-Shifting während des Trainings.
+
+Hilfsfunktionen (utils/):
+[Utility-Module für: Pre-/Postprocessing und Evaluierung]
+    audio.py:
+        Audiovorverarbeitung (z.B. Audiosignal in Segemente aufteilen).
+    task_manger.py:
+        Definiert die Klasse TaskManager,
+        für die Verwaltung der Transkriptionsaufgaben.
+    note2event.py / event2note.py:
+        Konverteirung zwischen Noten und Event-Token.
+        Noten-Objekte werden auf MIDI-Events/Noten abgebildet.
+    midi.py:
+        Helfer zum Erstellen von MIDI-Dateien aus Note-Events.
+    utils.py:
+        Allgemeine Hilfsfunktionen.
+        Routinen zum Donwload von Datensätzen.
+    metrics.py:
+        Funktionen zur Berechnung von Evaluierungsmetriken.
+
+Sonstige Ordner:
+[Ordner ohne System relevante Dateien]
+    content/:
+        Ablage generierter Inhalte
+    logs/:
+        Während Training entstehende Logs.
+        Gespeicherte Modellcheckpoints.
+    extras/:
+        zusätzliche Skripte oder experimentelle Features.
+
 

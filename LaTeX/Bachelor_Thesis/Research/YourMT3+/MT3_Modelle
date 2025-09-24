@@ -1,0 +1,45 @@
+MT3:
+    Von Google/Magenta 2022 veröffentlicht.
+    Erstes Transformer basiertes AMT-System.
+YourMT3:
+    Von Sungkyun Chang (November 2022 veröffentlicht).
+    Eigenständiges, trainierbares Toolkit/Repo.
+YourMT3+:
+    Weiterentwickelte Modell-Suite von Sungkyun Chang (auf Basis des MT3-Ansatzes).
+Hugging Face:
+    Nutzt das YourMT3+ Repo.
+
+
+Kurz:
+    MT3 = Originalmodell von Google/Magenta.
+    YourMT3 = Chang’s open-source Toolkit/Implementation.
+    YourMT3+ = Chang et al.’s verbesserte Modelle auf Basis des
+               MT3-Token-Decoding-Paradigmas; veröffentlicht 2024.
+
+
+mimbres/YourMT3:
+    Enthält YourMT3 und YourMT3+, je nach geladenen Checkpoints und Config.
+    YourMT3 Einstellungen:
+    1. Config (Datei config/config.py)
+        encoder_type = "t5"
+        Segmentlänge / Samplerate belassen (z. B. 16 kHz, ~2 s Kontext).
+    2. Vokabular (config/vocabulary.py)
+        Ohne Singing-IDs (100/101) und ohne Drums-Sonderprogramm 128 (falls als Option geführt).
+        d.h. nur GM-Instrumente (0–127).
+    3. Decoder/Tasks (config/task.py)
+        Single-Channel-Decoding (ein gemeinsamer Noten-Kanal).
+    4. Checkpoint
+        Falls ein dedizierter YourMT3-(Basis)-Checkpoint vorliegt, nutze den.
+
+    YourMT3+ Einstellungen:
+    1. Config (Datei config/config.py)
+        encoder_type = "perceiver_tf"
+        (laut Paper sind PerceiverTF + MoE die Kern-Neuheiten).
+        Segmentlänge / Samplerate belassen (z. B. 16 kHz, ~2 s Kontext).
+    2. Vokabular (config/vocabulary.py)
+        aktiv: 100/101 (Singing Voice), 128 (Drums) – YourMT3+-Spezifika.
+    3. Decoder/Tasks (config/task.py)
+        Multi-Channel-Decoder einschalten (separate Decoding-Kanäle je Instrumentgruppe).
+    4. Checkpoint
+        Von HF „mimbres/YourMT3“ (dort stehen YourMT3+-Checkpoints).
+

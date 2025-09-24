@@ -1,0 +1,58 @@
+Setup:
+    1. 3 kurze Test Audios (30-45 Sekunden):
+        Solo-Piano (monophon/polyphon)
+        Pop-Song mit Gesang + Drums + Gitarre
+        Band/Ensemble (z. B. Streicher + Bläser)
+    2. DAW (z. B. Reaper/Ableton) + MuseScore (zur Sichtprüfung) installiert.
+
+Audio-Dateien downloaden:
+    1. Solo-Piano:
+        MAESTRO Datensatz laden
+    2. Pop-Song:
+        MUSDB18 (sigsep): 150 volle Tracks mit Stems
+        [https://sigsep.github.io/datasets/musdb.html?utm_source=chatgpt.com]
+    3. Ensemble/Band:
+        URMP (University of Rochester):
+        Audio + (Einzel-)Stimmen + Partituren für klassische Ensembles
+        [https://labsites.rochester.edu/air/projects/URMP.html?utm_source=chatgpt.com]
+    Snippet Zuschneiden:
+        ffmpeg -ss 00:00:20 -t 00:00:35 -i input.wav -ac 1 -ar 16000 snippet.wav
+
+Lauf 1 YourMT3 (Basis):
+    Audios transkribieren mit Basis-Config:
+    (T5, Single-Channel, GM-only [siehe MT3-Modelle])
+    MIDI als *_base.mid speichern.
+
+Lauf 2 YourMT3+:
+    Audios transkribieren mit Plus-Config:
+    (PerceiverTF, Multi-Channel, Singing/Drums on [siehe MT3-Modelle])
+    MIDI als *_plus.mid speichern.
+
+Auswertung:
+    1. Struktur-Check:
+        Öffne beide MIDIs in der DAW:
+            Anzahl Spuren/Kanäle vergleichen.
+            Sind Singing-Spuren (Vox) vorhanden (Plus)?
+            Sind Drums separat und plausibel gemappt (Plus sollte hier sichtbar im Vorteil sein.)
+
+    2. Quantitative Kennzahlen (ohne Ground-Truth):
+        Zähle je Datei:
+            Wie viele Noten insgesamt und pro Instrument (DAW oder Tool wie midicsv/MIDI-Inspector).
+            Durchschnittliche Notendauer & Lücken (zeigt Over-/Under-Segmentation).
+            Rechenzeit & GPU-Speicher (Konsole protokollieren).
+
+    3. Timing / Hörtest:
+        In DAW ohne Quantisierung abspielen:
+            Klingt Plus stabiler synchron (weniger „zitternde“ Notenstarts)?
+            Liegt Gesangsmelodie hörbar auf separater Spur?
+
+    4. Partitur-Tauglichkeit:
+        Import nach MuseScore:
+            Mit gleicher Quantisierungsstufe (z. B. 1/16) exportieren.
+            Ist die Plus-Version nach identischer Quantisierung lesbarer (weniger krumme Noten)?
+            (PerceiverTFs längerer Kontext kann Onsets stabilisieren; Plus profitiert zudem von Multi-Channel-Decoder.)
+
+    5. Edge-Cases:
+        Kurzer A-capella-Clip → erkennt Plus Singing?
+        Drum-Loop pur → werden Drums bei Plus korrekt (Kick/Snare/Hi-Hat) auf dem Drum-Kanal ausgegeben?
+        (YourMT3+ bezeichnet Drums intern als Programm 128 und mapped sie auf Drum-Kanal in der MIDI-Ausgabe.)

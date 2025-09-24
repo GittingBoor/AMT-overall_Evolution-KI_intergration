@@ -2,3 +2,58 @@ Inferenz:
     Der Prozess, bei dem das Modell eine Ausgabe erzeugt,
     indem es sein Wissen aus den Trainingsdaten auf zuvor
     ungesehene Daten anwendet.
+
+MIDI-Programmnummern:
+    Sagt dem Synth/DAW, welcher Klang auf diesem Kanal gespielt wird.
+    Program Change / Patch.
+    MIDI maximal 16 Kanäle.
+    Pro Kanal wird ein Programm ausgewählt.
+    Programm = Instrument (z.B. 0-127 bei General MIDI [Klavier, Gitarre, Streicher...]).
+
+Instrument-Vokabular:
+    Instrument-Vokabular = Menge aller zulässigen Instrument-Tokens + deren IDs.
+   YourMT3+ dekodiert Musik als Text-ähnliche Tokenfolge.
+   Instrument-Tokens:
+    Sagt dem Decoder, welche Instrument-Spur jetzt folgt.
+   IDs:
+    100 = Melody
+    101 = Chorus
+    128 = Drums
+    129 = Unnotated (nicht tokenisiert)
+
+T5-Sprachmodell:
+    T5 = Text-to-Text Transfer Transformer
+    Natural Language Processing Modell (NLP)
+    Aufgaben:
+     Textklassifizierung
+     Fragebeantwortung
+     Sprachübersetzung
+    Architektur basiert auf dem Transformer (Vaswani et a., 2017)
+    T5 im AMT-Kontext:
+     Encoder: wandelt Audiofeatures um.
+     Decoder: erzeugt symbolische Repräsentation der Musik.
+     Ergebnis: Tokens, welche in MIDI übersetzt werden.
+    In YourMT3+ ist T5 das Gehirn
+
+PreceiverTF-Encoder:
+    Universelles Encoder-Model für viele Datentypen (Bild, Audio, Video 3D...).
+    Kann als ersatz für den T5-Encoder verwendet werden.
+    Unterschied zu anderen Tranfsormern:
+     Klassische Transformer, wie T5, haben eine quadratische Komplexität,
+     was bei langen Eingabesequenzen uneffizient ist.
+
+     Preceiver führt einen "Latent Array" ein.
+     Attention wird nicht über alle Input-Elemente gemappt,
+     sondern nur über latenten Vektoren, was effizienter ist.
+
+DAW:
+    Digital Audio Workstation.
+    Musik aufnehmen, bearbeiten, arrangieren, abmischen und exportieren.
+    Bekannte DAWs:
+     Ableton Live
+     FL Studio
+     Logic Pro
+     Cubase
+     Reaper
+     Studio One
+     Pro Tools.
