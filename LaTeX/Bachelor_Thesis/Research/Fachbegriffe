@@ -57,3 +57,10 @@ DAW:
      Reaper
      Studio One
      Pro Tools.
+
+Ground-Truth:
+    Reale, durch direkte Beobachtung gewonnene Daten oder Informationen,
+    die als Grundlage für die Bewertung und das Training von Modellen dienen.
+
+    Z.B. wenn man eine Audio-Datei aus dem MAESTRO Datensatz transkribiert,
+    ist die dazugehörige MIDI-Datei aus diesem Datensatz der Ground-Truth.

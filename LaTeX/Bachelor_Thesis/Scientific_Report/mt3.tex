@@ -1,2 +1,66 @@
 \section{MT3}
+% Inhalt: Wer (Autoren/Institution), Wann (Jahr/konferenz), Wofür (AMT – automatische Musiktranskription),
+% Warum MT3? (Motivation: Multitrack, multi-instrumental, einheitliche Token-Sprache statt getrennte Modelle),
+% Kurzbezug auf Benchmarks/Verbreitung; 3–5 Sätze, mit 1–2 Zitaten.
 
+\subsection{Grundidee von MT3}
+% Inhalt: Erkläre das Sequenz-zu-Sequenz-Paradigma:
+% - Input: Audio → Log-Mel-Spektrogramm (Zeit–Frequenz-Features).
+% - Output: Ereignistokens (Onset, Offset/Dauer, Pitch, ggf. Velocity, Instrument-Token).
+% - Warum Tokenisierung? Vereinheitlicht Noten/Timing/Instrumente in einer „Sprache“ → ermöglicht autoregressives Decoding.
+% - Instrument-Vokabular: Anlehnung an GM + Modell-spezifische Instrument-Tokens; Zweck: "Spurwechsel" im Decoder, Mapping zu MIDI.
+
+\subsection{Architektur}
+% Inhalt: High-Level in 1–2 Absätzen:
+% - Encoder: T5-ähnlich (Self-Attention) ODER PerceiverTF (Cross-Attention auf Zeit–Frequenz mit latentem Bottleneck).
+% - Decoder: Autoregressiv (Nächstes Token konditioniert auf bisherige Tokens + Encoder-Features).
+% - Embeddings/Positionskodierung: kurze Erwähnung (keine Detailschlacht).
+% - (Falls passend) Multi-Channel-Decoding als Konzept (mehrere „Ausgabe-Kanäle“ für Instrumentgruppen).
+% Ziel: Bausteine + Rollen, ohne Implementierungsdetails.
+
+\subsection{Transkriptions-Pipeline}
+% Inhalt: Praktischer Ablauf von Audio → MIDI mit 4–7 Sätzen Gesamt.
+% Danach kommen UNNUMMERIERTE Subsubsections (nicht in ToC) für klare Struktur.
+
+\subsubsection*{Preprocessing}
+% - Laden der Audiodatei (ggf. Stereo→Mono, Resampling z.B. auf 16 kHz).
+% - Feature-Extraktion (Log-Mel: Fenstergröße, Hop, Normierung – grob, keine Zahlenfriedhöfe).
+% - Optional: Pegel-Norm, Clipping-Check.
+
+\subsubsection*{Segmentierung (Chunking)}
+% - Lange Audios in überlappende Fenster (~Sekundenbereich) zerlegen,
+% - Zweck: Speicher/Modellkontext begrenzen; Nahtstellen später sauber mergen (Ties/Überlapp).
+
+\subsubsection*{Decoding (Token-Sequenz)}
+% - Autoregressives Erzeugen von Ereignistokens (Instrument→Onset→Pitch→Offset/Duration→Velocity …),
+% - Temperature/Beam-Search falls relevant: sehr kurz (optional).
+
+\subsubsection*{Postprocessing}
+% - Events → Notenlisten: Ties zusammenführen, ungültige/überschneidende Ereignisse korrigieren,
+% - Zusammenführen der Chunks: Dubletten/Boundary-Fälle glätten.
+
+\subsubsection*{MIDI-Mapping \& Export}
+% - Token/Noten → MIDI: Spuren/Kanäle/Programnummern je Instrument (Drums eigens),
+% - Metadaten (Tempo/PPQ) knapp erwähnen, Hinweis auf ggf. fehlende Quantisierung,
+% - Output-Ort/Dateiname (z.B. content/model_output/<track>.mid).
+
+\subsection{YourMT3}
+% Inhalt: Konkreter Praxisbezug zum Repo:
+% - Projektstruktur: kurz beschreiben, wer was tut (config/, model/, utils/, infer.py).
+% - „Basis“-Nutzung: Encoder=T5, (ggf.) Single-Channel, GM-nahes Vokabular.
+% - Inputs: Audio-Datei (optional YouTube falls unterstützt); Output: MIDI mit Spuren/Kanälen.
+% - Mini-Workflow: 3–5 Schritte, wie man lokal Audio→MIDI erzeugt (ohne Code-Massen).
+
+\subsection{YourMT3+}
+% Inhalt: Was ist „+“ gegenüber YourMT3:
+% - Encoder-Option: PerceiverTF (+ ggf. MoE), längerer Kontext effizienter.
+% - Multi-Channel-Decoder, erweiterte Instrument-Tokens (z.B. Singing/Drums),
+% - On-the-fly Augmentations (kurz, nicht ausufern).
+% - Erwartete Vorteile: stabilere Onsets, bessere Instrumenttrennung (insb. Vox/Drums) – mit kurzer Referenz.
+
+\subsection{Weiterverwendung}
+% Inhalt: Was du PRAKTISCH mit der MIDI machst + wie du Qualität prüfst:
+% - DAW-Workflow: Instrumente zuweisen, Quantisierung (lesbare Notation), Analyse (Akkorde/Melodien).
+% - Notensatz: erst quantisieren, dann exportieren (warum direkter Export oft unleserlich ist).
+% - Kompakter Testplan: 3 Snippets (Piano, Pop mit Voc/Drums/Gitarre, Ensemble); Basis vs. Plus durchprobieren,
+%   subjektiver Hörtest + einfache Kennzahlen (Spuranzahl, Notenzahl, grobe Onset-Stabilität).
